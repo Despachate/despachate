@@ -538,8 +538,7 @@ app.post('/venta/:email', (req, res, next) => {
             from: '“Despachate Group” test@despachate.com.mx',
             cc: 'mk@despachate.com.mx',
             bcc: 'test@despachate.com.mx',
-            to: 'mk@despachate.com.mx, melgabrielc@gmail.com, melanie@despachate.mx, shopper@despachate.mx, e-commerce@arteventas.com',
-            to: 'allenwalker123.hr@gmail.com',
+            to: 'mk@despachate.com.mx, melgabrielc@gmail.com, melanie@despachate.mx, shopper@despachate.mx, e-commerce@arteventas.com'
             subject: 'Detalle de venta',
             html: htmlToSend,
           };
