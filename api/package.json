@@ -1,0 +1,30 @@
+{
+    "name": "despachateapi",
+    "version": "1.0.0",
+    "description": "backend para aplicacion de leconf",
+    "main": "index.js",
+    "scripts": {
+        "start": "nodemon app.js",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "allenwalker123.hr@gmail.com",
+    "license": "ISC",
+    "dependencies": {
+        "bcryptjs": "^2.4.3",
+        "body-parser": "^1.19.0",
+        "conekta": "^4.0.1",
+        "express": "^4.17.1",
+        "express-fileupload": "^1.1.7-alpha.3",
+        "google-auth-library": "^6.0.2",
+        "handlebars": "^4.7.6",
+        "jshint": "^2.13.4",
+        "jsonwebtoken": "^8.5.1",
+        "moment": "^2.27.0",
+        "mongoose": "^5.9.11",
+        "mongoose-unique-validator": "^2.0.3",
+        "nodemailer": "^6.4.10",
+        "nodemailer-smtp-transport": "^2.7.4",
+        "stripe": "^8.198.0",
+        "xlsx": "^0.16.3"
+    }
+}

@@ -1,0 +1,908 @@
+<!-- Content -->
+<div class="content">
+  <!-- Animated -->
+  <div class="animated fadeIn">
+    <div class="clearfix"></div>
+
+    <div class="orders">
+      <div class="row">
+        <div class="col">
+          <div class="card">
+            <div class="card-header text-dark">
+              <div class="d-block text-center">
+                <strong class="p-2 bd-highlight">Detalle pedido</strong>
+              </div>
+            </div>
+            <div class="card-body card-block" id="header-form">
+              <form ngNativeValidate [formGroup]="form" class="form-horizontal">
+                <div class="row">
+                  <div class="col-12 col-md-6 col-sm-12 form-group">
+                    <div class="col">
+                      <label for="fechaCompra" class="form-control-label">
+                        Fecha de Compra
+                      </label>
+                    </div>
+                    <div class="col">
+                      <input
+                        formControlName="fechaCompra"
+                        required
+                        type="date"
+                        id="fechaCompra"
+                        name="fechaCompra"
+                        class="form-control"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6 col-sm-12 form-group">
+                    <div class="col">
+                      <label for="fechaRecepcion" class="form-control-label">
+                        Fecha de Recepción
+                      </label>
+                    </div>
+                    <div class="col">
+                      <input
+                        formControlName="fechaRecepcion"
+                        required
+                        type="date"
+                        id="fechaRecepcion"
+                        name="fechaRecepcion"
+                        class="form-control"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6 col-sm-12 form-group">
+                    <div class="col">
+                      <label for="horarioRecepcion" class="form-control-label">
+                        Horario de recepción
+                      </label>
+                    </div>
+                    <div class="col">
+                      <select
+                        formControlName="horarioRecepcion"
+                        name="horarioRecepcion"
+                        id="horarioRecepcion"
+                        class="form-control"
+                      >
+                        <option value="null" selected>
+                          Selecciona un Horario de recepción
+                        </option>
+                        <option value="9:00AM - 11:00AM" selected>
+                          9:00AM - 11:00AM
+                        </option>
+                        <option value="11:00am-1:00pm" selected>
+                          11:00AM - 1:00PM
+                        </option>
+                        <option value="12:00PM - 3:00PM" selected>
+                          12:00PM - 3:00PM
+                        </option>
+                        <option value="1:00pm-3:00pm" selected>
+                          1:00PM - 3:00PM
+                        </option>
+                        <option value="3:00pm-4:00pm" selected>
+                          3:00PM - 4:00PM
+                        </option>
+                        <option value="4:00PM - 7:00PM" selected>
+                          4:00PM - 7:00PM
+                        </option>
+                        <option value="9:00am - 12:00pm" selected>
+                          9:00AM - 12:00PM
+                        </option>
+                        <option value="12:00pm - 4:00pm" selected>
+                          12:00AM - 4:00PM
+                        </option>
+                        <option value="4:00pm - 7:00pm" selected>
+                          4:00PM - 7:00PM
+                        </option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6 col-sm-12 form-group">
+                    <div class="col">
+                      <label for="precioTotal" class="form-control-label">
+                        Precio Total del Pedido
+                      </label>
+                    </div>
+                    <div class="col">
+                      <input
+                        formControlName="precioTotal"
+                        type="number"
+                        min="0"
+                        id="precioTotal"
+                        name="precioTotal"
+                        class="form-control"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6 col-sm-12 form-group">
+                    <div class="col">
+                      <label for="cantidadTotal" class="form-control-label">
+                        Cantidad Total de Productos
+                      </label>
+                    </div>
+                    <div class="col">
+                      <input
+                        formControlName="cantidadTotal"
+                        type="number"
+                        min="0"
+                        required
+                        id="cantidadTotal"
+                        name="cantidadTotal"
+                        placeholder="Introduce la cantidad Total de productos"
+                        class="form-control"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6 col-sm-12 form-group">
+                    <div class="col">
+                      <label for="metodoPago" class="form-control-label">
+                        Método de Pago
+                      </label>
+                    </div>
+                    <div class="col">
+                      <select
+                        formControlName="metodoPago"
+                        name="metodoPago"
+                        id="metodoPago"
+                        class="form-control"
+                      >
+                        <option value="null" selected>
+                          Selecciona un Método Pago
+                        </option>
+                        <option value="Pago con PAYPAL" selected>
+                          Pago con PAYPAL
+                        </option>
+                        <option value="Pago con STRIPE" selected>
+                          Pago con STRIPE
+                        </option>
+                        <option value="Efectivo" selected>Efectivo</option>
+                        <option
+                          value="Vales de despensa o electrónicos"
+                          selected
+                        >
+                          Vales de despensa o electrónicos
+                        </option>
+                        <option value="Tarjeta de crédito" selected>
+                          Tarjeta de crédito
+                        </option>
+                        <option value="Tarjeta de débito" selected>
+                          Tarjeta de débito
+                        </option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6 col-sm-12 form-group">
+                    <div class="col">
+                      <label for="referenciaPago" class="form-control-label">
+                        Referencia
+                      </label>
+                    </div>
+                    <div class="col">
+                      <input
+                        formControlName="referenciaPago"
+                        type="text"
+                        required
+                        id="referenciaPago"
+                        name="referenciaPago"
+                        placeholder="Introduce la Referencia de Pago"
+                        class="form-control"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6 col-sm-12 form-group">
+                    <div class="col">
+                      <label for="contacto" class="form-control-label">
+                        Contacto
+                      </label>
+                    </div>
+                    <div class="col">
+                      <input
+                        formControlName="contacto"
+                        type="text"
+                        id="contacto"
+                        name="contacto"
+                        class="form-control"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6 col-sm-12 form-group">
+                    <div class="col">
+                      <label for="formaContacto" class="form-control-label">
+                        Forma de Contacto
+                      </label>
+                    </div>
+                    <div class="col">
+                      <select
+                        formControlName="formaContacto"
+                        name="formaContacto"
+                        id="formaContacto"
+                        class="form-control"
+                      >
+                        <option value="null" selected>
+                          Selecciona un Método Pago
+                        </option>
+                        <option value="Ninguna" selected>Ninguna</option>
+                        <option value="Whatsapp" selected>Whatsapp</option>
+                        <option value="WhatsApp" selected>WhatsApp</option>
+                        <option value="Teléfono" selected>Teléfono</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6 col-sm-12 form-group">
+                    <div class="col">
+                      <label for="estatusPago" class="form-control-label">
+                        Estatus del Pago
+                      </label>
+                    </div>
+                    <div class="col">
+                      <select
+                        formControlName="estatusPago"
+                        name="estatusPago"
+                        id="estatusPago"
+                        class="form-control"
+                      >
+                        <option value="null" selected>
+                          Selecciona el estatus del Pago
+                        </option>
+                        <option value="Pendiente" selected>Pendiente</option>
+                        <option value="Pagado" selected>Pagado</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6 col-sm-12 form-group">
+                    <div class="col">
+                      <label for="estatusEnvio" class="form-control-label">
+                        Estatus del Envio
+                      </label>
+                    </div>
+                    <div class="col">
+                      <select
+                        formControlName="estatusEnvio"
+                        name="estatusEnvio"
+                        id="estatusEnvio"
+                        class="form-control"
+                      >
+                        <option value="null" selected>
+                          Selecciona el estatus de Envio
+                        </option>
+                        <option value="Pendiente" selected>Pendiente</option>
+                        <option value="En preparación" selected>
+                          En preparación
+                        </option>
+                        <option value="Enviado" selected>Enviado</option>
+                        <option value="Recibido" selected>Recibido</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6 col-sm-12 form-group">
+                    <div class="col">
+                      <label for="direccion" class="form-control-label">
+                        Dirección de Envio
+                      </label>
+                    </div>
+                    <div class="col">
+                      <input
+                        formControlName="direccion"
+                        type="text"
+                        required
+                        id="direccion"
+                        name="direccion"
+                        placeholder="Introduce la dirección envio"
+                        class="form-control"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6 col-sm-12 form-group">
+                    <div class="col">
+                      <label for="cupon" class="form-control-label">
+                        Cupon
+                      </label>
+                    </div>
+                    <div class="col">
+                      <input
+                        formControlName="cupon"
+                        type="text"
+                        required
+                        id="cupon"
+                        name="cupon"
+                        placeholder="Introduce el cupon"
+                        class="form-control"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6 col-sm-12 form-group">
+                    <div class="col">
+                      <label for="usuario" class="form-control-label">
+                        Usuario
+                      </label>
+                    </div>
+                    <div class="col">
+                      <input
+                        formControlName="usuario"
+                        type="text"
+                        required
+                        id="usuario"
+                        name="usuario"
+                        placeholder="Introduce el nombre del usuario"
+                        class="form-control"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6 col-sm-12 form-group">
+                    <div class="col">
+                      <label for="empaque" class="form-control-label">
+                        Tipo de Empaque
+                      </label>
+                    </div>
+                    <div class="col">
+                      <select
+                        formControlName="empaque"
+                        name="empaque"
+                        id="empaque"
+                        class="form-control"
+                      >
+                        <option value="null" selected>
+                          Selecciona el Tipo de Empaque
+                        </option>
+                        <option value="Tela" selected>Tela</option>
+                        <option value="Papel" selected>Papel</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6 col-sm-12 form-group">
+                    <div class="col">
+                      <label for="cantidadEmpaque" class="form-control-label">
+                        Cantidad de empaques
+                      </label>
+                    </div>
+                    <div class="col">
+                      <input
+                        formControlName="cantidadEmpaque"
+                        type="number"
+                        required
+                        id="cantidadEmpaque"
+                        name="cantidadEmpaque"
+                        placeholder="Introduce el nombre del usuario"
+                        class="form-control"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6 col-sm-12 form-group">
+                    <div class="col">
+                      <label for="precioEmpaques" class="form-control-label">
+                        Precio de empaques
+                      </label>
+                    </div>
+                    <div class="col">
+                      <input
+                        formControlName="precioEmpaques"
+                        type="number"
+                        required
+                        id="precioEmpaques"
+                        name="precioEmpaques"
+                        placeholder="Introduce el nombre del usuario"
+                        class="form-control"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header text-dark">
+              <div class="d-block text-center">
+                <strong class="p-2 bd-highlight">Detalle envio</strong>
+              </div>
+            </div>
+            <div class="card-body card-block" id="header-form">
+              <form
+                ngNativeValidate
+                [formGroup]="form2"
+                class="form-horizontal"
+              >
+                <div class="row">
+                  <div class="col-12 col-md-6 col-sm-12 form-group">
+                    <div class="col">
+                      <label for="nombre" class="form-control-label">
+                        Nombre
+                      </label>
+                    </div>
+                    <div class="col">
+                      <input
+                        formControlName="nombre"
+                        required
+                        type="text"
+                        id="nombre"
+                        name="nombre"
+                        class="form-control"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6 col-sm-12 form-group">
+                    <div class="col">
+                      <label for="telefono" class="form-control-label">
+                        Telefono
+                      </label>
+                    </div>
+                    <div class="col">
+                      <input
+                        formControlName="telefono"
+                        required
+                        type="text"
+                        id="telefono"
+                        name="telefono"
+                        class="form-control"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6 col-sm-12 form-group">
+                    <div class="col">
+                      <label for="calle" class="form-control-label">
+                        Calle
+                      </label>
+                    </div>
+                    <div class="col">
+                      <input
+                        formControlName="calle"
+                        required
+                        type="text"
+                        id="calle"
+                        name="calle"
+                        class="form-control"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6 col-sm-12 form-group">
+                    <div class="col">
+                      <label for="colonia" class="form-control-label">
+                        Colonia
+                      </label>
+                    </div>
+                    <div class="col">
+                      <input
+                        formControlName="colonia"
+                        required
+                        type="text"
+                        id="colonia"
+                        name="colonia"
+                        class="form-control"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6 col-sm-12 form-group">
+                    <div class="col">
+                      <label for="numeroInterior" class="form-control-label">
+                        Número Interior
+                      </label>
+                    </div>
+                    <div class="col">
+                      <input
+                        formControlName="numeroInterior"
+                        type="text"
+                        id="numeroInterior"
+                        name="numeroInterior"
+                        class="form-control"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6 col-sm-12 form-group">
+                    <div class="col">
+                      <label for="referencia" class="form-control-label">
+                        Referencia
+                      </label>
+                    </div>
+                    <div class="col">
+                      <input
+                        formControlName="referencia"
+                        type="text"
+                        required
+                        id="referencia"
+                        name="referencia"
+                        placeholder="Introduce la referencia"
+                        class="form-control"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6 col-sm-12 form-group">
+                    <div class="col">
+                      <label for="codigoPostal" class="form-control-label">
+                        Código Postal
+                      </label>
+                    </div>
+                    <div class="col">
+                      <input
+                        formControlName="codigoPostal"
+                        type="text"
+                        required
+                        id="codigoPostal"
+                        name="codigoPostal"
+                        placeholder="Introduce el código postal"
+                        class="form-control"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6 col-sm-12 form-group">
+                    <div class="col">
+                      <label for="usuario" class="form-control-label">
+                        Usuario
+                      </label>
+                    </div>
+                    <div class="col">
+                      <input
+                        formControlName="usuario"
+                        type="text"
+                        required
+                        id="usuario"
+                        name="usuario"
+                        placeholder="Introduce la dirección envio"
+                        class="form-control"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="card" [hidden]="hiddenSuscripcion">
+            <div class="card-header text-dark">
+              <div class="d-block text-center">
+                <strong class="p-2 bd-highlight">Detalle suscripción</strong>
+              </div>
+            </div>
+            <div class="card-body card-block" id="header-form">
+              <form
+                ngNativeValidate
+                [formGroup]="form3"
+                class="form-horizontal"
+              >
+                <div class="row">
+                  <div class="col-12 col-md-6 col-sm-12 form-group">
+                    <div class="col">
+                      <label for="frecuenciaEntrega" class="form-control-label">
+                        Frecuencia de entrega
+                      </label>
+                    </div>
+                    <div class="col">
+                      <input
+                        formControlName="frecuenciaEntrega"
+                        required
+                        type="text"
+                        id="frecuenciaEntrega"
+                        name="frecuenciaEntrega"
+                        class="form-control"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6 col-sm-12 form-group">
+                    <div class="col">
+                      <label for="horarioEntrega" class="form-control-label">
+                        Horario de entrega
+                      </label>
+                    </div>
+                    <div class="col">
+                      <input
+                        formControlName="horarioEntrega"
+                        required
+                        type="text"
+                        id="horarioEntrega"
+                        name="horarioEntrega"
+                        class="form-control"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6 col-sm-12 form-group">
+                    <div class="col">
+                      <label for="diaRecepcion" class="form-control-label">
+                        Día de recepción
+                      </label>
+                    </div>
+                    <div class="col">
+                      <input
+                        formControlName="diaRecepcion"
+                        required
+                        type="text"
+                        id="diaRecepcion"
+                        name="diaRecepcion"
+                        class="form-control"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6 col-sm-12 form-group">
+                    <div class="col">
+                      <label for="contacto" class="form-control-label">
+                        Contacto
+                      </label>
+                    </div>
+                    <div class="col">
+                      <input
+                        formControlName="contacto"
+                        type="text"
+                        id="contacto"
+                        name="contacto"
+                        class="form-control"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6 col-sm-12 form-group">
+                    <div class="col">
+                      <label for="formaContacto" class="form-control-label">
+                        Forma de contacto
+                      </label>
+                    </div>
+                    <div class="col">
+                      <input
+                        formControlName="formaContacto"
+                        type="text"
+                        required
+                        id="formaContacto"
+                        name="formaContacto"
+                        class="form-control"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6 col-sm-12 form-group">
+                    <div class="col">
+                      <label for="metodoPago" class="form-control-label">
+                        Método de pago
+                      </label>
+                    </div>
+                    <div class="col">
+                      <input
+                        formControlName="metodoPago"
+                        type="text"
+                        required
+                        id="metodoPago"
+                        name="metodoPago"
+                        class="form-control"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6 col-sm-12 form-group">
+                    <div class="col">
+                      <label for="referenciaPago" class="form-control-label">
+                        Referencia
+                      </label>
+                    </div>
+                    <div class="col">
+                      <input
+                        formControlName="referenciaPago"
+                        type="text"
+                        required
+                        id="referenciaPago"
+                        name="referenciaPago"
+                        class="form-control"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6 col-sm-12 form-group">
+                    <div class="col">
+                      <label for="precioTotal" class="form-control-label">
+                        Precio total
+                      </label>
+                    </div>
+                    <div class="col">
+                      <input
+                        formControlName="precioTotal"
+                        type="text"
+                        required
+                        id="precioTotal"
+                        name="precioTotal"
+                        class="form-control"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6 col-sm-12 form-group">
+                    <div class="col">
+                      <label for="cantidadTotal" class="form-control-label">
+                        Cantidad total
+                      </label>
+                    </div>
+                    <div class="col">
+                      <input
+                        formControlName="cantidadTotal"
+                        type="text"
+                        required
+                        id="cantidadTotal"
+                        name="cantidadTotal"
+                        class="form-control"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6 col-sm-12 form-group">
+                    <div class="col">
+                      <label for="direccion" class="form-control-label">
+                        dirección
+                      </label>
+                    </div>
+                    <div class="col">
+                      <input
+                        formControlName="direccion"
+                        type="text"
+                        required
+                        id="direccion"
+                        name="direccion"
+                        class="form-control"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6 col-sm-12 form-group">
+                    <div class="col">
+                      <label for="empaque" class="form-control-label">
+                        empaque
+                      </label>
+                    </div>
+                    <div class="col">
+                      <input
+                        formControlName="empaque"
+                        type="text"
+                        required
+                        id="empaque"
+                        name="empaque"
+                        class="form-control"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6 col-sm-12 form-group">
+                    <div class="col">
+                      <label for="cantidadEmpaques" class="form-control-label">
+                        Cantidad de empaques
+                      </label>
+                    </div>
+                    <div class="col">
+                      <input
+                        formControlName="cantidadEmpaques"
+                        type="text"
+                        required
+                        id="cantidadEmpaques"
+                        name="cantidadEmpaques"
+                        class="form-control"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6 col-sm-12 form-group">
+                    <div class="col">
+                      <label for="fecha" class="form-control-label">
+                        Fecha
+                      </label>
+                    </div>
+                    <div class="col">
+                      <input
+                        formControlName="fecha"
+                        type="text"
+                        required
+                        id="fecha"
+                        name="fecha"
+                        class="form-control"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6 col-sm-12 form-group">
+                    <div class="col">
+                      <label for="usuario" class="form-control-label">
+                        Usuario
+                      </label>
+                    </div>
+                    <div class="col">
+                      <input
+                        formControlName="usuario"
+                        type="text"
+                        required
+                        id="usuario"
+                        name="usuario"
+                        class="form-control"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="clearfix"></div>
+          <div class="card p-3">
+            <div class="card-body">
+              <h4 class="box-title">Productos Vendidos</h4>
+            </div>
+            <div class="card-body">
+              <div class="">
+                <div class="table-responsive">
+                  <table
+                    datatable
+                    [dtOptions]="dtOptions"
+                    [dtTrigger]="dtTrigger"
+                    class="table"
+                  >
+                    <thead>
+                      <tr>
+                        <th class="serial">#</th>
+                        <th>Nombre</th>
+                        <th>SKU</th>
+                        <th>Paquete</th>
+                        <th>Precio</th>
+                        <th>Cantidad</th>
+                        <th>subTotal</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr *ngFor="let item of lista; let i = index">
+                        <td class="serial">{{ i + 1 }}</td>
+                        <td>
+                          <span *ngIf="item.producto != null">
+                            {{ item.producto.nombre }}
+                          </span>
+                          <span *ngIf="item.producto == null">
+                            Producto no encontrado
+                          </span>
+                        </td>
+                        <td>
+                          <span *ngIf="item.producto != null">
+                            {{ item.producto.sku }}
+                          </span>
+                          <span *ngIf="item.producto == null">
+                            Producto no encontrado
+                          </span>
+                        </td>
+                        <td>
+                          <span
+                            *ngIf="
+                              item.producto != null && item.paquete != null
+                            "
+                          >
+                            {{ item.paquete.paquete }}
+                          </span>
+                          <span
+                            *ngIf="
+                              item.producto == null || item.paquete == null
+                            "
+                          >
+                            Producto o paquete no encontrado
+                          </span>
+                        </td>
+                        <td>
+                          <span
+                            *ngIf="
+                              item.producto != null && item.paquete != null
+                            "
+                          >
+                            {{ item.paquete.precio }}
+                          </span>
+                          <span
+                            *ngIf="
+                              item.producto == null || item.paquete == null
+                            "
+                          >
+                            Producto o paquete no encontrado
+                          </span>
+                        </td>
+                        <td>
+                          <span *ngIf="item.producto != null">
+                            {{ item.cantidad }}
+                          </span>
+                          <span *ngIf="item.producto == null">
+                            Producto no encontrado
+                          </span>
+                        </td>
+                        <td>
+                          <span *ngIf="item.producto != null">
+                            {{ item.subtotal }}
+                          </span>
+                          <span *ngIf="item.producto == null">
+                            Producto no encontrado
+                          </span>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <!-- /.table-stats -->
+            </div>
+          </div>
+          <!-- /.card -->
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- .animated -->
+</div>
+<!-- /.content -->
+<div class="clearfix"></div>

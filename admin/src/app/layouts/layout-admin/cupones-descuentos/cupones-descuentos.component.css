@@ -1,0 +1,4 @@
+.list-group {
+  max-height: 10rem;
+  overflow-y: auto;
+}

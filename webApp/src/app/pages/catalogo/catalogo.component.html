@@ -1,0 +1,711 @@
+<div class="container-fluid p-0">
+  <div class="row p-0">
+    <div class="col-12 p-0" style="position: relative">
+      <!--<div class="uk-inline">
+                  <img [src]="img" alt="" srcset=""> 
+                  <h1 class="uk-position-left uk-padding ml-5 text-light">Texto</h1> 
+            </div>-->
+      <img
+        *ngIf="menuDepartamento"
+        [src]="img + menuDepartamento.img"
+        class="d-none d-md-block w-100"
+        alt=""
+        srcset=""
+        style="object-fit: cover"
+      />
+      <img
+        *ngIf="menuDepartamento"
+        [src]="img + menuDepartamento.img"
+        class="d-block d-md-none"
+        alt=""
+        srcset=""
+        style="object-fit: cover; height: 25vh"
+      />
+      <div
+        class="container"
+        style="position: absolute; top: 0px; bottom: 0px; left: 0px; right: 0px"
+      >
+        <div class="row align-items-center" style="height: 100%">
+          <div class="col-12">
+            <h1
+              class="text-light text-monospace text-uppercase bold"
+              *ngIf="menuDepartamento"
+            >
+              {{ menuDepartamento.nombre }}
+            </h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container-fluid mb-5 zeta-index">
+  <!--     <div class="row my-5 mx-2">
+        <div class="col-md-4 col-12 text-md-right text-center mt-2" *ngIf="sesion">
+            <a (click)="cerrarSesion()" *ngIf="sesion" class="texto-negritas estilo-r" style="text-decoration: none;color: black;"> <u><strong>Cerrar sesión</strong></u></a>
+        </div>
+    </div> -->
+  <div class="row mt-5">
+    <div class="col-12 px-0">
+      <div class="d-block d-md-none">
+        <button
+          class="btn btn-block btn-lg"
+          type="button"
+          uk-toggle="target: #offcanvas-usage"
+        >
+          <svg
+            class="svg-inline--fa fa-bars fa-w-14"
+            aria-hidden="true"
+            focusable="false"
+            data-prefix="fas"
+            data-icon="bars"
+            role="img"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 448 512"
+            data-fa-i2svg=""
+          >
+            <path
+              fill="currentColor"
+              d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"
+            ></path>
+          </svg>
+          Filtrar
+        </button>
+
+        <div id="offcanvas-usage" uk-offcanvas="" class="uk-offcanvas">
+          <div class="uk-offcanvas-bar uk-background-default">
+            <button
+              class="uk-offcanvas-close texto-negro uk-icon uk-close"
+              type="button"
+              uk-close=""
+            >
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 14 14"
+                xmlns="http://www.w3.org/2000/svg"
+                data-svg="close-icon"
+              >
+                <line
+                  fill="none"
+                  stroke="#000"
+                  stroke-width="1.1"
+                  x1="1"
+                  y1="1"
+                  x2="13"
+                  y2="13"
+                ></line>
+                <line
+                  fill="none"
+                  stroke="#000"
+                  stroke-width="1.1"
+                  x1="13"
+                  y1="1"
+                  x2="1"
+                  y2="13"
+                ></line>
+              </svg>
+            </button>
+            <!-- menu movil -->
+            <div class="container">
+              <div class="row" *ngIf="menuDepartamento">
+                <div class="col-12 renglond">
+                  <h2 class="uk-text-uppercase">
+                    <strong>{{ menuDepartamento.nombre }}</strong>
+                  </h2>
+                </div>
+              </div>
+              <div class="row" *ngIf="menuDepartamento">
+                <div class="uk-width-1-1">
+                  <ul
+                    class="uk-nav-default uk-nav-parent-icon"
+                    style="color: black"
+                    uk-nav
+                  >
+                    <li
+                      *ngFor="let categoria of menuDepartamento.categorias"
+                      [class]="
+                        filtros.categoria && filtros.categoria === categoria._id
+                          ? 'uk-parent renglond uk-active uk-open'
+                          : 'uk-parent renglond uk-active'
+                      "
+                    >
+                      <a
+                        class="uk-text-bold"
+                        style="font-size: 20px; color: black"
+                      >
+                        {{ categoria.nombre }}</a
+                      >
+                      <ul class="uk-nav-sub border-left">
+                        <li
+                          class="uk-active"
+                          *ngFor="
+                            let subcategoria of categoria.subcategorias;
+                            let i = index
+                          "
+                        >
+                          <p class="">
+                            <a
+                              class="uk-link-text uk-active"
+                              style="color: black"
+                              [routerLink]="['/catalogo']"
+                              [queryParams]="
+                                addFiltros({
+                                  departamento: menuDepartamento._id,
+                                  categoria: categoria._id,
+                                  subcategoria: subcategoria._id
+                                })
+                              "
+                              routerLinkActive="active"
+                              (click)="reinicializarPaginas()"
+                              >{{ subcategoria.nombre }}</a
+                            >
+                          </p>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="row mb-5">
+                <div class="col-12">
+                  <div class="sliderCustom">
+                    <div class="rangeslider sliderCustom">
+                      <input
+                        class="min"
+                        [(ngModel)]="rango1"
+                        name="range_1"
+                        #Rango1
+                        (change)="validar(true)"
+                        type="range"
+                        min="5"
+                        [max]="975"
+                        value="5"
+                      />
+                      <input
+                        class="max"
+                        [(ngModel)]="rango2"
+                        name="range_2"
+                        #Rango2
+                        (change)="validar(false)"
+                        type="range"
+                        [min]="30"
+                        max="1000"
+                        value="500"
+                      />
+                      <span class="range_min light left texto-negro">{{
+                        rango1 | currency: "MXN":"$":"1.2-2"
+                      }}</span>
+                      <span class="range_max light right texto-negro">{{
+                        rango2 | currency: "MXN":"$":"1.2-2"
+                      }}</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-12 mt-4 renglond">
+                  <button
+                    style="position: relative"
+                    (click)="filtrarXPrecio()"
+                    type="button"
+                    class="btn rounded-pill btn-secondary btn-sm"
+                  >
+                    Filtrar
+                  </button>
+                </div>
+              </div>
+              <div class="row">
+                <div class="uk-width-1-1">
+                  <ul
+                    class="uk-nav-default uk-padding-small"
+                    style="color: black"
+                    uk-nav
+                  >
+                    <li>
+                      <a
+                        class="uk-text-bold"
+                        style="font-size: 20px; color: rgb(17, 187, 17)"
+                        [routerLink]="['/catalogo']"
+                        [queryParams]="filtrosEstiloVida('Orgánico')"
+                        (click)="reinicializarPaginas()"
+                        >Orgánico</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="uk-text-bold"
+                        style="font-size: 20px; color: rgb(17, 187, 17)"
+                        [routerLink]="['/catalogo']"
+                        [queryParams]="filtrosEstiloVida('Vegano')"
+                        (click)="reinicializarPaginas()"
+                        >Vegano</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="uk-text-bold"
+                        style="font-size: 20px; color: rgb(17, 187, 17)"
+                        [routerLink]="['/catalogo']"
+                        [queryParams]="filtrosEstiloVida('Lo más local')"
+                        (click)="reinicializarPaginas()"
+                        >Lo más local</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="uk-text-bold"
+                        style="font-size: 20px; color: rgb(17, 187, 17)"
+                        [routerLink]="['/catalogo']"
+                        [queryParams]="filtrosEstiloVida('Comercio justo')"
+                        (click)="reinicializarPaginas()"
+                        >Comercio justo</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="uk-text-bold"
+                        style="font-size: 20px; color: rgb(17, 187, 17)"
+                        [routerLink]="['/catalogo']"
+                        [queryParams]="filtrosEstiloVida('Granel')"
+                        (click)="reinicializarPaginas()"
+                        >Granel</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="uk-width-1-1">
+                  <ul
+                    class="uk-nav-default uk-nav-parent-icon"
+                    style="color: black"
+                    uk-nav
+                  >
+                    <li
+                      *ngFor="let depto of menu; let index = index"
+                      class="uk-parent renglond uk-active uk-padding-small"
+                    >
+                      <a
+                        class="uk-text-bold"
+                        style="font-size: 20px; color: red"
+                      >
+                        {{ depto.nombre }}
+                      </a>
+                      <ul class="uk-nav-sub">
+                        <li
+                          *ngFor="let categoria of depto.categorias"
+                          class="uk-parent renglond uk-active'"
+                        >
+                          <a
+                            ><b>{{ categoria.nombre }}</b></a
+                          >
+                          <ul class="uk-nav-sub">
+                            <li
+                              *ngFor="
+                                let subcategoria of categoria.subcategorias
+                              "
+                              [class]="'uk-active'"
+                            >
+                              <p class="text-dark">
+                                <a
+                                  class="uk-link-text"
+                                  [routerLink]="['/catalogo']"
+                                  [queryParams]="{
+                                    departamento: depto._id,
+                                    categoria: categoria._id,
+                                    subcategoria: subcategoria._id
+                                  }"
+                                  (click)="reinicializarPaginas()"
+                                  routerLinkActive="active"
+                                  >{{ subcategoria.nombre }}</a
+                                >
+                              </p>
+                            </li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="container-fluid mb-5"
+    infiniteScroll
+    [infiniteScrollDistance]="2"
+    [infiniteScrollThrottle]="0"
+    (scrolled)="onScroll($event)"
+    [scrollWindow]="true"
+  >
+    <div class="row">
+      <div class="col-2 d-none d-md-block mt-5">
+        <div class="row" *ngIf="menuDepartamento">
+          <div class="col-12 renglond">
+            <h2 class="uk-text-uppercase">
+              <strong>{{ menuDepartamento.nombre }}</strong>
+            </h2>
+          </div>
+        </div>
+        <div class="row" *ngIf="menuDepartamento">
+          <div class="uk-width-1-1">
+            <ul
+              class="uk-nav-default uk-nav-parent-icon"
+              style="color: black"
+              uk-nav
+            >
+              <li
+                *ngFor="let categoria of menuDepartamento.categorias"
+                [class]="
+                  filtros.categoria && filtros.categoria === categoria._id
+                    ? 'uk-parent renglond uk-active uk-open'
+                    : 'uk-parent renglond uk-active'
+                "
+              >
+                <a class="uk-text-bold" style="font-size: 20px; color: black">
+                  {{ categoria.nombre }}</a
+                >
+                <ul class="uk-nav-sub border-left">
+                  <li
+                    class="uk-active"
+                    *ngFor="
+                      let subcategoria of categoria.subcategorias;
+                      let i = index
+                    "
+                  >
+                    <p class="">
+                      <a
+                        class="uk-link-text uk-active"
+                        style="color: black"
+                        [routerLink]="['/catalogo']"
+                        [queryParams]="
+                          addFiltros({
+                            departamento: menuDepartamento._id,
+                            categoria: categoria._id,
+                            subcategoria: subcategoria._id
+                          })
+                        "
+                        routerLinkActive="active"
+                        (click)="reinicializarPaginas()"
+                        >{{ subcategoria.nombre }}</a
+                      >
+                    </p>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="row mb-5">
+          <div class="col-12">
+            <div class="sliderCustom">
+              <div class="rangeslider sliderCustom">
+                <input
+                  class="min"
+                  [(ngModel)]="rango1"
+                  name="range_1"
+                  #Rango1
+                  (change)="validar(true)"
+                  type="range"
+                  min="5"
+                  [max]="975"
+                  value="5"
+                />
+                <input
+                  class="max"
+                  [(ngModel)]="rango2"
+                  name="range_2"
+                  #Rango2
+                  (change)="validar(false)"
+                  type="range"
+                  [min]="30"
+                  max="1000"
+                  value="500"
+                />
+                <span class="range_min light left texto-negro">{{
+                  rango1 | currency: "MXN":"$":"1.2-2"
+                }}</span>
+                <span class="range_max light right texto-negro">{{
+                  rango2 | currency: "MXN":"$":"1.2-2"
+                }}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 mt-4 renglond">
+            <button
+              style="position: relative"
+              #Filtrar
+              (click)="filtrarXPrecio()"
+              type="button"
+              class="btn rounded-pill btn-secondary btn-sm"
+            >
+              Filtrar
+            </button>
+          </div>
+        </div>
+        <div class="row">
+          <div class="uk-width-1-1">
+            <ul
+              class="uk-nav-default uk-padding-small"
+              style="color: black"
+              uk-nav
+            >
+              <li>
+                <a
+                  class="uk-text-bold"
+                  style="font-size: 20px; color: rgb(17, 187, 17)"
+                  [routerLink]="['/catalogo']"
+                  [queryParams]="filtrosEstiloVida('Orgánico')"
+                  (click)="reinicializarPaginas()"
+                  >Orgánico</a
+                >
+              </li>
+              <li>
+                <a
+                  class="uk-text-bold"
+                  style="font-size: 20px; color: rgb(17, 187, 17)"
+                  [routerLink]="['/catalogo']"
+                  [queryParams]="filtrosEstiloVida('Vegano')"
+                  (click)="reinicializarPaginas()"
+                  >Vegano</a
+                >
+              </li>
+              <li>
+                <a
+                  class="uk-text-bold"
+                  style="font-size: 20px; color: rgb(17, 187, 17)"
+                  [routerLink]="['/catalogo']"
+                  [queryParams]="filtrosEstiloVida('Lo más local')"
+                  (click)="reinicializarPaginas()"
+                  >Lo más local</a
+                >
+              </li>
+              <li>
+                <a
+                  class="uk-text-bold"
+                  style="font-size: 20px; color: rgb(17, 187, 17)"
+                  [routerLink]="['/catalogo']"
+                  [queryParams]="filtrosEstiloVida('Comercio justo')"
+                  (click)="reinicializarPaginas()"
+                  >Comercio justo</a
+                >
+              </li>
+              <li>
+                <a
+                  class="uk-text-bold"
+                  style="font-size: 20px; color: rgb(17, 187, 17)"
+                  [routerLink]="['/catalogo']"
+                  [queryParams]="filtrosEstiloVida('Granel')"
+                  (click)="reinicializarPaginas()"
+                  >Granel</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- *ngIf="depto.nombre != departamento" -->
+        <div class="row">
+          <div class="uk-width-1-1">
+            <ul
+              class="uk-nav-default uk-nav-parent-icon"
+              style="color: black"
+              uk-nav
+            >
+              <li
+                *ngFor="let depto of menu; let index = index"
+                class="uk-parent renglond uk-active uk-padding-small"
+              >
+                <a class="uk-text-bold" style="font-size: 20px; color: red">
+                  {{ depto.nombre }}
+                </a>
+                <ul class="uk-nav-sub">
+                  <li
+                    *ngFor="let categoria of depto.categorias"
+                    class="uk-parent renglond uk-active'"
+                  >
+                    <a
+                      ><b>{{ categoria.nombre }}</b></a
+                    >
+                    <ul class="uk-nav-sub">
+                      <li
+                        *ngFor="let subcategoria of categoria.subcategorias"
+                        [class]="'uk-active'"
+                      >
+                        <p class="text-dark">
+                          <a
+                            class="uk-link-text"
+                            [routerLink]="['/catalogo']"
+                            [queryParams]="{
+                              departamento: depto._id,
+                              categoria: categoria._id,
+                              subcategoria: subcategoria._id
+                            }"
+                            (click)="reinicializarPaginas()"
+                            routerLinkActive="active"
+                            >{{ subcategoria.nombre }}</a
+                          >
+                        </p>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-10">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12 text-md-right">
+              <div class="d-flex justify-content-between" style="gap: 0.5rem">
+                <div
+                  class="d-flex flex-column flex-md-row flex-wrap"
+                  style="gap: 0.5rem"
+                >
+                  <span>Ordenar por:</span>
+                  <span class="uk-label bg-danger">
+                    <a
+                      href="javascript:void(0)"
+                      style="color: white"
+                      class="d-block"
+                      (click)="
+                        changeOrder({ order: 'abc', order_direction: 'ASC' })
+                      "
+                    >
+                      A...Z
+                      <span
+                        uk-icon="arrow-up"
+                        *ngIf="
+                          !!filtros.order &&
+                          filtros.order === 'abc' &&
+                          !!filtros.order_direction &&
+                          filtros.order_direction === 'ASC'
+                        "
+                      ></span>
+                      <span
+                        uk-icon="arrow-down"
+                        *ngIf="
+                          !!filtros.order &&
+                          filtros.order === 'abc' &&
+                          !!filtros.order_direction &&
+                          filtros.order_direction === 'DESC'
+                        "
+                      ></span>
+                    </a>
+                  </span>
+                  <span class="uk-label bg-danger text-wrap">
+                    <a
+                      href="javascript:void(0)"
+                      style="color: white"
+                      class="d-block"
+                      (click)="
+                        changeOrder({
+                          order: 'ultimos',
+                          order_direction: 'ASC'
+                        })
+                      "
+                    >
+                      Recién agregados
+                      <span
+                        uk-icon="arrow-up"
+                        *ngIf="
+                          !!filtros.order &&
+                          filtros.order === 'ultimos' &&
+                          !!filtros.order_direction &&
+                          filtros.order_direction === 'ASC'
+                        "
+                      ></span>
+                      <span
+                        uk-icon="arrow-down"
+                        *ngIf="
+                          !!filtros.order &&
+                          filtros.order === 'ultimos' &&
+                          !!filtros.order_direction &&
+                          filtros.order_direction === 'DESC'
+                        "
+                      ></span>
+                    </a>
+                  </span>
+                  <span class="uk-label bg-danger">
+                    <a
+                      href="javascript:void(0)"
+                      style="color: white"
+                      class="d-block"
+                      (click)="
+                        changeOrder({ order: 'precio', order_direction: 'ASC' })
+                      "
+                    >
+                      Precio
+                      <span
+                        uk-icon="arrow-up"
+                        *ngIf="
+                          !!filtros.order &&
+                          filtros.order === 'precio' &&
+                          !!filtros.order_direction &&
+                          filtros.order_direction === 'ASC'
+                        "
+                      ></span>
+                      <span
+                        uk-icon="arrow-down"
+                        *ngIf="
+                          !!filtros.order &&
+                          filtros.order === 'precio' &&
+                          !!filtros.order_direction &&
+                          filtros.order_direction === 'DESC'
+                        "
+                      ></span>
+                    </a>
+                  </span>
+                </div>
+                <span class="d-flex flex-column flex-md-row flex-wrap">
+                  Mostrando {{ productos.length > 0 ? 1 : 0 }} -
+                  {{ productos.length }} de {{ total_productos }}
+                  <span
+                    class="
+                      bg-danger
+                      text-white
+                      px-5
+                      uk-text-uppercase
+                      text-nowrap
+                    "
+                    style="background-color: #fc4b44 !important"
+                    >{{ subtittle }}</span
+                  >
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="row row-cols-md-3 row-cols-lg-5 row-cols-1">
+            <app-card-producto
+              *ngFor="let producto of productos"
+              [producto]="producto"
+              [style]="'cardCatalogo'"
+            ></app-card-producto>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--here-->
+  </div>
+  <a
+    href="javascript:void(0)"
+    class="uk-button uk-button-default uk-padding-small"
+    uk-totop
+    style="position: fixed; bottom: 5%; right: 5%"
+    (click)="scroll()"
+  ></a>
+</div>

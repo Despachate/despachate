@@ -1,0 +1,921 @@
+<div class="text-center container-fluid" style="background: black">
+  <h6 style="color: #00d2b8" class="py-1">
+    Envío gratis en la compra de $500 pesos en la ciudad de Puebla
+  </h6>
+</div>
+<!-- Barra de navegacion -->
+<nav
+  class="bg-white navbar navbar-expand-md sticky-top navbar-light"
+  style="margin-top: -15px !important"
+>
+  <div class="container-fluid boundary-align uk-panel">
+    <div class="row">
+      <div
+        class="col-md-2 d-none d-md-block d-lg-none align-self-start"
+        style="margin-top: -30px !important"
+      >
+        <a class="navbar-brand" [routerLink]="['/', 'home']">
+          <img
+            src="./assets/images/logo-header.svg"
+            style="height: 100px !important"
+            class="align-top d-inline-block"
+            alt="Bootstrap"
+            loading="lazy"
+          />
+        </a>
+      </div>
+      <div
+        class="col-md-2 d-none d-lg-block"
+        style="padding-left: 80px !important"
+      >
+        <a class="pl-0 navbar-brand pl-md-4" [routerLink]="['/', 'home']">
+          <img
+            src="./assets/images/logo-header.svg"
+            style="height: 65px !important"
+            class="align-top d-inline-block"
+            alt="Bootstrap"
+            loading="lazy"
+          />
+        </a>
+      </div>
+      <div class="col-12 d-block d-md-none col-md-2">
+        <div class="row align-items-center">
+          <div class="col-3 d-block d-md-none">
+            <button
+              class="navbar-toggler noneb btn-primary-outline"
+              type="button"
+              data-toggle="collapse"
+              data-target="#navbarTogglerDemo01"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <svg
+                class="svg-inline--fa fa-bars fa-w-14 texto-rojo"
+                style="height: 1.5em"
+                aria-hidden="true"
+                focusable="false"
+                data-prefix="fas"
+                data-icon="bars"
+                role="img"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 448 512"
+                data-fa-i2svg=""
+              >
+                <path
+                  fill="currentColor"
+                  d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"
+                ></path>
+              </svg>
+              <!-- <i class="fas fa-bars text-danger" style="height: 1.5em;"></i> -->
+            </button>
+          </div>
+          <div class="p-0 text-center col-6">
+            <a class="navbar-brand" [routerLink]="['/', 'home']">
+              <img
+                src="./assets/images/logo-despachate.svg"
+                style="height: 100px !important; max-width: 100px"
+                height="90"
+                class="align-top d-inline-block"
+                alt="Bootstrap"
+                loading="lazy"
+              />
+            </a>
+          </div>
+          <div class="p-0 col-3 d-block d-md-none">
+            <div class="d-flex row">
+              <div class="dropdown dropleft">
+                <a
+                  id="dropdownMenuButton"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                  class="uk-link-text"
+                  ><i class="fas fa-user fa-lg"></i
+                ></a>
+                <div
+                  class="dropdown-menu col"
+                  aria-labelledby="dropdownMenuButton"
+                >
+                  <a class="dropdown-item" [routerLink]="['/', 'miCuenta']"
+                    >Mi información</a
+                  >
+                  <a class="dropdown-item" [routerLink]="['/', 'miSuscripcion']"
+                    >Administrar<br />
+                    <span class="mr-1" style="color: #62059e"
+                      >Mi súper<br />
+                      recurrente</span
+                    >
+                  </a>
+                  <a
+                    *ngIf="!!_usuarioService.usuario"
+                    class="dropdown-item"
+                    [routerLink]="['/catalogo']"
+                    [queryParams]="{ user: _usuarioService.usuario._id }"
+                    >Mis favoritos</a
+                  >
+                  <a
+                    class="dropdown-item"
+                    [routerLink]="
+                      _usuarioService.usuario ? ['/recetas'] : ['/login']
+                    "
+                    [queryParams]="{ user: _usuarioService.usuario?._id }"
+                    >Mis recetas</a
+                  >
+                  <a
+                  class="dropdown-item"
+                  [routerLink]="['/', 'misListasSuper']"
+                  style="color: red;"
+                  >Mis listas</a
+                >
+                  <a
+                    *ngIf="sesion"
+                    class="dropdown-item"
+                    (click)="cerrarSesion()"
+                    ><strong>Cerrar sesión</strong></a
+                  >
+                  <a
+                    *ngIf="!sesion"
+                    class="dropdown-item"
+                    [routerLink]="['/login']"
+                    routerLinkActive="router-link-active"
+                    ><strong>Iniciar sesión</strong></a
+                  >
+                </div>
+              </div>
+              <div class="col-4 p-0 m-0 pl-2">
+                <a
+                  class="uk-link-text"
+                  [routerLink]="['/', 'miSuscripcion']"
+                  style="color: #62059e"
+                >
+                  <img
+                    class="ml-2 w-100"
+                    style="width: 20px !important; height: auto !important"
+                    src="./assets/icons/Carrito-recurrente.svg"
+                /></a>
+                <a class="uk-link-text mt-2" [routerLink]="['/', 'giftCard']">
+                  <img
+                    class="ml-2 w-100"
+                    style="width: 20px !important; height: auto !important"
+                    src="./assets/images/GiftCardDespchate-02.jpg"
+                /></a>
+              </div>
+
+              <a
+                [routerLink]="['/', 'carrito']"
+                class="ml-2 uk-link-text text-center"
+              >
+                <img
+                  class="w-100 d-block d-md-none"
+                  style="width: 20px !important; height: auto !important"
+                  src="./assets/images/CARRITO_N.svg"
+                />
+                <img
+                  class="w-100 d-none d-md-block"
+                  style="width: 20px !important; height: auto !important"
+                  src="./assets/images/CARRITO_N.svg"
+                /><small
+                  class="uk-badge uk-border-circle uk-text-bold"
+                  style="
+                    font-size: 10px;
+                    padding: 1px;
+                    background-color: #11d5bd;
+                    font-weight: bold;
+                  "
+                  >{{ _carritoService.lista.length }}</small
+                ></a
+              >
+            </div>
+            <!-- <a [routerLink]="['/','miSuscricpcionInfografia']" style="color: #62059E; font-size: 10px;" class="btn btn-outline-dark btn-sm">Como Funciona</a> -->
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-10">
+        <div class="row">
+          <div class="col-12">
+            <div class="row">
+              <div class="col-12 col-md-7">
+                <form class="form-inline w-100" style="position: relative">
+                  <div class="mb-3 input-group w-100">
+                    <div
+                      class="p-2 border input-group-prepend border-right-0"
+                      style="background-color: #f3f3f3"
+                    >
+                      <i class="my-auto fas fa-search text-muted"></i>
+                    </div>
+                    <input
+                      type="text"
+                      autocomplete="off"
+                      class="border-left-0 border-right-0 form-control rounded-0"
+                      style="background-color: #f3f3f3"
+                      [(ngModel)]="terminoBusqueda"
+                      (keyup)="getHint()"
+                      (keydown.enter)="Buscar()"
+                      name="search"
+                      list="browserList"
+                      placeholder="Buscar productos"
+                    />
+                    <datalist id="browserList">
+                      <option
+                        [value]="hint.nombre"
+                        style="width: 100%"
+                        *ngFor="let hint of hints"
+                      ></option>
+                    </datalist>
+
+                    <div
+                      class="border input-group-append border-left-0"
+                      style="background-color: #f3f3f3"
+                    >
+                      <button
+                        *ngIf="terminoBusqueda != ''"
+                        type="button"
+                        class="pl-2 pr-2 close"
+                        (click)="terminoBusqueda = ''"
+                        aria-label="Close"
+                      >
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="input-group-append">
+                      <button
+                        class="btn btn-danger rounded-0"
+                        style="background-color: #fc4b44"
+                        (click)="Buscar()"
+                        type="button"
+                      >
+                        Buscar
+                      </button>
+                    </div>
+                    <!-- <button type="button" class="close uk-position-right uk-margin-xlarge-right" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button> -->
+                  </div>
+                </form>
+              </div>
+
+              <div class="col-4 col-md-5 d-flex" style="font-size: 0.9em">
+                <div class="text-center row row-cols-3 w-100 uk-text-bold">
+                  <div class="p-0 col dentro-nav d-none d-md-block">
+                    <div class="dropdown">
+                      <a
+                        style="text-decoration: none"
+                        id="dropdownMenuButton"
+                        data-toggle="dropdown"
+                        aria-haspopup="true"
+                        aria-expanded="false"
+                      >
+                        <p class="mr-1" style="color: black">
+                          <img
+                            src="./assets/images/MICUENTA.svg"
+                            height="15"
+                            alt=""
+                            srcset=""
+                          />
+                          Mi cuenta
+                        </p>
+                      </a>
+                      <div
+                        class="dropdown-menu col-lg-3"
+                        aria-labelledby="dropdownMenuButton"
+                      >
+                        <a
+                          class="dropdown-item"
+                          [routerLink]="['/', 'miCuenta']"
+                          >Mi información</a
+                        >
+                        <a
+                          class="dropdown-item"
+                          [routerLink]="['/', 'miSuscripcion']"
+                          >Administrar<br />
+                          <span class="mr-1" style="color: #62059e">
+                            Mi súper<br />
+                            recurrente
+                          </span>
+                        </a>
+                        <a
+                          *ngIf="!!_usuarioService.usuario"
+                          class="dropdown-item"
+                          [routerLink]="['/catalogo']"
+                          [queryParams]="{ user: _usuarioService.usuario._id }"
+                          >Mis favoritos</a
+                        >
+                        <a
+                          class="dropdown-item"
+                          [routerLink]="
+                            _usuarioService.usuario ? ['/recetas'] : ['/login']
+                          "
+                          [queryParams]="{ user: _usuarioService.usuario?._id }"
+                          >Mis recetas</a
+                        >
+                        <a
+                          class="dropdown-item"
+                          [routerLink]="['/', 'misListasSuper']"
+                          style="color: red;"
+                          >Mis listas</a
+                        >
+                       <a
+                          class="dropdown-item"
+                          *ngIf="sesion"
+                          (click)="cerrarSesion()"
+                          ><strong>Cerrar sesión</strong></a
+                        >
+                        <a
+                          *ngIf="!sesion"
+                          class="dropdown-item"
+                          [routerLink]="['/login']"
+                          routerLinkActive="router-link-active"
+                          ><strong>Iniciar sesión</strong></a
+                        >
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="p-0 col dentro-nav d-none d-md-block text-left">
+                    <div>
+                      <div class="tooltip2" style="height: 25px !important">
+                        <a
+                          [routerLink]="['/', 'miSuscripcion']"
+                          style="text-decoration: none"
+                        >
+                          <p class="mr-1 mb-2" style="color: #62059e">
+                            <img
+                              style="
+                                width: 20px !important;
+                                height: auto !important;
+                              "
+                              src="./assets/icons/Carrito-recurrente.svg"
+                              class="h-25"
+                              alt=""
+                              srcset=""
+                            />
+                            Mi súper recurrente
+                          </p>
+                          <span
+                            style="
+                              text-align: justify;
+                              cursor: auto !important;
+                              height: auto !important;
+                            "
+                            class="p-4 text-justify tooltiptexto"
+                          >
+                            Configura
+                            <span class="texto-morado"
+                              >Mi Súper Recurrente</span
+                            >
+                            y agrega los artículos de tú consumo diario, para
+                            que no lo tengas que hacer cada vez que realizas tu
+                            súper. Si quieres editar Mi Súper Recurrente, solo
+                            tienes que agregar o quitar los artículos que
+                            consideres a la hora de realizar tu compra.
+                          </span>
+                        </a>
+                      </div>
+                      <div
+                        class="tooltip2 mt-2"
+                        style="height: 25px !important"
+                      >
+                        <a
+                          [routerLink]="['/', 'giftCard']"
+                          style="text-decoration: none"
+                          class="mb-2"
+                        >
+                          <p class="mr-1 texto-rojo">
+                            <img
+                              style="
+                                width: 20px !important;
+                                height: auto !important;
+                              "
+                              src="./assets/images/GiftCardDespchate-02.jpg"
+                              class="h-25"
+                              alt=""
+                              srcset=""
+                            />
+                            Gift Card
+                          </p>
+                          <span
+                            style="
+                              text-align: justify;
+                              cursor: auto !important;
+                              height: auto !important;
+                              border-color: #fc4b44 !important;
+                            "
+                            class="p-4 text-justify tooltiptexto tooltiptexto2"
+                          >
+                            El mejor regalo para a tus amigos y familiares.
+                            Regala saldo para el súper Despachate
+                          </span>
+                        </a>
+                      </div>
+
+                      <br />
+                      <!-- <div>
+                                                <a [routerLink]="['/','miSuscricpcionInfografia']" style="text-decoration:none">
+                                                    <p class="mr-1" style="color: #62059E;margin-top: 5px!important;"> Como Funciona</p>
+                                                </a>
+                                            </div> -->
+                    </div>
+                  </div>
+                  <div class="p-0 col dentro-nav d-none d-md-block">
+                    <div>
+                      <a
+                        [routerLink]="['/', 'carrito']"
+                        style="text-decoration: none"
+                      >
+                        <div class="uk-inline">
+                          <p class="mr-1" style="color: red">
+                            <img
+                              style="
+                                width: 20px !important;
+                                height: auto !important;
+                              "
+                              src="./assets/images/CARRITO_N.svg"
+                              class="h-25"
+                              alt=""
+                              srcset=""
+                            />Carrito
+                            <small
+                              class="uk-badge uk-border-circle uk-text-bold"
+                              style="
+                                font-size: 10px;
+                                padding: 1px;
+                                background-color: #11d5bd;
+                                font-weight: bold;
+                              "
+                              >{{ _carritoService.lista.length }}</small
+                            >
+                          </p>
+                          <!-- <div class="uk-position-bottom-left">
+                                                        <span class="uk-label uk-border-pill uk-margin-small-bottom uk-margin-small-#11d5bd">{{_carritoService.lista.length}}</span>
+                                                    </div> -->
+                        </div>
+                      </a>
+                    </div>
+                   <!--  <div>
+                      <a
+                        [routerLink]="['/', 'misListasSuper']"
+                        style="text-decoration: none"
+                      >
+                        <div class="uk-inline">
+                          <p class="mr-1" style="color: red">
+                            <img
+                              style="
+                                width: 20px !important;
+                                height: auto !important;
+                              "
+                              src="./assets/images/listas.png"
+                              class="h-25"
+                              alt=""
+                              srcset=""
+                            />Mis listas
+
+                          </p>
+
+                        </div>
+                      </a>
+                    </div> -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-12 pt-4"
+            style="margin-top: -15px !important; margin-left: -8px !important"
+          >
+            <!-- pantallas grandes -->
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+              <div class="navbar-nav d-none d-md-flex" style="font-size: 0.9em">
+                <!-- Uikit -->
+                <div class="d-flex">
+                  <div class="d-inline-flex">
+                    <div
+                      class="uk-inline"
+                      *ngFor="let dpto of _menu; let index = index"
+                    >
+                      <a class="nav-item nav-link texto-negro">{{
+                        dpto.nombre
+                      }}</a>
+                      <div
+                        #dropDown
+                        uk-dropdown="mode: click; pos: bottom-center; boundary: .boundary-align; boundary-align: true"
+                      >
+                        <div class="column" style="height: 100%; width: 45vw">
+                          <div>
+                            <h3
+                              *ngIf="dpto.nombre != 'Recetas'"
+                              class="px-4"
+                              style="cursor: pointer"
+                              (click)="cerrarDropDown(dropDown)"
+                              [routerLink]="['/catalogo']"
+                              [queryParams]="{ departamento: dpto._id }"
+                              routerLinkActive="router-link-active"
+                            >
+                              {{ dpto.nombre }}
+                            </h3>
+                            <h3
+                              *ngIf="dpto.nombre === 'Recetas'"
+                              class="px-4"
+                              style="cursor: pointer"
+                              (click)="cerrarDropDown(dropDown)"
+                              [routerLink]="['/recetas']"
+                              routerLinkActive="router-link-active"
+                            >
+                              {{ dpto.nombre }}
+                            </h3>
+                            <ul uk-accordion="multiple: false">
+                              <li
+                                class="mt-0 mb-0"
+                                *ngFor="let cat of dpto.categorias"
+                              >
+                                <span class="mb-0 uk-accordion-title">
+                                  <a
+                                    class="pl-3"
+                                    style="font-size: 16px !important"
+                                    href="#"
+                                    >{{ cat.nombre }}</a
+                                  ></span
+                                >
+                                <div
+                                  class="mt-0 uk-accordion-content"
+                                  (click)="cerrarDropDown()"
+                                >
+                                  <a
+                                    class="pl-5"
+                                    style="font-size: 13px !important"
+                                    [routerLink]="['/catalogo']"
+                                    [queryParams]="{
+                                      departamento: dpto._id,
+                                      categoria: cat._id,
+                                      subcategoria: subcat._id
+                                    }"
+                                    *ngFor="let subcat of cat.subcategorias"
+                                    >{{ subcat.nombre }}</a
+                                  >
+                                </div>
+                              </li>
+
+                              <li
+                                class="mt-0 mb-0"
+                                *ngIf="dpto.nombre === 'Recetas'"
+                                (click)="cerrarDropDown()"
+                              >
+                                <span
+                                  class="mb-0"
+                                  *ngFor="let catrec of listaCategoriasRecetas"
+                                >
+                                  <a
+                                    class="pl-3"
+                                    style="font-size: 16px !important"
+                                    [routerLink]="['/recetas']"
+                                    [queryParams]="{
+                                      categoria: catrec._id
+                                    }"
+                                    (click)="cerrarDropDown()"
+                                    >{{ catrec.nombre }}</a
+                                  >
+                                </span>
+                              </li>
+
+                              <a
+                                class="nav-item nav-link texto-negro"
+                                [routerLink]="['/', 'giftCard']"
+                                *ngIf="dpto.nombre == 'Temporada / Regalos'"
+                              >
+                                <img
+                                  style="
+                                    width: 20px !important;
+                                    height: auto !important;
+                                  "
+                                  src="./assets/images/GiftCardDespchate-02.jpg"
+                                  class="h-25"
+                                  alt=""
+                                  srcset=""
+                                />
+                                Gift Card</a
+                              >
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="d-inline-flex">
+                    <div class="uk-inline">
+                      <a class="nav-item nav-link texto-negro">
+                        <img
+                          height="12"
+                          src="assets/images/FAV-ROJO.svg"
+                          width="12px"
+                          alt=""
+                        />
+                        Conócenos</a
+                      >
+                      <div
+                        #dropDown
+                        uk-dropdown="mode: click; pos: bottom-center; boundary: .boundary-align; boundary-align: true"
+                      >
+                        <div class="column" style="height: 100%; width: 45vw">
+                          <div>
+                            <h3
+                              class="px-4 text-nowrap"
+                              style="cursor: pointer"
+                              [routerLink]="['/conocenos']"
+                              routerLinkActive="router-link-active"
+                            >
+                              <img
+                                height="12"
+                                src="assets/images/FAV-ROJO.svg"
+                                width="12px"
+                                alt=""
+                              />Conócenos
+                            </h3>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="uk-inline">
+                      <a class="nav-item nav-link" style="color: red"
+                        >Únete a la bolsa</a
+                      >
+                      <div
+                        #dropDown
+                        uk-dropdown="mode: click; pos: bottom-center; boundary: .boundary-align; boundary-align: true"
+                      >
+                        <div class="column" style="height: 100%; width: 45vw">
+                          <div>
+                            <h3
+                              class="px-4"
+                              style="cursor: pointer"
+                              [routerLink]="['/conocenos']"
+                              routerLinkActive="router-link-active"
+                            >
+                              Únete a la bolsa
+                            </h3>
+                            <ul uk-accordion="multiple: false">
+                              <li class="px-0 mx-0">
+                                <a
+                                  style="font-size: 16px !important"
+                                  [routerLink]="['/uneteBolsa']"
+                                  >Vende tus productos en despáchate</a
+                                >
+                              </li>
+                              <li class="px-0 mx-0">
+                                <a
+                                  style="font-size: 16px !important"
+                                  [routerLink]="['/recomiendaGana']"
+                                  >Despáchate recomienda y gana</a
+                                >
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!--  <div class="uk-inline">
+                      <a
+                        class="nav-item nav-link texto-negro"
+                        [routerLink]="['/', 'giftCard']"
+                      >
+                        <img
+                          style="
+                            width: 20px !important;
+                            height: auto !important;
+                          "
+                          src="./assets/images/GiftCardDespchate-02.jpg"
+                          class="h-25"
+                          alt=""
+                          srcset=""
+                        />
+                        Gift Card</a
+                      >
+                    </div> -->
+                  </div>
+                </div>
+                <!-- <a class="nav-item nav-link texto-negro" href="#">Alimentos y bebidas</a> -->
+              </div>
+              <!-- pantallas pequeñas -->
+              <div class="navbar-nav d-block d-md-none estilo-b-movil">
+                <h4 class="text-center text-danger">DEPARTAMENTOS</h4>
+                <ul class="uk-nav-default uk-nav-parent-icon" uk-nav>
+                  <li
+                    class="uk-parent border-bottom"
+                    *ngFor="let departamento of _menu; let index = index"
+                  >
+                    <a
+                      class="texto-rojo"
+                      style="
+                        font-family: Manrope-Light !important;
+                        font-weight: bold;
+                        font-size: 16px !important;
+                      "
+                      >{{ departamento.nombre }}</a
+                    >
+                    <ul uk-accordion="multiple: false">
+                      <li
+                        class="mt-0 mb-0"
+                        *ngFor="let categoria of departamento.categorias"
+                      >
+                        <span
+                          class="mb-0 uk-accordion-title text-dark border-bottom"
+                        >
+                          <a
+                            class="pl-3 uk-link-text"
+                            style="font-size: 16px !important"
+                            href="#"
+                            >{{ categoria.nombre }}</a
+                          ></span
+                        >
+                        <div class="mt-0 uk-accordion-content">
+                          <a
+                            class="pl-5 w-100 d-block uk-link-text border-bottom"
+                            style="font-size: 13px !important"
+                            [routerLink]="['/catalogo']"
+                            [queryParams]="{
+                              departamento: departamento._id,
+                              categoria: categoria._id,
+                              subcategoria: subcategoria._id
+                            }"
+                            *ngFor="let subcategoria of categoria.subcategorias"
+                            data-toggle="collapse"
+                            data-target="#navbarTogglerDemo01"
+                            >{{ subcategoria.nombre }}</a
+                          >
+                        </div>
+                      </li>
+
+                      <li
+                        class="mt-0 mb-0"
+                        *ngIf="departamento.nombre === 'Recetas'"
+                        (click)="cerrarDropDown()"
+                      >
+                        <span
+                          class="mb-0 text-dark border-bottom d-block"
+                          *ngFor="let catrec of listaCategoriasRecetas"
+                        >
+                          <a
+                            class="pl-3 uk-link-text d-block"
+                            style="font-size: 16px !important"
+                            [routerLink]="['/recetas']"
+                            [queryParams]="{
+                              categoria: catrec._id
+                            }"
+                            data-toggle="collapse"
+                            data-target="#navbarTogglerDemo01"
+                            >{{ catrec.nombre }}</a
+                          >
+                        </span>
+                      </li>
+                      <li
+                        class="mt-0 mb-0"
+                        *ngIf="departamento.nombre == 'Temporada / Regalos'"
+                        (click)="cerrarDropDown()"
+                      >
+                        <a
+                          class="pl-3 uk-link-text d-block"
+                          style="font-size: 16px !important"
+                          [routerLink]="['/', 'giftCard']"
+                          >Gift Card</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="uk-parent border-bottom">
+                    <a
+                      class="texto-rojo"
+                      style="
+                        font-family: Manrope-Light !important;
+                        font-weight: bold;
+                        font-size: 16px !important;
+                      "
+                      >Únete a la bolsa</a
+                    >
+                    <ul uk-accordion="multiple: false">
+                      <li class="mt-0 mb-0">
+                        <span
+                          class="mb-0 uk-accordion-title text-dark border-bottom"
+                        >
+                          <a
+                            class="pl-3 uk-link-text"
+                            style="font-size: 16px !important"
+                            href="#"
+                            >Únete a la bolsa</a
+                          ></span
+                        >
+                        <div class="mt-0 uk-accordion-content">
+                          <a
+                            class="pl-5 texto-negro w-100 d-block uk-link-text border-bottom"
+                            [routerLink]="['/uneteBolsa']"
+                            data-toggle="collapse"
+                            data-target="#navbarTogglerDemo01"
+                            >Vende tus productos en despáchate</a
+                          >
+                          <a
+                            class="pl-5 texto-negro w-100 d-block uk-link-text border-bottom"
+                            [routerLink]="['/recomiendaGana']"
+                            data-toggle="collapse"
+                            data-target="#navbarTogglerDemo01"
+                            >Despáchate recomienda y gana</a
+                          >
+                        </div>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="border-bottom">
+                    <a
+                      routerLink="/conocenos"
+                      class="texto-rojo"
+                      style="
+                        font-family: Manrope-Light !important;
+                        font-weight: bold;
+                        font-size: 16px !important;
+                      "
+                      data-toggle="collapse"
+                      data-target="#navbarTogglerDemo01"
+                      >Conócenos</a
+                    >
+                  </li>
+                  <!--  <li class="border-bottom">
+                    <a
+                      [routerLink]="['/', 'giftCard']"
+                      class="texto-rojo"
+                      style="
+                        font-family: Manrope-Light !important;
+                        font-weight: bold;
+                        font-size: 16px !important;
+                      "
+                      >Gift Card</a
+                    >
+                  </li> -->
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+<!-- Modal Buscar productos -->
+<div
+  class="modal fade"
+  id="mdlProductos"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="mdlProductos"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+    <div class="modal-content">
+      <div class="text-center modal-header">
+        <h5 class="text-center modal-title text-uppercase">
+          <strong>Productos que coinciden con tu busqueda</strong>
+        </h5>
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="row row-cols-md-3 row-cols-1" *ngIf="prodEncontrados">
+          <app-card-producto
+            *ngFor="let producto of _paginado.ver()"
+            [producto]="producto"
+            [style]="'cardCatalogo'"
+          ></app-card-producto>
+        </div>
+        <div class="mt-5 row row-cols-2">
+          <div class="col">
+            <button
+              class="uk-button uk-width-1-1 uk-button-link uk-link-text"
+              (click)="_paginado.prev()"
+            >
+              Anterior
+            </button>
+          </div>
+          <div class="col">
+            <button
+              class="uk-button uk-width-1-1 uk-button-link uk-link-text"
+              (click)="_paginado.next()"
+            >
+              Siguiente
+            </button>
+          </div>
+        </div>
+        <p *ngIf="!prodEncontrados" class="mt-4 text-center">
+          No se encontraron productos, por favor ingresa otro texto
+        </p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">
+          Cerrar
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

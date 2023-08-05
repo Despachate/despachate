@@ -1,0 +1,224 @@
+<!-- footer -->
+<footer class="sitio-footer seccion d-md-block d-none">
+  <div class="contenedor contenedor-footer">
+    <div class="navegacion">
+      <a [routerLink]="['/', 'home']">
+        <img
+          src="assets/images/logo-footer.svg"
+          height="200"
+          width="200"
+          alt=""
+          srcset=""
+        />
+      </a>
+    </div>
+    <div>
+      <div class="pb-2">
+        <a [routerLink]="['/', 'conocenos']" class="logo-footer">Conócenos</a>
+      </div>
+
+      <div class="pb-2">
+        <a [routerLink]="['/', '']" class="logo-footer">Despáchate con causa</a>
+      </div>
+      <div class="pb-2">
+        <a [routerLink]="['/', 'privacidad']" class="logo-footer"
+          >Aviso de privacidad</a
+        >
+      </div>
+      <div class="pb-2">
+        <a [routerLink]="['/', 'terminos']" class="logo-footer"
+          >Términos y Condiciones</a
+        >
+      </div>
+
+      <div class="pb-2">
+        <a [routerLink]="['/', 'preguntas']" class="logo-footer"
+          >Preguntas Frecuentes</a
+        >
+      </div>
+      <div class="pb-2">
+        <a [routerLink]="['/', 'miSuscricpcionInfografia']" class="logo-footer"
+          >Como Funciona Mi Súper Recurrente</a
+        >
+      </div>
+    </div>
+    <div>
+      <div>
+        <div>
+          <a class="logo-footer text-white">Contactos</a>
+        </div>
+        <div class="d-flex">
+          <a href="https://wa.me/522224570222" target="blank" class="d-flex">
+            <img
+              class="mr-1"
+              src="assets/images/icono-whatsapp.svg"
+              height="30"
+              width="30"
+              alt=""
+            />
+            <p class="text-white">+52 222 457 0222</p>
+          </a>
+        </div>
+      </div>
+
+      <div class="d-flex">
+        <a href="mailto:hola@despachate.mx" target="blank" class="d-flex">
+          <img
+            class="mr-1"
+            src="assets/images/icono-mail.svg"
+            height="30"
+            width="30"
+            alt=""
+          />
+          <p class="logo-footer">hola@despachate.mx</p>
+        </a>
+      </div>
+    </div>
+    <div>
+      <p class="logo-footer">Síguenos en:</p>
+      <div class="d-flex justify-content-center">
+        <a target="blank" href="https://www.facebook.com/despachatemx/"
+          ><img
+            src="assets/images/icono-facebook.svg"
+            class="mr-3"
+            style="height: 40px !important"
+            alt=""
+        /></a>
+        <a
+          target="blank"
+          href="https://instagram.com/despachate?igshid=jwodirbtqnfv"
+          ><img
+            src="assets/images/icono-instagram.svg"
+            style="height: 40px !important"
+            alt=""
+        /></a>
+      </div>
+    </div>
+    <div class="logo-footer">
+      <p class="reservados">Despáchate, recomienda y gana</p>
+      <br />
+      <a
+        [routerLink]="['/', 'recomiendaGana']"
+        class="text-light p-1 mb-1 btn btn-success btn-block text-center"
+        >Más información</a
+      >
+    </div>
+  </div>
+  <div class="uk-flex uk-flex-center uk-flex-middle">
+    <div class="text-center text-white">
+      <span>Copyright © {{ fullYear }} Despachate</span>
+    </div>
+  </div>
+</footer>
+<footer class="sitio-footer seccion d-md-none d-block">
+  <div class="container">
+    <div class="row">
+      <div class="col-10 offset-1 p-5">
+        <img
+          src="assets/images/logo-footer.svg"
+          class="w-100"
+          alt=""
+          srcset=""
+        />
+      </div>
+
+      <div class="col-10 offset-1 p-3">
+        <div class="pb-2">
+          <a [routerLink]="['/', 'conocenos']" class="logo-footer">Conócenos</a>
+        </div>
+        <div class="pb-2">
+          <a [routerLink]="['/', 'privacidad']" class="logo-footer"
+            >Aviso de privacidad</a
+          >
+        </div>
+        <div class="pb-2">
+          <a [routerLink]="['/', 'terminos']" class="logo-footer"
+            >Términos y Condiciones</a
+          >
+        </div>
+        <div class="pb-2">
+          <a [routerLink]="['/', 'preguntas']" class="logo-footer"
+            >Preguntas Frecuentes</a
+          >
+        </div>
+        <div class="pb-2">
+          <a
+            [routerLink]="['/', 'miSuscricpcionInfografia']"
+            class="logo-footer"
+            >Como Funciona Mi Súper Recurrente</a
+          >
+        </div>
+      </div>
+      <div class="col-10 offset-1 p-3">
+        <div>
+          <a class="logo-footer text-white">Contacto</a>
+        </div>
+        <div class="d-flex">
+          <a href="https://wa.me/522224570222" target="blank" class="d-flex">
+            <img
+              src="assets/images/icono-whatsapp.svg"
+              class="mt-4 mr-2"
+              style="height: 25px !important"
+              alt=""
+            />
+            <p class="text-white">+52 222 457 0222</p>
+          </a>
+        </div>
+        <div class="d-flex">
+          <a href="mailto:hola@despachate.mx" target="blank" class="d-flex">
+            <img
+              class="mr-1"
+              src="assets/images/icono-mail.svg"
+              class="mt-4 mr-2"
+              style="height: 20px !important"
+              alt=""
+            />
+            <p class="logo-footer">hola@despachate.mx</p>
+          </a>
+        </div>
+      </div>
+      <div class="col-10 offset-1 p-4">
+        <p class="logo-footer text-center">Síguenos en:</p>
+        <div class="d-flex justify-content-center">
+          <a target="blank" href="https://www.facebook.com/despachatemx/"
+            ><img
+              src="assets/images/icono-facebook.svg"
+              class="mr-4"
+              style="height: 30px !important"
+              alt=""
+          /></a>
+          <a
+            target="blank"
+            href="https://instagram.com/despachate?igshid=jwodirbtqnfv"
+            ><img
+              src="assets/images/icono-instagram.svg"
+              style="height: 30px !important"
+              alt=""
+          /></a>
+        </div>
+      </div>
+      <div class="col-10 offset-1 p-4">
+        <p class="reservados text-center">
+          Despáchate,<br />
+          recomienda y gana
+        </p>
+        <br />
+        <a
+          [routerLink]="['/', 'recomiendaGana']"
+          class="text-light p-1 mb-1 btn btn-success btn-block text-center"
+          >Más información</a
+        >
+      </div>
+    </div>
+    <div class="uk-flex uk-flex-center uk-flex-middle">
+      <div class="text-center text-white">
+        <span>Copyright © {{ fullYear }} Despachate</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+<footer-add-lista-modal>
+
+</footer-add-lista-modal>

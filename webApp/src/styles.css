@@ -1,0 +1,22 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import '~ngx-bootstrap/datepicker/bs-datepicker.css';
+a {
+    text-decoration: none !important;
+}
+
+a:hover {
+    color: #fff
+}
+
+bs-datepicker-inline-container {
+    display: block !important;
+}
+
+.bs-datepicker-container {
+    width: 100%;
+}
+
+bs-days-calendar-view {
+    width: 100% !important;
+}

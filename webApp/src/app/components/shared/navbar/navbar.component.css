@@ -1,0 +1,66 @@
+.tooltip2 {
+    position: relative;
+    display: inline-block;
+    /* esta última si se desean puntos debajo del texto */
+}
+
+
+/* Texto del Tooltipo */
+
+.tooltip2 .tooltiptexto {
+    visibility: hidden;
+    width: 20em;
+    height: 14em;
+    background-color: white;
+    color: black;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+    border: purple solid 3px;
+    /* Posición del texto */
+    position: absolute;
+    z-index: 1000;
+    top: 100%;
+    right: 50%;
+    margin-left: -60px;
+}
+
+
+/* Muestra el texto del Tooltip */
+
+.tooltip2:hover .tooltiptexto {
+    visibility: visible;
+    cursor: auto!important;
+}
+
+.tooltip2 .tooltiptexto::after {
+    content: " ";
+    position: absolute;
+    bottom: 100%;
+    /* parte superior del tooltip */
+    /* aqui */
+    left: 90%;
+    margin-right: -50px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent purple transparent;
+}
+
+
+.tooltip2 .tooltiptexto2::after {
+    content: " ";
+    position: absolute;
+    bottom: 100%;
+    /* parte superior del tooltip */
+    /* aqui */
+    left: 90%;
+    margin-right: -50px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent #fc4b44 transparent;
+}
+
+button:focus {
+    /* outline: 1px dotted; */
+    outline: 0px auto -webkit-focus-ring-color;
+}

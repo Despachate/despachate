@@ -1,0 +1,95 @@
+<div class="container-fluid ">
+    <div class="row mb-5 bg-unete">
+        <div class="col-12 px-0 align-self-end d-md-block d-none">
+            <div class="noneb card w-50">
+                <div class="card-body pl-5">
+                    <h2 class="card-title">VENDE TUS PRODUCTOS <br> EN <strong style="color:orange">DESPÁCHATE</strong></h2>
+                    <p class="card-text">
+                        Buscamos impulsar la economía de México apoyando a emprendedores y productores locales, ofreciendo una plataforma digital en donde pueden distribuir sus productos y llegar a más personas y familias.
+                        <br> Si tú tienes un producto que te gustaría distribuir dentro de despáchate llena este formulario y nuestro equipo de “Únete a la Bolsa” se pondrá en contacto contigo.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 d-block d-md-none mt-4">
+            <div class="noneb card w-60" style="background-color: rgba(255, 255, 255, 0.7);">
+                <div class="card-body ">
+                    <h2 class="card-title text-danger text-center ">VENDE TUS PRODUCTOS EN DESPÁCHATE</h2>
+                    <p class="card-text">
+                        Buscamos impulsar la economía de México apoyando a emprendedores y productores locales, ofreciendo una plataforma digital en donde pueden distribuir sus productos y llegar a más personas y familias.
+                        <br> Si tú tienes un producto que te gustaría distribuir dentro de despáchate llena este formulario y nuestro equipo de “Únete a la Bolsa” se pondrá en contacto contigo.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row mt-6 degradonaranga">
+        <div class="col-md-12 col-lg-8 col-12">
+            <img src="assets/images/002-unete-a-la-bolsa.jpg" width="98%" class=" d-none d-md-block img-fluid ml-5 mt-5 mb-5" alt="" srcset="">
+            <img src="assets/images/002-unete-a-la-bolsa.jpg" width="100%" class=" d-block d-md-none img-fluid" alt="" srcset="">
+        </div>
+        <div class="col-md-12 col-lg-3 col-12">
+            <!-- <form class="bg-blanco shadow-sm p-3 mb-5 bg-white rounded border" >
+             <div><h4>¡Queremos que seas parte de <span class="texto-rojo">Despáchte</span>!</h4></div>
+            <div class="form-group">
+              <input  placeholder="Nombre comercial de tu empresa" class="form-control"  aria-describedby="emailHelp">
+            </div>
+            <div class="form-group">
+              <input placeholder="Nombre completo" type="password" class="form-control" >
+            </div>
+            <div class="form-group">
+              <input placeholder="Correo" type="checkbox" class="form-check-input" >
+            </div>
+            <div class="form-group ">
+                <input placeholder="Puesto" type="checkbox" class="form-check-input" >
+            </div>
+            <div class="form-group ">
+                <input placeholder="Descripción" type="checkbox" class="form-check-input" >
+            </div>
+            <div class="form-group ">
+                <input placeholder="Producto" type="checkbox" class="form-check-input" >
+            </div>
+         </form> -->
+
+            <form [formGroup]="form" (ngSubmit)="enviarCorreo()" class=" bg-blanco shadow-sm p-3 mb-5 bg-white rounded border">
+
+                <div>
+                    <h4>¡Queremos que seas parte de <span class="texto-rojo"><b>Despáchate</b></span>!</h4>
+                </div>
+                <div class="form-group">
+                    <input formControlName="empresa" placeholder="Nombre comercial de tu empresa" class="form-control" aria-describedby="emailHelp">
+                </div>
+                <div class="form-group">
+                    <input formControlName="nombre" placeholder="Nombre completo" class="form-control" aria-describedby="emailHelp">
+                </div>
+                <div class="form-group">
+                    <input formControlName="correo" placeholder="Correo" class="form-control" aria-describedby="emailHelp">
+                </div>
+                <div class="form-group">
+                    <input formControlName="puesto" placeholder="Puesto" class="form-control" aria-describedby="emailHelp">
+                </div>
+                <div class="form-group">
+                    <input formControlName="descripcion" placeholder="Descripción de tu empresa" class="form-control" aria-describedby="emailHelp">
+                </div>
+                <div class="form-group">
+                    <input formControlName="productos" placeholder="Productos" class="form-control" aria-describedby="emailHelp">
+                </div>
+
+                <div class="form-group">
+                    <div class="uk-margin">
+                        <div class="uk-width-1-1" uk-form-custom>
+                            <input type="file" formControlName="archivos" name="archivos" id="archivos" (change)="seleccionImage($event.target.files[0]) ">
+                            <button class="uk-button uk-button-default uk-width-1-1 " type="button " tabindex="-1 ">Seleccionar archivo pdf</button>
+                        </div>
+                    </div>
+                    <!-- <input type="file " class="btn btn-success " formControlName="archivos " name=" " id=" " (change)="seleccionImage($event.target.files[0]) "> -->
+                    <button type="submit " class="btn bg-rojo btn-block ">ENVIAR</button>
+                </div>
+
+
+            </form>
+
+
+        </div>
+    </div>
+</div>

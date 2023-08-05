@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Fuentes de Icono Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&family=PT+Mono&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            padding: 0px;
+            margin: 0px;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .mt {
+            margin-top: 1em;
+        }
+
+        .w-100 {
+            width: 100%;
+        }
+
+        .w-90 {
+            width: 90%;
+        }
+
+        .w-80 {
+            width: 80%;
+        }
+
+        .w-70 {
+            width: 70%;
+        }
+
+        .text-left negro {
+            text-align: left;
+        }
+
+        .padding-responsive {
+            padding: 3em;
+        }
+
+        .btn-principal {
+            color: #fff;
+            background-color: #fb4a44;
+            padding: .5em .7em;
+            border-radius: 25px;
+            font-family: 'Manrope', sans-serif;
+            font-weight: 700;
+        }
+
+        .morado {
+            color: #68059b;
+            font-family: 'Manrope', sans-serif;
+            font-weight: 700;
+        }
+
+        .negro {
+            color: #000;
+        }
+
+        .gris {
+            color: #555;
+        }
+
+        .bg-footer {
+            background-color: #231f20;
+            color: #fff;
+            padding: 4em 1em;
+        }
+
+
+        .pt-mono {
+            font-family: 'PT Mono', monospace;
+        }
+
+        .pt-mono-bold {
+            font-family: 'PT Mono', monospace;
+            font-weight: bold;
+        }
+
+        .manrope {
+            font-family: 'Manrope', sans-serif;
+            font-weight: 500;
+        }
+
+        .manrope-bold {
+            font-family: 'Manrope', sans-serif;
+            font-weight: 700;
+        }
+
+        @media screen and (max-width: 770px) {
+            .padding-responsive {
+                padding: 1em;
+            }
+        }
+
+        @media screen and (max-width: 500px) {
+            .padding-responsive {
+                padding: .4em;
+            }
+        }
+    </style>
+
+    <title>Unete a la bolsa</title>
+  </head>
+  <body>
+
+    <!-- Inicio de Tabla del Header -->
+    <table align="center" cellpadding="0" cellspacing="0" class="w-100">
+        <tr>
+            <td>
+                <img src="https://despachate.com.mx/email-assets/banner-unete.jpg" class="w-100" alt="Header de Mail">
+            </td>
+        </tr>
+    </table>
+    <!-- Final de Tabla del Header -->
+         
+
+    <!-- Inicio de Tabla del texto principal -->
+    <table align="center" cellpadding="0" cellspacing="0" class="w-70">
+        <tr>
+            <td style="text-align: justify;" >
+                <h1 class="pt-mono-bold">¡HOLA <b style="color:#fb4a44;">{{nombreEmpresa}}</b>!</h1>
+
+                <!--<p class="text-left negro manrope">
+                    Es <a href="https://despachate.com.mx" target="_blanck"><b class="morado">Despachate</b></a>
+                </p>-->
+
+                <p class="text-left negro manrope">
+                   Gracias por tu interés en unirte a la bolsa de <a href="https://despachate.com.mx" target="_blanck"><span> Despachate.</span></a>
+                </p>
+
+                <p class="text-left negro manrope">
+                   Hemos recibido tu solicitud de registro, la cual será revisada y en breve una persona de nuestro equipo "Únete a la bolsa" se contactara contigo.
+                </p>
+                <p class="text-left negro manrope">
+                    El siguiente listado son los datos que han enviado:
+                    <ul class="text-left negro manrope">
+                        <li><strong>Nombre comercial de tu empresa:</strong> {{nombreEmpresa}}</li>
+                        <li><strong>Nombre completo:</strong> {{nombreCompleto}}</li>
+                        <li><strong>Correo:</strong> {{correo}}</li>
+                        <li><strong>Puesto:</strong> {{puesto}}</li>
+                        <li><strong>Descripción de tu empresa:</strong> {{descripcionEmpresa}}</li>
+                        <li><strong>Productos:</strong> {{productos}}</li>
+                        <li><strong>Archivo:</strong> <a href="https://despachate.com.mx/node/imagenes/pdfs/{{archivo}}" target="_blanck">Archivo</a></li>
+                    </ul>
+                </p>
+
+
+                <p class="text-left negro manrope">
+                    Creemos que juntos podemos impulsar la economía de México, trabajando de la mano con productores locales, emprendedores y empresarios que buscan, al igual que nosotros, el bienestar de todos.
+                </p>
+                
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <h4 class="manrope" style="font-weight:200; ">
+                    <b>Con cariño,
+                    <br>
+                    El equipo de Despachate</b>
+                </h4>
+            </td>
+        </tr>
+
+
+    </table>
+ 
+    <br><br>
+
+    <!-- Inicio de Tabla Call to actions -->
+    <table align="center" cellpadding="0" cellspacing="0" class="w-80">
+        <tr>
+            <td>
+                <img src="https://despachate.com.mx/email-assets/linea.png" class="w-100" alt="">
+            </td>
+        </tr>
+
+
+        <tr style="text-align: justify;">
+            <td>
+                <p class="text-left negro manrope">
+                    Para cualquier aclaración, duda o comentarios por favor comunicarse al <a class="gris" href="tel:2224570222" target="_blanck">+521 222 457 0222</a> o escríbenos a nuestro correo electrónico <a href="mailto:hola@despachate.mx" target="_blanck" class="gris">hola@despachate.mx</a>. Puedes consultar nuestro <a href="https://despachate.com.mx/tienda/terminos" target="_blanck" class="gris">términos y condiciones aquí</a>.
+                </p>
+
+                <p class="text-left negro manrope">
+                    Para mantenerte informado sobre nuestras ofertas y promociones <a href="https://despachate.com.mx/tienda/registrarse" target="_blanck"> <u>suscribete aquí.<u></a>
+                </p>
+            </td>
+        </tr>
+      
+    </table>
+    <!-- Inicio de Tabla Call to actions -->
+
+    <br><br>
+
+
+    <br><br>
+
+    <!-- Inicio de Tabla Footer -->
+    <table align="center" cellpadding="0" cellspacing="0" class="w-100 bg-footer">
+        <tr>
+            <td style="text-align: center;">
+                 <img width="20" src="https://despachate.com.mx/email-assets/facebook-f-brands.png" style="padding: 0px .5em;">
+
+                <img width="30" src="https://despachate.com.mx/email-assets/instagram-brands.png" style="padding: 0px .5em;">
+            </td>
+        </tr>
+
+        <tr style="text-align: center;">
+            <td>
+                <a href="mailto:hola@despachate.com.mx" style="color: #fff;">
+                    <h3 class="pt-mono-bold">hola@despachate.com.mx</h3>
+                </a>
+            </td>
+        </tr>
+    </table>
+    <!-- Final de Tabla Footer -->
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

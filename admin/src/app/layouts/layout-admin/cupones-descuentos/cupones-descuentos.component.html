@@ -1,0 +1,696 @@
+<div class="card card-body">
+  <a routerLink="/admin/cupones-descuentos-usos" class="btn btn-primary">
+    Cupones usados
+  </a>
+</div>
+
+<div class="card card-body">
+  <h4 class="card-title">Cupones de descuento</h4>
+
+  <!-- 
+        codigo
+        valor
+        tipo
+        caduca
+        tipoCaducidad
+        fechaInicio
+        fechaCaducidad
+        intentos
+        intentosMaximos
+        compraMinima
+        valorCompraMinima
+        usuario
+        producto
+        categoria
+        subcategoria
+        departamento
+        empresa
+        empresaNombre
+        empresaEncargado
+        deleted
+   -->
+
+  <form [formGroup]="form" (ngSubmit)="handleSubmit()" class="row">
+    <div class="col-12 col-md-4">
+      <div class="form-group">
+        <label for="">Código</label>
+        <input
+          type="text"
+          class="form-control"
+          name="codigo"
+          formControlName="codigo"
+          id="codigo"
+          aria-describedby="helpId"
+          required
+          placeholder="Introduce el codigo del cupón"
+        />
+      </div>
+    </div>
+    <!-- Valor -->
+    <div class="col-12 col-md-4">
+      <div class="form-group">
+        <label for="">Valor</label>
+        <input
+          type="text"
+          class="form-control"
+          name="valor"
+          formControlName="valor"
+          id="valor"
+          aria-describedby="helpId"
+          required
+          placeholder="Introduce el valor del cupón"
+        />
+      </div>
+    </div>
+    <!-- Tipo -->
+    <div class="col-12 col-md-4">
+      <div class="form-group">
+        <label for="">Tipo</label>
+        <select
+          class="form-control"
+          name="tipo"
+          formControlName="tipo"
+          id="tipo"
+          required
+        >
+          <option value="%">Porcentaje</option>
+          <option value="$">Fijo</option>
+        </select>
+      </div>
+    </div>
+    <!-- Caduca -->
+    <div class="col-12 col-md-4">
+      <div class="form-group">
+        <label for="">Caduca</label>
+        <select
+          class="form-control"
+          name="caduca"
+          formControlName="caduca"
+          id="caduca"
+        >
+          <option [ngValue]="true">Si</option>
+          <option [ngValue]="false">No</option>
+        </select>
+      </div>
+    </div>
+    <!-- Tipo de caducidad -->
+    <div class="col-12 col-md-4" *ngIf="form.value.caduca">
+      <div class="form-group">
+        <label for="">Tipo de caducidad</label>
+        <select
+          class="form-control"
+          name="tipoCaducidad"
+          formControlName="tipoCaducidad"
+          id="tipoCaducidad"
+        >
+          <option value="fecha">Fecha</option>
+          <option value="intentos">Intentos Maximos</option>
+        </select>
+      </div>
+    </div>
+    <!-- Fecha de inicio -->
+    <div
+      class="col-12 col-md-4"
+      *ngIf="form.value.caduca && form.value.tipoCaducidad === 'fecha'"
+    >
+      <div class="form-group">
+        <label for="">Fecha de inicio</label>
+        <input
+          type="date"
+          class="form-control"
+          name="fechaInicio"
+          formControlName="fechaInicio"
+          id="fechaInicio"
+          aria-describedby="helpId"
+          placeholder="Introduce la fecha de inicio del cupón"
+        />
+      </div>
+    </div>
+    <!-- Fecha de caducidad -->
+    <div
+      class="col-12 col-md-4"
+      *ngIf="form.value.caduca && form.value.tipoCaducidad === 'fecha'"
+    >
+      <div class="form-group">
+        <label for="">Fecha de caducidad</label>
+        <input
+          type="date"
+          class="form-control"
+          name="fechaCaducidad"
+          formControlName="fechaCaducidad"
+          id="fechaCaducidad"
+          aria-describedby="helpId"
+          placeholder="Introduce la fecha de caducidad del cupón"
+        />
+      </div>
+    </div>
+    <!-- Intentos -->
+    <div class="col-12 col-md-4">
+      <div class="form-group">
+        <label for="">Intentos</label>
+        <input
+          readonly
+          type="text"
+          class="form-control"
+          name="intentos"
+          formControlName="intentos"
+          id="intentos"
+          aria-describedby="helpId"
+          placeholder="Introduce el número de intentos del cupón"
+        />
+      </div>
+    </div>
+    <!-- Intentos máximos -->
+    <div
+      class="col-12 col-md-4"
+      *ngIf="form.value.caduca && form.value.tipoCaducidad === 'intentos'"
+    >
+      <div class="form-group">
+        <label for="">Intentos máximos</label>
+        <input
+          type="text"
+          class="form-control"
+          name="intentosMaximos"
+          formControlName="intentosMaximos"
+          id="intentosMaximos"
+          aria-describedby="helpId"
+          placeholder="Introduce el número máximo de intentos del cupón"
+        />
+      </div>
+    </div>
+    <!-- Compra mínima -->
+    <div class="col-12 col-md-4">
+      <div class="form-group">
+        <label for="">Compra mínima</label>
+        <select
+          class="form-control"
+          name="compraMinima"
+          formControlName="compraMinima"
+          id="compraMinima"
+        >
+          <option [ngValue]="true">Si</option>
+          <option [ngValue]="false">No</option>
+        </select>
+      </div>
+    </div>
+    <!-- Valor de la compra mínima -->
+    <div class="col-12 col-md-4" *ngIf="form.value.compraMinima">
+      <div class="form-group">
+        <label for="">Valor de la compra mínima</label>
+        <input
+          type="text"
+          class="form-control"
+          name="valorCompraMinima"
+          formControlName="valorCompraMinima"
+          id="valorCompraMinima"
+          aria-describedby="helpId"
+          placeholder="Introduce el valor de la compra mínima para usar el cupón"
+        />
+      </div>
+    </div>
+    <!-- Usuario -->
+    <div class="col-12 col-md-12">
+      <div class="form-group">
+        <label for="">Usuario</label>
+        <select
+          class="form-control"
+          name="usuario"
+          formControlName="usuario"
+          id="usuario"
+        >
+          <option [ngValue]="true">Si</option>
+          <option [ngValue]="false">No</option>
+        </select>
+      </div>
+    </div>
+    <!-- Usuarios -->
+    <div class="col-12 col-md-12">
+      <div class="row" *ngIf="form.value.usuario">
+        <div class="col-12 col-md-6">
+          <div class="form-group">
+            <input
+              type="search"
+              class="form-control"
+              [(ngModel)]="search.usuarios"
+              name="search_usuarios"
+              (change)="getFieldsValues()"
+              [ngModelOptions]="{ standalone: true }"
+              placeholder="Buscar por nombre"
+            />
+          </div>
+          <div class="list-group">
+            <a
+              href="javascript:void(0)"
+              (click)="seleccionados(usuario, 'usuarios')"
+              class="list-group-item list-group-item-action"
+              [ngClass]="{
+                'list-group-item-primary':
+                  findSeleccionado(usuario, 'usuarios') > -1
+              }"
+              *ngFor="let usuario of fields_select_values?.usuarios"
+            >
+              {{ usuario.nombre }}
+            </a>
+          </div>
+        </div>
+        <div class="col-12 col-md-6">
+          <div class="form-group">
+            <label for="">Usuarios</label>
+            <select
+              class="form-control"
+              name="usuarios"
+              formControlName="usuarios"
+              id="usuarios"
+              multiple
+            >
+              <option
+                *ngFor="let usuario of fields_select_values.usuarios_s"
+                [ngValue]="usuario._id"
+              >
+                {{ usuario.nombre }}
+              </option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Producto -->
+    <div class="col-12 col-md-12">
+      <div class="form-group">
+        <label for="">Producto</label>
+        <select
+          class="form-control"
+          name="producto"
+          formControlName="producto"
+          id="producto"
+        >
+          <option [ngValue]="true">Si</option>
+          <option [ngValue]="false">No</option>
+        </select>
+      </div>
+    </div>
+    <div class="col-12 col-md-12">
+      <div class="row" *ngIf="form.value.producto">
+        <div class="col-12 col-md-6">
+          <div class="form-group">
+            <input
+              type="search"
+              class="form-control"
+              [(ngModel)]="search.productos"
+              name="search_productos"
+              (change)="getFieldsValues()"
+              [ngModelOptions]="{ standalone: true }"
+              placeholder="Buscar producto por nombre o SKU"
+            />
+          </div>
+          <div class="list-group">
+            <a
+              href="javascript:void(0)"
+              (click)="seleccionados(producto, 'productos')"
+              class="list-group-item list-group-item-action"
+              [ngClass]="{
+                'list-group-item-primary':
+                  findSeleccionado(producto, 'productos') > -1
+              }"
+              *ngFor="let producto of fields_select_values?.productos"
+            >
+              {{ producto.nombre }} - SKU: {{ producto.sku }}
+            </a>
+          </div>
+        </div>
+        <div class="form-group col-12 col-md-6">
+          <label for="">Productos</label>
+
+          <select
+            class="form-control"
+            name="productos"
+            formControlName="productos"
+            id="productos"
+            multiple
+          >
+            <option
+              [ngValue]="producto._id"
+              *ngFor="let producto of fields_select_values?.productos_s"
+            >
+              {{ producto.sku }} - {{ producto.nombre }}
+            </option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <!-- Categoria -->
+    <div class="col-12 col-md-12">
+      <div class="form-group">
+        <label for="">Categoria</label>
+        <select
+          class="form-control"
+          name="categoria"
+          formControlName="categoria"
+          id="categoria"
+        >
+          <option [ngValue]="true">Si</option>
+          <option [ngValue]="false">No</option>
+        </select>
+      </div>
+    </div>
+    <div class="col-12 col-md-12" *ngIf="form.value.categoria">
+      <div class="row">
+        <div class="col-12 col-md-6">
+          <div class="form-group">
+            <input
+              type="search"
+              class="form-control"
+              [(ngModel)]="search.categorias"
+              name="search_categorias"
+              (change)="getFieldsValues()"
+              [ngModelOptions]="{ standalone: true }"
+              placeholder="Buscar por nombre"
+            />
+          </div>
+
+          <div class="list-group">
+            <a
+              href="javascript:void(0)"
+              (click)="seleccionados(categoria, 'categorias')"
+              class="list-group-item list-group-item-action"
+              [ngClass]="{
+                'list-group-item-primary':
+                  findSeleccionado(categoria, 'categorias') > -1
+              }"
+              *ngFor="let categoria of fields_select_values?.categorias"
+            >
+              {{ categoria.nombre }}
+            </a>
+          </div>
+        </div>
+        <div class="form-group col-12 col-md-6">
+          <label for="">Categorias</label>
+
+          <select
+            class="form-control"
+            name="categorias"
+            formControlName="categorias"
+            id="categorias"
+            multiple
+          >
+            <option
+              [ngValue]="categoria._id"
+              *ngFor="let categoria of fields_select_values?.categorias_s"
+            >
+              {{ categoria.nombre }}
+            </option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <!-- Subcategoria -->
+    <div class="col-12 col-md-12">
+      <div class="form-group">
+        <label for="">Subcategoria</label>
+        <select
+          class="form-control"
+          name="subcategoria"
+          formControlName="subcategoria"
+          id="subcategoria"
+        >
+          <option [ngValue]="true">Si</option>
+          <option [ngValue]="false">No</option>
+        </select>
+      </div>
+    </div>
+    <div class="col-12 col-md-12" *ngIf="form.value.subcategoria">
+      <div class="row">
+        <div class="col-12 col-md-6">
+          <div class="form-group">
+            <input
+              type="search"
+              class="form-control"
+              [(ngModel)]="search.subcategorias"
+              name="search_subcategorias"
+              (change)="getFieldsValues()"
+              [ngModelOptions]="{ standalone: true }"
+              placeholder="Buscar por nombre"
+            />
+          </div>
+
+          <div class="list-group">
+            <a
+              href="javascript:void(0)"
+              (click)="seleccionados(subcategoria, 'subcategorias')"
+              class="list-group-item list-group-item-action"
+              [ngClass]="{
+                'list-group-item-primary':
+                  findSeleccionado(subcategoria, 'subcategorias') > -1
+              }"
+              *ngFor="let subcategoria of fields_select_values?.subcategorias"
+            >
+              {{ subcategoria.nombre }}
+            </a>
+          </div>
+        </div>
+        <div class="form-group col-12 col-md-6">
+          <label for="">Subcategorias</label>
+
+          <select
+            class="form-control"
+            name="subcategorias"
+            formControlName="subcategorias"
+            id="subcategorias"
+            multiple
+          >
+            <option
+              [ngValue]="subcategoria._id"
+              *ngFor="let subcategoria of fields_select_values?.subcategorias_s"
+            >
+              {{ subcategoria.nombre }}
+            </option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <!-- Departamento -->
+    <div class="col-12 col-md-12">
+      <div class="form-group">
+        <label for="">Departamento</label>
+        <select
+          class="form-control"
+          name="departamento"
+          formControlName="departamento"
+          id="departamento"
+        >
+          <option [ngValue]="true">Si</option>
+          <option [ngValue]="false">No</option>
+        </select>
+      </div>
+    </div>
+    <div class="col-12 col-md-12" *ngIf="form.value.departamento">
+      <div class="row">
+        <div class="col-12 col-md-6">
+          <div class="form-group">
+            <input
+              type="search"
+              class="form-control"
+              [(ngModel)]="search.departamentos"
+              name="search_departamentos"
+              (change)="getFieldsValues()"
+              [ngModelOptions]="{ standalone: true }"
+              placeholder="Buscar por nombre"
+            />
+          </div>
+
+          <div class="list-group">
+            <a
+              href="javascript:void(0)"
+              (click)="seleccionados(departamento, 'departamentos')"
+              class="list-group-item list-group-item-action"
+              [ngClass]="{
+                'list-group-item-primary':
+                  findSeleccionado(departamento, 'departamentos') > -1
+              }"
+              *ngFor="let departamento of fields_select_values?.departamentos"
+            >
+              {{ departamento.nombre }}
+            </a>
+          </div>
+        </div>
+        <div class="form-group col-12 col-md-6">
+          <label for="">Departamentos</label>
+
+          <select
+            class="form-control"
+            name="departamentos"
+            formControlName="departamentos"
+            id="departamentos"
+            multiple
+          >
+            <option
+              [ngValue]="departamento._id"
+              *ngFor="let departamento of fields_select_values?.departamentos_s"
+            >
+              {{ departamento.nombre }}
+            </option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <!-- Empresa -->
+    <div class="col-12 col-md-12">
+      <div class="form-group">
+        <label for="">Empresa</label>
+        <select
+          class="form-control"
+          name="empresa"
+          formControlName="empresa"
+          id="empresa"
+        >
+          <option [ngValue]="true">Si</option>
+          <option [ngValue]="false">No</option>
+        </select>
+      </div>
+    </div>
+    <div class="col-12 col-md-6" *ngIf="form.value.empresa">
+      <div class="form-group">
+        <input
+          type="search"
+          class="form-control"
+          [(ngModel)]="search.empresas"
+          name="search_empresas"
+          (change)="getFieldsValues()"
+          [ngModelOptions]="{ standalone: true }"
+          placeholder="Buscar por nombre"
+        />
+      </div>
+
+      <div class="list-group">
+        <a
+          href="javascript:void(0)"
+          (click)="seleccionados(empresa, 'empresas')"
+          class="list-group-item list-group-item-action"
+          [ngClass]="{
+            'list-group-item-primary':
+              findSeleccionado(empresa, 'empresas') > -1
+          }"
+          *ngFor="let empresa of fields_select_values?.empresas"
+        >
+          {{ empresa.nombre }}
+        </a>
+      </div>
+    </div>
+    <div class="form-group col-12 col-md-6" *ngIf="form.value.empresa">
+      <label for="">Empresas</label>
+
+      <select
+        class="form-control"
+        name="empresas"
+        formControlName="empresas"
+        id="empresas"
+        multiple
+      >
+        <option
+          [ngValue]="empresa._id"
+          *ngFor="let empresa of fields_select_values?.empresas_s"
+        >
+          {{ empresa.nombre }}
+        </option>
+      </select>
+    </div>
+    <div class="col-12 col-md-12">
+      <button class="btn btn-primary btn-block" type="submit">Guardar</button>
+    </div>
+  </form>
+  <div class="table-responsive">
+    <table class="table table-striped">
+      <thead class="">
+        <tr>
+          <th>Código</th>
+          <th>Valor</th>
+          <th>Tipo</th>
+          <th>¿Tiene Caducidad?</th>
+          <th>Tipo caducidad</th>
+          <th>Fecha Inicio</th>
+          <th>Fecha Caducidad</th>
+          <th>Intentos</th>
+          <th>Intentos Maximos</th>
+          <th>¿Tiene Compra Minima?</th>
+          <th>Compra Minima</th>
+          <th>Usuario</th>
+          <th>Producto</th>
+          <!-- <th>Productos</th> -->
+          <th>Categoria</th>
+          <!-- <th>Categorias</th> -->
+          <th>Subcategoria</th>
+          <!-- <th>Subcategorias</th> -->
+          <th>Departamento</th>
+          <!-- <th>Departamentos</th> -->
+          <th>Empresa</th>
+          <th
+            [style.background]="'#000'"
+            [style.color]="'#fff'"
+            [style.position]="'sticky'"
+            [style.right]="0"
+          >
+            Operaciones
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let _cupon of cupones">
+          <td>{{ _cupon.codigo }}</td>
+          <td>{{ _cupon.valor }}</td>
+          <td>{{ _cupon.tipo }}</td>
+          <td>{{ _cupon.caduca ? 'Si' : 'No' }}</td>
+          <td>{{ _cupon.tipoCaducidad }}</td>
+          <td>{{ _cupon.fechaInicio }}</td>
+          <td>{{ _cupon.fechaCaducidad }}</td>
+          <td>{{ _cupon.intentos }}</td>
+          <td>{{ _cupon.intentosMaximos }}</td>
+          <td>{{ _cupon.compraMinima ? 'Si' : 'No' }}</td>
+          <td>{{ _cupon.valorCompraMinima }}</td>
+          <td>{{ _cupon.usuario ? 'Si' : 'No' }}</td>
+          <td>{{ _cupon.producto ? 'Si' : 'No' }}</td>
+          <!-- <td>
+            {{ _cupon.productos }}
+            <p *ngFor="let producto of _cupon.productos" class="m-0">
+              >{{ producto.nombre }}
+            </p>
+          </td> -->
+          <td>{{ _cupon.categoria ? 'Si' : 'No' }}</td>
+          <!-- <td>{{ _cupon.categorias }}</td> -->
+          <td>{{ _cupon.subcategoria ? 'Si' : 'No' }}</td>
+          <!-- <td>{{ _cupon.subcategorias }}</td> -->
+          <td>{{ _cupon.departamento ? 'Si' : 'No' }}</td>
+          <!-- <td>{{ _cupon.departamentos }}</td> -->
+          <td>{{ _cupon.empresa ? 'Si' : 'No' }}</td>
+
+          <td
+            [style.background]="'#000'"
+            [style.color]="'#fff'"
+            [style.position]="'sticky'"
+            [style.right]="0"
+          >
+            <button
+              class="btn btn-block btn-warning"
+              type="button"
+              (click)="handleEditCupon(_cupon)"
+            >
+              <i class="fas fa-edit"></i>
+            </button>
+            <button
+              class="btn btn-block btn-info"
+              type="button"
+              (click)="handleEditCupon(_cupon)"
+            >
+              <i class="fas fa-info"></i>
+            </button>
+            <button
+              class="btn btn-block btn-danger"
+              (click)="handleDelete(_cupon._id)"
+            >
+              <i class="fas fa-trash-alt"></i>
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

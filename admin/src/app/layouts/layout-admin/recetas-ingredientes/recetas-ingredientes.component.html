@@ -1,0 +1,252 @@
+<!-- Content -->
+<div class="content">
+  <!-- Animated -->
+  <div class="animated fadeIn">
+    <div class="clearfix"></div>
+
+    <div class="orders">
+      <div class="row">
+        <div class="col">
+          <div class="card">
+            <div
+              class="card-header hover btn-primary text-dark"
+              style="cursor: pointer"
+              data-toggle="collapse"
+              role="button"
+              data-target="#header-form"
+            >
+              <div class="d-block text-center">
+                <strong class="p-2 bd-highlight"
+                  >Agregar ingrediente a {{ receta_nombre }}</strong
+                >
+              </div>
+            </div>
+            <div class="card-body card-block collapse show" id="header-form">
+              <form
+                ngNativeValidate
+                [formGroup]="form"
+                (ngSubmit)="add()"
+                class="form-horizontal"
+              >
+                <div class="row">
+                  <div class="col-12 col-md-6 col-sm-12 form-group">
+                    <div class="col">
+                      <label for="ingrediente" class="form-control-label"
+                        >Ingrediente</label
+                      >
+                    </div>
+                    <div class="col">
+                      <input
+                        formControlName="ingrediente"
+                        minlength="1"
+                        maxlength="200"
+                        required
+                        type="text"
+                        id="ingrediente"
+                        name="ingrediente"
+                        placeholder="Introduce el nombre del ingrediente"
+                        class="form-control"
+                      />
+                      <small class="form-text text-muted"
+                        >Ejemplo: Azucar</small
+                      >
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6 col-sm-12 form-group">
+                    <div class="col">
+                      <label for="cantidad_medida" class="form-control-label"
+                        >Cantidad/Medida</label
+                      >
+                    </div>
+                    <div class="col">
+                      <input
+                        formControlName="cantidad_medida"
+                        minlength="1"
+                        maxlength="200"
+                        required
+                        type="text"
+                        id="cantidad_medida"
+                        name="cantidad_medida"
+                        placeholder="Introduce la cantidad con su medida"
+                        class="form-control"
+                      />
+                      <small class="form-text text-muted"
+                        >Ejemplo: 1/2 cucharada</small
+                      >
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6 col-sm-12 form-group">
+                    <div class="col">
+                      <label for="producto" class="form-control-label"
+                        >Producto</label
+                      >
+                    </div>
+                    <div class="col">
+                      <input
+                        formControlName="producto"
+                        minlength="1"
+                        maxlength="200"
+                        required
+                        type="text"
+                        id="producto"
+                        name="producto"
+                        placeholder="Introduce el nombre de un producto"
+                        class="form-control"
+                        (keyup)="consultarProductos()"
+                      />
+                      <small class="form-text text-muted"
+                        >Ejemplo: azucar</small
+                      >
+                    </div>
+
+                    <div class="col">
+                      <div class="form-group">
+                        <label for="paquete">Paquete</label>
+                        <select
+                          class="form-control"
+                          formControlName="paquete"
+                          name="paquete"
+                          id="paquete"
+                        >
+                          <option [ngValue]="null" selected>
+                            Selecciona un paquete
+                          </option>
+                          <option
+                            *ngFor="let item of paquetes"
+                            [value]="item._id"
+                          >
+                            {{ item.paquete }}
+                          </option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="row row-cols-2">
+                      <div class="col" *ngFor="let item of productos">
+                        <div
+                          [class]="
+                            producto && producto._id === item._id
+                              ? 'card bg-primary'
+                              : 'card'
+                          "
+                          (click)="setProducto(item)"
+                        >
+                          <img
+                            class="card-img-top"
+                            [src]="url + item.img"
+                            alt=""
+                          />
+                          <div class="card-body">
+                            <h4 class="card-title">{{ item.nombre }}</h4>
+                            <p class="card-text">{{ item.resumen }}</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col">
+                    <button
+                      type="button"
+                      class="btn btn-danger btn-block"
+                      (click)="limpiarCampos()"
+                    >
+                      Cancelar
+                    </button>
+                  </div>
+                  <div class="col">
+                    <button
+                      type="submit"
+                      class="btn btn-primary btn-block"
+                      [hidden]="hidden"
+                    >
+                      Registrar
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="clearfix"></div>
+          <div class="card p-3">
+            <div class="card-body">
+              <h4 class="box-title">Ingredientes de {{ receta_nombre }}</h4>
+            </div>
+            <div class="card-body">
+              <div class="">
+                <div class="table-responsive">
+                  <table
+                    datatable
+                    [dtOptions]="dtOptions"
+                    [dtTrigger]="dtTrigger"
+                    class="table"
+                  >
+                    <thead>
+                      <tr>
+                        <th class="serial">#</th>
+                        <th>Ingrediente</th>
+                        <th>Cantidad/Medida</th>
+                        <th>Producto</th>
+                        <th>Paquete</th>
+                        <th>Categoria</th>
+                        <th>Opciones</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr *ngFor="let item of lista; let i = index">
+                        <td class="serial">{{ i + 1 }}</td>
+                        <td>{{ item.ingrediente }}</td>
+                        <td>{{ item.cantidad_medida }}</td>
+                        <td>{{ item.producto.nombre }}</td>
+                        <td>{{ item.paquete?.paquete }}</td>
+                        <td>{{ item.categoria_ingrediente }}</td>
+                        <td>
+                          <div class="row row-cols-3 row-cols-1">
+                            <button
+                              (click)="ver(i)"
+                              class="col m-0 m-md-3 btn btn-info"
+                              data-toggle="tooltip"
+                              data-placement="top"
+                              title="Ver"
+                            >
+                              <i class="fas fa-info"></i>
+                            </button>
+                            <button
+                              (click)="update(i, true)"
+                              class="col m-0 m-md-3 btn btn-warning"
+                              data-toggle="tooltip"
+                              data-placement="top"
+                              title="Editar"
+                            >
+                              <i class="fas fa-edit"></i>
+                            </button>
+                            <button
+                              (click)="delete(item._id)"
+                              class="col m-0 m-md-3 btn btn-danger"
+                              data-toggle="tooltip"
+                              data-placement="top"
+                              title="Eliminar"
+                            >
+                              <i class="fas fa-trash"></i>
+                            </button>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <!-- /.table-stats -->
+            </div>
+          </div>
+          <!-- /.card -->
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- .animated -->
+</div>
+<!-- /.content -->
+<div class="clearfix"></div>

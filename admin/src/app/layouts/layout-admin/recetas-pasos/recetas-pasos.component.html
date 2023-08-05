@@ -1,0 +1,170 @@
+<!-- Content -->
+<div class="content">
+  <!-- Animated -->
+  <div class="animated fadeIn">
+    <div class="clearfix"></div>
+
+    <div class="orders">
+      <div class="row">
+        <div class="col">
+          <div class="card">
+            <div
+              class="card-header hover btn-primary text-dark"
+              style="cursor: pointer"
+              data-toggle="collapse"
+              role="button"
+              data-target="#header-form"
+            >
+              <div class="d-block text-center">
+                <strong class="p-2 bd-highlight"
+                  >Agregar paso a {{ receta_nombre }}</strong
+                >
+              </div>
+            </div>
+            <div class="card-body card-block collapse show" id="header-form">
+              <form
+                ngNativeValidate
+                [formGroup]="form"
+                (ngSubmit)="add()"
+                class="form-horizontal"
+              >
+                <div class="row">
+                  <div class="col-12 col-md-6 col-sm-12 form-group">
+                    <div class="col">
+                      <label for="paso" class="form-control-label">Paso</label>
+                    </div>
+                    <div class="col">
+                      <input
+                        formControlName="paso"
+                        required
+                        type="number"
+                        step="1"
+                        min="1"
+                        id="paso"
+                        name="paso"
+                        placeholder="Introduce el paso de la receta"
+                        class="form-control"
+                      />
+                      <small class="form-text text-muted">Ejemplo: 1</small>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6 col-sm-12 form-group">
+                    <div class="col">
+                      <label for="descripcion" class="form-control-label"
+                        >Descripcion</label
+                      >
+                    </div>
+                    <div class="col">
+                      <textarea
+                        formControlName="descripcion"
+                        rows="10"
+                        required
+                        id="descripcion"
+                        name="descripcion"
+                        placeholder="Introduce el descripcion del paso"
+                        class="form-control"
+                      ></textarea>
+                      <small class="form-text text-muted"
+                        >Ejemplo: llenar 3/4 de un tazón de agua</small
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col">
+                    <button
+                      type="button"
+                      class="btn btn-danger btn-block"
+                      (click)="limpiarCampos()"
+                    >
+                      Cancelar
+                    </button>
+                  </div>
+                  <div class="col">
+                    <button
+                      type="submit"
+                      class="btn btn-primary btn-block"
+                      [hidden]="hidden"
+                    >
+                      Registrar
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="clearfix"></div>
+          <div class="card p-3">
+            <div class="card-body">
+              <h4 class="box-title">Pasos de {{ receta_nombre }}</h4>
+            </div>
+            <div class="card-body">
+              <div class="">
+                <div class="table-responsive">
+                  <table
+                    datatable
+                    [dtOptions]="dtOptions"
+                    [dtTrigger]="dtTrigger"
+                    class="table"
+                  >
+                    <thead>
+                      <tr>
+                        <th class="serial">#</th>
+                        <th>Paso</th>
+                        <th>Descripción</th>
+                        <th>Opciones</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr *ngFor="let item of lista; let i = index">
+                        <td class="serial">{{ i + 1 }}</td>
+                        <td>Paso {{ item.paso }}</td>
+                        <td>{{ item.descripcion }}</td>
+                        <td>
+                          <div class="row row-cols-3 row-cols-1">
+                            <button
+                              (click)="ver(i)"
+                              class="col m-0 m-md-3 btn btn-info"
+                              data-toggle="tooltip"
+                              data-placement="top"
+                              title="Ver"
+                            >
+                              <i class="fas fa-info"></i>
+                            </button>
+                            <button
+                              (click)="update(i, true)"
+                              class="col m-0 m-md-3 btn btn-warning"
+                              data-toggle="tooltip"
+                              data-placement="top"
+                              title="Editar"
+                            >
+                              <i class="fas fa-edit"></i>
+                            </button>
+                            <button
+                              (click)="delete(item._id)"
+                              class="col m-0 m-md-3 btn btn-danger"
+                              data-toggle="tooltip"
+                              data-placement="top"
+                              title="Eliminar"
+                            >
+                              <i class="fas fa-trash"></i>
+                            </button>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <!-- /.table-stats -->
+            </div>
+          </div>
+          <!-- /.card -->
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- .animated -->
+</div>
+<!-- /.content -->
+<div class="clearfix"></div>

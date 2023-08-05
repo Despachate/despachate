@@ -1,0 +1,101 @@
+<div class="container-fluid degrablue">
+  <div class="container bg-registrate rounded my-4">
+    <div class="row py-5">
+      <div class="col-12 col-lg-4 col-md-12">
+        <form class="mt-3" [formGroup]="form" (ngSubmit)="inicioSesion()">
+          <div class="form-group row mx-1 d-flex flex-column">
+            <h3 for="" class="texto-negritas font-weight-bold">
+              INICIAR SESIÓN
+            </h3>
+            <p>Inicia sesión en #Despachate</p>
+          </div>
+          <div class="form-group row">
+            <div class="col-sm-12">
+              <input
+                formControlName="email"
+                type="text"
+                id="email"
+                class="form-control bordes-btn"
+                name="email"
+                placeholder="Correo"
+              />
+            </div>
+          </div>
+          <div class="form-group row">
+            <div class="col-sm-12">
+              <input
+                formControlName="password"
+                type="password"
+                id="password"
+                class="form-control bordes-btn"
+                name="email"
+                placeholder="Contraseña"
+              />
+            </div>
+          </div>
+
+          <div class="form-group row mx-1">
+            <input
+              type="submit"
+              class="btn btn-block bg-rojo text-white mt-3 mb-3"
+              value="Ingresar"
+            />
+            <!-- <input
+              type="button"
+              class="btn btn-block bg-rojo text-white mt-3 mb-3"
+              value="Sign in with Google"
+              (click)="ingresar('Google')"
+            /> -->
+            <button
+              type="button"
+              class="btn btn-block bg-rojo text-white mt-3 mb-3"
+              (click)="ingresar('Google')"
+            >
+              <img
+                src="https://www.seekpng.com/png/full/788-7887426_google-g-png-google-logo-white-png.png"
+                alt="G"
+                class="mt-1"
+                style="width: 20px; left: 30px; position: absolute"
+              />
+              Registrar con Google
+            </button>
+          </div>
+
+          <div class="mt-3">
+            <label for=""
+              >¿Aún no tienes una cuenta?<a
+                class="texto-negro"
+                [routerLink]="['/', 'registrarse']"
+                ><strong> Registrate aquí</strong></a
+              ></label
+            >
+            <label for=""
+              >¿Olvidaste tu contraseña?<a
+                class="texto-negro"
+                (click)="recuperarContrasenia()"
+                ><strong> Recuperala aquí</strong></a
+              ></label
+            >
+            <label for=""
+              >Tus datos serán tratados como lo indica nuestro aviso de
+              <a
+                [routerLink]="['/', 'privacidad']"
+                class="texto-negro texto-negritas"
+                ><strong> PRIVACIDAD</strong>
+              </a>
+            </label>
+          </div>
+          <div class="form-group row mx-1 mt-3">
+            <input
+              type="submit"
+              [routerLink]="['/', 'miSuscricpcionInfografia']"
+              class="btn btn-block bg-btnMorado text-white"
+              value="Como Funciona mi súper recurrente"
+            />
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <br />
+</div>

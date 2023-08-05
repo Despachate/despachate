@@ -1,0 +1,9 @@
+.fondo {
+    background-image: url('src\assets\images\suscripcionInfografiaBolsa.jpeg');
+    background-size: cover;
+    height: 826px;
+}
+
+.texto-p{
+    color: #9BCD57;
+}

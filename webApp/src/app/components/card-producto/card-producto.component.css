@@ -1,0 +1,35 @@
+.uk-button-paquete {
+  font-size: 10px !important;
+  line-height: 10px;
+  padding: 4px;
+  color: #fff;
+  background-color: #adadad !important;
+}
+
+.uk-button-paquete.active,
+.uk-button-paquete:hover {
+  /* background-color:  #8dc63f; */
+  background-color: #7db92d !important;
+}
+
+.btn-cantidad {
+  border: none;
+}
+
+.btn-cantidad:hover,
+.btn-cantidad:focus,
+.btn-cantidad:active {
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+
+.text-card {
+  text-overflow: ellipsis;
+}
+
+.posicion-botonLista {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  z-index: 1;
+}

@@ -1,0 +1,397 @@
+<div class="uk-container">
+  <div class="uk-grid-match uk-margin-small-top uk-margin-small-bottom" uk-grid>
+    <div class="uk-width-1-1 uk-width-1-4@m">
+      <div class="uk-panel">
+        <div
+          class="
+            uk-panel uk-box-shadow-small uk-padding-small uk-height-max-medium
+          "
+        >
+          <ul class="uk-list">
+            <li>
+              <small>
+                <img src="./assets/icons/clock.svg" alt="" width="10%" /> Listo
+                en:
+                <b
+                  >{{ _receta && _receta.listo_en }}
+                  {{
+                    _receta && _receta.listo_en.split(":")[0] !== "00"
+                      ? "hrs"
+                      : "min"
+                  }}</b
+                >
+              </small>
+            </li>
+            <li>
+              <small>
+                <img src="./assets/icons/apron.svg" alt="" width="10%" />
+                Preparación:
+                <b
+                  >{{ _receta && _receta.preparacion }}
+                  {{
+                    _receta && _receta.preparacion.split(":")[0] !== "00"
+                      ? "hrs"
+                      : "min"
+                  }}</b
+                >
+              </small>
+            </li>
+            <li>
+              <small>
+                <img src="./assets/icons/pot.svg" alt="" width="10%" /> Cocinar:
+                <b
+                  >{{ _receta && _receta.cocinar }}
+                  {{
+                    _receta && _receta.cocinar.split(":")[0] !== "00"
+                      ? "hrs"
+                      : "min"
+                  }}</b
+                >
+              </small>
+            </li>
+            <li>
+              <small>
+                <img src="./assets/icons/tray.svg" alt="" width="10%" />
+                Porciones: <b>{{ _receta && _receta.porciones }} </b>
+              </small>
+            </li>
+          </ul>
+        </div>
+
+        <div
+          class="uk-panel uk-box-shadow-small uk-padding-small uk-margin-top"
+        >
+          <span><b>Ingredientes</b></span>
+          <ul class="uk-list">
+            <li *ngFor="let item of _ingredientes">
+              {{ item.cantidad_medida }} de {{ item.ingrediente }}
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="uk-width-1-1 uk-width-1-2@m">
+      <div class="uk-panel">
+        <h3 class="uk-card-title">
+          {{ _receta && _receta.nombre | uppercase }}
+        </h3>
+        <p>
+          <span *ngIf="_valoracion < 1">
+            <i class="far fa-star" aria-hidden="true"></i>
+          </span>
+          <span *ngIf="_valoracion > 0">
+            <i class="fas fa-star" aria-hidden="true"></i>
+          </span>
+          <span *ngIf="_valoracion < 2">
+            <i class="far fa-star" aria-hidden="true"></i>
+          </span>
+          <span *ngIf="_valoracion > 1">
+            <i class="fas fa-star" aria-hidden="true"></i>
+          </span>
+          <span *ngIf="_valoracion < 3">
+            <i class="far fa-star" aria-hidden="true"></i>
+          </span>
+          <span *ngIf="_valoracion > 2">
+            <i class="fas fa-star" aria-hidden="true"></i>
+          </span>
+          <span *ngIf="_valoracion < 4">
+            <i class="far fa-star" aria-hidden="true"></i>
+          </span>
+          <span *ngIf="_valoracion > 3">
+            <i class="fas fa-star" aria-hidden="true"></i>
+          </span>
+          <span *ngIf="_valoracion < 5">
+            <i class="far fa-star" aria-hidden="true"></i>
+          </span>
+          <span *ngIf="_valoracion > 4">
+            <i class="fas fa-star" aria-hidden="true"></i>
+          </span>
+          {{ _valoracion }} ({{ _resenias.length }})
+        </p>
+        <p>{{ _receta && _receta.descripcion }}</p>
+        <img
+          [attr.data-src]="_receta && url + _receta.img"
+          width="100%"
+          height="auto"
+          [alt]="_receta && _receta.img"
+          uk-img
+        />
+        <div class="uk-panel uk-margin-top uk-width-1-1">
+          <span><b>Productos</b></span>
+          <button class="uk-button uk-align-right" (click)="addAllCarrito()">
+            <span uk-icon="icon: plus-circle"></span> Agregar seleccionados al
+            carrito
+          </button>
+        </div>
+
+        <ul class="uk-list">
+          <li *ngFor="let item of _ingredientes">
+            <div
+              class="uk-grid-match uk-child-width-1-1 uk-child-width-1-4@m"
+              uk-grid
+            >
+              <div>
+                <div>
+                  <input
+                    class="uk-checkbox uk-form-blank"
+                    type="checkbox"
+                    [name]="item.producto._id"
+                    [(ngModel)]="item.check"
+                  />
+                </div>
+              </div>
+              <div
+                class="uk-padding-remove"
+                [routerLink]="['/producto', item.producto._id]"
+              >
+                <img
+                  [src]="url_p + item.producto.img"
+                  alt=""
+                  srcset=""
+                  style="height: 100% !important; width: 100% !important"
+                />
+              </div>
+              <div>
+                <div>
+                  <p>{{ item.producto.nombre }}</p>
+                  <span class="uk-label">{{ item.paquete?.paquete }}</span>
+                </div>
+              </div>
+              <div>
+                <div class="uk-panel">
+                  <a
+                    href="javascript:void(0)"
+                    class="uk-button uk-button-default uk-button-small"
+                    (click)="addCarrito(item.producto, item.paquete)"
+                    >Agregar al carrito</a
+                  >
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+
+        <hr />
+        <h3>Pasos</h3>
+        <ul class="uk-list">
+          <li *ngFor="let item of _pasos">
+            {{ item.paso }}. {{ item.descripcion }}
+          </li>
+        </ul>
+        <span><b>Reseñas</b></span>
+        <hr />
+        <div class="uk-grid-small" uk-grid>
+          <div class="uk-width-1-1">
+            <h4>
+              <span
+                *ngIf="_valoracion_usuario < 1"
+                (click)="setValoracionUsuario(1)"
+                (mouseover)="setValoracionUsuario(1)"
+              >
+                <i class="far fa-star" aria-hidden="true"></i>
+              </span>
+              <span
+                *ngIf="_valoracion_usuario > 0"
+                (click)="setValoracionUsuario(1)"
+                (mouseover)="setValoracionUsuario(1)"
+              >
+                <i class="fas fa-star" aria-hidden="true"></i>
+              </span>
+              <span
+                *ngIf="_valoracion_usuario < 2"
+                (click)="setValoracionUsuario(2)"
+                (mouseover)="setValoracionUsuario(2)"
+              >
+                <i class="far fa-star" aria-hidden="true"></i>
+              </span>
+              <span
+                *ngIf="_valoracion_usuario > 1"
+                (click)="setValoracionUsuario(2)"
+                (mouseover)="setValoracionUsuario(2)"
+              >
+                <i class="fas fa-star" aria-hidden="true"></i>
+              </span>
+              <span
+                *ngIf="_valoracion_usuario < 3"
+                (click)="setValoracionUsuario(3)"
+                (mouseover)="setValoracionUsuario(3)"
+              >
+                <i class="far fa-star" aria-hidden="true"></i>
+              </span>
+              <span
+                *ngIf="_valoracion_usuario > 2"
+                (click)="setValoracionUsuario(3)"
+                (mouseover)="setValoracionUsuario(3)"
+              >
+                <i class="fas fa-star" aria-hidden="true"></i>
+              </span>
+              <span
+                *ngIf="_valoracion_usuario < 4"
+                (click)="setValoracionUsuario(4)"
+                (mouseover)="setValoracionUsuario(4)"
+              >
+                <i class="far fa-star" aria-hidden="true"></i>
+              </span>
+              <span
+                *ngIf="_valoracion_usuario > 3"
+                (click)="setValoracionUsuario(4)"
+                (mouseover)="setValoracionUsuario(4)"
+              >
+                <i class="fas fa-star" aria-hidden="true"></i>
+              </span>
+              <span
+                *ngIf="_valoracion_usuario < 5"
+                (click)="setValoracionUsuario(5)"
+                (mouseover)="setValoracionUsuario(5)"
+              >
+                <i class="far fa-star" aria-hidden="true"></i>
+              </span>
+              <span
+                *ngIf="_valoracion_usuario > 4"
+                (click)="setValoracionUsuario(5)"
+                (mouseover)="setValoracionUsuario(5)"
+              >
+                <i class="fas fa-star" aria-hidden="true"></i>
+              </span>
+              ({{ _valoracion_usuario }})
+              <button
+                class="
+                  uk-button uk-button-default uk-button-small uk-align-right
+                "
+                (click)="insertResenia()"
+              >
+                Agregar
+              </button>
+            </h4>
+            <input
+              type="text"
+              nombre="titulo"
+              placeholder="Titulo"
+              class="uk-input"
+              [(ngModel)]="_resenia.titulo"
+            />
+            <textarea
+              class="uk-textarea"
+              rows=" 5"
+              name="resenia"
+              placeholder="Reseña"
+              [(ngModel)]="_resenia.resenia"
+            ></textarea>
+          </div>
+        </div>
+        <ul class="uk-comment-list">
+          <li class="uk-height-large uk-overflow-auto">
+            <article
+              class="uk-comment uk-visible-toggle"
+              tabindex="-1"
+              *ngFor="let item of _resenias"
+            >
+              <header class="uk-comment-header uk-position-relative">
+                <div class="uk-grid-medium uk-flex-middle" uk-grid>
+                  <div class="uk-width-auto">
+                    <img
+                      class="uk-comment-avatar uk-border-circle"
+                      [src]="
+                        'https://dummyimage.com/400x400/000/ffffff&text=' +
+                        item.usuario.nombre.split(' ')[0]
+                      "
+                      width="80"
+                      height="80"
+                      alt=""
+                    />
+                  </div>
+                  <div class="uk-width-expand">
+                    <h4 class="uk-comment-title uk-margin-remove">
+                      <a class="uk-link-reset" href="javascript:void(0)">{{
+                        item.titulo
+                      }}</a>
+                    </h4>
+                    <p
+                      class="
+                        uk-comment-meta
+                        uk-margin-remove-top
+                        uk-margin-remove-bottom
+                      "
+                    >
+                      <a class="uk-link-reset" href="javascript:void(0)"
+                        >Escrito en {{ item.fecha | date }} por
+                        {{ item.usuario.nombre }}
+                      </a>
+                    </p>
+                    <p class="uk-comment-meta uk-margin-remove-top">
+                      <span *ngIf="item.valoracion < 1">
+                        <i class="far fa-star" aria-hidden="true"></i>
+                      </span>
+                      <span *ngIf="item.valoracion > 0">
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                      </span>
+                      <span *ngIf="item.valoracion < 2">
+                        <i class="far fa-star" aria-hidden="true"></i>
+                      </span>
+                      <span *ngIf="item.valoracion > 1">
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                      </span>
+                      <span *ngIf="item.valoracion < 3">
+                        <i class="far fa-star" aria-hidden="true"></i>
+                      </span>
+                      <span *ngIf="item.valoracion > 2">
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                      </span>
+                      <span *ngIf="item.valoracion < 4">
+                        <i class="far fa-star" aria-hidden="true"></i>
+                      </span>
+                      <span *ngIf="item.valoracion > 3">
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                      </span>
+                      <span *ngIf="item.valoracion < 5">
+                        <i class="far fa-star" aria-hidden="true"></i>
+                      </span>
+                      <span *ngIf="item.valoracion > 4">
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                      </span>
+                      ({{ item.valoracion }})
+                    </p>
+                  </div>
+                </div>
+              </header>
+              <div class="uk-comment-body">
+                <p>{{ item.resenia }}</p>
+              </div>
+            </article>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="uk-width-1-1 uk-width-1-4@m uk-flex-first uk-flex-last@m">
+      <div
+        class="
+          uk-panel
+          uk-text-center
+          uk-padding-small
+          uk-box-shadow-small
+          uk-height-small
+        "
+      >
+        <button
+          class="uk-button uk-button-default uk-button-small uk-width-1-1"
+          *ngIf="_isFavorito"
+          (click)="addfavorito()"
+        >
+          <i class="fas fa-heart" aria-hidden="true"></i>
+          Quitar
+        </button>
+        <button
+          class="uk-button uk-button-default uk-button-small uk-width-1-1"
+          *ngIf="!_isFavorito"
+          (click)="addfavorito()"
+        >
+          <i class="far fa-heart" aria-hidden="true"></i>
+          Guardar
+        </button>
+        <span
+          ><small>Guardado por {{ _conteo }} personas</small></span
+        >
+      </div>
+    </div>
+  </div>
+</div>

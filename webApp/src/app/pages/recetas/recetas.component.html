@@ -1,0 +1,49 @@
+<div class="uk-grid-match" uk-grid>
+  <div class="uk-width-1-1 uk-width-1-4@m">
+    <div class="uk-card uk-card-default uk-card-body">
+      <h3 class="uk-card-title">
+        Categorias
+        <span
+          class="cat"
+          uk-icon="icon: minus-circle"
+          uk-toggle="target: .cat"
+          type="button"
+        ></span
+        ><span
+          class="cat"
+          uk-icon="icon: plus-circle"
+          uk-toggle="target: .cat"
+          type="button"
+          hidden
+        ></span>
+      </h3>
+      <ul class="uk-nav uk-nav-default cat">
+        <li class="uk-active" *ngFor="let categoria of categorias">
+          <a
+            [routerLink]="['/recetas']"
+            [queryParams]="{ categoria: categoria._id }"
+            routerLinkActive="router-link-active"
+            >{{ categoria.nombre }}</a
+          >
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div
+    class="uk-width-1-1 uk-width-3-4@m"
+    infiniteScroll
+    [infiniteScrollDistance]="2"
+    [infiniteScrollThrottle]="50"
+    (scrolled)="onScroll($event)"
+    [scrollWindow]="true"
+  >
+    <div
+      class="uk-grid-match uk-child-width-1-2 uk-child-width-1-4@m uk-padding-small"
+      uk-grid
+    >
+      <div *ngFor="let item of recetas">
+        <app-card-receta [receta]="item"></app-card-receta>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,664 @@
+<div class="pb-3" style="min-height: 100%" *ngIf="_style === 'card1'">
+  <div class="card pt-3 mx-3 posion-relativa shadow">
+    <div class="posicion-botonLista" (click)="seleccionaALista()">
+      <img
+        style="width: 25px !important; height: auto !important"
+        src="./assets/images/listas.png"
+        class="h-25"
+        alt=""
+        srcset=""
+        data-toggle="modal"
+        data-target="#modalAddProductoLista"
+      />
+    </div>
+    <button class="posicion-botonLike" (click)="favorito()" *ngIf="!isFavorito">
+      <!-- <i [class]="class" ></i> -->
+      <i class="far fa-heart inclinacion-botonlike"></i>
+    </button>
+    <button class="posicion-botonLike" (click)="favorito()" *ngIf="isFavorito">
+      <!-- <i [class]="class" ></i> -->
+      <i class="fas fa-heart text-danger inclinacion-botonlike"></i>
+    </button>
+    <img
+      *ngIf="_producto != null"
+      [src]="url + _img"
+      [routerLink]="['/producto', _producto._id]"
+      routerLinkActive="router-link-active"
+      class="card-img-top ml-auto mt-3 mr-auto autoW"
+      alt="..."
+    />
+    <div class="card-body mt-0 text-center">
+      <div style="height: 6rem; overflow: hidden">
+        <a class="text m-0 p-0 d-block" *ngIf="_producto != null">{{
+          _producto.nombre
+        }}</a>
+      </div>
+      <p class="price m-0 p-0" style="color: #ffb107" *ngIf="_paquete != null">
+        ${{ _paquete.precio }}
+      </p>
+      <span *ngIf="precioAnterior > 0" style="text-decoration: line-through"
+        >${{ precioAnterior }}</span
+      >
+
+      <div
+        class="uk-flex uk-flex-wrap uk-flex-wrap-between"
+        style="min-height: 60px"
+        *ngIf="_inventario.length > 1"
+      >
+        <button
+          [class]="
+            _paquete._id === paquete._id
+              ? 'uk-button uk-button-default uk-button-small uk-width-1-3 uk-text-capitalize uk-button-paquete active'
+              : 'uk-button uk-button-default uk-button-small uk-width-1-3 uk-text-capitalize uk-button-paquete'
+          "
+          *ngFor="let paquete of _inventario"
+          (click)="selectPaquete(paquete)"
+        >
+          {{ paquete.paquete }}
+        </button>
+      </div>
+      <div
+        class="uk-flex uk-flex-wrap uk-flex-wrap-between"
+        style="min-height: 60px"
+        *ngIf="2 > _inventario.length"
+      >
+        <button
+          [class]="
+            _paquete._id === paquete._id
+              ? 'uk-button uk-button-default uk-button-small uk-width-expand uk-text-capitalize uk-button-paquete active'
+              : 'uk-button uk-button-default uk-button-small uk-width-expand uk-text-capitalize uk-button-paquete'
+          "
+          *ngFor="let paquete of _inventario"
+          (click)="selectPaquete(paquete)"
+        >
+          {{ paquete.paquete }}
+        </button>
+      </div>
+      <div class="uk-flex uk-flex-wrap uk-flex-wrap-between p-0 m-2">
+        <div class="input-group uk-flex-center">
+          <div class="input-group-prepend">
+            <button
+              (click)="changeCantidad(false)"
+              class="btn btn-outline-secondary btn-cantidad"
+              style="color: #ffb107"
+              type="button"
+              id="button-addon1"
+            >
+              <i class="fas fa-minus"></i>
+            </button>
+          </div>
+          <input
+            type="number"
+            readonly
+            [(ngModel)]="_cantidad"
+            name="cantidad"
+            class="form-control p-0 text-center"
+            placeholder=""
+            aria-label="Example text with button addon"
+            aria-describedby="button-addon1"
+          />
+          <div class="input-group-append">
+            <button
+              (click)="changeCantidad()"
+              class="btn btn-outline-secondary btn-cantidad"
+              style="color: #ffb107"
+              type="button"
+              id="button-addon1"
+            >
+              <i class="fas fa-plus"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <button
+        type="button"
+        (click)="addCarrito()"
+        class="btn text-light bg-btnRojo btn-sm btn-block mt-3"
+      >
+        Añadir al carrito
+      </button>
+      <button
+        type="button"
+        (click)="addSuscripcion()"
+        class="btn text-light bg-btnMorado btn-sm btn-block"
+      >
+        Añadir a mi súper recurrente
+      </button>
+
+      <!--  <button type="button" class="btn bg-btnAzul btn-sm btn-block" data-toggle="modal"
+        data-target="#modalAddProductoLista" (click)="seleccionaALista()">
+        Agregar a mis listas
+      </button> -->
+    </div>
+  </div>
+</div>
+<div class="pb-3" style="min-height: 100%" *ngIf="_style === 'card2'">
+  <div class="mx-3 mb-5 bg-white rounded estilo-cards-bolsa shadow">
+    <div class="ancho40" style="position: relative">
+      <img
+        *ngIf="_producto != null"
+        [src]="url + _img"
+        [routerLink]="['/producto', _producto._id]"
+        routerLinkActive="router-link-active"
+        class="w-100"
+        alt="..."
+      />
+    </div>
+
+    <div class="ancho60 mx-3">
+      <button
+        *ngIf="!isFavorito"
+        style="position: absolute; left: 20px; top: 1px; right: auto"
+        (click)="favorito()"
+        class="posicion-botonLike2"
+        id="12344"
+      >
+        <i class="far fa-heart inclinacion-botonlike"></i>
+      </button>
+      <button
+        *ngIf="isFavorito"
+        style="position: absolute; left: 30px; top: 1px"
+        (click)="favorito()"
+        class="posicion-botonLike2"
+        id="12344"
+      >
+        <i class="fas text-danger fa-heart inclinacion-botonlike"></i>
+      </button>
+
+      <div style="height: 6rem; overflow: hidden">
+        <a class="text m-0 p-0 d-block" *ngIf="_producto != null">{{
+          _producto.nombre
+        }}</a>
+      </div>
+      <!-- <p class=" card-text overflow-hidden" style="height:45px">{{_producto.nombre}}</p> -->
+      <p class="price m-0 p-0" style="color: #ffb107">${{ _paquete.precio }}</p>
+      <span *ngIf="precioAnterior > 0" style="text-decoration: line-through">{{
+        precioAnterior
+      }}</span>
+
+      <div
+        class="uk-flex uk-flex-wrap uk-flex-wrap-between"
+        style="min-height: 60px"
+        *ngIf="_inventario.length > 1"
+      >
+        <button
+          [class]="
+            _paquete._id === paquete._id
+              ? 'uk-button uk-button-default uk-button-small uk-width-1-3 uk-text-capitalize uk-button-paquete active'
+              : 'uk-button uk-button-default uk-button-small uk-width-1-3 uk-text-capitalize uk-button-paquete'
+          "
+          *ngFor="let paquete of _inventario"
+          (click)="selectPaquete(paquete)"
+        >
+          {{ paquete.paquete }}
+        </button>
+      </div>
+      <div
+        class="uk-flex uk-flex-wrap uk-flex-wrap-between"
+        style="min-height: 60px"
+        *ngIf="2 > _inventario.length"
+      >
+        <button
+          [class]="
+            _paquete._id === paquete._id
+              ? 'uk-button uk-button-default uk-button-small uk-width-expand uk-text-capitalize uk-button-paquete active'
+              : 'uk-button uk-button-default uk-button-small uk-width-expand uk-text-capitalize uk-button-paquete'
+          "
+          *ngFor="let paquete of _inventario"
+          (click)="selectPaquete(paquete)"
+        >
+          {{ paquete.paquete }}
+        </button>
+      </div>
+      <div class="uk-flex uk-flex-wrap uk-flex-wrap-between p-0 m-2">
+        <div class="input-group uk-flex-center">
+          <div class="input-group-prepend">
+            <button
+              (click)="changeCantidad(false)"
+              class="btn btn-outline-secondary btn-cantidad"
+              style="color: #ffb107"
+              type="button"
+              id="button-addon1"
+            >
+              <i class="fas fa-minus"></i>
+            </button>
+          </div>
+          <input
+            type="number"
+            readonly
+            [(ngModel)]="_cantidad"
+            name="cantidad"
+            class="form-control p-0 text-center"
+            placeholder=""
+            aria-label="Example text with button addon"
+            aria-describedby="button-addon1"
+          />
+          <div class="input-group-append">
+            <button
+              (click)="changeCantidad()"
+              class="btn btn-outline-secondary btn-cantidad"
+              style="color: #ffb107"
+              type="button"
+              id="button-addon1"
+            >
+              <i class="fas fa-plus"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <button
+        type="button"
+        (click)="addCarrito()"
+        class="btn text-light bg-btnRojo btn-sm btn-block mt-3"
+      >
+        Añadir al carrito
+      </button>
+      <button
+        type="button"
+        (click)="addSuscripcion()"
+        class="btn text-light bg-btnMorado btn-sm btn-block mb-3"
+      >
+        Añadir a mi súper recurrente
+      </button>
+    </div>
+  </div>
+</div>
+<div class="pb-3" style="min-height: 100%" *ngIf="_style === 'card3'">
+  <div id="divCard" *ngIf="!!_producto">
+    <div class="posicion-botonLista" (click)="seleccionaALista()">
+      <img
+        style="width: 25px !important; height: auto !important"
+        src="./assets/images/listas.png"
+        class="h-25"
+        alt=""
+        srcset=""
+        data-toggle="modal"
+        data-target="#modalAddProductoLista"
+      />
+    </div>
+    <button class="posicion-botonLike" (click)="favorito()" *ngIf="!isFavorito">
+      <!-- <i [class]="class" ></i> -->
+      <i class="far fa-heart inclinacion-botonlike"></i>
+    </button>
+    <button class="posicion-botonLike" (click)="favorito()" *ngIf="isFavorito">
+      <!-- <i [class]="class" ></i> -->
+      <i class="fas fa-heart text-danger inclinacion-botonlike"></i>
+    </button>
+    <img
+      [src]="url + _img"
+      [routerLink]="['/producto', _producto._id]"
+      routerLinkActive="router-link-active"
+      class="card-img-top ml-auto mt-3 mr-auto autoW"
+      alt="..."
+    />
+    <div class="card-body text-center mt-0">
+      <div style="height: 6rem; overflow: hidden">
+        <a class="text m-0 p-0 d-block" *ngIf="_producto != null">{{
+          _producto.nombre
+        }}</a>
+      </div>
+      <p class="price m-0 p-0" style="color: #ffb107">${{ _paquete.precio }}</p>
+      <span *ngIf="precioAnterior > 0" style="text-decoration: line-through">{{
+        precioAnterior
+      }}</span>
+      <div
+        class="uk-flex uk-flex-wrap uk-flex-wrap-between"
+        style="min-height: 60px"
+        *ngIf="_inventario.length > 1"
+      >
+        <button
+          [class]="
+            _paquete._id === paquete._id
+              ? 'uk-button uk-button-default uk-button-small uk-width-1-3 uk-text-capitalize uk-button-paquete active'
+              : 'uk-button uk-button-default uk-button-small uk-width-1-3 uk-text-capitalize uk-button-paquete'
+          "
+          *ngFor="let paquete of _inventario"
+          (click)="selectPaquete(paquete)"
+        >
+          {{ paquete.paquete }}
+        </button>
+      </div>
+      <div
+        class="uk-flex uk-flex-wrap uk-flex-wrap-between"
+        style="min-height: 60px"
+        *ngIf="2 > _inventario.length"
+      >
+        <button
+          [class]="
+            _paquete._id === paquete._id
+              ? 'uk-button uk-button-default uk-button-small uk-width-expand uk-text-capitalize uk-button-paquete active'
+              : 'uk-button uk-button-default uk-button-small uk-width-expand uk-text-capitalize uk-button-paquete'
+          "
+          *ngFor="let paquete of _inventario"
+          (click)="selectPaquete(paquete)"
+        >
+          {{ paquete.paquete }}
+        </button>
+      </div>
+      <div class="uk-flex uk-flex-wrap uk-flex-wrap-between p-0 m-2">
+        <div class="input-group uk-flex-center">
+          <div class="input-group-prepend">
+            <button
+              (click)="changeCantidad(false)"
+              class="btn btn-outline-secondary btn-cantidad px-1"
+              style="color: #ffb107"
+              type="button"
+              id="button-addon1"
+            >
+              <i class="fas fa-minus"></i>
+            </button>
+          </div>
+          <input
+            type="number"
+            readonly
+            [(ngModel)]="_cantidad"
+            name="cantidad"
+            class="form-control p-0 text-center"
+            placeholder=""
+            aria-label="Example text with button addon"
+            aria-describedby="button-addon1"
+          />
+          <div class="input-group-append">
+            <button
+              (click)="changeCantidad()"
+              class="btn btn-outline-secondary btn-cantidad px-1"
+              style="color: #ffb107"
+              type="button"
+              id="button-addon1"
+            >
+              <i class="fas fa-plus"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <button
+        type="button"
+        (click)="addCarrito()"
+        class="btn text-light bg-btnRojo btn-sm btn-block mt-3"
+      >
+        Añadir al carrito
+      </button>
+      <button
+        type="button"
+        (click)="addSuscripcion()"
+        class="btn text-light bg-btnMorado btn-sm btn-block"
+      >
+        Añadir a mi súper recurrente
+      </button>
+    </div>
+  </div>
+</div>
+<div class="pb-3" style="min-height: 100%" *ngIf="_style === 'card4'">
+  <div class="col-6 col-md-4 mb-3">
+    <div class="card md-shadow noneb">
+      <img
+        [src]="url + _img"
+        [routerLink]="['/producto', _producto._id]"
+        routerLinkActive="router-link-active"
+        class="card-img-top ml-auto mt-3 mr-auto autoW"
+        alt="..."
+      />
+      <div class="card-text overflow-hidden" style="height: 45px">
+        <div style="height: 6rem; overflow: hidden">
+          <a class="text m-0 p-0 d-block" *ngIf="_producto != null">{{
+            _producto.nombre
+          }}</a>
+        </div>
+        <p class="price m-0 p-0" style="color: #ffb107">
+          ${{ _paquete.precio }}
+        </p>
+        <span
+          *ngIf="precioAnterior > 0"
+          style="text-decoration: line-through"
+          >{{ precioAnterior }}</span
+        >
+        <div
+          class="uk-flex uk-flex-wrap uk-flex-wrap-between"
+          style="min-height: 60px"
+          *ngIf="_inventario.length > 1"
+        >
+          <button
+            [class]="
+              _paquete._id === paquete._id
+                ? 'uk-button uk-button-default uk-button-small uk-width-1-3 uk-text-capitalize uk-button-paquete active'
+                : 'uk-button uk-button-default uk-button-small uk-width-1-3 uk-text-capitalize uk-button-paquete'
+            "
+            *ngFor="let paquete of _inventario"
+            (click)="selectPaquete(paquete)"
+          >
+            {{ paquete.paquete }}
+          </button>
+        </div>
+        <div
+          class="uk-flex uk-flex-wrap uk-flex-wrap-between"
+          style="min-height: 60px"
+          *ngIf="2 > _inventario.length"
+        >
+          <button
+            [class]="
+              _paquete._id === paquete._id
+                ? 'uk-button uk-button-default uk-button-small uk-width-expand uk-text-capitalize uk-button-paquete active'
+                : 'uk-button uk-button-default uk-button-small uk-width-expand uk-text-capitalize uk-button-paquete'
+            "
+            *ngFor="let paquete of _inventario"
+            (click)="selectPaquete(paquete)"
+          >
+            {{ paquete.paquete }}
+          </button>
+        </div>
+        <div class="uk-flex uk-flex-wrap uk-flex-wrap-between p-0 m-2">
+          <div class="input-group uk-flex-center">
+            <div class="input-group-prepend">
+              <button
+                (click)="changeCantidad(false)"
+                class="btn btn-outline-secondary btn-cantidad"
+                style="color: #ffb107"
+                type="button"
+                id="button-addon1"
+              >
+                <i class="fas fa-minus"></i>
+              </button>
+            </div>
+            <input
+              type="number"
+              readonly
+              [(ngModel)]="_cantidad"
+              name="cantidad"
+              class="form-control p-0 text-center"
+              placeholder=""
+              aria-label="Example text with button addon"
+              aria-describedby="button-addon1"
+            />
+            <div class="input-group-append">
+              <button
+                (click)="changeCantidad()"
+                class="btn btn-outline-secondary btn-cantidad"
+                style="color: #ffb107"
+                type="button"
+                id="button-addon1"
+              >
+                <i class="fas fa-plus"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <button
+          type="button"
+          (click)="addCarrito()"
+          class="btn text-light bg-btnRojo btn-sm btn-block mt-5"
+        >
+          Añadir al carrito
+        </button>
+        <button
+          type="button"
+          (click)="addSuscripcion()"
+          class="btn text-light bg-btnMorado btn-sm btn-block"
+        >
+          Añadir a mi súper recurrente
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="pb-3" style="min-height: 100%" *ngIf="_style === 'cardRedonda'">
+  <div class="card shadow-none md-shadow noneb p-3 fondo-negro">
+    <img
+      [src]="url + _img"
+      [routerLink]="['/producto', _producto._id]"
+      routerLinkActive="router-link-active"
+      class="card-img-top ml-auto mt-3 mr-auto redo autoW"
+      style="width: 100% !important; height: auto !important"
+      alt="..."
+    />
+    <div class="card-body text-center text-white fondo-negro">
+      <a class="text overflow-hidden" style="height: 45px">{{
+        _producto.nombre
+      }}</a>
+      <span>
+        <p class="price m-0 p-0" style="color: #ffb107">
+          ${{ _paquete.precio }}
+        </p>
+        <span
+          *ngIf="precioAnterior > 0"
+          style="text-decoration: line-through; color: #ffb107"
+          >${{ precioAnterior }}</span
+        >
+      </span>
+    </div>
+  </div>
+</div>
+<div
+  class="pb-3"
+  style="min-height: 100%"
+  *ngIf="_style === 'cardCatalogo'"
+  class="col pt-3"
+>
+  <div class="card shadow border-0">
+    <div class="posicion-botonLista" (click)="seleccionaALista()">
+      <img
+        style="width: 25px !important; height: auto !important"
+        src="./assets/images/listas.png"
+        class="h-25"
+        alt=""
+        srcset=""
+        data-toggle="modal"
+        data-target="#modalAddProductoLista"
+      />
+    </div>
+    <button class="posicion-botonLike" (click)="favorito()" *ngIf="!isFavorito">
+      <!-- <i [class]="class" ></i> -->
+      <i class="far fa-heart inclinacion-botonlike"></i>
+    </button>
+    <button class="posicion-botonLike" (click)="favorito()" *ngIf="isFavorito">
+      <!-- <i [class]="class" ></i> -->
+      <i class="fas fa-heart text-danger inclinacion-botonlike"></i>
+    </button>
+    <!-- <button class="btn-primary-outline posicion-botonLike"><img class="size-img-24" src="assets/images/TACHE.svg" alt=""></button> -->
+    <img
+      [src]="url + _img"
+      [routerLink]="['/producto', _producto._id]"
+      routerLinkActive="router-link-active"
+      class="card-img-top ml-auto mt-3 mr-auto autoW"
+      alt="..."
+    />
+    <div class="card-body text-center mt-0">
+      <div style="height: 6rem; overflow: hidden">
+        <a class="text m-0 p-0 d-block" *ngIf="_producto != null">{{
+          _producto.nombre
+        }}</a>
+      </div>
+      <h3 class="p-0 m-0" style="color: #ffb107">${{ _paquete.precio }}</h3>
+      <span
+        *ngIf="precioAnterior > 0"
+        style="text-decoration: line-through; color: #ffb107"
+        >{{ precioAnterior }}</span
+      >
+      <div
+        class="uk-flex uk-flex-wrap uk-flex-wrap-between"
+        style="min-height: 60px"
+        *ngIf="_inventario.length > 1"
+      >
+        <button
+          [class]="
+            _paquete._id === paquete._id
+              ? 'uk-button uk-button-default uk-button-small uk-width-1-3 uk-text-capitalize uk-button-paquete active'
+              : 'uk-button uk-button-default uk-button-small uk-width-1-3 uk-text-capitalize uk-button-paquete'
+          "
+          *ngFor="let paquete of _inventario"
+          (click)="selectPaquete(paquete)"
+        >
+          {{ paquete.paquete }}
+        </button>
+      </div>
+      <div
+        class="uk-flex uk-flex-wrap uk-flex-wrap-between"
+        style="min-height: 60px"
+        *ngIf="2 > _inventario.length"
+      >
+        <button
+          [class]="
+            _paquete._id === paquete._id
+              ? 'uk-button uk-button-default uk-button-small uk-width-expand uk-text-capitalize uk-button-paquete active'
+              : 'uk-button uk-button-default uk-button-small uk-width-expand uk-text-capitalize uk-button-paquete'
+          "
+          *ngFor="let paquete of _inventario"
+          (click)="selectPaquete(paquete)"
+        >
+          {{ paquete.paquete }}
+        </button>
+      </div>
+      <div class="uk-flex uk-flex-wrap uk-flex-wrap-between p-0 m-2">
+        <div class="input-group uk-flex-center">
+          <div class="input-group-prepend">
+            <button
+              (click)="changeCantidad(false)"
+              class="btn btn-outline-secondary btn-cantidad px-1 px-md-3"
+              style="color: #ffb107"
+              type="button"
+              id="button-addon1"
+            >
+              <i class="fas fa-minus"></i>
+            </button>
+          </div>
+          <input
+            type="number"
+            readonly
+            [(ngModel)]="_cantidad"
+            name="cantidad"
+            class="form-control p-0 text-center"
+            placeholder=""
+            aria-label="Example text with button addon"
+            aria-describedby="button-addon1"
+          />
+          <div class="input-group-append">
+            <button
+              (click)="changeCantidad()"
+              class="btn btn-outline-secondary btn-cantidad px-1 px-md-3"
+              style="color: #ffb107"
+              type="button"
+              id="button-addon1"
+            >
+              <i class="fas fa-plus"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <button
+        type="button"
+        (click)="addCarrito()"
+        class="btn text-light bg-btnRojo btn-sm btn-block mt-3"
+      >
+        Añadir al carrito
+      </button>
+      <button
+        type="button"
+        (click)="addSuscripcion()"
+        class="btn text-light bg-btnMorado btn-sm btn-block"
+      >
+        Añadir a mi súper recurrente
+      </button>
+    </div>
+  </div>
+</div>

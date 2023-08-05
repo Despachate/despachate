@@ -1,0 +1,23 @@
+<div
+  class="uk-flex uk-flex-column uk-flex-center uk-flex-middle"
+  uk-height-viewport="expand: true"
+>
+  <div *ngIf="terminado">
+    <span
+      class="uk-label-success uk-border-circle p-3"
+      uk-icon="icon: check; ratio: 2"
+    ></span>
+  </div>
+  <div class="uk-text-center" *ngIf="terminado">
+    <h3>El pago ha sido completado</h3>
+    <a
+      routerLink="/miCuenta/"
+      fragment="mispedidos"
+      class="uk-button uk-button-text uk-text-primary"
+      >Ir a mis pedidos</a
+    >
+  </div>
+  <div class="uk-text-center" *ngIf="!terminado">
+    <h3>Verificando el pago....</h3>
+  </div>
+</div>

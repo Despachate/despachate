@@ -1,0 +1,170 @@
+<!-- Content -->
+<div class="content">
+    <!-- Animated -->
+    <div class="animated fadeIn">
+
+        <div class="clearfix"></div>
+
+        <div class="orders">
+            <div class="row">
+                <div class="col">
+                    <div class="card">
+                        <div class="card-header btn-primary text-dark" style="cursor: pointer;" data-toggle="collapse" role="button" data-target="#header-form">
+                            <div class="d-flex bd-highlight">
+                                <strong class="p-2 flex-grow-1 bd-highlight">Pedidos</strong>
+                                <strong class="p-2 bd-highlight">Detalle Pedido</strong>
+                            </div>
+                        </div>
+                        <div class="card-body card-block collapse" id="header-form">
+                            <form ngNativeValidate [formGroup]="form" class="form-horizontal">
+                                <div class="row">
+                                    <div class="col-12 col-md-6 col-sm-12 form-group">
+                                        <div class="col"><label for="fechaCompra" class=" form-control-label">Fecha de Compra</label></div>
+                                        <div class="col"><input formControlName="fechaCompra" required type="date" id="fechaCompra" name="fechaCompra" class="form-control">
+                                            <small class="form-text text-muted">Ejemplo:29/06/2020 </small></div>
+                                    </div>
+                                    <div class="col-12 col-md-6 col-sm-12 form-group">
+                                        <div class="col"><label for="fechaRecepcion" class=" form-control-label">Fecha de Recepción</label></div>
+                                        <div class="col"><input formControlName="fechaRecepcion" required type="date" id="fechaRecepcion" name="fechaRecepcion" class="form-control">
+                                            <small class="form-text text-muted">Ejemplo:29/06/2020 </small></div>
+                                    </div>
+                                    <div class="col-12 col-md-6 col-sm-12 form-group">
+                                        <div class="col"><label for="precioTotal" class=" form-control-label">Precio Total del Pedido</label></div>
+                                        <div class="col"><input formControlName="precioTotal" type="number" min="0" id="precioTotal" name="precioTotal" class="form-control">
+                                            <small class="form-text text-muted">Ejemplo: 1379.50</small></div>
+                                    </div>
+                                    <div class="col-12 col-md-6 col-sm-12 form-group">
+                                        <div class="col"><label for="cantidadTotal" class=" form-control-label">Cantidad Total de Productos</label></div>
+                                        <div class="col"><input formControlName="cantidadTotal" type="number" min="0" required id="cantidadTotal" name="cantidadTotal" placeholder="Introduce la cantidad Total de productos" class="form-control">
+                                            <small class="form-text text-muted">Ejemplo: 25</small></div>
+                                    </div>
+                                    <div class="col-12  col-md-6 col-sm-12 form-group">
+                                        <div class="col"><label for="metodoPago" class=" form-control-label">Método de Pago</label></div>
+                                        <div class="col">
+                                            <select formControlName="metodoPago" name="metodoPago" id="metodoPago" class="form-control">
+                                                <option value="null" selected >Selecciona un Método Pago</option>
+                                                <option value="Paypal" selected >Paypal</option>
+                                                <option value="Conecta" selected >Conecta</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-6 col-sm-12 form-group">
+                                        <div class="col"><label for="referenciaPago" class=" form-control-label">Referencia del Pago</label></div>
+                                        <div class="col"><input formControlName="referenciaPago" type="text" required id="referenciaPago" name="referenciaPago" placeholder="Introduce la Referencia de Pago" class="form-control">
+                                            <small class="form-text text-muted">Ejemplo: gfhdgd546</small></div>
+                                    </div>
+                                    <div class="col-12 col-md-6 col-sm-12 form-group">
+                                        <label for="contacto" class=" form-check-label">Contactar Cliente</label>
+                                        <input class="form-check-input ml-4" id="contacto" formControlName="contacto" type="checkbox">
+                                    </div>
+                                    <div class="col-12  col-md-6 col-sm-12 form-group">
+                                        <div class="col"><label for="formaContacto" class=" form-control-label">Forma de Contacto</label></div>
+                                        <div class="col">
+                                            <select formControlName="formaContacto" name="formaContacto" id="formaContacto" class="form-control">
+                                                <option value="null" selected >Selecciona un Método Pago</option>
+                                                <option value="Ninguna" selected >Ninguna</option>
+                                                <option value="Whatsapp" selected >Whatsapp</option>
+                                                <option value="Teléfono" selected >Teléfono</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-12  col-md-6 col-sm-12 form-group">
+                                        <div class="col"><label for="estatusPago" class=" form-control-label">Estatus del Pago</label></div>
+                                        <div class="col">
+                                            <select formControlName="estatusPago" name="estatusPago" id="estatusPago" class="form-control">
+                                                <option value="null" selected >Selecciona el estatus del Pago</option>
+                                                <option value="Pendiente" selected >Pendiente</option>
+                                                <option value="Pagado" selected >Pagado</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-12  col-md-6 col-sm-12 form-group">
+                                        <div class="col"><label for="estatusEnvio" class=" form-control-label">Estatus del Envio</label></div>
+                                        <div class="col">
+                                            <select formControlName="estatusEnvio" name="estatusEnvio" id="estatusEnvio" class="form-control">
+                                                <option value="null" selected >Selecciona el estatus de Envio</option>
+                                                <option value="Pendiente" selected >Pendiente</option>
+                                                <option value="En preparación" selected >En preparación</option>
+                                                <option value="Enviado" selected >Enviado</option>
+                                                <option value="Recibido" selected >Recibido</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-6 col-sm-12 form-group">
+                                        <div class="col"><label for="direccion" class=" form-control-label">Dirección de Envio</label></div>
+                                        <div class="col"><input formControlName="direccion" type="text" required id="direccion" name="direccion" placeholder="Introduce la dirección envio" class="form-control">
+                                            <small class="form-text text-muted">Ejemplo: Calle Salvador Urrutia #345</small></div>
+                                    </div>
+                                    <div class="col-12 col-md-6 col-sm-12 form-group">
+                                        <div class="col"><label for="cupon" class=" form-control-label">Cupon</label></div>
+                                        <div class="col"><input formControlName="cupon" type="text" required id="cupon" name="cupon" placeholder="Introduce el cupon" class="form-control">
+                                            <small class="form-text text-muted">Ejemplo: F45TY </small></div>
+                                    </div>
+                                    <div class="col-12 col-md-6 col-sm-12 form-group">
+                                        <div class="col"><label for="usuario" class=" form-control-label">Usuario</label></div>
+                                        <div class="col"><input formControlName="usuario" type="text" required id="usuario" name="usuario" placeholder="Introduce el nombre del usuario" class="form-control">
+                                            <small class="form-text text-muted">Ejemplo: Juan López </small></div>
+                                    </div>
+                                    <div class="col-12  col-md-6 col-sm-12 form-group">
+                                        <div class="col"><label for="empaque" class=" form-control-label">Tipo de Empaque</label></div>
+                                        <div class="col">
+                                            <select formControlName="empaque" name="empaque" id="empaque" class="form-control">
+                                                <option value="null" selected >Selecciona el Tipo de Empaque</option>
+                                                <option value="Tela" selected >Tela</option>
+                                                <option value="Papel" selected >Papel</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="card p-3">
+                        <div class="card-body">
+                            <h4 class="box-title">Productos Vendidos</h4>
+                        </div>
+                        <div class="card-body">
+                            <div class="">
+                                <div class="table-responsive">
+                                    <table datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" class="table ">
+                                        <thead>
+                                            <tr>
+                                                <th class="serial">#</th>
+                                                <th>Nombre</th>
+                                                <th>Precio</th>
+                                                <th>Peso</th>
+                                                <th>Medida</th>
+                                                <th>Cantidad</th>
+                                                <th>subTotal</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr *ngFor="let item of lista; let i = index">
+                                                <td class="serial">{{i+1}}</td>
+                                                <td>{{item.producto.nombre}}</td>
+                                                <td>{{item.producto.precio}}</td>
+                                                <td>{{item.producto.peso}}</td>
+                                                <td>{{item.producto.medida}}</td>
+                                                <td>{{item.cantidad}}</td>
+                                                <td>{{item.subtotal}}</td>
+                                            </tr>
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <!-- /.table-stats -->
+                        </div>
+
+                    </div>
+                    <!-- /.card -->
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- .animated -->
+</div>
+<!-- /.content -->
+<div class="clearfix"></div>

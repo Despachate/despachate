@@ -1,0 +1,5665 @@
+[{
+        "_id": "5f2dae808e2217565bc9e600",
+        "etiqueta": "frutas de temporada, alimento saludable, natural"
+    },
+    {
+        "_id": "5f2dae808e2217565bc9e601",
+        "etiqueta": "fruta favorita, temporada, sabor natural"
+    },
+    {
+        "_id": "5f2dae808e2217565bc9e602",
+        "etiqueta": "sabor natural, fruta importada, fresco, arugula"
+    },
+    {
+        "_id": "5f2dae808e2217565bc9e605",
+        "etiqueta": "frescura, fruta nutritiva, refrescante"
+    },
+    {
+        "_id": "5f2dae808e2217565bc9e607",
+        "etiqueta": "fruta jugosa, pulpa natural"
+    },
+    {
+        "_id": "5f2dae808e2217565bc9e609",
+        "etiqueta": "fruta fresca, postres de durazno, sabor natural"
+    },
+    {
+        "_id": "5f2dae808e2217565bc9e60b",
+        "etiqueta": "frutos rojos, ideal para mermeladas, frescura "
+    },
+    {
+        "_id": "5f2dae808e2217565bc9e60f",
+        "etiqueta": "fruta fresca, temporada "
+    },
+    {
+        "_id": "5f2dae808e2217565bc9e60d",
+        "etiqueta": "frutos rojos, ideal para mermeladas, frescura "
+    },
+    {
+        "_id": "5f2dae808e2217565bc9e610",
+        "etiqueta": "fuente de fibra, refrescante, fruta de verano"
+    },
+    {
+        "_id": "5f2dae818e2217565bc9e613",
+        "etiqueta": "fruta de temporada, ideal para postres, frutos verdes"
+    },
+    {
+        "_id": "5f2dae818e2217565bc9e615",
+        "etiqueta": "agua de limón, refrescante, limon, limón amarillo, limon amarillo"
+    },
+    {
+        "_id": "5f2dae818e2217565bc9e617",
+        "etiqueta": "agua de limón, refrescante, limón, limon, limón limon con semilla, limón con semilla, limón verde,  limon verde"
+    },
+    {
+        "_id": "5f2dae818e2217565bc9e619",
+        "etiqueta": "agua de limón, refrescante, limon, limón, limón sin semilla, limon sin semilla, limón verde, limon verde"
+    },
+    {
+        "_id": "5f2dae818e2217565bc9e61b",
+        "etiqueta": "fruta de temporada, pulpa natural, frutos dulces"
+    },
+    {
+        "_id": "5f2dae818e2217565bc9e61d",
+        "etiqueta": "fruta de temporada, pulpa natural, frutos dulces"
+    },
+    {
+        "_id": "5f2dae818e2217565bc9e61f",
+        "etiqueta": "fruta de temporada, pulpa natural, toque fresco"
+    },
+    {
+        "_id": "5f2dae818e2217565bc9e621",
+        "etiqueta": "fruta favorita, jugosa, snack para niños"
+    },
+    {
+        "_id": "5f2dae818e2217565bc9e623",
+        "etiqueta": "favorece al sistema digestivo, fibra "
+    },
+    {
+        "_id": "5f2dae818e2217565bc9e625",
+        "etiqueta": "favorece al sistema digestivo, fibra "
+    },
+    {
+        "_id": "5f2dae818e2217565bc9e627",
+        "etiqueta": "favorece al sistema digestivo, fibra "
+    },
+    {
+        "_id": "5f2dae818e2217565bc9e629",
+        "etiqueta": "cóctel de frutas, saludable, frescura"
+    },
+    {
+        "_id": "5f2dae818e2217565bc9e62b",
+        "etiqueta": "jugo de naranja, fibra, vitamina C"
+    },
+    {
+        "_id": "5f2dae818e2217565bc9e62d",
+        "etiqueta": "cóctel de frutas, saludable, favorece al sistema digestivo"
+    },
+    {
+        "_id": "5f2dae818e2217565bc9e62f",
+        "etiqueta": "Fibra natural, fruta de temporada"
+    },
+    {
+        "_id": "5f2dae818e2217565bc9e631",
+        "etiqueta": "Fibra natural, fruta de temporada"
+    },
+    {
+        "_id": "5f2dae818e2217565bc9e633",
+        "etiqueta": "refrescante, frutas dulces, sabor natural"
+    },
+    {
+        "_id": "5f2dae818e2217565bc9e635",
+        "etiqueta": "refrescante, frutas dulces, sabor natural"
+    },
+    {
+        "_id": "5f2dae818e2217565bc9e637",
+        "etiqueta": "potasio, fruta saludable, licuado de plátano, platano, plátano, plátano chiapas, platano chiapas"
+    },
+    {
+        "_id": "5f2dae818e2217565bc9e639",
+        "etiqueta": "fruta mini, saludable, ideal para postres, platano, plátano, platano dominico, plátano dominico"
+    },
+    {
+        "_id": "5f2dae818e2217565bc9e63b",
+        "etiqueta": "fruta vitaminada, frutas para postres, "
+    },
+    {
+        "_id": "5f2dae818e2217565bc9e63d",
+        "etiqueta": "refrescante, fruta de verano, cóctel de frutas"
+    },
+    {
+        "_id": "5f2dae818e2217565bc9e63f",
+        "etiqueta": "refrescante, fruta de verano, cóctel de frutas"
+    },
+    {
+        "_id": "5f2dae818e2217565bc9e641",
+        "etiqueta": "vitamina C, ideal para jugos, zumo"
+    },
+    {
+        "_id": "5f2dae818e2217565bc9e643",
+        "etiqueta": "fruta de temporada, snack saludable, "
+    },
+    {
+        "_id": "5f2dae818e2217565bc9e645",
+        "etiqueta": "fruta de temporada, snack saludable, "
+    },
+    {
+        "_id": "5f2dae818e2217565bc9e647",
+        "etiqueta": "frutos rojos, fruta de temporada, ideal para postres, mermeladas"
+    },
+    {
+        "_id": "5f2dae818e2217565bc9e649",
+        "etiqueta": "condimento, antioxidante, sabor a tus platillos"
+    },
+    {
+        "_id": "5f2dae818e2217565bc9e64b",
+        "etiqueta": "verduras frescas, complemento, platillos saludables"
+    },
+    {
+        "_id": "5f2dae818e2217565bc9e64d",
+        "etiqueta": "verduras frescas, complemento, platillos saludables"
+    },
+    {
+        "_id": "5f2dae818e2217565bc9e64f",
+        "etiqueta": "tubérculo, verdura saludable, ideal para ensaladas"
+    },
+    {
+        "_id": "5f2dae818e2217565bc9e651",
+        "etiqueta": "hortaliza, verdura fresca, platillos saludables"
+    },
+    {
+        "_id": "5f2dae818e2217565bc9e653",
+        "etiqueta": "antioxidante, complementa platillos, "
+    },
+    {
+        "_id": "5f2dae818e2217565bc9e655",
+        "etiqueta": "antioxidante, complementa platillos, "
+    },
+    {
+        "_id": "5f2dae818e2217565bc9e657",
+        "etiqueta": "tubérculo, prepara postres"
+    },
+    {
+        "_id": "5f2dae818e2217565bc9e659",
+        "etiqueta": "tubérculo, prepara postres"
+    },
+    {
+        "_id": "5f2dae818e2217565bc9e65b",
+        "etiqueta": "sabor a tus platillos,  consume local"
+    },
+    {
+        "_id": "5f2dae818e2217565bc9e65d",
+        "etiqueta": "sabor a tus platillos,  consume local"
+    },
+    {
+        "_id": "5f2dae818e2217565bc9e65f",
+        "etiqueta": "sabor a tus platillos,  consume local"
+    },
+    {
+        "_id": "5f2dae818e2217565bc9e661",
+        "etiqueta": "Ensaladas, fresco, huerto"
+    },
+    {
+        "_id": "5f2dae818e2217565bc9e663",
+        "etiqueta": "Verdura fresca, consume natural"
+    },
+    {
+        "_id": "5f2dae818e2217565bc9e667",
+        "etiqueta": "Verduras frescas, huerto, vaina, chícharo, en vaina, "
+    },
+    {
+        "_id": "5f2dae818e2217565bc9e669",
+        "etiqueta": "Frescura, consume local, Chícharo, Fresco, Pelado, "
+    },
+    {
+        "_id": "5f2dae828e2217565bc9e66b",
+        "etiqueta": "Salsas, chile mexicano"
+    },
+    {
+        "_id": "5f2dae828e2217565bc9e66d",
+        "etiqueta": "Chile verde, salsa, frecura, Chile Jalapeño, "
+    },
+    {
+        "_id": "5f2dae828e2217565bc9e671",
+        "etiqueta": "Chiles frescos, antoxidante"
+    },
+    {
+        "_id": "5f2dae828e2217565bc9e673",
+        "etiqueta": "Chile rojo, salsas, picante"
+    },
+    {
+        "_id": "5f2dae828e2217565bc9e675",
+        "etiqueta": "salsas, chile mexicano"
+    },
+    {
+        "_id": "5f2dae828e2217565bc9e677",
+        "etiqueta": "Vitamina C, verduras frescas"
+    },
+    {
+        "_id": "5f2dae828e2217565bc9e679",
+        "etiqueta": "verduras frescas, ensaladas "
+    },
+    {
+        "_id": "5f2dae828e2217565bc9e67b",
+        "etiqueta": "Verdura de huerto, comsume local"
+    },
+    {
+        "_id": "5f2dae828e2217565bc9e67d",
+        "etiqueta": "Verdura de huerto, comsume local"
+    },
+    {
+        "_id": "5f2dae828e2217565bc9e67f",
+        "etiqueta": "Verduras frescas, consumo sustentable"
+    },
+    {
+        "_id": "5f2dae828e2217565bc9e681",
+        "etiqueta": "Verdura, consume local"
+    },
+    {
+        "_id": "5f2dae828e2217565bc9e683",
+        "etiqueta": "Verduras frescas, consumo sustentable"
+    },
+    {
+        "_id": "5f2dae828e2217565bc9e685",
+        "etiqueta": "Snack nutritivo, complemento saludable, antioxidante"
+    },
+    {
+        "_id": "5f2dae828e2217565bc9e687",
+        "etiqueta": "Sabor crujiente,  complemento saludable, consume local"
+    },
+    {
+        "_id": "5f2dae828e2217565bc9e689",
+        "etiqueta": "Legumbres verdes, consume local, alimentos saludables"
+    },
+    {
+        "_id": "5f2dae828e2217565bc9e68b",
+        "etiqueta": "Verduras frescas, consumo sustentable"
+    },
+    {
+        "_id": "5f2dae828e2217565bc9e68d",
+        "etiqueta": "Hongos, consume local"
+    },
+    {
+        "_id": "5f2dae828e2217565bc9e68f",
+        "etiqueta": "Prepara postres, beneficios naturales, verdura fresca"
+    },
+    {
+        "_id": "5f2dae828e2217565bc9e691",
+        "etiqueta": "Consume natural, alimento local, verdura fresca"
+    },
+    {
+        "_id": "5f2dae828e2217565bc9e693",
+        "etiqueta": "Consume natural, alimento local, verdura fresca"
+    },
+    {
+        "_id": "5f2dae828e2217565bc9e695",
+        "etiqueta": "Consume natural, alimento local, verdura fresca"
+    },
+    {
+        "_id": "5f2dae828e2217565bc9e697",
+        "etiqueta": "Ensaladas, fresco, huerto"
+    },
+    {
+        "_id": "5f2dae828e2217565bc9e699",
+        "etiqueta": "Ensaladas, fresco, huerto"
+    },
+    {
+        "_id": "5f2dae828e2217565bc9e69b",
+        "etiqueta": "Ensaladas, fresco, huerto"
+    },
+    {
+        "_id": "5f2dae828e2217565bc9e69d",
+        "etiqueta": "Ensaladas, fresco, huerto"
+    },
+    {
+        "_id": "5f2dae828e2217565bc9e69f",
+        "etiqueta": "Ensaladas, fresco, huerto"
+    },
+    {
+        "_id": "5f2dae828e2217565bc9e6a1",
+        "etiqueta": "Ensaladas, fresco, huerto"
+    },
+    {
+        "_id": "5f2dae828e2217565bc9e6a3",
+        "etiqueta": "Ensaladas, fresco, huerto"
+    },
+    {
+        "_id": "5f2dae828e2217565bc9e6a5",
+        "etiqueta": "Nutritivo, fresco, saludable"
+    },
+    {
+        "_id": "5f2dae828e2217565bc9e6a7",
+        "etiqueta": "Verdura de huerto, comsume local"
+    },
+    {
+        "_id": "5f2dae828e2217565bc9e6a9",
+        "etiqueta": "Verduras frescas, consumo sustentable"
+    },
+    {
+        "_id": "5f2dae828e2217565bc9e6ab",
+        "etiqueta": "Verdura de huerto, comsume local, refrescante"
+    },
+    {
+        "_id": "5f2dae828e2217565bc9e6ad",
+        "etiqueta": "Fibra, verdura fresca consume local"
+    },
+    {
+        "_id": "5f2dae828e2217565bc9e6af",
+        "etiqueta": "Fibra, verdura fresca consume local"
+    },
+    {
+        "_id": "5f2dae828e2217565bc9e6b1",
+        "etiqueta": "Fibra, verdura fresca consume local"
+    },
+    {
+        "_id": "5f2dae828e2217565bc9e6b3",
+        "etiqueta": "Fibra, verdura fresca consume local"
+    },
+    {
+        "_id": "5f2dae828e2217565bc9e6b5",
+        "etiqueta": "verduras frescas, ensaladas "
+    },
+    {
+        "_id": "5f2dae828e2217565bc9e6b7",
+        "etiqueta": "verduras frescas, ensaladas "
+    },
+    {
+        "_id": "5f2dae838e2217565bc9e6b9",
+        "etiqueta": "Consume natural, alimento local, verdura fresca"
+    },
+    {
+        "_id": "5f2dae838e2217565bc9e6bb",
+        "etiqueta": "Consume natural, alimento local, verdura fresca"
+    },
+    {
+        "_id": "5f2dae838e2217565bc9e6bd",
+        "etiqueta": "vitamina C, ideal para jugos, verdura del huerto"
+    },
+    {
+        "_id": "5f2dae838e2217565bc9e6bf",
+        "etiqueta": "Hierba natural, consumo sustentable"
+    },
+    {
+        "_id": "5f2dae838e2217565bc9e6c1",
+        "etiqueta": "Hierba natural, consumo sustentable, vitamina"
+    },
+    {
+        "_id": "5f2dae838e2217565bc9e6c3",
+        "etiqueta": "Antioxidante, complementa platillos, "
+    },
+    {
+        "_id": "5f2dae838e2217565bc9e6c5",
+        "etiqueta": "Hortaliza, verdura fresca, platillos saludables"
+    },
+    {
+        "_id": "5f2dae838e2217565bc9e6c7",
+        "etiqueta": "Hortaliza, verdura fresca, platillos saludables"
+    },
+    {
+        "_id": "5f2dae838e2217565bc9e6c9",
+        "etiqueta": "consume natural, alimento local"
+    },
+    {
+        "_id": "5f2dae838e2217565bc9e6cb",
+        "etiqueta": "consume natural, alimento local, hierbas"
+    },
+    {
+        "_id": "5f2dae838e2217565bc9e6cd",
+        "etiqueta": "consume natural, alimento local, hierbas"
+    },
+    {
+        "_id": "5f2dae838e2217565bc9e6cf",
+        "etiqueta": "consume natural, alimento local, hierbas"
+    },
+    {
+        "_id": "5f2dae838e2217565bc9e6d1",
+        "etiqueta": "consume natural, alimento local, hierbas"
+    },
+    {
+        "_id": "5f2dae838e2217565bc9e6d3",
+        "etiqueta": "consume natural, alimento local"
+    },
+    {
+        "_id": "5f2dae838e2217565bc9e6d5",
+        "etiqueta": "consume natural, alimento local, especias"
+    },
+    {
+        "_id": "5f2dae838e2217565bc9e6d7",
+        "etiqueta": "consume natural, alimento local, especias"
+    },
+    {
+        "_id": "5f2dae838e2217565bc9e6d9",
+        "etiqueta": "consume natural, alimento local, especias"
+    },
+    {
+        "_id": "5f2dae838e2217565bc9e6db",
+        "etiqueta": "Hierba fresca, consumo sustentable"
+    },
+    {
+        "_id": "5f2dae838e2217565bc9e6dd",
+        "etiqueta": "Hierba fresca, consumo sustentable"
+    },
+    {
+        "_id": "5f2dae838e2217565bc9e6df",
+        "etiqueta": "consume natural, alimento local"
+    },
+    {
+        "_id": "5f2dae838e2217565bc9e6e1",
+        "etiqueta": "Hierba fresca, consumo sustentable"
+    },
+    {
+        "_id": "5f2dae838e2217565bc9e6e3",
+        "etiqueta": "consume natural, alimento local"
+    },
+    {
+        "_id": "5f2dae838e2217565bc9e6e5",
+        "etiqueta": "Hierba fresca, consumo sustentable"
+    },
+    {
+        "_id": "5f2dae838e2217565bc9e6e7",
+        "etiqueta": "Hierba fresca, consumo sustentable, ideal para tes"
+    },
+    {
+        "_id": "5f2dae838e2217565bc9e6e9",
+        "etiqueta": "consume natural, alimento local, especias"
+    },
+    {
+        "_id": "5f2dae838e2217565bc9e6eb",
+        "etiqueta": "Hierba fresca, consumo sustentable"
+    },
+    {
+        "_id": "5f2dae838e2217565bc9e6ed",
+        "etiqueta": "Hierba fresca, consumo sustentable"
+    },
+    {
+        "_id": "5f2dae838e2217565bc9e6ef",
+        "etiqueta": "Hierba fresca, consumo sustentable"
+    },
+    {
+        "_id": "5f2dae838e2217565bc9e6f1",
+        "etiqueta": "Hierba fresca, consumo sustentable"
+    },
+    {
+        "_id": "5f2dae838e2217565bc9e6f3",
+        "etiqueta": "consume natural, alimento local, hierbas"
+    },
+    {
+        "_id": "5f2dae838e2217565bc9e6f5",
+        "etiqueta": "Hierba fresca, consumo sustentable, ideal para tes"
+    },
+    {
+        "_id": "5f2dae838e2217565bc9e6f7",
+        "etiqueta": "consume natural, alimento local, especias"
+    },
+    {
+        "_id": "5f2dae838e2217565bc9e6f9",
+        "etiqueta": "Hierba fresca, consumo sustentable"
+    },
+    {
+        "_id": "5f2db1ec8e2217565bc9e714",
+        "etiqueta": "Jabón, Ropa blanca, Ropa de color, Detergente, Ace, Despáchate, "
+    },
+    {
+        "_id": "5f2db1ec8e2217565bc9e715",
+        "etiqueta": "Aceite Comestible, Multifuncional, Canola, Maravilla, Despáchate,"
+    },
+    {
+        "_id": "5f2db1ec8e2217565bc9e717",
+        "etiqueta": "Aceite de Oliva, Extra Virgen, La Española, Despáchate,"
+    },
+    {
+        "_id": "5f2db1ec8e2217565bc9e719",
+        "etiqueta": "Aceite de Oliva, Extra Virgen, La Española, Despáchate,"
+    },
+    {
+        "_id": "5f2db1ec8e2217565bc9e71b",
+        "etiqueta": "Aceite de Oliva, Extra Virgen, La Española, Despáchate,"
+    },
+    {
+        "_id": "5f2db1ec8e2217565bc9e71d",
+        "etiqueta": "Aceite de Oliva, Extra Virgen, La Española, Despáchate,"
+    },
+    {
+        "_id": "5f2db1ec8e2217565bc9e71f",
+        "etiqueta": "Aceite de canola, Nutritivo, Antioxidante, Despáchate,"
+    },
+    {
+        "_id": "5f2db1ec8e2217565bc9e721",
+        "etiqueta": "Aceituna, Búfalo, Deshuesada, Despáchate,"
+    },
+    {
+        "_id": "5f2db1ec8e2217565bc9e723",
+        "etiqueta": "Acondicionador, Pantene, Higiene personal, Despáchate,"
+    },
+    {
+        "_id": "5f2db1ec8e2217565bc9e725",
+        "etiqueta": "A Domicilio, Aderezo, Despensa, Hellmanns, Queso cheddar, Despáchate,"
+    },
+    {
+        "_id": "5f2db1ec8e2217565bc9e727",
+        "etiqueta": "Detergente, Trastes, Polvo, Ajax, Bicloro, Despáchate,"
+    },
+    {
+        "_id": "5f2db1ec8e2217565bc9e729",
+        "etiqueta": "Alcachofas, San Miguel, Vegetales, Despáchate,"
+    },
+    {
+        "_id": "5f2db1ec8e2217565bc9e72b",
+        "etiqueta": "Producto orgánico, Leche de proteinas, Leche de almendras, Güd, Despáchate,  bebida vegana, leche de almendra,  GUD, orgánico"
+    },
+    {
+        "_id": "5f2db1ec8e2217565bc9e72d",
+        "etiqueta": "Producto organico, Leche de proteinas, Leche de almendras, Güd, Gud, Despáchate, sin azúcar, orgánico, leche de almendra"
+    },
+    {
+        "_id": "5f2db1ec8e2217565bc9e72e",
+        "etiqueta": "Producto organico, Leche de proteinas, Leche de almendras, Güd, Gud, orgánico, coco, Despáchate,"
+    },
+    {
+        "_id": "5f2db1ec8e2217565bc9e731",
+        "etiqueta": "Producto organico, Leche de proteinas, Leche de almendras, gud, coco, orgánico, Güd, Despáchate,"
+    },
+    {
+        "_id": "5f2db1ec8e2217565bc9e733",
+        "etiqueta": "Alitas de pollo, Tipo búfalo, Pilgrims, Despáchate, pollo, congelado, alitas"
+    },
+    {
+        "_id": "5f2db1ed8e2217565bc9e735",
+        "etiqueta": "Almeja, Chirla, Despensa, Super a Domicilio, Despáchate, mariscos"
+    },
+    {
+        "_id": "5f2db1ed8e2217565bc9e739",
+        "etiqueta": "Almendras, Organico, Saludable, Cereales, antioxidantes, Despáchate,"
+    },
+    {
+        "_id": "5f2db1ed8e2217565bc9e73b",
+        "etiqueta": "Almendras, Organico, Saludable, Cereales, antioxidantes, Despáchate,"
+    },
+    {
+        "_id": "5f2db1ed8e2217565bc9e73d",
+        "etiqueta": "Amaranto, orgánico, tostado, Abarrotes, Despáchate, aires de campo"
+    },
+    {
+        "_id": "5f2db1ed8e2217565bc9e73f",
+        "etiqueta": "Anillas de calamar, Despensa, Super a Domicilio, Despáchate,"
+    },
+    {
+        "_id": "5f2db1ed8e2217565bc9e741",
+        "etiqueta": "Aros de Cebolla, Empanizado, McCain, Despacháte, "
+    },
+    {
+        "_id": "5f2db1ed8e2217565bc9e743",
+        "etiqueta": "Arrachera, Marinada, carne, angus, lonja"
+    },
+    {
+        "_id": "5f2db1ed8e2217565bc9e745",
+        "etiqueta": "Arrachera, Marinada,"
+    },
+    {
+        "_id": "5f2db1ed8e2217565bc9e747",
+        "etiqueta": "Arroz, Blanco, Orgánico, Aires del campo, Abarrotes,"
+    },
+    {
+        "_id": "5f2db1ed8e2217565bc9e749",
+        "etiqueta": "Arroz Integral, Orgánico, Súper Extra, Aires del campo, Abarrotes, integral"
+    },
+    {
+        "_id": "5f2db1ed8e2217565bc9e74b",
+        "etiqueta": "Arroz, Super Extra, SOS,"
+    },
+    {
+        "_id": "5f2db1ed8e2217565bc9e74f",
+        "etiqueta": "Atún, En agua, Herdez, Lomo, Atun"
+    },
+    {
+        "_id": "5f2db1ed8e2217565bc9e751",
+        "etiqueta": "Atún, En agua, Nair, atun, "
+    },
+    {
+        "_id": "5f2db1ed8e2217565bc9e753",
+        "etiqueta": "Lomo, Atún, En aceite, Herdez, atun,"
+    },
+    {
+        "_id": "5f2db1ed8e2217565bc9e755",
+        "etiqueta": "Lomo, Atun, En agua, Herdez,"
+    },
+    {
+        "_id": "5f2db1ed8e2217565bc9e757",
+        "etiqueta": "Lomo, Atún, Atun, lomo de atún, lomo de atun"
+    },
+    {
+        "_id": "5f2db1ed8e2217565bc9e759",
+        "etiqueta": "Atún, Steak, atun, "
+    },
+    {
+        "_id": "5f2db1ed8e2217565bc9e75b",
+        "etiqueta": "Avena, Orgánica, Hojuelas, Aires del campo, Abarrotes, orgánico"
+    },
+    {
+        "_id": "5f2db1ed8e2217565bc9e75d",
+        "etiqueta": "Azúcar, Estándar, granel, azucar"
+    },
+    {
+        "_id": "5f2db1ed8e2217565bc9e75f",
+        "etiqueta": "Azucar, Glass, Domino,"
+    },
+    {
+        "_id": "5f2db1ed8e2217565bc9e761",
+        "etiqueta": "Azucar, Mascabado, Domino, Campo, Mexicano, Caña, Natural,"
+    },
+    {
+        "_id": "5f2db1ed8e2217565bc9e763",
+        "etiqueta": "Endulzante, Azucar, Refinada, Domino, "
+    },
+    {
+        "_id": "5f2db1ed8e2217565bc9e765",
+        "etiqueta": "Amaranto, Orgánico, Sin gluten,  Sin leche, Quali tripto, comercio justo, lo más local"
+    },
+    {
+        "_id": "5f2db1ed8e2217565bc9e767",
+        "etiqueta": "Amaranto, Orgánico, Sin gluten, Quali tripto, lo más local"
+    },
+    {
+        "_id": "5f2db1ed8e2217565bc9e769",
+        "etiqueta": "Amaranto, Orgánico, Sin gluten, Aires del campo,"
+    },
+    {
+        "_id": "5f2db1ed8e2217565bc9e76a",
+        "etiqueta": "Amaranto, Orgánico, Sin gluten, Chocolate, Aires del campo,"
+    },
+    {
+        "_id": "5f2db1ed8e2217565bc9e76d",
+        "etiqueta": "Base, Cartón, Antihumedad, "
+    },
+    {
+        "_id": "5f2db1ed8e2217565bc9e76f",
+        "etiqueta": "Base, Cartón, Antihumedad, "
+    },
+    {
+        "_id": "5f2db1ed8e2217565bc9e771",
+        "etiqueta": "Base, Cartón, Antihumedad, "
+    },
+    {
+        "_id": "5f2db1ed8e2217565bc9e773",
+        "etiqueta": "Base, Cartón, Antihumedad, "
+    },
+    {
+        "_id": "5f2db1ed8e2217565bc9e775",
+        "etiqueta": "Base, Cartón, Antihumedad, "
+    },
+    {
+        "_id": "5f2db1ed8e2217565bc9e777",
+        "etiqueta": "Base, Cartón, Antihumedad, "
+    },
+    {
+        "_id": "5f2db1ed8e2217565bc9e778",
+        "etiqueta": "Bettercreme, Chocolate, Rich's, Crema, reposteria"
+    },
+    {
+        "_id": "5f2db1ed8e2217565bc9e77b",
+        "etiqueta": "Bettercreme, Doble, Chocolate, Rich's, Crema,"
+    },
+    {
+        "_id": "5f2db1ed8e2217565bc9e77d",
+        "etiqueta": "Bettercreme, Nata, Rich's, Crema, repostería"
+    },
+    {
+        "_id": "5f2db1ed8e2217565bc9e77f",
+        "etiqueta": "Bettercreme, Supremo, Vainilla, Rich's, Crema,"
+    },
+    {
+        "_id": "5f2db1ed8e2217565bc9e781",
+        "etiqueta": "Bolsa, Basura, Negra, Chiaplast, bolsa de basura, bolsas de basura"
+    },
+    {
+        "_id": "5f2db1ed8e2217565bc9e783",
+        "etiqueta": "Torres 10, Brandy, Licores,"
+    },
+    {
+        "_id": "5f2db1ed8e2217565bc9e785",
+        "etiqueta": "Café, Americano, Gourmet, Tostado y Molido, Blasón, "
+    },
+    {
+        "_id": "5f2db1ed8e2217565bc9e787",
+        "etiqueta": "Café, Americano, Gourmet, Descafeinado, Blasón, "
+    },
+    {
+        "_id": "5f2db1ee8e2217565bc9e789",
+        "etiqueta": "Cápsulas, Café, Expresso, Blu, Decaffeinato, Lavazza,"
+    },
+    {
+        "_id": "5f2db1ee8e2217565bc9e78b",
+        "etiqueta": "Cápsulas, Café, Expresso, Blu, Top Class, Lavazza,"
+    },
+    {
+        "_id": "5f2db1ee8e2217565bc9e78d",
+        "etiqueta": "Cápsulas, Café, Expresso, Blu, Top Class, x2, Lavazza,"
+    },
+    {
+        "_id": "5f2db1ee8e2217565bc9e78f",
+        "etiqueta": "Cápsulas, Café, Expresso, Crema, Lavazza,"
+    },
+    {
+        "_id": "5f2db1ee8e2217565bc9e791",
+        "etiqueta": "Café, Espresso, Tostado, Molido, Blasón,"
+    },
+    {
+        "_id": "5f2db1ee8e2217565bc9e793",
+        "etiqueta": "Café, Soluble, Nescafé, Clásico,"
+    },
+    {
+        "_id": "5f2db1ee8e2217565bc9e795",
+        "etiqueta": "Café, Soluble, Nescafé, Decaf,"
+    },
+    {
+        "_id": "5f2db1ee8e2217565bc9e797",
+        "etiqueta": "Café, Soluble, Nescafé, Dolca,"
+    },
+    {
+        "_id": "5f2db1ee8e2217565bc9e799",
+        "etiqueta": "Café, Soluble, Nescafé, Dolca,"
+    },
+    {
+        "_id": "5f2db1ee8e2217565bc9e79b",
+        "etiqueta": "Café, Soluble, Nescafé, Clásico,"
+    },
+    {
+        "_id": "5f2db1ee8e2217565bc9e79d",
+        "etiqueta": "Café, Blasón, Chiapas,"
+    },
+    {
+        "_id": "5f2db1ee8e2217565bc9e79f",
+        "etiqueta": "Café, Descafeínado, Espresso, Dek, Lavazza,"
+    },
+    {
+        "_id": "5f2db1ee8e2217565bc9e7a1",
+        "etiqueta": "Cafe, Descafeinado, Tostado y Molido, Blasón, "
+    },
+    {
+        "_id": "5f2db1ee8e2217565bc9e7a3",
+        "etiqueta": "Cafe, Grand Espresso, Lavazza, cafe en grano, grano"
+    },
+    {
+        "_id": "5f2db1ee8e2217565bc9e7a5",
+        "etiqueta": "Cafe, Italiano, Premium, Blasón,"
+    },
+    {
+        "_id": "5f2db1ee8e2217565bc9e7a7",
+        "etiqueta": "Cafe, Blasón, Oaxaca,"
+    },
+    {
+        "_id": "5f2db1ee8e2217565bc9e7a9",
+        "etiqueta": "Cafe, Blasón, Oaxaca,"
+    },
+    {
+        "_id": "5f2db1ee8e2217565bc9e7ab",
+        "etiqueta": "Cafetera, Capsulas, Cino,"
+    },
+    {
+        "_id": "5f2db1ee8e2217565bc9e7ad",
+        "etiqueta": "Cajeta, Quemada, Real de Potosi,"
+    },
+    {
+        "_id": "5f2db1ee8e2217565bc9e7af",
+        "etiqueta": "Caldo, Camarón, Condimento, Consome, Especias, Knorr, Sazonador, Unilever,"
+    },
+    {
+        "_id": "5f2db1ee8e2217565bc9e7b1",
+        "etiqueta": "Caldo, Pollo, Orgánico Aires del Campo, organico, caldo de pollo"
+    },
+    {
+        "_id": "5f2db1ee8e2217565bc9e7b3",
+        "etiqueta": "Caldo, Pescado, Condimento, Consome, Especias, Knorr, Mariscos, Pescado, Sazonador, Unilever,"
+    },
+    {
+        "_id": "5f2db1ee8e2217565bc9e7b5",
+        "etiqueta": "Caldo, Pollo, Consome, Especias, Knorr, Knorr Suiza, Sazonador, Unilever,"
+    },
+    {
+        "_id": "5f2db1ee8e2217565bc9e7b7",
+        "etiqueta": "Callo de Almeja, Capitán,"
+    },
+    {
+        "_id": "5f2db1ee8e2217565bc9e7b9",
+        "etiqueta": "Callo de Hacha, Capitán, capitan"
+    },
+    {
+        "_id": "5f2db1ee8e2217565bc9e7bb",
+        "etiqueta": "Camarón, Cocido, Capitán, camaron"
+    },
+    {
+        "_id": "5f2db1ee8e2217565bc9e7bd",
+        "etiqueta": "Camarón, Cocido, Capitán, camaron"
+    },
+    {
+        "_id": "5f2db1ee8e2217565bc9e7bf",
+        "etiqueta": "Camarón, Crudo, Frizado, camaron"
+    },
+    {
+        "_id": "5f2db1ee8e2217565bc9e7c1",
+        "etiqueta": "Camarón, Crudo, Frizado, camaron"
+    },
+    {
+        "_id": "5f2db1ee8e2217565bc9e7c3",
+        "etiqueta": "Camarón, Crudo, Frizado, Camaron"
+    },
+    {
+        "_id": "5f2db1ee8e2217565bc9e7c5",
+        "etiqueta": "Camarón, Crudo, Frizado, Camaron"
+    },
+    {
+        "_id": "5f2db1ee8e2217565bc9e7c7",
+        "etiqueta": "Camarón, Crudo, Frizado,"
+    },
+    {
+        "_id": "5f2db1ee8e2217565bc9e7c9",
+        "etiqueta": "Camarón, Langostino, con Cabeza, Camaron"
+    },
+    {
+        "_id": "5f2db1ee8e2217565bc9e7cb",
+        "etiqueta": "Camarón, Pacotilla, Chiapas,"
+    },
+    {
+        "_id": "5f2db1ee8e2217565bc9e7cd",
+        "etiqueta": "Capacillo, Varios Diseños,"
+    },
+    {
+        "_id": "5f2db1ee8e2217565bc9e7cf",
+        "etiqueta": "Capeador, Knorr, Unilever,"
+    },
+    {
+        "_id": "5f2db1ee8e2217565bc9e7d1",
+        "etiqueta": "Cartucho, Match3, Sensitive, Gillette,"
+    },
+    {
+        "_id": "5f2db1ee8e2217565bc9e7d3",
+        "etiqueta": "Catsup Up, Side Down, Heinz,"
+    },
+    {
+        "_id": "5f2db1ee8e2217565bc9e7d5",
+        "etiqueta": "Cereal, Carlos V, Nestlé, cereales"
+    },
+    {
+        "_id": "5f2db1ee8e2217565bc9e7d7",
+        "etiqueta": "Cereal, Cheerios, Miel, Nestlé, cereales"
+    },
+    {
+        "_id": "5f2db1ee8e2217565bc9e7d9",
+        "etiqueta": "Cereal, Cheerios, Manzana, Canela, Nestlé, cereales"
+    },
+    {
+        "_id": "5f2db1ee8e2217565bc9e7db",
+        "etiqueta": "Cereal, Cookie Crisp, Nestlé, cereales"
+    },
+    {
+        "_id": "5f2db1ee8e2217565bc9e7dd",
+        "etiqueta": "Cereal, Fitness, Nestlé, cereales"
+    },
+    {
+        "_id": "5f2db1ee8e2217565bc9e7df",
+        "etiqueta": "Cereal, Fitness, Fruits, Nestlé, cereales"
+    },
+    {
+        "_id": "5f2db1ef8e2217565bc9e7e1",
+        "etiqueta": "Cereal, Nesquik, Nestlé, cereales"
+    },
+    {
+        "_id": "5f2db1ef8e2217565bc9e7e3",
+        "etiqueta": "Cereal, Nestum, Nestlé,"
+    },
+    {
+        "_id": "5f2db1ef8e2217565bc9e7e5",
+        "etiqueta": "Cereal, Trix, Nestlé, cereales"
+    },
+    {
+        "_id": "5f2db1ef8e2217565bc9e7e7",
+        "etiqueta": "Chai, Manzana, Canela, Oregon, Té Chai,"
+    },
+    {
+        "_id": "5f2db1ef8e2217565bc9e7e9",
+        "etiqueta": "Chai, Oregon, Té Chai,"
+    },
+    {
+        "_id": "5f2db1ef8e2217565bc9e7eb",
+        "etiqueta": "Chai, Vainilla, Oregon, Té Chai,"
+    },
+    {
+        "_id": "5f2db1ef8e2217565bc9e7ed",
+        "etiqueta": "Champiñon, Rebanado, Herdez,"
+    },
+    {
+        "_id": "5f2db1ef8e2217565bc9e7ef",
+        "etiqueta": "Champiñones, Enteros, Herdez,"
+    },
+    {
+        "_id": "5f2db1ef8e2217565bc9e7f1",
+        "etiqueta": "Cheesecake, Media, Plancha, Richs,"
+    },
+    {
+        "_id": "5f2db1ef8e2217565bc9e7f3",
+        "etiqueta": "Cheesecake, New york, Richs,"
+    },
+    {
+        "_id": "5f2db1ef8e2217565bc9e7f5",
+        "etiqueta": "Cheesecake, Swirl de Fresa, Richs,"
+    },
+    {
+        "_id": "5f2db1ef8e2217565bc9e7f7",
+        "etiqueta": "Chicle, Val-U-Pack, Cool Bub, Trident,"
+    },
+    {
+        "_id": "5f2db1ef8e2217565bc9e7f9",
+        "etiqueta": "Chicle, Val-U-Pack, Freshmint, Trident,"
+    },
+    {
+        "_id": "5f2db1ef8e2217565bc9e7fb",
+        "etiqueta": "Chicle, Val-U-Pack, Menta, Trident,"
+    },
+    {
+        "_id": "5f2db1ef8e2217565bc9e7fd",
+        "etiqueta": "Chicle, Val-U-Pack, Sandía, Trident,"
+    },
+    {
+        "_id": "5f2db1ef8e2217565bc9e7ff",
+        "etiqueta": "Chicle, Val-U-Pack, Yerbabuena, Trident,"
+    },
+    {
+        "_id": "5f2db1ef8e2217565bc9e801",
+        "etiqueta": "Chicle, Trident, X-Tracare, Yerbabuena,"
+    },
+    {
+        "_id": "5f2db1ef8e2217565bc9e803",
+        "etiqueta": "Chicle, Trident, X-Twist Sweet, Mint,"
+    },
+    {
+        "_id": "5f2db1ef8e2217565bc9e805",
+        "etiqueta": "Chipotles, Adobados, San Marcos,"
+    },
+    {
+        "_id": "5f2db1ef8e2217565bc9e807",
+        "etiqueta": "Cereal, Kellogs, Choco Krispis, cereales"
+    },
+    {
+        "_id": "5f2db1ef8e2217565bc9e809",
+        "etiqueta": "Cereal, Kellogs, Choco Krispis, cereales"
+    },
+    {
+        "_id": "5f2db1ef8e2217565bc9e80b",
+        "etiqueta": "Chocolate, Polvo, ChocoMilk,"
+    },
+    {
+        "_id": "5f2db1ef8e2217565bc9e80d",
+        "etiqueta": "Chocolate, de Mesa, Abuelita,"
+    },
+    {
+        "_id": "5f2db1ef8e2217565bc9e80f",
+        "etiqueta": "Chocolate, Milano,"
+    },
+    {
+        "_id": "5f2db1ef8e2217565bc9e811",
+        "etiqueta": "Chocolate, en Polvo, Morelia, Presidencial,"
+    },
+    {
+        "_id": "5f2db1ef8e2217565bc9e813",
+        "etiqueta": "Cloralex, Rendidor, Desinfectante, Blanqueador, "
+    },
+    {
+        "_id": "5f2db1ef8e2217565bc9e815",
+        "etiqueta": "Clorox, Limpiador, Desinfectante,   "
+    },
+    {
+        "_id": "5f2db1ef8e2217565bc9e817",
+        "etiqueta": "Coco, Rallado, Granel,"
+    },
+    {
+        "_id": "5f2db1ef8e2217565bc9e819",
+        "etiqueta": "Cocoa, Natural, Hersheys,"
+    },
+    {
+        "_id": "5f2db1ef8e2217565bc9e81b",
+        "etiqueta": "Codo, No4, Barilla, Vegano, Vegetariano, Sin huevo, "
+    },
+    {
+        "_id": "5f2db1ef8e2217565bc9e81c",
+        "etiqueta": "Codo, Mediano, Italpasta, Sopa,"
+    },
+    {
+        "_id": "5f2db1ef8e2217565bc9e81f",
+        "etiqueta": "Crema, Café, Coffee Mate, Original,"
+    },
+    {
+        "_id": "5f2db1ef8e2217565bc9e821",
+        "etiqueta": "Arroz, Concentrado, Frutiva, Horchata,"
+    },
+    {
+        "_id": "5f2db1ef8e2217565bc9e823",
+        "etiqueta": "Consome, Pollo, Maggi,"
+    },
+    {
+        "_id": "5f2db1ef8e2217565bc9e825",
+        "etiqueta": "Consome, Res, Knorr,"
+    },
+    {
+        "_id": "5f2db1ef8e2217565bc9e827",
+        "etiqueta": "Crema, Champiñones, Campbells,"
+    },
+    {
+        "_id": "5f2db1ef8e2217565bc9e829",
+        "etiqueta": "Crema, Chile Poblano, Campbells,"
+    },
+    {
+        "_id": "5f2db1ef8e2217565bc9e82b",
+        "etiqueta": "Crema, Coco, Calahua,"
+    },
+    {
+        "_id": "5f2db1ef8e2217565bc9e82d",
+        "etiqueta": "Crema, Coco, Calahua,"
+    },
+    {
+        "_id": "5f2db1ef8e2217565bc9e82f",
+        "etiqueta": "Pasta, Dental, Briden,"
+    },
+    {
+        "_id": "5f2db1ef8e2217565bc9e831",
+        "etiqueta": "Pasta, Dental, Colgate, Kids,"
+    },
+    {
+        "_id": "5f2db1f08e2217565bc9e833",
+        "etiqueta": "Pasta, Dental, Crest, Kids, Star Wars,"
+    },
+    {
+        "_id": "5f2db1f08e2217565bc9e835",
+        "etiqueta": "Pasta, Dental, Oral B, Kids, Princess,"
+    },
+    {
+        "_id": "5f2db1f08e2217565bc9e837",
+        "etiqueta": "Crema, de Elote, Campbells,"
+    },
+    {
+        "_id": "5f2db1f08e2217565bc9e839",
+        "etiqueta": "Crema, de Espárragos, Campbells, sopa, sopas"
+    },
+    {
+        "_id": "5f2db1f08e2217565bc9e83b",
+        "etiqueta": "Crema, Piel Normal, Lubriderm, "
+    },
+    {
+        "_id": "5f2db1f08e2217565bc9e83d",
+        "etiqueta": "Crema, Reparación, Intensiva, Lubriderm, "
+    },
+    {
+        "_id": "5f2db1f08e2217565bc9e83f",
+        "etiqueta": "Crema, para Peinar, Pantene, Restauración, "
+    },
+    {
+        "_id": "5f2db1f08e2217565bc9e841",
+        "etiqueta": "Crema para Batir, Nestlé,"
+    },
+    {
+        "_id": "5f2db1f08e2217565bc9e843",
+        "etiqueta": "Crouton, Mantequilla, Fresh Gourmet, Ensaladas, Sopas,"
+    },
+    {
+        "_id": "5f2db1f08e2217565bc9e845",
+        "etiqueta": "Crouton, Queso, Ajo, Fresh Gourmet, Ensaladas, Sopas,"
+    },
+    {
+        "_id": "5f2db1f08e2217565bc9e847",
+        "etiqueta": "Crouton, Sazonado, Fresh Gourmet, Ensaladas, Sopas,"
+    },
+    {
+        "_id": "5f2db1f08e2217565bc9e849",
+        "etiqueta": "Cuchara, Mediana, Biodegradable,"
+    },
+    {
+        "_id": "5f2db1f08e2217565bc9e84b",
+        "etiqueta": "Cuitlacoche, San Miguel,"
+    },
+    {
+        "_id": "5f2db1f08e2217565bc9e84d",
+        "etiqueta": "Desmaquillante, Bifásico, Ojos, Nivea,"
+    },
+    {
+        "_id": "5f2db1f08e2217565bc9e84f",
+        "etiqueta": "Desodorante, Aerosol, Axe, Black,"
+    },
+    {
+        "_id": "5f2db1f08e2217565bc9e851",
+        "etiqueta": "Desodorante, Aerosol, Axe, Ice Braker,"
+    },
+    {
+        "_id": "5f2db1f08e2217565bc9e853",
+        "etiqueta": "Desodorante, Spray, Fresh Electric, Nivea, Men,"
+    },
+    {
+        "_id": "5f2db1f08e2217565bc9e855",
+        "etiqueta": "Desodorante, Barra, Rexona, Bamboo,"
+    },
+    {
+        "_id": "5f2db1f08e2217565bc9e857",
+        "etiqueta": "Lavatrastes, Líquido, Axion, Limón, Limpieza,"
+    },
+    {
+        "_id": "5f2db1f08e2217565bc9e85b",
+        "etiqueta": "Detergente, Jabón, Polvo, Roma, Limpieza,"
+    },
+    {
+        "_id": "5f2db1f08e2217565bc9e85d",
+        "etiqueta": "Detergente, Jabón, Polvo, Roma, Limpieza,"
+    },
+    {
+        "_id": "5f2db1f08e2217565bc9e85f",
+        "etiqueta": "DFN, Flor de Jaguar, Gummies, sistema inmunológico, Vitaminas,"
+    },
+    {
+        "_id": "5f2db1f08e2217565bc9e861",
+        "etiqueta": "DFN, Flor de Jaguar, sistema inmunológico, Smoothie Sabor Cacao, Vitaminas,"
+    },
+    {
+        "_id": "5f2db1f08e2217565bc9e863",
+        "etiqueta": "DFN, Flor de Jaguar, limon, miel, sistema inmunológico, Tea Sabor Jengibre, Vitaminas, té"
+    },
+    {
+        "_id": "5f2db1f08e2217565bc9e865",
+        "etiqueta": "Ready tea, té, Despensa, Flor de Jaguar, limon, miel, sistema inmunológico, Tea, Vitaminas, omega 3, coenzima q10, energía, rendimiento"
+    },
+    {
+        "_id": "5f2db1f08e2217565bc9e867",
+        "etiqueta": "Dosificador, Jarabe, Kerry,"
+    },
+    {
+        "_id": "5f2db1f08e2217565bc9e869",
+        "etiqueta": "Downy, Libre, Enjuague, Concentrado, Floral,"
+    },
+    {
+        "_id": "5f2db1f08e2217565bc9e86b",
+        "etiqueta": "Downy, Libre, Enjuague, Ocean, Breeze,"
+    },
+    {
+        "_id": "5f2db1f08e2217565bc9e86d",
+        "etiqueta": "Duraznos, Mitades, Del Monte,"
+    },
+    {
+        "_id": "5f2db1f08e2217565bc9e86f",
+        "etiqueta": "Elote, Grano, Herdez,"
+    },
+    {
+        "_id": "5f2db1f08e2217565bc9e871",
+        "etiqueta": "Elotitos, Tiernos, San Miguel,"
+    },
+    {
+        "_id": "5f2db1f08e2217565bc9e873",
+        "etiqueta": "Empanizador, Knorr,"
+    },
+    {
+        "_id": "5f2db1f08e2217565bc9e875",
+        "etiqueta": "Ensalada, Legumbres, Herdez,"
+    },
+    {
+        "_id": "5f2db1f08e2217565bc9e877",
+        "etiqueta": "Escoba, Interiores, Vileda,"
+    },
+    {
+        "_id": "5f2db1f08e2217565bc9e879",
+        "etiqueta": "Escoba, Antichoques, Vileda,"
+    },
+    {
+        "_id": "5f2db1f08e2217565bc9e87b",
+        "etiqueta": "Esparragos, Blancos, Vegetales, San Miguel,"
+    },
+    {
+        "_id": "5f2db1f08e2217565bc9e87d",
+        "etiqueta": "Limpiador, Fabuloso, Lavanda, multiusos,"
+    },
+    {
+        "_id": "5f2db1f08e2217565bc9e87f",
+        "etiqueta": "Fettuccine, Barilla, Pasta,"
+    },
+    {
+        "_id": "5f2db1f08e2217565bc9e881",
+        "etiqueta": "Fibra, Esponja, Scotch-Brite, Grande,"
+    },
+    {
+        "_id": "5f2db1f08e2217565bc9e883",
+        "etiqueta": "Fideo, Barilla, Pasta,"
+    },
+    {
+        "_id": "5f2db1f08e2217565bc9e885",
+        "etiqueta": "Fideo, Cambray, Italpasta,"
+    },
+    {
+        "_id": "5f2db1f18e2217565bc9e887",
+        "etiqueta": "Filete, Pescado, Basa, "
+    },
+    {
+        "_id": "5f2db1f18e2217565bc9e889",
+        "etiqueta": "Filete, Pollo, Empanizado, Pilgrims,"
+    },
+    {
+        "_id": "5f2db1f18e2217565bc9e88b",
+        "etiqueta": "Flor, Calabaza, San Miguel, Conservas, Vegetales,"
+    },
+    {
+        "_id": "5f2db1f18e2217565bc9e88d",
+        "etiqueta": "Frappease, Base, Neutral, Original, DaVinci, Consentrado, bebidas,"
+    },
+    {
+        "_id": "5f2db1f18e2217565bc9e88f",
+        "etiqueta": "Frijol, Negro, Bueno,"
+    },
+    {
+        "_id": "5f2db1f18e2217565bc9e891",
+        "etiqueta": "Frijol, Negro, Organico, Aires del Campo,"
+    },
+    {
+        "_id": "5f2db1f18e2217565bc9e893",
+        "etiqueta": "Frijoles, Bayos, Refritos, La Sierra,"
+    },
+    {
+        "_id": "5f2db1f18e2217565bc9e895",
+        "etiqueta": "Frijoles, Refritos, Deshidratados, Bayos, Knorr,"
+    },
+    {
+        "_id": "5f2db1f18e2217565bc9e897",
+        "etiqueta": "Frijoles, Refritos, Deshidratados, Negros, Knorr,"
+    },
+    {
+        "_id": "5f2db1f18e2217565bc9e899",
+        "etiqueta": "Frijoles, Refritos, Negros, La Sierra,"
+    },
+    {
+        "_id": "5f2db1f18e2217565bc9e89b",
+        "etiqueta": "Cereal, Froot Loops, Kelloggs, cereales"
+    },
+    {
+        "_id": "5f2db1f18e2217565bc9e89d",
+        "etiqueta": "Fusilli, Integral, Orgánico, Aires del Campo,"
+    },
+    {
+        "_id": "5f2db1f18e2217565bc9e89f",
+        "etiqueta": "Galletas, Saladitas, Gamesa,"
+    },
+    {
+        "_id": "5f2db1f18e2217565bc9e8a1",
+        "etiqueta": "Galletas, Marías, Gamesa,"
+    },
+    {
+        "_id": "5f2db1f18e2217565bc9e8a2",
+        "etiqueta": "Galletas, Oreo, Sandwich,"
+    },
+    {
+        "_id": "5f2db1f18e2217565bc9e8a5",
+        "etiqueta": "Galletas, Surtido, Rico, Gamesa,"
+    },
+    {
+        "_id": "5f2db1f18e2217565bc9e8a7",
+        "etiqueta": "Garbanzo, Natural, Vegetales, Herdez,"
+    },
+    {
+        "_id": "5f2db1f18e2217565bc9e8a9",
+        "etiqueta": "Gel, Antibacterial, Blumen,"
+    },
+    {
+        "_id": "5f2db1f18e2217565bc9e8ab",
+        "etiqueta": "Gel, Antibacterial, Blumen,"
+    },
+    {
+        "_id": "5f2db1f18e2217565bc9e8ad",
+        "etiqueta": "Gel, Antibacterial, Blumen,"
+    },
+    {
+        "_id": "5f2db1f18e2217565bc9e8af",
+        "etiqueta": "Gel, Afeitar, Gillette,"
+    },
+    {
+        "_id": "5f2db1f18e2217565bc9e8b3",
+        "etiqueta": "Ginebra, Hendricks,"
+    },
+    {
+        "_id": "5f2db1f18e2217565bc9e8b5",
+        "etiqueta": "Glaseado, Transparente, Richs, "
+    },
+    {
+        "_id": "5f2db1f18e2217565bc9e8b7",
+        "etiqueta": "Gorro, Negro, Red, Cabello,"
+    },
+    {
+        "_id": "5f2db1f18e2217565bc9e8b9",
+        "etiqueta": "Crema, Grand American, Chocolate Richs,"
+    },
+    {
+        "_id": "5f2db1f18e2217565bc9e8bb",
+        "etiqueta": "Crema, Grand American, Moka Richs,"
+    },
+    {
+        "_id": "5f2db1f18e2217565bc9e8bd",
+        "etiqueta": "Granola, Amaranto, Orgánico, Aires del Campo,"
+    },
+    {
+        "_id": "5f2db1f18e2217565bc9e8bf",
+        "etiqueta": "Granola, Maxilu, Cereales,"
+    },
+    {
+        "_id": "5f2db1f18e2217565bc9e8c0",
+        "etiqueta": "Guacamole, Tradicional, McCain,"
+    },
+    {
+        "_id": "5f2db1f18e2217565bc9e8c3",
+        "etiqueta": "Harina, Hot Cakes, San Blas, harinas"
+    },
+    {
+        "_id": "5f2db1f28e2217565bc9e8c5",
+        "etiqueta": "Harina, Hot Cakes, Tres Estrellas, harinas"
+    },
+    {
+        "_id": "5f2db1f28e2217565bc9e8c7",
+        "etiqueta": "Harina, Maiz, Maseca, harinas"
+    },
+    {
+        "_id": "5f2db1f28e2217565bc9e8c8",
+        "etiqueta": "Harina, Trigo, San Blas, harinas"
+    },
+    {
+        "_id": "5f2db1f28e2217565bc9e8cb",
+        "etiqueta": "Hilo, Dental, Encerado, Colgate, Total,"
+    },
+    {
+        "_id": "5f2db1f28e2217565bc9e8cd",
+        "etiqueta": "Hilo, Dental, Oral B,"
+    },
+    {
+        "_id": "5f2db1f28e2217565bc9e8cf",
+        "etiqueta": "huevo, Blanco, granja, huevos"
+    },
+    {
+        "_id": "5f2db1f28e2217565bc9e8d1",
+        "etiqueta": "Jabón, Blanco, Zote, jabon zote, jabón zote"
+    },
+    {
+        "_id": "5f2db1f28e2217565bc9e8d3",
+        "etiqueta": "Jabón, Tocador, Dove, "
+    },
+    {
+        "_id": "5f2db1f28e2217565bc9e8d5",
+        "etiqueta": "Jabón, Líquido, Manos, Blumen,"
+    },
+    {
+        "_id": "5f2db1f28e2217565bc9e8d7",
+        "etiqueta": "Jabón, Líquido, Manos, Blumen,"
+    },
+    {
+        "_id": "5f2db1f28e2217565bc9e8d9",
+        "etiqueta": "Jabón, Líquido, Manos, Blumen,"
+    },
+    {
+        "_id": "5f2db1f28e2217565bc9e8db",
+        "etiqueta": "Jabón, Líquido, Manos, Blumen,"
+    },
+    {
+        "_id": "5f2db1f28e2217565bc9e8dd",
+        "etiqueta": "Jabón, Líquido, Manos, Blumen,"
+    },
+    {
+        "_id": "5f2db1f28e2217565bc9e8df",
+        "etiqueta": "Jabón, Líquido, Blumen,"
+    },
+    {
+        "_id": "5f2db1f28e2217565bc9e8e1",
+        "etiqueta": "Jabón, Manos, Blumen,"
+    },
+    {
+        "_id": "5f2db1f28e2217565bc9e8e3",
+        "etiqueta": "Jabón, Líquido, Manos, Blumen,"
+    },
+    {
+        "_id": "5f2db1f28e2217565bc9e8e5",
+        "etiqueta": "Jabón, Líquido, Manos, Blumen,"
+    },
+    {
+        "_id": "5f2db1f28e2217565bc9e8e7",
+        "etiqueta": "Jabón, Tocador, Zest,"
+    },
+    {
+        "_id": "5f2db1f28e2217565bc9e8e8",
+        "etiqueta": "Jalador, Vileda, trapeador, "
+    },
+    {
+        "_id": "5f2db1f28e2217565bc9e8eb",
+        "etiqueta": "Jamaica, Granel,"
+    },
+    {
+        "_id": "5f2db1f28e2217565bc9e8ed",
+        "etiqueta": "Jamón, Serrano, Tangamanga, Jamon, Jamones"
+    },
+    {
+        "_id": "5f2db1f28e2217565bc9e8ef",
+        "etiqueta": "Jarabe, Monin, Saborizante,"
+    },
+    {
+        "_id": "5f2db1f28e2217565bc9e8f1",
+        "etiqueta": "Jarabe, Monin, Saborizante,"
+    },
+    {
+        "_id": "5f2db1f28e2217565bc9e8f3",
+        "etiqueta": "Jarabe, Monin, Saborizante,"
+    },
+    {
+        "_id": "5f2db1f28e2217565bc9e8f5",
+        "etiqueta": "Jarabe, Monin, Saborizante,"
+    },
+    {
+        "_id": "5f2db1f28e2217565bc9e8f7",
+        "etiqueta": "Jarabe, Monin, Saborizante,"
+    },
+    {
+        "_id": "5f2db1f28e2217565bc9e8f9",
+        "etiqueta": "Jarabe, Monin, Saborizante,"
+    },
+    {
+        "_id": "5f2db1f28e2217565bc9e8fb",
+        "etiqueta": "Jarabe, Monin, Saborizante,"
+    },
+    {
+        "_id": "5f2db1f38e2217565bc9e8fd",
+        "etiqueta": "Jarabe, Monin, Saborizante,"
+    },
+    {
+        "_id": "5f2db1f38e2217565bc9e8ff",
+        "etiqueta": "Jarabe, Chocolate, Hersheys,"
+    },
+    {
+        "_id": "5f2db1f38e2217565bc9e901",
+        "etiqueta": "Jarabe, Chocolate, Pouch, Hersheys,"
+    },
+    {
+        "_id": "5f2db1f38e2217565bc9e903",
+        "etiqueta": "Jarabe, Monin, Saborizante,"
+    },
+    {
+        "_id": "5f2db1f38e2217565bc9e905",
+        "etiqueta": "Jarabe, Monin, Saborizante,"
+    },
+    {
+        "_id": "5f2db1f38e2217565bc9e907",
+        "etiqueta": "Jarabe, Monin, Saborizante,"
+    },
+    {
+        "_id": "5f2db1f38e2217565bc9e909",
+        "etiqueta": "Jarabe, Monin, Saborizante,"
+    },
+    {
+        "_id": "5f2db1f38e2217565bc9e90b",
+        "etiqueta": "Jarabe, Monin, Saborizante,"
+    },
+    {
+        "_id": "5f2db1f38e2217565bc9e90c",
+        "etiqueta": "Jarabe, Monin, Saborizante,"
+    },
+    {
+        "_id": "5f2db1f38e2217565bc9e90f",
+        "etiqueta": "Jarabe, Monin, Saborizante,"
+    },
+    {
+        "_id": "5f2db1f38e2217565bc9e911",
+        "etiqueta": "Jarabe, Fresa, Hersheys,"
+    },
+    {
+        "_id": "5f2db1f38e2217565bc9e913",
+        "etiqueta": "Jarabe, Monin, Saborizante,"
+    },
+    {
+        "_id": "5f2db1f38e2217565bc9e915",
+        "etiqueta": "Jarabe, Monin, Saborizante,"
+    },
+    {
+        "_id": "5f2db1f38e2217565bc9e917",
+        "etiqueta": "Jarabe, Monin, Saborizante,"
+    },
+    {
+        "_id": "5f2db1f38e2217565bc9e919",
+        "etiqueta": "Jarabe, Monin, Saborizante,"
+    },
+    {
+        "_id": "5f2db1f38e2217565bc9e91a",
+        "etiqueta": "Jarabe, Monin, Saborizante,"
+    },
+    {
+        "_id": "5f2db1f38e2217565bc9e91d",
+        "etiqueta": "Jarabe, Monin, Saborizante,"
+    },
+    {
+        "_id": "5f2db1f38e2217565bc9e91f",
+        "etiqueta": "Jarabe, Monin, Saborizante,"
+    },
+    {
+        "_id": "5f2db1f38e2217565bc9e921",
+        "etiqueta": "Jarabe, Monin, Saborizante,"
+    },
+    {
+        "_id": "5f2db1f38e2217565bc9e923",
+        "etiqueta": "Jarabe, Monin, Saborizante,"
+    },
+    {
+        "_id": "5f2db1f38e2217565bc9e925",
+        "etiqueta": "Jarabe, Monin, Saborizante,"
+    },
+    {
+        "_id": "5f2db1f38e2217565bc9e927",
+        "etiqueta": "Jarabe, Monin, Saborizante,"
+    },
+    {
+        "_id": "5f2db1f38e2217565bc9e928",
+        "etiqueta": "Jarabe, Monin, Saborizante,"
+    },
+    {
+        "_id": "5f2db1f38e2217565bc9e92b",
+        "etiqueta": "Jarabe, Tres, Leches, Nestlé,"
+    },
+    {
+        "_id": "5f2db1f38e2217565bc9e92d",
+        "etiqueta": "Jarabe, Tres, Leches, Richs,"
+    },
+    {
+        "_id": "5f2db1f38e2217565bc9e92f",
+        "etiqueta": "Jarabe, Monin, Saborizante,"
+    },
+    {
+        "_id": "5f2db1f38e2217565bc9e931",
+        "etiqueta": "Jarabe, Monin, Saborizante,"
+    },
+    {
+        "_id": "5f2db1f38e2217565bc9e933",
+        "etiqueta": "Jarabe, Monin, Saborizante,"
+    },
+    {
+        "_id": "5f2db1f38e2217565bc9e935",
+        "etiqueta": "Jarabe, Monin, Saborizante,"
+    },
+    {
+        "_id": "5f2db1f38e2217565bc9e936",
+        "etiqueta": "Jugo, Arándano, Ocean Spray,"
+    },
+    {
+        "_id": "5f2db1f38e2217565bc9e939",
+        "etiqueta": "Jugo, Sazonador, Maggi,"
+    },
+    {
+        "_id": "5f2db1f48e2217565bc9e93b",
+        "etiqueta": "Jugo, Sazonador, Maggi,"
+    },
+    {
+        "_id": "5f2db1f48e2217565bc9e93c",
+        "etiqueta": "Jugo, Sazonador, Maggi,"
+    },
+    {
+        "_id": "5f2db1f48e2217565bc9e93e",
+        "etiqueta": "Jugo, Naranja, Jumex,"
+    },
+    {
+        "_id": "5f2db1f48e2217565bc9e941",
+        "etiqueta": "Jugo, Piña, Jumex,"
+    },
+    {
+        "_id": "5f2db1f48e2217565bc9e943",
+        "etiqueta": "Jugo, Uva, Jumex,"
+    },
+    {
+        "_id": "5f2db1f48e2217565bc9e945",
+        "etiqueta": "Pañales, Etapa 5, Niño, Huggies, Supreme, "
+    },
+    {
+        "_id": "5f2db1f48e2217565bc9e947",
+        "etiqueta": "Pañales, Etapa 3, Niña, Huggies, Supreme, "
+    },
+    {
+        "_id": "5f2db1f48e2217565bc9e949",
+        "etiqueta": "Pañales, Etapa 3, Niño, Huggies, Supreme, "
+    },
+    {
+        "_id": "5f2db1f48e2217565bc9e94b",
+        "etiqueta": "Pañales, Etapa 4, Niña, Huggies, Supreme, "
+    },
+    {
+        "_id": "5f2db1f48e2217565bc9e94d",
+        "etiqueta": "Pañales, Etapa 4, Niño, Huggies, Supreme, "
+    },
+    {
+        "_id": "5f2db1f48e2217565bc9e94f",
+        "etiqueta": "Pañales, Etapa 5, Niña, Huggies, Supreme, "
+    },
+    {
+        "_id": "5f2db1f48e2217565bc9e951",
+        "etiqueta": "Pañales, Recién, Nacido, Huggies, Supreme, "
+    },
+    {
+        "_id": "5f2db1f48e2217565bc9e953",
+        "etiqueta": "Pañales, Etapa 1, Unisex, Huggies, Supreme, "
+    },
+    {
+        "_id": "5f2db1f48e2217565bc9e955",
+        "etiqueta": "Leche, Condesada, La Lechera, Nestlé,"
+    },
+    {
+        "_id": "5f2db1f48e2217565bc9e957",
+        "etiqueta": "Lasagna, La Collezione, Barilla, "
+    },
+    {
+        "_id": "5f2db1f48e2217565bc9e959",
+        "etiqueta": "Leche, Almendra, Soy Amigo, Soya, Symkën, symken, leche de almendras"
+    },
+    {
+        "_id": "5f2db1f48e2217565bc9e95a",
+        "etiqueta": "Leche, Evaporada, Carnation, Clavel, Nestlé"
+    },
+    {
+        "_id": "5f2db1f48e2217565bc9e95d",
+        "etiqueta": "Leche, Evaporada, Carnation, Clavel, Nestlé"
+    },
+    {
+        "_id": "5f2db1f48e2217565bc9e95f",
+        "etiqueta": "Leche, Coco, Symkën, Soyamigo, symken, leche de coco"
+    },
+    {
+        "_id": "5f2db1f48e2217565bc9e962",
+        "etiqueta": "Leche, Deslactosada, Parmalat,"
+    },
+    {
+        "_id": "5f2db1f48e2217565bc9e965",
+        "etiqueta": "Leche, Entera, Alpura,"
+    },
+    {
+        "_id": "5f2db1f48e2217565bc9e967",
+        "etiqueta": "Leche, Entera, Organica, Bove, organico"
+    },
+    {
+        "_id": "5f2db1f48e2217565bc9e969",
+        "etiqueta": "Leche, Entera, Parmalat,"
+    },
+    {
+        "_id": "5f2db1f48e2217565bc9e96b",
+        "etiqueta": "Leche, Deslactosada, Light, Lala, "
+    },
+    {
+        "_id": "5f2db1f48e2217565bc9e96d",
+        "etiqueta": "Leche, Entera, Lala, "
+    },
+    {
+        "_id": "5f2db1f48e2217565bc9e96f",
+        "etiqueta": "Leche, Light, Lala, "
+    },
+    {
+        "_id": "5f2db1f48e2217565bc9e971",
+        "etiqueta": "Leche, Light, Alpura,"
+    },
+    {
+        "_id": "5f2db1f48e2217565bc9e973",
+        "etiqueta": "Leche, Deslactosada, Santa Clara,"
+    },
+    {
+        "_id": "5f2db1f48e2217565bc9e975",
+        "etiqueta": "Leche, Semidescremada, Alpura,"
+    },
+    {
+        "_id": "5f2db1f48e2217565bc9e977",
+        "etiqueta": "Lenteja, Chica, Canadiense,"
+    },
+    {
+        "_id": "5f2db1f48e2217565bc9e979",
+        "etiqueta": "Licor, 43,"
+    },
+    {
+        "_id": "5f2db1f48e2217565bc9e97b",
+        "etiqueta": "Dúo, Licor, Ron, Bacardi,"
+    },
+    {
+        "_id": "5f2db1f48e2217565bc9e97d",
+        "etiqueta": "Enjuague, Bucal, Cool Mint, Listerine, "
+    },
+    {
+        "_id": "5f2db1f48e2217565bc9e97f",
+        "etiqueta": "Enjuague, Bucal, Cool Mint, Listerine, "
+    },
+    {
+        "_id": "5f2db1f48e2217565bc9e981",
+        "etiqueta": "Enjuague, Bucal, Listerine,"
+    },
+    {
+        "_id": "5f2db1f48e2217565bc9e985",
+        "etiqueta": "Mangos en Almibar, Rebanado, San Marcos"
+    },
+    {
+        "_id": "5f2db1f48e2217565bc9e983",
+        "etiqueta": "Fécula, Maiz, Maizena,"
+    },
+    {
+        "_id": "5f2db1f58e2217565bc9e989",
+        "etiqueta": "Máquina, Afeitar, Gillette, Matc3, Sensitive,"
+    },
+    {
+        "_id": "5f2db1f58e2217565bc9e98b",
+        "etiqueta": "Máquina, Afeitar, Gillette, Venus, Malib,"
+    },
+    {
+        "_id": "5f2db1f58e2217565bc9e98d",
+        "etiqueta": "Mayonesa, Heinz,"
+    },
+    {
+        "_id": "5f2db1f58e2217565bc9e98f",
+        "etiqueta": "Mayonesa, Mc Cormick,"
+    },
+    {
+        "_id": "5f2db1f58e2217565bc9e991",
+        "etiqueta": "Media Crema, Nestlé, Platillos,"
+    },
+    {
+        "_id": "5f2db1f58e2217565bc9e993",
+        "etiqueta": "Media Crema, Nestlé, Platillos,"
+    },
+    {
+        "_id": "5f2db1f58e2217565bc9e995",
+        "etiqueta": "Mermelada, Chabacano, Mc Cormick, "
+    },
+    {
+        "_id": "5f2db1f58e2217565bc9e997",
+        "etiqueta": "Mermelada, Fresa, Mc Cormick, "
+    },
+    {
+        "_id": "5f2db1f58e2217565bc9e999",
+        "etiqueta": "Mermelada, Zarzamora, Mc Cormick, "
+    },
+    {
+        "_id": "5f2db1f58e2217565bc9e99b",
+        "etiqueta": "Mezcal, Joven, Ojo de Tigre, "
+    },
+    {
+        "_id": "5f2db1f58e2217565bc9e99d",
+        "etiqueta": "Miel, Abeja, Carlota,"
+    },
+    {
+        "_id": "5f2db1f58e2217565bc9e99f",
+        "etiqueta": "Milanesa, Pechuga, Pollo, Orgánico, Aires del Campo,"
+    },
+    {
+        "_id": "5f2db1f58e2217565bc9e9a1",
+        "etiqueta": "Sopa, Moño, Italpasta,"
+    },
+    {
+        "_id": "5f2db1f58e2217565bc9e9a3",
+        "etiqueta": "Mostaza, Amarilla, Heinz,"
+    },
+    {
+        "_id": "5f2db1f58e2217565bc9e9a5",
+        "etiqueta": "Niagara, Farms, Extra, Cremosa, Richs,"
+    },
+    {
+        "_id": "5f2db1f58e2217565bc9e9a7",
+        "etiqueta": "Niagara, Farms, Yogurth, Richs, Yogurt"
+    },
+    {
+        "_id": "5f2db1f58e2217565bc9e9a9",
+        "etiqueta": "Crema, Corporal, Nivea, Body Milk,"
+    },
+    {
+        "_id": "5f2db1f58e2217565bc9e9ad",
+        "etiqueta": "Nuez, Mitades, Granel, "
+    },
+    {
+        "_id": "5f2db1f58e2217565bc9e9ae",
+        "etiqueta": "Nuez, Quebrada, Granel, "
+    },
+    {
+        "_id": "5f2db1f58e2217565bc9e9b0",
+        "etiqueta": "Nuggets, Empanizado, Del Día,"
+    },
+    {
+        "_id": "5f2db1f58e2217565bc9e9ab",
+        "etiqueta": "Nuez, Granillo, Granel, "
+    },
+    {
+        "_id": "5f2db1f58e2217565bc9e9b2",
+        "etiqueta": "Pads, Faciales, Iceberg,"
+    },
+    {
+        "_id": "5f2db1f58e2217565bc9e9b4",
+        "etiqueta": "Palomitas, ACT II, Chile Limón,"
+    },
+    {
+        "_id": "5f2db1f58e2217565bc9e9b7",
+        "etiqueta": "Palomitas, ACT II, Chile Limón,"
+    },
+    {
+        "_id": "5f2db1f58e2217565bc9e9b9",
+        "etiqueta": "Pan, Esponja, Plancha, Vainilla, Richs,"
+    },
+    {
+        "_id": "5f2db1f58e2217565bc9e9bb",
+        "etiqueta": "Pan, Esponja, Chocolate, Richs,"
+    },
+    {
+        "_id": "5f2db1f58e2217565bc9e9bd",
+        "etiqueta": "Pañal, Chico, Bio Baby, "
+    },
+    {
+        "_id": "5f2db1f58e2217565bc9e9bf",
+        "etiqueta": "Pañal, Grande, Bio Baby, "
+    },
+    {
+        "_id": "5f2db1f58e2217565bc9e9c1",
+        "etiqueta": "Pañal, Mediano, Bio Baby, "
+    },
+    {
+        "_id": "5f2db1f58e2217565bc9e9c3",
+        "etiqueta": "Pañal, Recién Nacido, Bio Baby, "
+    },
+    {
+        "_id": "5f2db1f58e2217565bc9e9c5",
+        "etiqueta": "Pañal, XG, Bio Baby, "
+    },
+    {
+        "_id": "5f2db1f58e2217565bc9e9c7",
+        "etiqueta": "Pañal, XXG, Bio Baby,"
+    },
+    {
+        "_id": "5f2db1f58e2217565bc9e9c9",
+        "etiqueta": "Papa, Carita, Cosmic, McCain,"
+    },
+    {
+        "_id": "5f2db1f58e2217565bc9e9cb",
+        "etiqueta": "Papa, Espiral, Condimentada, McCain,"
+    },
+    {
+        "_id": "5f2db1f58e2217565bc9e9cd",
+        "etiqueta": "Papa, Francesa, Delgada, Evercrisp, McCain,"
+    },
+    {
+        "_id": "5f2db1f58e2217565bc9e9cf",
+        "etiqueta": "Papa, Francesa, Delgada, Golden Valley,"
+    },
+    {
+        "_id": "5f2db1f58e2217565bc9e9d1",
+        "etiqueta": "Papa, Francesa, Recta, Golden Valley,"
+    },
+    {
+        "_id": "5f2db1f58e2217565bc9e9d3",
+        "etiqueta": "Papa, Gajo, Cáscara, McCain,"
+    },
+    {
+        "_id": "5f2db1f58e2217565bc9e9d5",
+        "etiqueta": "Papa, Hash Brown, Triángulo, McCain,"
+    },
+    {
+        "_id": "5f2db1f58e2217565bc9e9d7",
+        "etiqueta": "Papa, Rejilla, McCain,"
+    },
+    {
+        "_id": "5f2db1f58e2217565bc9e9d9",
+        "etiqueta": "Papel, Aluminio,"
+    },
+    {
+        "_id": "5f2db1f68e2217565bc9e9dd",
+        "etiqueta": "Papel, Vitafilm, envolutura plástica adherente, plástico adherente, plastico adherente"
+    },
+    {
+        "_id": "5f2db1f58e2217565bc9e9db",
+        "etiqueta": "Papel, Higiénico, Regio, papel de baño, higienico"
+    },
+    {
+        "_id": "5f2db1f68e2217565bc9e9de",
+        "etiqueta": "Pasitas, K'Borca,"
+    },
+    {
+        "_id": "5f2db1f68e2217565bc9e9e1",
+        "etiqueta": "Crema, Dental, Colgate, Triple Accion,"
+    },
+    {
+        "_id": "5f2db1f68e2217565bc9e9e3",
+        "etiqueta": "Pasta, Tomate, Deshidratado, Knorr, salsa de tomate, salsa para pastas, salsa "
+    },
+    {
+        "_id": "5f2db1f68e2217565bc9e9e7",
+        "etiqueta": "Pastel, Chocolate, Richs,"
+    },
+    {
+        "_id": "5f2db1f68e2217565bc9e9e9",
+        "etiqueta": "Pastel, Tres, Leches, Richs, Tres leches, Pasteles, Pastel de tres leches "
+    },
+    {
+        "_id": "5f2db1f68e2217565bc9e9eb",
+        "etiqueta": "Pastillas, Menta, Halls,"
+    },
+    {
+        "_id": "5f2db1f68e2217565bc9e9ed",
+        "etiqueta": "Pastillas, Miel, Limón, Halls, "
+    },
+    {
+        "_id": "5f2db1f68e2217565bc9e9ef",
+        "etiqueta": "Pastillas, Mora, Azul, Halls, "
+    },
+    {
+        "_id": "5f2db1f68e2217565bc9e9f1",
+        "etiqueta": "Pastillas, Yerbabuena, Halls, "
+    },
+    {
+        "_id": "5f2db1f68e2217565bc9e9f3",
+        "etiqueta": "Pastillas, Menta, Usher, "
+    },
+    {
+        "_id": "5f2db1f68e2217565bc9e9f5",
+        "etiqueta": "Pastillas, Yerbabuena, Usher, "
+    },
+    {
+        "_id": "5f2db1f68e2217565bc9e9f7",
+        "etiqueta": "Pay, Helado, Limón, Richs,"
+    },
+    {
+        "_id": "5f2db1f68e2217565bc9e9f9",
+        "etiqueta": "Boneless, Pollo, Pilgrims,"
+    },
+    {
+        "_id": "5f2db1f68e2217565bc9e9fb",
+        "etiqueta": "Pechuga, Pollo, Deshuesada, Organica, Aires del Campo, orgánico"
+    },
+    {
+        "_id": "5f2db1f68e2217565bc9e9fd",
+        "etiqueta": "Nuggets, Preformado, Pilgrims, pollo"
+    },
+    {
+        "_id": "5f2db1f68e2217565bc9e9ff",
+        "etiqueta": "Pasta, Penne, Rigate, Barilla, pastas"
+    },
+    {
+        "_id": "5f2db1f68e2217565bc9ea01",
+        "etiqueta": "Pimientos, Morrones, Vegetal, San Miguel,"
+    },
+    {
+        "_id": "5f2db1f68e2217565bc9ea03",
+        "etiqueta": "Trozos, Piña, Almibar, San Marcos,"
+    },
+    {
+        "_id": "5f2db1f68e2217565bc9ea05",
+        "etiqueta": "Limpiador, Pinol, Familiar, "
+    },
+    {
+        "_id": "5f2db1f68e2217565bc9ea07",
+        "etiqueta": "Limpiador, Pinol, Original,"
+    },
+    {
+        "_id": "5f2db1f68e2217565bc9ea09",
+        "etiqueta": "Pulpa, Aguacate, McCain,"
+    },
+    {
+        "_id": "5f2db1f68e2217565bc9ea0b",
+        "etiqueta": "Pulpo, Congelado, pulpos"
+    },
+    {
+        "_id": "5f2db1f68e2217565bc9ea0d",
+        "etiqueta": "Pure, Papa, Knorr,"
+    },
+    {
+        "_id": "5f2db1f68e2217565bc9ea0f",
+        "etiqueta": "Alimento, Mascota, Perro, Adulto, Purina, Beneful, "
+    },
+    {
+        "_id": "5f2db1f68e2217565bc9ea11",
+        "etiqueta": "Alimento, Mascota, Perro, Adulto, Campeón,"
+    },
+    {
+        "_id": "5f2db1f68e2217565bc9ea13",
+        "etiqueta": "Alimento, Mascota, Perro, Purina, Dog Chow,"
+    },
+    {
+        "_id": "5f2db1f68e2217565bc9ea17",
+        "etiqueta": "Queso, Gouda, Uruguay, Esmeralda, Quesos"
+    },
+    {
+        "_id": "5f2db1f68e2217565bc9ea19",
+        "etiqueta": "Queso, Manchego, Esmeralda, Quesos"
+    },
+    {
+        "_id": "5f2db1f68e2217565bc9ea1b",
+        "etiqueta": "Queso, Manchego, Rebanado, Esmeralda, Quesos"
+    },
+    {
+        "_id": "5f2db1f68e2217565bc9ea1d",
+        "etiqueta": "Queso, Mozzarella, Picado, Bonswiss, Quesos"
+    },
+    {
+        "_id": "5f2db1f68e2217565bc9ea1f",
+        "etiqueta": "Queso, Oaxaca, Organico, Bove, Quesos"
+    },
+    {
+        "_id": "5f2db1f68e2217565bc9ea21",
+        "etiqueta": "Queso, Panela, Organico, Bove, Quesos"
+    },
+    {
+        "_id": "5f2db1f68e2217565bc9ea23",
+        "etiqueta": "Queso, Parmesano, Cuña, Esmeralda, Quesos"
+    },
+    {
+        "_id": "5f2db1f68e2217565bc9ea25",
+        "etiqueta": "Quinoa, Organica, Mexicana, Aires del Campo, orgánico"
+    },
+    {
+        "_id": "5f2db1f68e2217565bc9ea27",
+        "etiqueta": "Quita, Esmalte, Sara,"
+    },
+    {
+        "_id": "5f2db1f68e2217565bc9ea29",
+        "etiqueta": "Rajas, Vinagre, San Marcos,"
+    },
+    {
+        "_id": "5f2db1f68e2217565bc9ea2b",
+        "etiqueta": "Rib Eye, Lip On, Premium, carne"
+    },
+    {
+        "_id": "5f2db1f78e2217565bc9ea2d",
+        "etiqueta": "Rigatoni, Collezione, Barilla,"
+    },
+    {
+        "_id": "5f2db1f78e2217565bc9ea2f",
+        "etiqueta": "Ron, Flor de Caña, 4 Años, "
+    },
+    {
+        "_id": "5f2db1f78e2217565bc9ea31",
+        "etiqueta": "Sal, Mesa, La Fina,"
+    },
+    {
+        "_id": "5f2db1f78e2217565bc9ea33",
+        "etiqueta": "Salmón, Natural, Salmon"
+    },
+    {
+        "_id": "5f2db1f78e2217565bc9ea37",
+        "etiqueta": "Salsa, Bufalo, Clasica,"
+    },
+    {
+        "_id": "5f2db1f78e2217565bc9ea39",
+        "etiqueta": "Salsa, Bufalo, Clasica,"
+    },
+    {
+        "_id": "5f2db1f78e2217565bc9ea3b",
+        "etiqueta": "Salsa, Demiglace, Knorr"
+    },
+    {
+        "_id": "5f2db1f78e2217565bc9ea3d",
+        "etiqueta": "Salsa, Inglesa, Crosse&Blackwell,"
+    },
+    {
+        "_id": "5f2db1f78e2217565bc9ea3f",
+        "etiqueta": "Salsa, Inglesa, Crosse&Blackwell,"
+    },
+    {
+        "_id": "5f2db1f78e2217565bc9ea41",
+        "etiqueta": "Salsa, Inglesa, Crosse&Blackwell,"
+    },
+    {
+        "_id": "5f2db1f78e2217565bc9ea43",
+        "etiqueta": "Salsa, Tabasco,"
+    },
+    {
+        "_id": "5f2db1f78e2217565bc9ea45",
+        "etiqueta": "Salsa, Tabasco,"
+    },
+    {
+        "_id": "5f2db1f78e2217565bc9ea47",
+        "etiqueta": "Salsa, Polvo, Bajo, en Sodio, Tajín,"
+    },
+    {
+        "_id": "5f2db1f78e2217565bc9ea49",
+        "etiqueta": "Salsa, Original, Tajín, "
+    },
+    {
+        "_id": "5f2db1f78e2217565bc9ea4b",
+        "etiqueta": "Salsa, Tipo, Guacamole, Herdez,"
+    },
+    {
+        "_id": "5f2db1f78e2217565bc9ea4d",
+        "etiqueta": "Salsa, Valentina,"
+    },
+    {
+        "_id": "5f2db1f78e2217565bc9ea4f",
+        "etiqueta": "Sazonador, Carne, Molida, Knorr,"
+    },
+    {
+        "_id": "5f2db1f78e2217565bc9ea51",
+        "etiqueta": "Servilleta, Lujo, Kleenex, Servilletas"
+    },
+    {
+        "_id": "5f2db1f78e2217565bc9ea53",
+        "etiqueta": "Servilleta, Mesa, LYS, servilletas"
+    },
+    {
+        "_id": "5f2db1f78e2217565bc9ea57",
+        "etiqueta": "Servitoalla, Petalo, Servitoallas"
+    },
+    {
+        "_id": "5f2db1f78e2217565bc9ea59",
+        "etiqueta": "Shampoo, Pantene, Fuerza, Reconstrucción,"
+    },
+    {
+        "_id": "5f2db1f78e2217565bc9ea5b",
+        "etiqueta": "Spaghetti, Grande, No.7, Barilla, pasta"
+    },
+    {
+        "_id": "5f2db1f78e2217565bc9ea5d",
+        "etiqueta": "Spaghetti, Grande, No.7, Barilla,"
+    },
+    {
+        "_id": "5f2db1f78e2217565bc9ea5f",
+        "etiqueta": "Spaghetti, Mediano, No.5, Barilla,"
+    },
+    {
+        "_id": "5f2db1f78e2217565bc9ea61",
+        "etiqueta": "Spaghetti, Mediano, No.5, Barilla,"
+    },
+    {
+        "_id": "5f2db1f78e2217565bc9ea63",
+        "etiqueta": "Spaghetti, Italpasta,"
+    },
+    {
+        "_id": "5f2db1f78e2217565bc9ea65",
+        "etiqueta": "Surimi, Capitán,"
+    },
+    {
+        "_id": "5f2db1f78e2217565bc9ea67",
+        "etiqueta": "T-Bone, CAB, Carne, Res,"
+    },
+    {
+        "_id": "5f2db1f78e2217565bc9ea69",
+        "etiqueta": "T-Bone, Premium, Carne, Res,"
+    },
+    {
+        "_id": "5f2db1f78e2217565bc9ea6b",
+        "etiqueta": "Tallarines, Gialle, Barilla,"
+    },
+    {
+        "_id": "5f2db1f78e2217565bc9ea6d",
+        "etiqueta": "Te, Canela, Manzana, Mc Cormick,"
+    },
+    {
+        "_id": "5f2db1f78e2217565bc9ea6e",
+        "etiqueta": "Te, Hierbabuena, Mc Cormick,"
+    },
+    {
+        "_id": "5f2db1f78e2217565bc9ea71",
+        "etiqueta": "Te, Limón, Mc Cormick,"
+    },
+    {
+        "_id": "5f2db1f78e2217565bc9ea73",
+        "etiqueta": "Té, Manzanilla, Mc Cormick,"
+    },
+    {
+        "_id": "5f2db1f78e2217565bc9ea75",
+        "etiqueta": "Té, Manzanilla, Mc Cormick,"
+    },
+    {
+        "_id": "5f2db1f78e2217565bc9ea77",
+        "etiqueta": "Tequila, Don Julio, 70 años, Añejo,"
+    },
+    {
+        "_id": "5f2db1f78e2217565bc9ea79",
+        "etiqueta": "Tequila, Don Julio, Reposado,"
+    },
+    {
+        "_id": "5f2db1f78e2217565bc9ea7b",
+        "etiqueta": "Tequila, José Cuervo, Reposado,"
+    },
+    {
+        "_id": "5f2db1f78e2217565bc9ea7d",
+        "etiqueta": "Tequila, José Cuervo, Tradicional,"
+    },
+    {
+        "_id": "5f2db1f78e2217565bc9ea7f",
+        "etiqueta": "Tequila, Lunazul, Blanco,"
+    },
+    {
+        "_id": "5f2db1f78e2217565bc9ea81",
+        "etiqueta": "Toalla, Femenina, Saba, Buenas Noches,"
+    },
+    {
+        "_id": "5f2db1f88e2217565bc9ea83",
+        "etiqueta": "Toalla, Sanitaria, Saba, Invisible,"
+    },
+    {
+        "_id": "5f2db1f88e2217565bc9ea85",
+        "etiqueta": "Toalla, Femenina, Ultra, Invisible, Noche, Saba,"
+    },
+    {
+        "_id": "5f2db1f88e2217565bc9ea87",
+        "etiqueta": "Toallitas, Desmaquillantes, Humectante, Nivea, "
+    },
+    {
+        "_id": "5f2db1f88e2217565bc9ea89",
+        "etiqueta": "Toallitas, Húmedas, Cuidado, Natural, Huggies, "
+    },
+    {
+        "_id": "5f2db1f88e2217565bc9ea8b",
+        "etiqueta": "Toallitas, Húmedas, Bio Baby,"
+    },
+    {
+        "_id": "5f2db1f88e2217565bc9ea8d",
+        "etiqueta": "Tomate, Deshidratado, San Miguel,"
+    },
+    {
+        "_id": "5f2db1f88e2217565bc9ea8f",
+        "etiqueta": "Tornillo, Fusilli, Barilla,"
+    },
+    {
+        "_id": "5f2db1f88e2217565bc9ea91",
+        "etiqueta": "Quita Manchas, Color, Pro Vanish, "
+    },
+    {
+        "_id": "5f2db1f88e2217565bc9ea93",
+        "etiqueta": "Verduras, Congeladas, Brocoli, Freshco,"
+    },
+    {
+        "_id": "5f2db1f88e2217565bc9ea95",
+        "etiqueta": "Verduras, Congeladas, Ensalada, California, Freshco,"
+    },
+    {
+        "_id": "5f2db1f88e2217565bc9ea97",
+        "etiqueta": "Verduras, Congeladas, Ensalada, Campesina, Freshco,"
+    },
+    {
+        "_id": "5f2db1f88e2217565bc9ea99",
+        "etiqueta": "Verduras, Congeladas, Chicharo, Zanahoria, Freshco,"
+    },
+    {
+        "_id": "5f2db1f88e2217565bc9ea9b",
+        "etiqueta": "Verduras, Congeladas, Chícharo, Freshco,"
+    },
+    {
+        "_id": "5f2db1f88e2217565bc9ea9d",
+        "etiqueta": "Verduras, Congeladas, Elote, Grano, Freshco,"
+    },
+    {
+        "_id": "5f2db1f88e2217565bc9ea9f",
+        "etiqueta": "Versatié, Base, Cremosa, Richs,"
+    },
+    {
+        "_id": "5f2db1f88e2217565bc9eaa1",
+        "etiqueta": "Vino, Blanco, Cava,"
+    },
+    {
+        "_id": "5f2db1f88e2217565bc9eaa5",
+        "etiqueta": "Vino, Tinto, Cava,"
+    },
+    {
+        "_id": "5f2db1f88e2217565bc9eaa6",
+        "etiqueta": "Vino, Tinto, Cava,"
+    },
+    {
+        "_id": "5f2db1f88e2217565bc9eaa9",
+        "etiqueta": "Vino, Tinto, Cava,"
+    },
+    {
+        "_id": "5f2db1f88e2217565bc9eaab",
+        "etiqueta": "Vitacilina, Bebé,"
+    },
+    {
+        "_id": "5f2db1f88e2217565bc9eaad",
+        "etiqueta": "Vodka, Absolut,"
+    },
+    {
+        "_id": "5f2db1f88e2217565bc9eaae",
+        "etiqueta": "Vodka, Absolut, Apeach,"
+    },
+    {
+        "_id": "5f2db1f88e2217565bc9eab1",
+        "etiqueta": "Vodka, Absolut, Citron,"
+    },
+    {
+        "_id": "5f2db1f88e2217565bc9eab3",
+        "etiqueta": "Vodka, Absolut, Elix,"
+    },
+    {
+        "_id": "5f2db1f88e2217565bc9eab5",
+        "etiqueta": "Vodka, Absolut, Mandrin,"
+    },
+    {
+        "_id": "5f2db1f88e2217565bc9eab7",
+        "etiqueta": "Vodka, Absolut, Mango,"
+    },
+    {
+        "_id": "5f2db1f88e2217565bc9eab9",
+        "etiqueta": "Vodka, Absolut, Pear,"
+    },
+    {
+        "_id": "5f2db1f88e2217565bc9eabb",
+        "etiqueta": "Vodka, Smirnoff,"
+    },
+    {
+        "_id": "5f2db1f88e2217565bc9eabc",
+        "etiqueta": "Vodka, Smirnoff, Spicy Tamarind,"
+    },
+    {
+        "_id": "5f2db1f88e2217565bc9eabf",
+        "etiqueta": "Crema, Whip Topping, Base, Richs,"
+    },
+    {
+        "_id": "5f2db1f88e2217565bc9eac1",
+        "etiqueta": "Crema, Whip Topping, Premium, Richs,"
+    },
+    {
+        "_id": "5f2db1f88e2217565bc9eac3",
+        "etiqueta": "Whisky, Chivas, Regal,"
+    },
+    {
+        "_id": "5f2db1f88e2217565bc9eac5",
+        "etiqueta": "Whisky, Grants, Triple Wood,"
+    },
+    {
+        "_id": "5f2db1f88e2217565bc9eac7",
+        "etiqueta": "Whisky, Johnnie Walker, Double Black,"
+    },
+    {
+        "_id": "5f2db1f88e2217565bc9eac9",
+        "etiqueta": "Whisky, Johnnie Walker, Etiqueta Negra,"
+    },
+    {
+        "_id": "5f2db1f88e2217565bc9eaca",
+        "etiqueta": "Whisky, Johnnie Walker, Etiqueta Roja,"
+    },
+    {
+        "_id": "5f2db1f88e2217565bc9eacd",
+        "etiqueta": "Whisky, Johnnie Walker, Etiqueta Roja,"
+    },
+    {
+        "_id": "5f2db1f88e2217565bc9eacf",
+        "etiqueta": "Limpiador, Windex, Mr Músculo, "
+    },
+    {
+        "_id": "5f2db1f88e2217565bc9ead1",
+        "etiqueta": "Limpiador, Windex, Mr Músculo, "
+    },
+    {
+        "_id": "5f2db1f98e2217565bc9ead3",
+        "etiqueta": "Yogurt, Cremoso, Natural, Orgánico, Bove, Yoghurt"
+    },
+    {
+        "_id": "5f2db1f98e2217565bc9ead5",
+        "etiqueta": "Bolsa, Ziploc, Sandwich,"
+    },
+    {
+        "_id": "5f2db1f98e2217565bc9ead7",
+        "etiqueta": "Cereal, Kellogs, Zucaritas, cereales"
+    },
+    {
+        "_id": "5f2db1f98e2217565bc9ead9",
+        "etiqueta": "Cereal, Kellogs, Zucaritas, cereales"
+    },
+    {
+        "_id": "5f2db1f98e2217565bc9eadf",
+        "etiqueta": "Chicle, Trident, X-Tracare, Freshmint,"
+    },
+    {
+        "_id": "5f2db1f98e2217565bc9eae0",
+        "etiqueta": "Crema, Avellanas, Nutella,"
+    },
+    {
+        "_id": "5f2db1f98e2217565bc9eae2",
+        "etiqueta": "Alimento, Gato, Purina, Cat Chow, Adulto, Pescado,"
+    },
+    {
+        "_id": "5f2db1f98e2217565bc9eae4",
+        "etiqueta": "Alimento, Gato, Adulto, Purina, Cat Chow,  Pescado,"
+    },
+    {
+        "_id": "5f2db1f98e2217565bc9eae6",
+        "etiqueta": "Tostadas, Sanissimo, Horneadas,"
+    },
+    {
+        "_id": "5f2db1f98e2217565bc9eae8",
+        "etiqueta": "Tostadas, Salmas, Horneadas,"
+    },
+    {
+        "_id": "5f2db1f98e2217565bc9eaea",
+        "etiqueta": "Leche, Entera, Santa Clara,"
+    },
+    {
+        "_id": "5f2db1f98e2217565bc9eaec",
+        "etiqueta": "Concentrado, Jugo, Rojo, Steam and Eat,"
+    },
+    {
+        "_id": "5f2db1f98e2217565bc9eaee",
+        "etiqueta": "Concentrado, Jugo Verde, Steam and Eat,"
+    },
+    {
+        "_id": "5f2db1f98e2217565bc9eaf0",
+        "etiqueta": "Ponche, Frutas, Steam and Eat,"
+    },
+    {
+        "_id": "5f2db1f98e2217565bc9eaf2",
+        "etiqueta": "Pure, Alubia, Steam and Eat,"
+    },
+    {
+        "_id": "5f2db1f98e2217565bc9eaf4",
+        "etiqueta": "Pure, Betabel, Steam and Eat,"
+    },
+    {
+        "_id": "5f2db1f98e2217565bc9eaf6",
+        "etiqueta": "Pure, Brocoli, Steam and Eat,"
+    },
+    {
+        "_id": "5f2db1f98e2217565bc9eaf8",
+        "etiqueta": "Pure, Calabaza, Steam and Eat,"
+    },
+    {
+        "_id": "5f2db1f98e2217565bc9eafa",
+        "etiqueta": "Pure, Camote, Steam and Eat,"
+    },
+    {
+        "_id": "5f2db1f98e2217565bc9eafc",
+        "etiqueta": "Pure, Chayote, Steam and Eat,"
+    },
+    {
+        "_id": "5f2db1f98e2217565bc9eafe",
+        "etiqueta": "Pure, Chícharo, Steam and Eat,"
+    },
+    {
+        "_id": "5f2db1f98e2217565bc9eb00",
+        "etiqueta": "Pure, Ciruela Pasa, Steam and Eat,"
+    },
+    {
+        "_id": "5f2db1f98e2217565bc9eb02",
+        "etiqueta": "Pure, Espinaca, Steam and Eat,"
+    },
+    {
+        "_id": "5f2db1f98e2217565bc9eb04",
+        "etiqueta": "Pure, Frijol, Steam and Eat,"
+    },
+    {
+        "_id": "5f2db1f98e2217565bc9eb06",
+        "etiqueta": "Pure, Frutos Rojos, Steam and Eat,"
+    },
+    {
+        "_id": "5f2db1f98e2217565bc9eb08",
+        "etiqueta": "Pure, Garbanzo, Steam and Eat,"
+    },
+    {
+        "_id": "5f2db1f98e2217565bc9eb0a",
+        "etiqueta": "Pure, Jitomate, Steam and Eat,"
+    },
+    {
+        "_id": "5f2db1f98e2217565bc9eb0c",
+        "etiqueta": "Pure, Lenteja, Steam and Eat,"
+    },
+    {
+        "_id": "5f2db1f98e2217565bc9eb0e",
+        "etiqueta": "Pure, Mamey, Steam and Eat,"
+    },
+    {
+        "_id": "5f2db1f98e2217565bc9eb10",
+        "etiqueta": "Pure, Mango, Steam and Eat,"
+    },
+    {
+        "_id": "5f2db1f98e2217565bc9eb12",
+        "etiqueta": "Pure, Manzana, Steam and Eat,"
+    },
+    {
+        "_id": "5f2db1f98e2217565bc9eb14",
+        "etiqueta": "Pure, Papaya, Steam and Eat,"
+    },
+    {
+        "_id": "5f2db1f98e2217565bc9eb16",
+        "etiqueta": "Puré, Pera, Steam and Eat,"
+    },
+    {
+        "_id": "5f2db1f98e2217565bc9eb18",
+        "etiqueta": "Puré, Piña, Steam and Eat,"
+    },
+    {
+        "_id": "5f2db1f98e2217565bc9eb1a",
+        "etiqueta": "Puré, Zanahoria, Steam and Eat,"
+    },
+    {
+        "_id": "5f2db1f98e2217565bc9eb1c",
+        "etiqueta": "Vino, Blanco, Marella, Blanc de Blancs,"
+    },
+    {
+        "_id": "5f2db1f98e2217565bc9eb1e",
+        "etiqueta": "Vino, Blanco, Virto,"
+    },
+    {
+        "_id": "5f2db1f98e2217565bc9eb20",
+        "etiqueta": "Vino, Espumoso, Sensi, Prosecco,"
+    },
+    {
+        "_id": "5f2db1f98e2217565bc9eb22",
+        "etiqueta": "Vino, Tinto, Feluns, Domaine,"
+    },
+    {
+        "_id": "5f2db1f98e2217565bc9eb24",
+        "etiqueta": "Vino, Tinto, Incognito,"
+    },
+    {
+        "_id": "5f2db1fa8e2217565bc9eb26",
+        "etiqueta": "Vino, Tinto, Miguel, Adobe de Guadalupe,"
+    },
+    {
+        "_id": "5f2db1fa8e2217565bc9eb28",
+        "etiqueta": "Vino, Tinto, Feluns, Petite,"
+    },
+    {
+        "_id": "5f2db1fa8e2217565bc9eb2a",
+        "etiqueta": "Vino, Tinto, Virto,"
+    },
+    {
+        "_id": "5f2db1fa8e2217565bc9eb2c",
+        "etiqueta": "Miel, Mantequilla,"
+    },
+    {
+        "_id": "5f2db1fa8e2217565bc9eb2e",
+        "etiqueta": "Miel, Multiflora,"
+    },
+    {
+        "_id": "5f2db1fa8e2217565bc9eb30",
+        "etiqueta": "Perlitas, Antiestres,"
+    },
+    {
+        "_id": "5f2db1fa8e2217565bc9eb32",
+        "etiqueta": "Perlitas, Propoleo,"
+    },
+    {
+        "_id": "5f2db1fa8e2217565bc9eb34",
+        "etiqueta": "Mandolin, Kombucha, Fresa-Kiw, probioticos"
+    },
+    {
+        "_id": "5f2db1fa8e2217565bc9eb36",
+        "etiqueta": "Mandolin, Kombucha, Jamaica,"
+    },
+    {
+        "_id": "5f2db1fa8e2217565bc9eb38",
+        "etiqueta": "Mandolin, Kombucha, Jengibre,"
+    },
+    {
+        "_id": "5f2db1fa8e2217565bc9eb3a",
+        "etiqueta": "Mandolin, Kombucha,,Manzana, Verde,"
+    },
+    {
+        "_id": "5f2db1fa8e2217565bc9eb3c",
+        "etiqueta": "Mandolin, Kombucha, Moras, Maracuya,"
+    },
+    {
+        "_id": "5f2db1fa8e2217565bc9eb3e",
+        "etiqueta": "Detergente, Biodegradable, Ropa, Debion,"
+    },
+    {
+        "_id": "5f2db1fa8e2217565bc9eb40",
+        "etiqueta": "Detergente, Biodegradable, Ropa, Debion,"
+    },
+    {
+        "_id": "5f2db1fa8e2217565bc9eb42",
+        "etiqueta": "Lavatrastes, Líquido, Biodegradable,"
+    },
+    {
+        "_id": "5f2db1fa8e2217565bc9eb44",
+        "etiqueta": "Lavatrastes, Liquido, Biodegradable,"
+    },
+    {
+        "_id": "5f2db1fa8e2217565bc9eb46",
+        "etiqueta": "Desinfectante, Verduras, Biodegradable, Citrof,"
+    },
+    {
+        "_id": "5f2db1fa8e2217565bc9eb48",
+        "etiqueta": "Pasta, Dental, Mitch,"
+    },
+    {
+        "_id": "5f2db1fa8e2217565bc9eb4a",
+        "etiqueta": "Suplemento, Alimenticio, Mixsure, Fresa,"
+    },
+    {
+        "_id": "5f2db1fa8e2217565bc9eb4c",
+        "etiqueta": "Suplemento, Alimenticio, Mixsure, Vainilla,"
+    },
+    {
+        "_id": "5f2db1fa8e2217565bc9eb4e",
+        "etiqueta": "Suplemento, Alimenticio, Mixsure, Chocolate,"
+    },
+    {
+        "_id": "5f2db1fa8e2217565bc9eb50",
+        "etiqueta": "Proteina, Vegana, Falcon, Vainilla,"
+    },
+    {
+        "_id": "5f2db1fa8e2217565bc9eb52",
+        "etiqueta": "Proteina, Vegana, Falcon, Chocolate,"
+    },
+    {
+        "_id": "5f2db1fa8e2217565bc9eb54",
+        "etiqueta": "Proteina, Vegana, Falcon, Natural,"
+    },
+    {
+        "_id": "5f2db1fa8e2217565bc9eb56",
+        "etiqueta": "Agua, Alcalina, Zoe, Water, Clásica,"
+    },
+    {
+        "_id": "5f2db1fa8e2217565bc9eb58",
+        "etiqueta": "Agua, Alcalina, Zoe, Water, Clásica,"
+    },
+    {
+        "_id": "5f2db1fa8e2217565bc9eb5a",
+        "etiqueta": "Agua, Alcalina, Zoe, Water, Clásica,"
+    },
+    {
+        "_id": "5f2db1fa8e2217565bc9eb5e",
+        "etiqueta": "Agua, Alcalina, Zoe, Water, Sport,"
+    },
+    {
+        "_id": "5f2db1fa8e2217565bc9eb68",
+        "etiqueta": "Agua, Alcalina, Zoe, Water, Box Sport,"
+    },
+    {
+        "_id": "5f2db1fa8e2217565bc9eb6a",
+        "etiqueta": "Balsamo, Labial, Organico, Kone Care,"
+    },
+    {
+        "_id": "5f2db1fa8e2217565bc9eb6c",
+        "etiqueta": "Crema, Nutritiva, Orgánica, Kone Care,"
+    },
+    {
+        "_id": "5f2db1fa8e2217565bc9eb6e",
+        "etiqueta": "Desmaquillante, Bifasico, Rosas, Orgánico, Kone Care,"
+    },
+    {
+        "_id": "5f2db1fa8e2217565bc9eb70",
+        "etiqueta": "Jabón, Antiacne, Organico, Kone Care,"
+    },
+    {
+        "_id": "5f2db1fa8e2217565bc9eb72",
+        "etiqueta": "Jabón, Antioxidante, Orgánico, Kone Care,"
+    },
+    {
+        "_id": "5f2db1fb8e2217565bc9eb74",
+        "etiqueta": "Mascarilla, Arcilla, Rosa, Orgánica, Kone Care,"
+    },
+    {
+        "_id": "5f2db1fb8e2217565bc9eb76",
+        "etiqueta": "Papilla, Natural, Betabel, La Huerta de Elisa,"
+    },
+    {
+        "_id": "5f2db1fb8e2217565bc9eb78",
+        "etiqueta": "Papilla, Natural, Espinaca, La Huerta de Elisa,"
+    },
+    {
+        "_id": "5f2db1fb8e2217565bc9eb7a",
+        "etiqueta": "Papilla, Natural, Mango, La Huerta de Elisa,"
+    },
+    {
+        "_id": "5f2db1fb8e2217565bc9eb7c",
+        "etiqueta": "Papilla, Natural, Pera, La Huerta de Elisa,"
+    },
+    {
+        "_id": "5f2db1fb8e2217565bc9eb7e",
+        "etiqueta": "Agua, Bonafont,"
+    },
+    {
+        "_id": "5f2db1fb8e2217565bc9eb80",
+        "etiqueta": "Agua, Bonafont,"
+    },
+    {
+        "_id": "5f2db1fb8e2217565bc9eb82",
+        "etiqueta": "Agua, Bonafont,"
+    },
+    {
+        "_id": "5f2db1fb8e2217565bc9eb84",
+        "etiqueta": "Agua, Bonafont,"
+    },
+    {
+        "_id": "5f2db1fb8e2217565bc9eb86",
+        "etiqueta": "Detergente, Líquido, Mas Color,"
+    },
+    {
+        "_id": "5f2db1fb8e2217565bc9eb88",
+        "etiqueta": "Detergente, Liquido, Mas Color,"
+    },
+    {
+        "_id": "5f2db1fb8e2217565bc9eb8a",
+        "etiqueta": "Aderezo, Miel, Dijon, San Miguel,"
+    },
+    {
+        "_id": "5f2db1fb8e2217565bc9eb8c",
+        "etiqueta": "Aderezo, Soya, Limon, San Miguel,"
+    },
+    {
+        "_id": "5f2db1fb8e2217565bc9eb8e",
+        "etiqueta": "Arroz, Arborio, San Miguel,"
+    },
+    {
+        "_id": "5f2db1fb8e2217565bc9eb90",
+        "etiqueta": "Arroz, Basmati, San Miguel,"
+    },
+    {
+        "_id": "5f2db1fb8e2217565bc9eb92",
+        "etiqueta": "Arroz, Integral, Quinoa, San Miguel,"
+    },
+    {
+        "_id": "5f2db1fb8e2217565bc9eb94",
+        "etiqueta": "Arroz, Paellero, San Miguel,"
+    },
+    {
+        "_id": "5f2db1fb8e2217565bc9eb96",
+        "etiqueta": "Arroz, Salvaje, San Miguel,"
+    },
+    {
+        "_id": "5f2db1fb8e2217565bc9eb9a",
+        "etiqueta": "Elotitos, Tiernos, San Miguel,"
+    },
+    {
+        "_id": "5f2db1fb8e2217565bc9eb9b",
+        "etiqueta": "Palmitos, Enteros, San Miguel,"
+    },
+    {
+        "_id": "5f2db1fb8e2217565bc9eb9d",
+        "etiqueta": "Palmitos, Mitades, San Miguel,"
+    },
+    {
+        "_id": "5f2db1fb8e2217565bc9eb9f",
+        "etiqueta": "Pepinillos, Rebanados, San Miguel,"
+    },
+    {
+        "_id": "5f2db1fb8e2217565bc9eba1",
+        "etiqueta": "Salsa, Chile, Habanero, Don Pancho, San Miguel,"
+    },
+    {
+        "_id": "5f2db1fb8e2217565bc9eba3",
+        "etiqueta": "Salsa, Chile, Pasilla, Nana, San Miguel,"
+    },
+    {
+        "_id": "5f2db1fb8e2217565bc9eba5",
+        "etiqueta": "Salsa, Mango, Habanero, San Miguel,"
+    },
+    {
+        "_id": "5f2db1fb8e2217565bc9eba7",
+        "etiqueta": "Salsa, Organica, Roja, San Miguel,"
+    },
+    {
+        "_id": "5f2db1fb8e2217565bc9eba9",
+        "etiqueta": "Salsa, Organica, Verde, San Miguel, organico"
+    },
+    {
+        "_id": "5f2db1fb8e2217565bc9ebab",
+        "etiqueta": "Tomate, Deshidratado, San Miguel,"
+    },
+    {
+        "_id": "5f2db1fb8e2217565bc9ebad",
+        "etiqueta": "Vinagre, Balsamico, Modena, San Miguel,"
+    },
+    {
+        "_id": "5f2db1fb8e2217565bc9ebaf",
+        "etiqueta": "Detergente, Liquido, Multiusos, Roma,"
+    },
+    {
+        "_id": "5f2db1fb8e2217565bc9ebb1",
+        "etiqueta": "Detergente, Polvo, Roma,"
+    },
+    {
+        "_id": "5f2db1fb8e2217565bc9ebb3",
+        "etiqueta": "Jabon, Barra, Verbena, Murano,"
+    },
+    {
+        "_id": "5f2db1fb8e2217565bc9ebb5",
+        "etiqueta": "Jabon, Barra, Exfoliante, Frambuesa, Chia, Murano,"
+    },
+    {
+        "_id": "5f2db1fb8e2217565bc9ebb7",
+        "etiqueta": "Jabon, Barra, Exfoliante, Limon, Chia, Murano,"
+    },
+    {
+        "_id": "5f2db1fb8e2217565bc9ebb9",
+        "etiqueta": "Jabon, Barra, Flor, Almendro, Manilva,"
+    },
+    {
+        "_id": "5f2db1fb8e2217565bc9ebbb",
+        "etiqueta": "Jabon, Barra, Herbal, Manilva,"
+    },
+    {
+        "_id": "5f2db1fb8e2217565bc9ebbd",
+        "etiqueta": "Jabon, Barra, Natural, Hipoalergenico, Tuit,"
+    },
+    {
+        "_id": "5f2db1fb8e2217565bc9ebbf",
+        "etiqueta": "Jabon, Barra, Natural, Selva, Negra, Murano,"
+    },
+    {
+        "_id": "5f2db1fb8e2217565bc9ebc1",
+        "etiqueta": "Jabon, Barra, Neutro, Tresso,"
+    },
+    {
+        "_id": "5f2db1fb8e2217565bc9ebc3",
+        "etiqueta": "Jabón, Barra, Pepino, Murano, Jabon"
+    },
+    {
+        "_id": "5f2db1fb8e2217565bc9ebc5",
+        "etiqueta": "Jabon, Liquido, Manos, Cuerpo, Manilva,"
+    },
+    {
+        "_id": "5f2db1fb8e2217565bc9ebc7",
+        "etiqueta": "Base, Chasen, Azul, Eurote,"
+    },
+    {
+        "_id": "5f2db1fb8e2217565bc9ebc9",
+        "etiqueta": "Base, Chasen, Verde, Eurote,"
+    },
+    {
+        "_id": "5f2db1fc8e2217565bc9ebcb",
+        "etiqueta": "Base, Polvo, Helado, Black, Maracuyá, Eurote,"
+    },
+    {
+        "_id": "5f2db1fc8e2217565bc9ebcd",
+        "etiqueta": "Base, Polvo, Helado, Masala, Chai, Eurote,"
+    },
+    {
+        "_id": "5f2db1fc8e2217565bc9ebcf",
+        "etiqueta": "Filtros, Desechables, Taza,"
+    },
+    {
+        "_id": "5f2db1fc8e2217565bc9ebd1",
+        "etiqueta": "Cha Wan, Doble, Fondo, Cristal, Eurote,"
+    },
+    {
+        "_id": "5f2db1fc8e2217565bc9ebd3",
+        "etiqueta": "Cha Wan, Fuji, Azul, Eurote,"
+    },
+    {
+        "_id": "5f2db1fc8e2217565bc9ebd5",
+        "etiqueta": "Cha Wan, Fuji, Verde, Eurote,"
+    },
+    {
+        "_id": "5f2db1fc8e2217565bc9ebd7",
+        "etiqueta": "Charola, Gong Fu Cha, Eurote,"
+    },
+    {
+        "_id": "5f2db1fc8e2217565bc9ebd9",
+        "etiqueta": "Charola, Surtida, Pirámide, Eurote, te, té"
+    },
+    {
+        "_id": "5f2db1fc8e2217565bc9ebdb",
+        "etiqueta": "Chasen, Eurote,"
+    },
+    {
+        "_id": "5f2db1fc8e2217565bc9ebdd",
+        "etiqueta": "Clavo, Chico, Decorar, Rafmex,"
+    },
+    {
+        "_id": "5f2db1fc8e2217565bc9ebdf",
+        "etiqueta": "Clavo, Grande, Decorar, Rafmex,"
+    },
+    {
+        "_id": "5f2db1fc8e2217565bc9ebe1",
+        "etiqueta": "Cronómetro, Te, Eurote,"
+    },
+    {
+        "_id": "5f2db1fc8e2217565bc9ebe3",
+        "etiqueta": "Cucharita, Medidora, Eurote,"
+    },
+    {
+        "_id": "5f2db1fc8e2217565bc9ebe5",
+        "etiqueta": "Cuchillo, Chef, Rafmex,"
+    },
+    {
+        "_id": "5f2db1fc8e2217565bc9ebe7",
+        "etiqueta": "Cuchillo, Pastelero, Rafmex,"
+    },
+    {
+        "_id": "5f2db1fc8e2217565bc9ebe9",
+        "etiqueta": "Charola, Cupcake, Vainilla, Richs,"
+    },
+    {
+        "_id": "5f2db1fc8e2217565bc9ebeb",
+        "etiqueta": "Envase, Hermético, Eurote,"
+    },
+    {
+        "_id": "5f2db1fc8e2217565bc9ebed",
+        "etiqueta": "Estuche, Surtido, Latas, Eurote,"
+    },
+    {
+        "_id": "5f2db1fc8e2217565bc9ebef",
+        "etiqueta": "Estuche, Euro Fusión, Mini, Eurote,"
+    },
+    {
+        "_id": "5f2db1fc8e2217565bc9ebf1",
+        "etiqueta": "Estuche, Pirámide, Eurote,"
+    },
+    {
+        "_id": "5f2db1fc8e2217565bc9ebf3",
+        "etiqueta": "Estuche, color, Chocolate, Eurote,"
+    },
+    {
+        "_id": "5f2db1fc8e2217565bc9ebf5",
+        "etiqueta": "Accesorios, Té, Filtros, te"
+    },
+    {
+        "_id": "5f2db1fc8e2217565bc9ebf7",
+        "etiqueta": "Accesorios, Té, Eurote, Infusor"
+    },
+    {
+        "_id": "5f2db1fc8e2217565bc9ebf9",
+        "etiqueta": "Accesorios, Té, Eurote, Infusor"
+    },
+    {
+        "_id": "5f2db1fc8e2217565bc9ebfa",
+        "etiqueta": "Accesorios, Té, Eurote, Infusor"
+    },
+    {
+        "_id": "5f2db1fc8e2217565bc9ebfd",
+        "etiqueta": "Accesorios, Té, Eurote, Infusor"
+    },
+    {
+        "_id": "5f2db1fc8e2217565bc9ebff",
+        "etiqueta": "Accesorios, Té, Eurote, Infusor"
+    },
+    {
+        "_id": "5f2db1fc8e2217565bc9ec01",
+        "etiqueta": "Accesorios, Té, Eurote, Infusor"
+    },
+    {
+        "_id": "5f2db1fc8e2217565bc9ec03",
+        "etiqueta": "Accesorios, Té, Eurote, Infusor"
+    },
+    {
+        "_id": "5f2db1fc8e2217565bc9ec05",
+        "etiqueta": "Accesorios, Té, Eurote, Infusor"
+    },
+    {
+        "_id": "5f2db1fc8e2217565bc9ec07",
+        "etiqueta": "Accesorios, Té, Eurote"
+    },
+    {
+        "_id": "5f2db1fc8e2217565bc9ec09",
+        "etiqueta": "Accesorios, Té, Eurote"
+    },
+    {
+        "_id": "5f2db1fc8e2217565bc9ec0b",
+        "etiqueta": "Accesorios, Pastelería, Rafmex, Decoración"
+    },
+    {
+        "_id": "5f2db1fc8e2217565bc9ec0d",
+        "etiqueta": "Accesorios, Pastelería, Rafmex, Decoración"
+    },
+    {
+        "_id": "5f2db1fc8e2217565bc9ec0f",
+        "etiqueta": "Accesorios, Pastelería, Rafmex, Decoración"
+    },
+    {
+        "_id": "5f2db1fc8e2217565bc9ec11",
+        "etiqueta": "Accesorios, Pastelería, Rafmex, Decoración"
+    },
+    {
+        "_id": "5f2db1fc8e2217565bc9ec13",
+        "etiqueta": "Accesorios, Pastelería, Rafmex, Decoración"
+    },
+    {
+        "_id": "5f2db1fc8e2217565bc9ec15",
+        "etiqueta": "Accesorios, Pastelería, Rafmex, Decoración"
+    },
+    {
+        "_id": "5f2db1fc8e2217565bc9ec17",
+        "etiqueta": "Accesorios, Pastelería, Rafmex, Decoración"
+    },
+    {
+        "_id": "5f2db1fc8e2217565bc9ec19",
+        "etiqueta": "Accesorios, Pastelería, Rafmex"
+    },
+    {
+        "_id": "5f2db1fd8e2217565bc9ec1d",
+        "etiqueta": "Accesorios, Té, Eurote"
+    },
+    {
+        "_id": "5f2db1fd8e2217565bc9ec1f",
+        "etiqueta": "Accesorios, Pastelería, Rafmex"
+    },
+    {
+        "_id": "5f2db1fd8e2217565bc9ec21",
+        "etiqueta": "Accesorios, Té, Eurote"
+    },
+    {
+        "_id": "5f2db1fd8e2217565bc9ec23",
+        "etiqueta": "Accesorios, Té, Eurote"
+    },
+    {
+        "_id": "5f2db1fd8e2217565bc9ec25",
+        "etiqueta": "Accesorios, Té, Eurote"
+    },
+    {
+        "_id": "5f2db1fd8e2217565bc9ec27",
+        "etiqueta": "Accesorios, Té, Eurote"
+    },
+    {
+        "_id": "5f2db1fd8e2217565bc9ec29",
+        "etiqueta": "Accesorios, Té, Eurote"
+    },
+    {
+        "_id": "5f2db1fd8e2217565bc9ec2b",
+        "etiqueta": "Té, Artístico, Eurote"
+    },
+    {
+        "_id": "5f2db1fd8e2217565bc9ec2d",
+        "etiqueta": "Té, Blanco, Eurote, te,"
+    },
+    {
+        "_id": "5f2db1fd8e2217565bc9ec2f",
+        "etiqueta": "To, Helado, Lipton, Limon"
+    },
+    {
+        "_id": "5f2db1fd8e2217565bc9ec31",
+        "etiqueta": "Té, Negro, Eurote"
+    },
+    {
+        "_id": "5f2db1fd8e2217565bc9ec33",
+        "etiqueta": "Té, Negro, Eurote, te"
+    },
+    {
+        "_id": "5f2db1fd8e2217565bc9ec35",
+        "etiqueta": "Té, Negro, Eurote, te"
+    },
+    {
+        "_id": "5f2db1fd8e2217565bc9ec36",
+        "etiqueta": "Té, Negro, Eurote, te, "
+    },
+    {
+        "_id": "5f2db1fd8e2217565bc9ec39",
+        "etiqueta": "Té, Negro, Eurote, te"
+    },
+    {
+        "_id": "5f2db1fd8e2217565bc9ec3b",
+        "etiqueta": "Té, Negro, Eurote, te"
+    },
+    {
+        "_id": "5f2db1fd8e2217565bc9ec3f",
+        "etiqueta": "Té, Negro, Oriental, te"
+    },
+    {
+        "_id": "5f2db1fd8e2217565bc9ec41",
+        "etiqueta": "Té, Rojo, Eurote, Frutas, te "
+    },
+    {
+        "_id": "5f2db1fd8e2217565bc9ec43",
+        "etiqueta": "Té, Verde, Eurote, te verde, té verde"
+    },
+    {
+        "_id": "5f2db1fd8e2217565bc9ec45",
+        "etiqueta": "Té, Verde, Eurote, te, té verde, te verde"
+    },
+    {
+        "_id": "5f2db1fd8e2217565bc9ec47",
+        "etiqueta": "Té, Verde, Eurote, te verde, té verde"
+    },
+    {
+        "_id": "5f2db1fd8e2217565bc9ec4b",
+        "etiqueta": "Té, Verde, Eurote, te verde, te, té verde"
+    },
+    {
+        "_id": "5f2db1fd8e2217565bc9ec49",
+        "etiqueta": "Té, Verde, Eurote, te verde, té verde"
+    },
+    {
+        "_id": "5f2db1fd8e2217565bc9ec4c",
+        "etiqueta": "Té, Verde, Eurote, te verde, té verde"
+    },
+    {
+        "_id": "5f2db1fd8e2217565bc9ec4d",
+        "etiqueta": "Té, Verde, Eurote, te verde, te, té verde"
+    },
+    {
+        "_id": "5f2db1fd8e2217565bc9ec51",
+        "etiqueta": "Té, Verde, Eurote, te, te verde, té verde"
+    },
+    {
+        "_id": "5f2db1fd8e2217565bc9ec53",
+        "etiqueta": "Té, Verde, Eurote, te, te verde, té verde"
+    },
+    {
+        "_id": "5f2db1fd8e2217565bc9ec55",
+        "etiqueta": "Té, Verde, Eurote, te, te verde, té verde"
+    },
+    {
+        "_id": "5f2db1fd8e2217565bc9ec57",
+        "etiqueta": "Té, Verde, Eurote, te"
+    },
+    {
+        "_id": "5f2db1fd8e2217565bc9ec59",
+        "etiqueta": "Té, Verde, Eurote, te, te verde, té verde"
+    },
+    {
+        "_id": "5f2db1fd8e2217565bc9ec5b",
+        "etiqueta": "Accesorio, Termómetro, Té"
+    },
+    {
+        "_id": "5f2db1fd8e2217565bc9ec5d",
+        "etiqueta": "Accesorio, Tetera, Eurote"
+    },
+    {
+        "_id": "5f2db1fd8e2217565bc9ec5f",
+        "etiqueta": "Accesorio, Tetera, Eurote"
+    },
+    {
+        "_id": "5f2db1fd8e2217565bc9ec61",
+        "etiqueta": "Accesorio, Tetera, Eurote"
+    },
+    {
+        "_id": "5f2db1fd8e2217565bc9ec63",
+        "etiqueta": "Accesorio, Tetera, Eurote"
+    },
+    {
+        "_id": "5f2db1fe8e2217565bc9ec65",
+        "etiqueta": "Accesorio, Tetera, Eurote"
+    },
+    {
+        "_id": "5f2db1fe8e2217565bc9ec67",
+        "etiqueta": "Accesorio, Tetera, Eurote"
+    },
+    {
+        "_id": "5f2db1fe8e2217565bc9ec69",
+        "etiqueta": "Accesorio, Tetera, Eurote"
+    },
+    {
+        "_id": "5f2db1fe8e2217565bc9ec6b",
+        "etiqueta": "Accesorio, Tetera, Eurote"
+    },
+    {
+        "_id": "5f2db1fe8e2217565bc9ec6d",
+        "etiqueta": "Tisana, Té, Frutas, te"
+    },
+    {
+        "_id": "5f2db1fe8e2217565bc9ec6f",
+        "etiqueta": "Tisana, Té, Frutas, te"
+    },
+    {
+        "_id": "5f2db1fe8e2217565bc9ec71",
+        "etiqueta": "Tisana, Té, Frutas, te"
+    },
+    {
+        "_id": "5f2db1fe8e2217565bc9ec73",
+        "etiqueta": "Tisana, Té, Frutas, te"
+    },
+    {
+        "_id": "5f2db1fe8e2217565bc9ec75",
+        "etiqueta": "Tisana, Té, Frutas, te"
+    },
+    {
+        "_id": "5f2db1fe8e2217565bc9ec77",
+        "etiqueta": "Tisana, Té, Frutas, te"
+    },
+    {
+        "_id": "5f2db1fe8e2217565bc9ec79",
+        "etiqueta": "Tisana, Té, Frutas, te"
+    },
+    {
+        "_id": "5f2db1fe8e2217565bc9ec7b",
+        "etiqueta": "Tisana, Té, Frutas, te"
+    },
+    {
+        "_id": "5f2db1fe8e2217565bc9ec7d",
+        "etiqueta": "Tisana, Té, Frutas, te"
+    },
+    {
+        "_id": "5f2db1fe8e2217565bc9ec7f",
+        "etiqueta": "Tisana, Té, Frutas, te"
+    },
+    {
+        "_id": "5f2db1fe8e2217565bc9ec81",
+        "etiqueta": "Tisana, Té, Frutas, te"
+    },
+    {
+        "_id": "5f2db1fe8e2217565bc9ec83",
+        "etiqueta": "Tisana, Té, Frutas, te"
+    },
+    {
+        "_id": "5f2db1fe8e2217565bc9ec85",
+        "etiqueta": "Accesorio, Té, Infusión"
+    },
+    {
+        "_id": "5f2db1fe8e2217565bc9ec87",
+        "etiqueta": "Accesorio, Té, Infusión"
+    },
+    {
+        "_id": "5f2db1fe8e2217565bc9ec89",
+        "etiqueta": "Accesorio, Té, Infusión"
+    },
+    {
+        "_id": "5f2db1fe8e2217565bc9ec8b",
+        "etiqueta": "Accesorio, Té, Infusión"
+    },
+    {
+        "_id": "5f2db1fe8e2217565bc9ec8d",
+        "etiqueta": "Licor, Crema, Whisky"
+    },
+    {
+        "_id": "5f2db1fe8e2217565bc9ec8f",
+        "etiqueta": "Pan, Pastelería, Rich's, Vainilla"
+    },
+    {
+        "_id": "5f2db1fe8e2217565bc9ec91",
+        "etiqueta": "Pan, Pasteleria, Rich's, Vainilla"
+    },
+    {
+        "_id": "5f2db1fe8e2217565bc9ec93",
+        "etiqueta": "Pan, Pastelería, Rich's, Chocolate, pastel"
+    },
+    {
+        "_id": "5f2db1fe8e2217565bc9ec95",
+        "etiqueta": "Pan, Pasteleria, Rich's, Chocolate"
+    },
+    {
+        "_id": "5f2db1fe8e2217565bc9ec97",
+        "etiqueta": "Amaranto, Orgánico, Consume local, "
+    },
+    {
+        "_id": "5f2db1fe8e2217565bc9ec99",
+        "etiqueta": "Arandano, Enchilado, Organico, Consume local, "
+    },
+    {
+        "_id": "5f2db1fe8e2217565bc9ec9b",
+        "etiqueta": "Arandano, Organico, Consume local, "
+    },
+    {
+        "_id": "5f2db1fe8e2217565bc9ec9d",
+        "etiqueta": "Arroz, Orgánico, Consume local, "
+    },
+    {
+        "_id": "5f2db1fe8e2217565bc9ec9f",
+        "etiqueta": "Avena, Orgánica, Consume local, "
+    },
+    {
+        "_id": "5f2db1fe8e2217565bc9eca1",
+        "etiqueta": "Chia, Negra, Orgánica, Consume local, "
+    },
+    {
+        "_id": "5f2db1fe8e2217565bc9eca3",
+        "etiqueta": "Frijol, Negro, Orgánico, Consume local, granel"
+    },
+    {
+        "_id": "5f2db1fe8e2217565bc9eca5",
+        "etiqueta": "Frijol, Pinto, Orgánico, Consume local, granel"
+    },
+    {
+        "_id": "5f2db1fe8e2217565bc9eca7",
+        "etiqueta": "Garbanzo, Orgánico, Consume local, granel"
+    },
+    {
+        "_id": "5f2db1fe8e2217565bc9eca9",
+        "etiqueta": "Haba, Limpia, Orgánica, Consume local, granel"
+    },
+    {
+        "_id": "5f2db1fe8e2217565bc9ecab",
+        "etiqueta": "Lenteja, Chica, Orgánica, Consume local,"
+    },
+    {
+        "_id": "5f2db1fe8e2217565bc9ecad",
+        "etiqueta": "Linaza, Orgánica, Consume local, granel"
+    },
+    {
+        "_id": "5f2db1fe8e2217565bc9ecaf",
+        "etiqueta": "Quinoa, Orgánica, Consume local, granel"
+    },
+    {
+        "_id": "5f2db1fe8e2217565bc9ecb3",
+        "etiqueta": "Pan, 12 Granos, Semillas, Oroweat,"
+    },
+    {
+        "_id": "5f2db1fe8e2217565bc9ecb7",
+        "etiqueta": "Tortillinas, Tía, Rosa,"
+    },
+    {
+        "_id": "5f2db1ff8e2217565bc9ecbc",
+        "etiqueta": "Medias, Noches, Bimbo, Pan, Hot dog, bimbo, pan bimbo, Pan"
+    },
+    {
+        "_id": "5f2db1ff8e2217565bc9ecbf",
+        "etiqueta": "Bimbollos, Bimbo, Pan, Hamburguesa, Pan Bimbo,"
+    },
+    {
+        "_id": "5f2db1ff8e2217565bc9ecc1",
+        "etiqueta": "Pan, Tostado, Integral, Bimbo, Pan Bimbo,"
+    },
+    {
+        "_id": "5f2db1ff8e2217565bc9ecc3",
+        "etiqueta": "Pan, Blanco, Grande, Bimbo, Pan Bimbo, Pan de caja, "
+    },
+    {
+        "_id": "5f2db1ff8e2217565bc9ecc5",
+        "etiqueta": "Pan, Integral, Grande, Bimbo, Pan Bimbo, Pan de Caja,"
+    },
+    {
+        "_id": "5f2db1ff8e2217565bc9ecc7",
+        "etiqueta": "Pan, Tostado, Clasico, Bimbo,"
+    },
+    {
+        "_id": "5f2db1ff8e2217565bc9ecc9",
+        "etiqueta": "Arandano, deshidratado, Ocean, Spray,"
+    },
+    {
+        "_id": "5f2db1ff8e2217565bc9eccb",
+        "etiqueta": "Chile, Ancho,"
+    },
+    {
+        "_id": "5f2db1ff8e2217565bc9eccd",
+        "etiqueta": "Chile, Pasilla,"
+    },
+    {
+        "_id": "5f2db1ff8e2217565bc9eccf",
+        "etiqueta": "Chile, Chipotle, Rojo,"
+    },
+    {
+        "_id": "5f2db1ff8e2217565bc9ecd1",
+        "etiqueta": "Chile, Morita,"
+    },
+    {
+        "_id": "5f2db1ff8e2217565bc9ecd3",
+        "etiqueta": "Chile, Árbol, Sin cola,"
+    },
+    {
+        "_id": "5f2db1ff8e2217565bc9ecd5",
+        "etiqueta": "Chile, Guajillo,"
+    },
+    {
+        "_id": "5f2db1ff8e2217565bc9ecd6",
+        "etiqueta": "Pepita, Calabaza, Limpia, granel"
+    },
+    {
+        "_id": "5f2db1ff8e2217565bc9ecd9",
+        "etiqueta": "Cacahuate, Salado, granel"
+    },
+    {
+        "_id": "5f2db1ff8e2217565bc9ecdb",
+        "etiqueta": "Canela, Entera, Trozos,"
+    },
+    {
+        "_id": "5f2db1ff8e2217565bc9ecdd",
+        "etiqueta": "Cerveza, Michelob, Ultra,"
+    },
+    {
+        "_id": "5f2db1ff8e2217565bc9ecdf",
+        "etiqueta": "Cerveza, Heineken,"
+    },
+    {
+        "_id": "5f2db1ff8e2217565bc9ece1",
+        "etiqueta": "Cerveza, Victoria,"
+    },
+    {
+        "_id": "5f2db1ff8e2217565bc9ece3",
+        "etiqueta": "Cerveza, Heineken,"
+    },
+    {
+        "_id": "5f2db1ff8e2217565bc9ece5",
+        "etiqueta": "Cerveza, Indio,"
+    },
+    {
+        "_id": "5f2db1ff8e2217565bc9ece7",
+        "etiqueta": "Papilla, Junior, Mix de Frutas, Gerber,"
+    },
+    {
+        "_id": "5f2db1ff8e2217565bc9ece9",
+        "etiqueta": "Gerber, Cosecha, Natural, Durazno,"
+    },
+    {
+        "_id": "5f2db1ff8e2217565bc9eceb",
+        "etiqueta": "Papilla, Junior, Durazno, Gerber,"
+    },
+    {
+        "_id": "5f2db1ff8e2217565bc9eced",
+        "etiqueta": "Papilla, Junior, Mango, Gerber,"
+    },
+    {
+        "_id": "5f2db1ff8e2217565bc9ecef",
+        "etiqueta": "Papilla, Junior, Manzana, Gerber,"
+    },
+    {
+        "_id": "5f2db1ff8e2217565bc9ecf1",
+        "etiqueta": "Gerber, Postre, Delicia, Frutas, "
+    },
+    {
+        "_id": "5f2db1ff8e2217565bc9ecf3",
+        "etiqueta": "Gerber, Cosecha, Natural, Frutas, Tropicales,"
+    },
+    {
+        "_id": "5f2db1ff8e2217565bc9ecf5",
+        "etiqueta": "Gerber, Manzana, Calabaza, Brocoli,"
+    },
+    {
+        "_id": "5f2db1ff8e2217565bc9ecf7",
+        "etiqueta": "Gerber, Manzana, Canela,"
+    },
+    {
+        "_id": "5f2db1ff8e2217565bc9ecf9",
+        "etiqueta": "Gerber, Cosecha, Natural, Manzana,"
+    },
+    {
+        "_id": "5f2db1ff8e2217565bc9ecfb",
+        "etiqueta": "Gerber, Zanahoria,"
+    },
+    {
+        "_id": "5f2db1ff8e2217565bc9ecfd",
+        "etiqueta": "Gerber, Cosecha, Natural, Pera,"
+    },
+    {
+        "_id": "5f2db1ff8e2217565bc9ecff",
+        "etiqueta": "Gerber, Zanahoria, Pera, Chicharo,"
+    },
+    {
+        "_id": "5f2db1ff8e2217565bc9ed01",
+        "etiqueta": "Gerber, Espinaca, Papas,"
+    },
+    {
+        "_id": "5f2db1ff8e2217565bc9ed03",
+        "etiqueta": "Papas, Ruffles, Queso, "
+    },
+    {
+        "_id": "5f2db1ff8e2217565bc9ed04",
+        "etiqueta": "Papas, Chips, Jalapeño,"
+    },
+    {
+        "_id": "5f2db1ff8e2217565bc9ed06",
+        "etiqueta": "Papas, Chips, Sal,"
+    },
+    {
+        "_id": "5f2db1ff8e2217565bc9ed09",
+        "etiqueta": "Papas, Sabritas, Original,"
+    },
+    {
+        "_id": "5f2db1ff8e2217565bc9ed0b",
+        "etiqueta": "Papas, Ruffles, Original,"
+    },
+    {
+        "_id": "5f2db1ff8e2217565bc9ed0d",
+        "etiqueta": "Gerber, Cosecha, Natural, Ciruela Pasa,"
+    },
+    {
+        "_id": "5f2db1ff8e2217565bc9ed0f",
+        "etiqueta": "Gerber, Cosecha, Natural, Platano,"
+    },
+    {
+        "_id": "5f2db1ff8e2217565bc9ed11",
+        "etiqueta": "Gerber, Ejote, Calabacita,"
+    },
+    {
+        "_id": "5f2db2008e2217565bc9ed13",
+        "etiqueta": "Chicharron, Cerdo, Natural, Sabritas,"
+    },
+    {
+        "_id": "5f2db2008e2217565bc9ed15",
+        "etiqueta": "Gerber, Vegetales, Mixtos,"
+    },
+    {
+        "_id": "5f2db2008e2217565bc9ed17",
+        "etiqueta": "Gerber, Cosecha, Natural, Frutas, Mixtas,"
+    },
+    {
+        "_id": "5f2db2008e2217565bc9ed19",
+        "etiqueta": "Papas, Sabritas, Adobadas,"
+    },
+    {
+        "_id": "5f2db2008e2217565bc9ed1b",
+        "etiqueta": "Doritos, Nacho, Botana"
+    },
+    {
+        "_id": "5f2db2008e2217565bc9ed1d",
+        "etiqueta": "Takis, Fuego,"
+    },
+    {
+        "_id": "5f2db2008e2217565bc9ed1f",
+        "etiqueta": "Sabritones, Chile, Limón,"
+    },
+    {
+        "_id": "5f2db2008e2217565bc9ed21",
+        "etiqueta": "Gerber, Chayote,"
+    },
+    {
+        "_id": "5f2db2008e2217565bc9ed23",
+        "etiqueta": "Cerveza, Corona, Lata,"
+    },
+    {
+        "_id": "5f2db2008e2217565bc9ed25",
+        "etiqueta": "Chile, Mulato,"
+    },
+    {
+        "_id": "5f2db2008e2217565bc9ed27",
+        "etiqueta": "Chile, Pulla,"
+    },
+    {
+        "_id": "5f2db2008e2217565bc9ed29",
+        "etiqueta": "Avellana,"
+    },
+    {
+        "_id": "5f2db2008e2217565bc9ed2b",
+        "etiqueta": "Careta, Protectora, Roja, Palvatex,"
+    },
+    {
+        "_id": "5f2db2008e2217565bc9ed2d",
+        "etiqueta": "Cubre, Bocas, Tricapa, Protz, cubrebocas"
+    },
+    {
+        "_id": "5f2db2008e2217565bc9ed2f",
+        "etiqueta": "Llavero, Gel, Antibacterial, Morado,"
+    },
+    {
+        "_id": "5f2db2008e2217565bc9ed31",
+        "etiqueta": "Desinfectante, Anolyte,"
+    },
+    {
+        "_id": "5f2db2008e2217565bc9ed33",
+        "etiqueta": "Termometro, Infrarojo, Digital, Penrui,"
+    },
+    {
+        "_id": "5f2db2008e2217565bc9ed37",
+        "etiqueta": "Hamburguesa, Jabali, San Jose,"
+    },
+    {
+        "_id": "5f2db2008e2217565bc9ed39",
+        "etiqueta": "Lechon, Jabali, Asar, San Jose,"
+    },
+    {
+        "_id": "5f2db2008e2217565bc9ed3b",
+        "etiqueta": "Rack, Jabali, Frances, San Jose, Carnes"
+    },
+    {
+        "_id": "5f2db2008e2217565bc9ed3d",
+        "etiqueta": "Fertilizante, Organico, Liquido, Casa, Jardin, Aminobact,"
+    },
+    {
+        "_id": "5f2db2008e2217565bc9ed3f",
+        "etiqueta": "Fertilizante, Organico, Liquido, Cesped, Aminobact,"
+    },
+    {
+        "_id": "5f2db2008e2217565bc9ed41",
+        "etiqueta": "Fertilizante, Organico, Liquido, Huertos, Urbanos, Aminobact,"
+    },
+    {
+        "_id": "5f2db2008e2217565bc9ed43",
+        "etiqueta": "Cerveza, Tecate,"
+    },
+    {
+        "_id": "5f2db2008e2217565bc9ed45",
+        "etiqueta": "Cerveza, Laguer,"
+    },
+    {
+        "_id": "5f2db2008e2217565bc9ed47",
+        "etiqueta": "Cerveza, Indio,"
+    },
+    {
+        "_id": "5f2db2008e2217565bc9ed48",
+        "etiqueta": "Cerveza, Modelo,"
+    },
+    {
+        "_id": "5f2db2008e2217565bc9ed4b",
+        "etiqueta": "Cerveza, Carta Blanca,"
+    },
+    {
+        "_id": "5f2db2008e2217565bc9ed4d",
+        "etiqueta": "Cerveza, Caguamita, Carta Blanca,"
+    },
+    {
+        "_id": "5f2db2008e2217565bc9ed4f",
+        "etiqueta": "Caribe, Cooler, Durazno,"
+    },
+    {
+        "_id": "5f2db2008e2217565bc9ed51",
+        "etiqueta": "Bebida, Energética, Yellow, Energy, Volt, energetica"
+    },
+    {
+        "_id": "5f2db2008e2217565bc9ed53",
+        "etiqueta": "Bebida, Energética, Blue, Energy, Volt, energetica"
+    },
+    {
+        "_id": "5f2db2008e2217565bc9ed55",
+        "etiqueta": "Bebida, Energética, Pink, Energy, Volt, energetica"
+    },
+    {
+        "_id": "5f2db2008e2217565bc9ed57",
+        "etiqueta": "Refresco, Pepsi,"
+    },
+    {
+        "_id": "5f2db2008e2217565bc9ed59",
+        "etiqueta": "Refresco, Coca Cola,"
+    },
+    {
+        "_id": "5f2db2008e2217565bc9ed5b",
+        "etiqueta": "Refresco, Coca Cola,"
+    },
+    {
+        "_id": "5f2db2008e2217565bc9ed5d",
+        "etiqueta": "Refresco, 7Up,"
+    },
+    {
+        "_id": "5f2db2008e2217565bc9ed5f",
+        "etiqueta": "Refresco, Manzanita, Sol,"
+    },
+    {
+        "_id": "5f2db2008e2217565bc9ed61",
+        "etiqueta": "Agua, Epura,"
+    },
+    {
+        "_id": "5f2db2008e2217565bc9ed63",
+        "etiqueta": "Agua, Ciel,"
+    },
+    {
+        "_id": "5f2db2008e2217565bc9ed65",
+        "etiqueta": "Agua, Ciel,"
+    },
+    {
+        "_id": "5f2db2008e2217565bc9ed67",
+        "etiqueta": "Agua, Epura,"
+    },
+    {
+        "_id": "5f2db2008e2217565bc9ed69",
+        "etiqueta": "Refresco, Coca Cola,"
+    },
+    {
+        "_id": "5f2db2008e2217565bc9ed6b",
+        "etiqueta": "Refresco, Coca Cola,"
+    },
+    {
+        "_id": "5f2db2008e2217565bc9ed6d",
+        "etiqueta": "Refresco, Coca Cola,"
+    },
+    {
+        "_id": "5f2db2008e2217565bc9ed6f",
+        "etiqueta": "Refresco, Coca Cola,"
+    },
+    {
+        "_id": "5f2db2018e2217565bc9ed71",
+        "etiqueta": "Refresco, Coca Cola,"
+    },
+    {
+        "_id": "5f2db2018e2217565bc9ed73",
+        "etiqueta": "Refresco, Pepsi,"
+    },
+    {
+        "_id": "5f2db2018e2217565bc9ed75",
+        "etiqueta": "Refresco, Pepsi,"
+    },
+    {
+        "_id": "5f2db2018e2217565bc9ed77",
+        "etiqueta": "Refresco, sabor, Naranja, Fanta,"
+    },
+    {
+        "_id": "5f2db2018e2217565bc9ed79",
+        "etiqueta": "Refresco, Sprite,"
+    },
+    {
+        "_id": "5f2db2018e2217565bc9ed7b",
+        "etiqueta": "Refresco, Manzana, Lift,"
+    },
+    {
+        "_id": "5f2db2018e2217565bc9ed7d",
+        "etiqueta": "Refresco, Fresca,"
+    },
+    {
+        "_id": "5f2db2018e2217565bc9ed7f",
+        "etiqueta": "Refresco, Mirinda,"
+    },
+    {
+        "_id": "5f2db2018e2217565bc9ed81",
+        "etiqueta": "Refresco, 7Up,"
+    },
+    {
+        "_id": "5f2db2018e2217565bc9ed83",
+        "etiqueta": "Refresco, Manzanita, Sol,"
+    },
+    {
+        "_id": "5f2db2018e2217565bc9ed85",
+        "etiqueta": "Refresco, Mirinda,"
+    },
+    {
+        "_id": "5f2db2018e2217565bc9ed86",
+        "etiqueta": "Refresco, 7Up,"
+    },
+    {
+        "_id": "5f2db2018e2217565bc9ed89",
+        "etiqueta": "Refresco, Manzanita, Sol,"
+    },
+    {
+        "_id": "5f2db2018e2217565bc9ed8b",
+        "etiqueta": "Refresco, sabor, Naranja, Fanta,"
+    },
+    {
+        "_id": "5f2db2018e2217565bc9ed8d",
+        "etiqueta": "Refresco, Sprite,"
+    },
+    {
+        "_id": "5f2db2018e2217565bc9ed8f",
+        "etiqueta": "Refresco, Fresca,"
+    },
+    {
+        "_id": "5f2db2018e2217565bc9ed91",
+        "etiqueta": "Refresco, Manzana, Lift,"
+    },
+    {
+        "_id": "5f2db2018e2217565bc9ed93",
+        "etiqueta": "Agua, Mineral, Penafiel, peñafiel"
+    },
+    {
+        "_id": "5f2db2018e2217565bc9ed95",
+        "etiqueta": "Agua, Mineral, Penafiel, peñafiel"
+    },
+    {
+        "_id": "5f2db2018e2217565bc9ed97",
+        "etiqueta": "Refresco, Sidral, Mundet,"
+    },
+    {
+        "_id": "5f2db2018e2217565bc9ed99",
+        "etiqueta": "Refresco, Squirt,"
+    },
+    {
+        "_id": "5f2db2018e2217565bc9ed9b",
+        "etiqueta": "Refresco, Squirt,"
+    },
+    {
+        "_id": "5f2db2018e2217565bc9ed9d",
+        "etiqueta": "Tapete, Sanitizante, Tapetazo,"
+    },
+    {
+        "_id": "5f2db2018e2217565bc9eda1",
+        "etiqueta": "Llavero, Gel, Antibacterial, Azul, JWR,"
+    },
+    {
+        "_id": "5f2db2018e2217565bc9eda2",
+        "etiqueta": "Llavero, Gel, Antibacterial, Rojo, JWR,"
+    },
+    {
+        "_id": "5f2db2018e2217565bc9eda4",
+        "etiqueta": "Llavero, Gel, Antibacterial, Tiffany, JWR,"
+    },
+    {
+        "_id": "5f2db2018e2217565bc9eda6",
+        "etiqueta": "Llavero, Gel, Antibacterial, Coral, JWR,"
+    },
+    {
+        "_id": "5f2db2018e2217565bc9eda8",
+        "etiqueta": "Careta, Protectora, Blanca, Palvatex,"
+    },
+    {
+        "_id": "5f2db2018e2217565bc9edaa",
+        "etiqueta": "Careta, Protectora, Negra, Palvatex,"
+    },
+    {
+        "_id": "5f2db2018e2217565bc9edac",
+        "etiqueta": "Cubre, Bocas, Kids, Unicornio, JWR,"
+    },
+    {
+        "_id": "5f2db2018e2217565bc9edb0",
+        "etiqueta": "Cubre, Bocas, Kids, Superheróes, JWR,"
+    },
+    {
+        "_id": "5f2db2018e2217565bc9edb5",
+        "etiqueta": "Jamon, Pechuga, Pavo, Rebanado, Tangamanga, Jamones"
+    },
+    {
+        "_id": "5f2db2028e2217565bc9edb8",
+        "etiqueta": "Chorizo, Español, Rebanado, Tangamanga,"
+    },
+    {
+        "_id": "5f2db2028e2217565bc9edba",
+        "etiqueta": "Jamón, Pechuga, Pavo, Rebanado, Balance, jamon, Jamones"
+    },
+    {
+        "_id": "5f2db2028e2217565bc9edbc",
+        "etiqueta": "Salchicha, Pavo, San Rafael,"
+    },
+    {
+        "_id": "5f2db2028e2217565bc9edbe",
+        "etiqueta": "Salchicha, Pavo, FUD,"
+    },
+    {
+        "_id": "5f2db2028e2217565bc9edc0",
+        "etiqueta": "Jamon, Virgina, FUD, jamón, Jamones"
+    },
+    {
+        "_id": "5f2db2028e2217565bc9edc2",
+        "etiqueta": "Tortillas, Nixtamal,"
+    },
+    {
+        "_id": "5f2db2028e2217565bc9edc4",
+        "etiqueta": "Cerveza, Ambar,"
+    },
+    {
+        "_id": "5f2db2028e2217565bc9edc5",
+        "etiqueta": "Cerveza, Bohemia, Weizen,"
+    },
+    {
+        "_id": "5f2db2028e2217565bc9edc8",
+        "etiqueta": "Cerveza, Bohemia, Vienna,"
+    },
+    {
+        "_id": "5f2db2028e2217565bc9edca",
+        "etiqueta": "Cerveza, Modelo, Negra,"
+    },
+    {
+        "_id": "5f2db2028e2217565bc9edcc",
+        "etiqueta": "Cerveza, Stella, Artois,"
+    },
+    {
+        "_id": "5f2db2028e2217565bc9edce",
+        "etiqueta": "Ron, Bacardi,"
+    },
+    {
+        "_id": "5f2db2028e2217565bc9edd0",
+        "etiqueta": "Refresco, Coca Cola,"
+    },
+    {
+        "_id": "5f2db2028e2217565bc9edd2",
+        "etiqueta": "Refresco, Coca Cola, Light,"
+    },
+    {
+        "_id": "5f2db2028e2217565bc9edd4",
+        "etiqueta": "Bebida, Skyy, Cosmo, Arándano, arandano"
+    },
+    {
+        "_id": "5f2db2028e2217565bc9edd6",
+        "etiqueta": "Refresco, Coca Cola, Sin Azúcar,"
+    },
+    {
+        "_id": "5f2db2028e2217565bc9edd8",
+        "etiqueta": "Refresco, Coca Cola, Light,"
+    },
+    {
+        "_id": "5f2db2028e2217565bc9edda",
+        "etiqueta": "Refresco, Coca Cola,"
+    },
+    {
+        "_id": "5f2db2028e2217565bc9eddc",
+        "etiqueta": "Refresco, Pepsi,"
+    },
+    {
+        "_id": "5f3e9f68bf8e4a102367e826",
+        "etiqueta": "Tortillas, Superfoods, Flor de Jaguar, espirulina, moringa, "
+    },
+    {
+        "_id": "5f3e9fd5bf8e4a102367e828",
+        "etiqueta": "Tortillas, Superfoods, Flor de Jaguar, betabel, jamaica, nixtamal, "
+    },
+    {
+        "_id": "5f3ea050bf8e4a102367e829",
+        "etiqueta": "Boost, Kids, Flor de Jaguar, sistema inmunológico, ready to eat, "
+    },
+    {
+        "_id": "5f3ea098bf8e4a102367e82a",
+        "etiqueta": "Boost inmunológico, sistema inmunológico, Flor de Jaguar, ready to eat, steam and eat"
+    },
+    {
+        "_id": "5f3ea0e5bf8e4a102367e82b",
+        "etiqueta": "Boost, Energía, Flor de Jaguar, ready to eat, steam and eat"
+    },
+    {
+        "_id": "5f45698d5f991c317a92b50b",
+        "etiqueta": "Pepperoni, Rebanado, Tangamanga, "
+    },
+    {
+        "_id": "5f46939933a8225047c8a5ff",
+        "etiqueta": "Aceite, Canola, Aerosol, Pam"
+    },
+    {
+        "_id": "5f46cee233a8225047c8a605",
+        "etiqueta": "Chorizo, carnes, embutido"
+    },
+    {
+        "_id": "5f47c36933a8225047c8a608",
+        "etiqueta": "Aceite, Oliva, Aerosol, Pam"
+    },
+    {
+        "_id": "5f47c58d33a8225047c8a60a",
+        "etiqueta": "Agua, Ciel,"
+    },
+    {
+        "_id": "5f47c8d633a8225047c8a60c",
+        "etiqueta": "Agua, Ciel, Garrafon"
+    },
+    {
+        "_id": "5f47ca4833a8225047c8a60e",
+        "etiqueta": "Agua, Ciel, mineral, agua mineral"
+    },
+    {
+        "_id": "5f47cb7433a8225047c8a610",
+        "etiqueta": "Agua, Ciel, Mineral"
+    },
+    {
+        "_id": "5f47cd5233a8225047c8a612",
+        "etiqueta": "Agua, Ciel, Mineral, Sifon, agua mineral"
+    },
+    {
+        "_id": "5f47cf3933a8225047c8a614",
+        "etiqueta": "Agua, Epura"
+    },
+    {
+        "_id": "5f47d10033a8225047c8a616",
+        "etiqueta": "Ajo, En polvo, Condimento, Mccormick,"
+    },
+    {
+        "_id": "5f47d47733a8225047c8a618",
+        "etiqueta": "Azucar, Mascabado, Sobre, Azúcar"
+    },
+    {
+        "_id": "5f47e1ad33a8225047c8a620",
+        "etiqueta": "azucar, refinada, domino"
+    },
+    {
+        "_id": "5f47e39133a8225047c8a622",
+        "etiqueta": "Te, kit, base, Eurote"
+    },
+    {
+        "_id": "5f49721ff37d99257098afd0",
+        "etiqueta": "Queso, Crema, Philadelphia"
+    },
+    {
+        "_id": "5f4972e9f37d99257098afd2",
+        "etiqueta": "Queso, Crema, Untable, Philadelphia"
+    },
+    {
+        "_id": "5f497591f37d99257098afd6",
+        "etiqueta": "Lacteo, Yoghurt, Natural, Yoplait, Yogurt"
+    },
+    {
+        "_id": "5f4976f8f37d99257098afd8",
+        "etiqueta": "Barra, Chocolate, Hershey's, Almendra"
+    },
+    {
+        "_id": "5f4977b6f37d99257098afda",
+        "etiqueta": "Salsa, Picante, Valentina"
+    },
+    {
+        "_id": "5f49799ef37d99257098afdc",
+        "etiqueta": "Cerveza, Ultra, Amstel, "
+    },
+    {
+        "_id": "5f4d1e8a2df89701d8bcc9fe",
+        "etiqueta": "Limpieza, Acido, Muriatico"
+    },
+    {
+        "_id": "5f4d22ab2df89701d8bcca04",
+        "etiqueta": "Jamon, Pierna, Zwan, Jamones"
+    },
+    {
+        "_id": "5f4d24682df89701d8bcca08",
+        "etiqueta": "Queso, Asadero, Quesos"
+    },
+    {
+        "_id": "5f4d25cb2df89701d8bcca0a",
+        "etiqueta": "Sopa, instantanea, fideos, chile y limon"
+    },
+    {
+        "_id": "5f4d26c52df89701d8bcca0c",
+        "etiqueta": "Sopa, Instantanea, Coditos, Knorr"
+    },
+    {
+        "_id": "5f4d280b2df89701d8bcca0e",
+        "etiqueta": "Sopa, Letras, Instantanea"
+    },
+    {
+        "_id": "5f4d28b92df89701d8bcca10",
+        "etiqueta": "Sopa, Instantanea, Estrellas"
+    },
+    {
+        "_id": "5f4d29682df89701d8bcca12",
+        "etiqueta": "Sopa, Instantanea, Fideos"
+    },
+    {
+        "_id": "5f4d2a062df89701d8bcca14",
+        "etiqueta": "Sopa, Fideos, Pollo, Knorr, Instantanea"
+    },
+    {
+        "_id": "5f4d2aa92df89701d8bcca16",
+        "etiqueta": "Chorizo, Mexicana"
+    },
+    {
+        "_id": "5f4d2c4e2df89701d8bcca18",
+        "etiqueta": "Mantequilla, Gloria, Gourmet"
+    },
+    {
+        "_id": "5f4d2d1a2df89701d8bcca1a",
+        "etiqueta": "Mantequilla, Gloria, Sin sal "
+    },
+    {
+        "_id": "5f4d2fbf2df89701d8bcca1f",
+        "etiqueta": "Galletas, Habaneras, "
+    },
+    {
+        "_id": "5f4d30f42df89701d8bcca21",
+        "etiqueta": "Papel, Rollo, Higienico, papel de baño, baño, papel higiénico, papel higienico"
+    },
+    {
+        "_id": "5f4d32aa2df89701d8bcca23",
+        "etiqueta": "Chocolate, Hershey's, Barra"
+    },
+    {
+        "_id": "5f4d33702df89701d8bcca25",
+        "etiqueta": "Cafe, Oro, Soluble, "
+    },
+    {
+        "_id": "5f4d34522df89701d8bcca27",
+        "etiqueta": "Polvo, Royal, Hornear "
+    },
+    {
+        "_id": "5f4d35c52df89701d8bcca29",
+        "etiqueta": "Crema, Lala"
+    },
+    {
+        "_id": "5f4d37412df89701d8bcca2b",
+        "etiqueta": "Salchicha, Botanera, San Rafael, Pavo"
+    },
+    {
+        "_id": "5f4d38992df89701d8bcca2d",
+        "etiqueta": "Chiles, Jalapeños, La morena"
+    },
+    {
+        "_id": "5f4d3a9d2df89701d8bcca31",
+        "etiqueta": "Pan, Blanco, Bimbo"
+    },
+    {
+        "_id": "5f4e82ac2df89701d8bccaa7",
+        "etiqueta": "Sazonador, Pimienta, McCormick"
+    },
+    {
+        "_id": "5f4e839d2df89701d8bccaa9",
+        "etiqueta": "Jengibre, molido, condimento"
+    },
+    {
+        "_id": "5f4e843c2df89701d8bccaaa",
+        "etiqueta": "Comino, Molido, Especias, McCormick"
+    },
+    {
+        "_id": "5f4e85122df89701d8bccaad",
+        "etiqueta": "Nuez, Molida, Especias, McCormick"
+    },
+    {
+        "_id": "5f4e85af2df89701d8bccaae",
+        "etiqueta": "Cebolla, Polvo, Condimento, McCormick"
+    },
+    {
+        "_id": "5f4e873e2df89701d8bccaaf",
+        "etiqueta": "Sal, Chile, Limon, Condimento"
+    },
+    {
+        "_id": "5f4e88c82df89701d8bccab3",
+        "etiqueta": "Pimienta, Blanca, Molida, Especias"
+    },
+    {
+        "_id": "5f4e8a142df89701d8bccab5",
+        "etiqueta": "Sal, Ajo, Condimento, McCormick"
+    },
+    {
+        "_id": "5f4e8b2d2df89701d8bccab7",
+        "etiqueta": "Pimienta, Molida, Negra, Especias"
+    },
+    {
+        "_id": "5f4e8c2a2df89701d8bccab9",
+        "etiqueta": "Oregano, Condimento, McCormick"
+    },
+    {
+        "_id": "5f4e8cbd2df89701d8bccaba",
+        "etiqueta": "Paprika, Condimento, McCormick"
+    },
+    {
+        "_id": "5f4e8d622df89701d8bccabc",
+        "etiqueta": "Canela, Molida, Especias, McCormick"
+    },
+    {
+        "_id": "5f4e8de72df89701d8bccabd",
+        "etiqueta": "Clavo, Entero, McCormick, Especias"
+    },
+    {
+        "_id": "5f4e8f092df89701d8bccac1",
+        "etiqueta": "Canela, Entera, Especias, McCormick"
+    },
+    {
+        "_id": "5f4e8feb2df89701d8bccac3",
+        "etiqueta": "Perejil, Condimento, McCormick"
+    },
+    {
+        "_id": "5f4e90ca2df89701d8bccac6",
+        "etiqueta": "Tamarindo, Local, "
+    },
+    {
+        "_id": "5f4e91682df89701d8bccac9",
+        "etiqueta": "Piloncillo, endulzante, azucar"
+    },
+    {
+        "_id": "5f4e93262df89701d8bccacf",
+        "etiqueta": "Endulzante, Estevia, Azucar"
+    },
+    {
+        "_id": "5f4e948e2df89701d8bccad3",
+        "etiqueta": "Endulzante, Estevia, Azucar"
+    },
+    {
+        "_id": "5f4e968f2df89701d8bccad6",
+        "etiqueta": "Sucralosa, Endulzante, Azucar"
+    },
+    {
+        "_id": "5f4e97802df89701d8bccad8",
+        "etiqueta": "Endulzante, Sucralosa, Azucar"
+    },
+    {
+        "_id": "5f4e98282df89701d8bccad9",
+        "etiqueta": "Ciruela, Sin Hueso, Pasa"
+    },
+    {
+        "_id": "5f4e98a52df89701d8bccadc",
+        "etiqueta": "Ciruela, Pasa, Hueso "
+    },
+    {
+        "_id": "5f4e996f2df89701d8bccadf",
+        "etiqueta": "Sucralosa, Endulzante, Azucar"
+    },
+    {
+        "_id": "5f4e99e42df89701d8bccae0",
+        "etiqueta": "Mascabado, Azucar, Domino"
+    },
+    {
+        "_id": "5f4e9ad12df89701d8bccae3",
+        "etiqueta": "Refresco, Sangria "
+    },
+    {
+        "_id": "5f4e9b352df89701d8bccae4",
+        "etiqueta": "Refresco, Sangria"
+    },
+    {
+        "_id": "5f4e9beb2df89701d8bccae7",
+        "etiqueta": "Refresco, Pepsi, Light"
+    },
+    {
+        "_id": "5f4e9c6f2df89701d8bccae9",
+        "etiqueta": "Mirinda, Naranja, Refresco"
+    },
+    {
+        "_id": "5f4e9d062df89701d8bccaea",
+        "etiqueta": "Te, Helado, Lipton"
+    },
+    {
+        "_id": "5f4e9e962df89701d8bccaed",
+        "etiqueta": "Durazno, Lipton, Te"
+    },
+    {
+        "_id": "5f4e9f312df89701d8bccaee",
+        "etiqueta": "Mandrina, Jumex, Mineral"
+    },
+    {
+        "_id": "5f4e9ffe2df89701d8bccaf1",
+        "etiqueta": "Gatorade, Uva"
+    },
+    {
+        "_id": "5f4ea0902df89701d8bccaf2",
+        "etiqueta": "Naranja, Gatorade"
+    },
+    {
+        "_id": "5f4ea1212df89701d8bccaf5",
+        "etiqueta": "Moras, Gatorade"
+    },
+    {
+        "_id": "5f4ea2042df89701d8bccaf7",
+        "etiqueta": "Canada, Soda "
+    },
+    {
+        "_id": "5f4ea2812df89701d8bccaf8",
+        "etiqueta": "Agua, Mineral, Canada"
+    },
+    {
+        "_id": "5f4ecb132df89701d8bccafd",
+        "etiqueta": "Refresco, Uva, Delaware"
+    },
+    {
+        "_id": "5f4ecc892df89701d8bccb01",
+        "etiqueta": "Refresco, Sangria, Mundet"
+    },
+    {
+        "_id": "5f4ecde62df89701d8bccb05",
+        "etiqueta": "Monster, Energizante, Bebida"
+    },
+    {
+        "_id": "5f4ecebd2df89701d8bccb07",
+        "etiqueta": "Te, Limon, Fuze Tea"
+    },
+    {
+        "_id": "5f4ecfbb2df89701d8bccb0b",
+        "etiqueta": "Durazno, Te, Fuze Tea"
+    },
+    {
+        "_id": "5f4ed0702df89701d8bccb0d",
+        "etiqueta": "Moras, Gatorade"
+    },
+    {
+        "_id": "5f4ed1612df89701d8bccb0f",
+        "etiqueta": "Fanta, Refresco, Naranja"
+    },
+    {
+        "_id": "5f4fab2b2df89701d8bccb64",
+        "etiqueta": "Murano, Jabon, Liquido"
+    },
+    {
+        "_id": "5f4fabd22df89701d8bccb65",
+        "etiqueta": "Refresco, Coca Cola, Sin Azucar"
+    },
+    {
+        "_id": "5f4fac8f2df89701d8bccb68",
+        "etiqueta": "Refresco, Sin Azucar, Coca Cola"
+    },
+    {
+        "_id": "5f4fae1c2df89701d8bccb6a",
+        "etiqueta": "Refresco, Coca Cola"
+    },
+    {
+        "_id": "5f4fafc12df89701d8bccb6c",
+        "etiqueta": "Refresco, Light, Coca Cola"
+    },
+    {
+        "_id": "5f4fb1342df89701d8bccb6e",
+        "etiqueta": "Cacahuates, Japoneses, Kiyakis"
+    },
+    {
+        "_id": "5f4fb19b2df89701d8bccb6f",
+        "etiqueta": "Refresco, Coca Cola, Vidrio"
+    },
+    {
+        "_id": "5f4fb2732df89701d8bccb72",
+        "etiqueta": "Cacahuates, Enchilados, Hot Nuts"
+    },
+    {
+        "_id": "5f4fb2f42df89701d8bccb73",
+        "etiqueta": "Valentones, Chicharrones, Enchilados"
+    },
+    {
+        "_id": "5f4fb3bc2df89701d8bccb76",
+        "etiqueta": "Botana, Queso, Big Mix"
+    },
+    {
+        "_id": "5f4fb4fe2df89701d8bccb77",
+        "etiqueta": "Fuego, Big Mix, Botana"
+    },
+    {
+        "_id": "5f4fb5c02df89701d8bccb7a",
+        "etiqueta": "Palomitas, Caramelo, Pop"
+    },
+    {
+        "_id": "5f4fb6442df89701d8bccb7c",
+        "etiqueta": "Runners, Botana"
+    },
+    {
+        "_id": "5f4fb6fa2df89701d8bccb7e",
+        "etiqueta": "Papas, Wapas, Salsa Negra"
+    },
+    {
+        "_id": "5f4fb7ae2df89701d8bccb80",
+        "etiqueta": "Papas, Wapas, Queso"
+    },
+    {
+        "_id": "5f4fb8712df89701d8bccb82",
+        "etiqueta": "Takis, Picante, Fuego"
+    },
+    {
+        "_id": "5f4fb9172df89701d8bccb84",
+        "etiqueta": "Takis, Picante, Botana"
+    },
+    {
+        "_id": "5f4fb9dc2df89701d8bccb87",
+        "etiqueta": "Takis, Botana"
+    },
+    {
+        "_id": "5f4fbab52df89701d8bccb8e",
+        "etiqueta": "Papas, Chips, Fuego "
+    },
+    {
+        "_id": "5f4fbbdb2df89701d8bccb94",
+        "etiqueta": "Papas, Jalapeño, Chips"
+    },
+    {
+        "_id": "5f4fbc792df89701d8bccb97",
+        "etiqueta": "Takis, Volcano, Picante, Queso"
+    },
+    {
+        "_id": "5f4fbd322df89701d8bccb9a",
+        "etiqueta": "Papas, Fuego, Chips"
+    },
+    {
+        "_id": "5f4fbdfe2df89701d8bccb9b",
+        "etiqueta": "Limpiador, Fabuloso, aroma"
+    },
+    {
+        "_id": "5f4fbec72df89701d8bccb9d",
+        "etiqueta": "Limpador, Mascotas, Cloro"
+    },
+    {
+        "_id": "5f4fbf7b2df89701d8bccb9f",
+        "etiqueta": "Cloro, Gel, Limpiador"
+    },
+    {
+        "_id": "5f4fc19d2df89701d8bccba2",
+        "etiqueta": "Agua, Alcalina, Sport, Zoe"
+    },
+    {
+        "_id": "5f4fc2d72df89701d8bccba4",
+        "etiqueta": "Dental, Briden, Cuidado"
+    },
+    {
+        "_id": "5f4fc3fb2df89701d8bccba6",
+        "etiqueta": "Jabon, Barra, Mandarina"
+    },
+    {
+        "_id": "5f4fc64b2df89701d8bccba9",
+        "etiqueta": "Antibacterial, Desinfectante, Clear Once"
+    },
+    {
+        "_id": "5f4fc7ad2df89701d8bccbab",
+        "etiqueta": "Pescado, Tilapia, Filete"
+    },
+    {
+        "_id": "5f4fc86b2df89701d8bccbad",
+        "etiqueta": "Cocoa, Heshey's, Chocolate"
+    },
+    {
+        "_id": "5f4fc9cc2df89701d8bccbb1",
+        "etiqueta": "Matcha, Te, Verde"
+    },
+    {
+        "_id": "5f4fcc072df89701d8bccbb3",
+        "etiqueta": "Alpura, Leche, Deslactosada"
+    },
+    {
+        "_id": "5f4fcdae2df89701d8bccbb5",
+        "etiqueta": "Grenetina, postre"
+    },
+    {
+        "_id": "5f4fce2a2df89701d8bccbb6",
+        "etiqueta": "Masala, Chai, Euro Te"
+    },
+    {
+        "_id": "5f4fd1ae2df89701d8bccbb9",
+        "etiqueta": "Charola, Cupcake, Chocolate, Richs,"
+    },
+    {
+        "_id": "5f4fd2d12df89701d8bccbbb",
+        "etiqueta": "Waffles, Mc Cain"
+    },
+    {
+        "_id": "5f4fd3aa2df89701d8bccbbd",
+        "etiqueta": "Cortes, Carne, New York"
+    },
+    {
+        "_id": "5f4fd4d82df89701d8bccbbf",
+        "etiqueta": "Granillo, Chocolate, Amargo"
+    },
+    {
+        "_id": "5f4fd5532df89701d8bccbc0",
+        "etiqueta": "Granillo, Chocolate, Leche"
+    },
+    {
+        "_id": "5f4fd6162df89701d8bccbc3",
+        "etiqueta": "Granillo, Chocolate, Blanco"
+    },
+    {
+        "_id": "5f4fd7032df89701d8bccbc5",
+        "etiqueta": "Cajeta, Real de Potosi, Untable"
+    },
+    {
+        "_id": "5f4fd8e62df89701d8bccbc8",
+        "etiqueta": "Salsa, Soya "
+    },
+    {
+        "_id": "5f4fda112df89701d8bccbcb",
+        "etiqueta": "Grenetina, Granel"
+    },
+    {
+        "_id": "5f4fdb512df89701d8bccbce",
+        "etiqueta": "Grenetina, Gelatina, Lamina"
+    },
+    {
+        "_id": "5f4fde462df89701d8bccbd0",
+        "etiqueta": "Molde, Pastel"
+    },
+    {
+        "_id": "5f4fdef22df89701d8bccbd2",
+        "etiqueta": "Molde, Pastel"
+    },
+    {
+        "_id": "5f4fe8642df89701d8bccbd5",
+        "etiqueta": "Carnaval, Bebida, Eurote"
+    },
+    {
+        "_id": "5f4feb762df89701d8bccbd7",
+        "etiqueta": "Matcha, Bebida, Polvo"
+    },
+    {
+        "_id": "5f4fefe92df89701d8bccbd9",
+        "etiqueta": "Bagles, Pan"
+    },
+    {
+        "_id": "5f4ff0862df89701d8bccbda",
+        "etiqueta": "Bagels, Pan, "
+    },
+    {
+        "_id": "5f5000162df89701d8bccbde",
+        "etiqueta": "Tartaleta, Chocolate"
+    },
+    {
+        "_id": "5f5000842df89701d8bccbdf",
+        "etiqueta": "Strudel, Manzana"
+    },
+    {
+        "_id": "5f50038a2df89701d8bccbe2",
+        "etiqueta": "Pizza, Queso, Individual"
+    },
+    {
+        "_id": "5f5004692df89701d8bccbe4",
+        "etiqueta": "Pizza, Mexicana, Individual"
+    },
+    {
+        "_id": "5f5007b32df89701d8bccbf0",
+        "etiqueta": "Pizza, Hawaiana, Individual "
+    },
+    {
+        "_id": "5f50084e2df89701d8bccbf2",
+        "etiqueta": "Pizza, Fuego de leña"
+    },
+    {
+        "_id": "5f5009242df89701d8bccbf4",
+        "etiqueta": "Pay, Queso, Ate"
+    },
+    {
+        "_id": "5f5009c02df89701d8bccbf6",
+        "etiqueta": "Panque, Elote, Pan"
+    },
+    {
+        "_id": "5f500ac92df89701d8bccbf9",
+        "etiqueta": "Pizza, Mini, Pepperoni"
+    },
+    {
+        "_id": "5f500b712df89701d8bccbfc",
+        "etiqueta": "Leñitos, Pan, Artesanal"
+    },
+    {
+        "_id": "5f500bef2df89701d8bccbfe",
+        "etiqueta": "Churros, Panaderia, Artesanal"
+    },
+    {
+        "_id": "5f500e4e2df89701d8bccc04",
+        "etiqueta": "Choripan, Pan, Fuego de Leña"
+    },
+    {
+        "_id": "5f500ec12df89701d8bccc08",
+        "etiqueta": "Brownie, Postre, Chocolate"
+    },
+    {
+        "_id": "5f500f422df89701d8bccc0a",
+        "etiqueta": "Alitas, Pollo"
+    },
+    {
+        "_id": "5f5017602df89701d8bccc0c",
+        "etiqueta": "Duya, Petalo, Reposteria"
+    },
+    {
+        "_id": "5f5019992df89701d8bccc10",
+        "etiqueta": "Palito, Brocheta, Bambú"
+    },
+    {
+        "_id": "5f501a532df89701d8bccc12",
+        "etiqueta": "Base, Cartón, Antihumedad, "
+    },
+    {
+        "_id": "5f501bc42df89701d8bccc14",
+        "etiqueta": "Duya, Hoja, Reposteria, Decoración"
+    },
+    {
+        "_id": "5f501cb82df89701d8bccc16",
+        "etiqueta": "Duya, Concha, Reposteria"
+    },
+    {
+        "_id": "5f501ed12df89701d8bccc19",
+        "etiqueta": "Molde, Muffin, Antiadherente"
+    },
+    {
+        "_id": "5f501f532df89701d8bccc1b",
+        "etiqueta": "Molde, Muffin, Antiadherente"
+    },
+    {
+        "_id": "5f5020c12df89701d8bccc1d",
+        "etiqueta": "Molde, Silicon, Media, Esfera"
+    },
+    {
+        "_id": "5f5115302df89701d8bccc44",
+        "etiqueta": "Paleta, Molde, Silicon"
+    },
+    {
+        "_id": "5f5115642df89701d8bccc45",
+        "etiqueta": "Paleta, Molde, Silicon"
+    },
+    {
+        "_id": "5f511edd2df89701d8bccc4a",
+        "etiqueta": "Duya, Petalo, Reposteria"
+    },
+    {
+        "_id": "5f511f4c2df89701d8bccc4b",
+        "etiqueta": "Duya, Petalo, Reposteria"
+    },
+    {
+        "_id": "5f5121c82df89701d8bccc4e",
+        "etiqueta": "Duya, Flor, Repostería"
+    },
+    {
+        "_id": "5f5126372df89701d8bccc4f",
+        "etiqueta": "Duya, Flor, Repostería"
+    },
+    {
+        "_id": "5f512bfa2df89701d8bccc53",
+        "etiqueta": "Pizza, Pepperoni, Individual"
+    },
+    {
+        "_id": "5f51325a2df89701d8bccc58",
+        "etiqueta": "Confiteria, Granel, Reposteria"
+    },
+    {
+        "_id": "5f5133532df89701d8bccc59",
+        "etiqueta": "Confiteria, Granel, Reposteria"
+    },
+    {
+        "_id": "5f513e322df89701d8bccc74",
+        "etiqueta": "Salsa, Tio Luis, Boruka"
+    },
+    {
+        "_id": "5f513e872df89701d8bccc76",
+        "etiqueta": "Salsa, Tio Luis, Boruka"
+    },
+    {
+        "_id": "5f51403d2df89701d8bccc78",
+        "etiqueta": "Sazonador, Boruka, Botanero"
+    },
+    {
+        "_id": "5f5143092df89701d8bccc79",
+        "etiqueta": "Polvo, Chile, Limon"
+    },
+    {
+        "_id": "5f5160732df89701d8bccc83",
+        "etiqueta": "Salsa, Chipotle, Boruka"
+    },
+    {
+        "_id": "5f5160d92df89701d8bccc85",
+        "etiqueta": "Salsa, Chipotle, Boruka"
+    },
+    {
+        "_id": "5f5162772df89701d8bccc88",
+        "etiqueta": "Salsa, Habanero, Boruka"
+    },
+    {
+        "_id": "5f51627b2df89701d8bccc89",
+        "etiqueta": "Salsa, Habanero, Boruka"
+    },
+    {
+        "_id": "5f5163fa2df89701d8bccc8c",
+        "etiqueta": "Salsa, Boruka, Brava, Picante"
+    },
+    {
+        "_id": "5f51640c2df89701d8bccc8d",
+        "etiqueta": "Salsa, Boruka, Brava, Picante"
+    },
+    {
+        "_id": "5f5164e02df89701d8bccc90",
+        "etiqueta": "Chamoy, Salsa, Boruka"
+    },
+    {
+        "_id": "5f527b6d2df89701d8bccc94",
+        "etiqueta": "Cepillo, Dental, Bambu "
+    },
+    {
+        "_id": "5f527d482df89701d8bccc96",
+        "etiqueta": "Cepillo, Dental, Negro, Bambu"
+    },
+    {
+        "_id": "5f527f392df89701d8bccc99",
+        "etiqueta": "Huevo, Campero, Organico, huevos"
+    },
+    {
+        "_id": "5f52801a2df89701d8bccc9b",
+        "etiqueta": "Antibacterial, Gel, Zest"
+    },
+    {
+        "_id": "5f5280bf2df89701d8bccc9c",
+        "etiqueta": "Jabon, Antibacterial, Zest"
+    },
+    {
+        "_id": "5f5281992df89701d8bccc9f",
+        "etiqueta": "Jabon, Antibacterial, Zest"
+    },
+    {
+        "_id": "5f52825c2df89701d8bccca0",
+        "etiqueta": "Spray, Antibacterial, Zest"
+    },
+    {
+        "_id": "5f5286a62df89701d8bccca3",
+        "etiqueta": "Cupcake, Vainilla, Pan"
+    },
+    {
+        "_id": "5f5287f72df89701d8bccca5",
+        "etiqueta": "Cupcake, Chocolate, Pan"
+    },
+    {
+        "_id": "5f5292b62df89701d8bccca7",
+        "etiqueta": "Taquera, Salsa, Boruka, Arabe"
+    },
+    {
+        "_id": "5f5293262df89701d8bccca8",
+        "etiqueta": "Salsa, Taquera, Cremosa, Boruka"
+    },
+    {
+        "_id": "5f5293ce2df89701d8bcccab",
+        "etiqueta": "Salsa, Soya, Boruka"
+    },
+    {
+        "_id": "5f5294662df89701d8bcccac",
+        "etiqueta": "Salsa, Pastor, Boruka"
+    },
+    {
+        "_id": "5f52b0172df89701d8bcccb0",
+        "etiqueta": "huevo, Blanco, granja,"
+    },
+    {
+        "_id": "5f57a1362df89701d8bccdfc",
+        "etiqueta": "Postre, Tres Leches, Bellini"
+    },
+    {
+        "_id": "5f57a1f42df89701d8bccdfe",
+        "etiqueta": "Tres Leches, Coco, Postre, Bellini"
+    },
+    {
+        "_id": "5f57a3972df89701d8bcce18",
+        "etiqueta": "Pay, Limón, Bellini, Postre"
+    },
+    {
+        "_id": "5f58f42b2df89701d8bcce64",
+        "etiqueta": "Aceite, Coco, Organico, Aires de Campo"
+    },
+    {
+        "_id": "5f5914a32df89701d8bcce66",
+        "etiqueta": "Desodorante, Orgánico, Unisex"
+    },
+    {
+        "_id": "5f591aaa2df89701d8bcce69",
+        "etiqueta": "Natural, Desodorante, Pies"
+    },
+    {
+        "_id": "5f591ca02df89701d8bcce6b",
+        "etiqueta": "Desodorante, Piel Sensible, Natural "
+    },
+    {
+        "_id": "5f591dbf2df89701d8bcce6d",
+        "etiqueta": "Desodorante, Natural, Mujer"
+    },
+    {
+        "_id": "5f591ea02df89701d8bcce6f",
+        "etiqueta": "Desodorante, Natural, Niños"
+    },
+    {
+        "_id": "5f591fa92df89701d8bcce71",
+        "etiqueta": "Crema, Corporal, Karite, Organica"
+    },
+    {
+        "_id": "5f5920942df89701d8bcce73",
+        "etiqueta": "Crema, Corporal, Raspones, Hidratante"
+    },
+    {
+        "_id": "5f5921682df89701d8bcce75",
+        "etiqueta": "Crema, Natural, Embarazo, "
+    },
+    {
+        "_id": "5f59221c2df89701d8bcce77",
+        "etiqueta": "Crema, Natural, Piel, Suave"
+    },
+    {
+        "_id": "5f5924432df89701d8bcce79",
+        "etiqueta": "Pasta, Verde, Reposteria"
+    },
+    {
+        "_id": "5f5928152df89701d8bcce7c",
+        "etiqueta": "Rosa, Repostería, Pasta"
+    },
+    {
+        "_id": "5f5929072df89701d8bcce7e",
+        "etiqueta": "Pasta, Rojo, Reposteria"
+    },
+    {
+        "_id": "5f592a932df89701d8bcce80",
+        "etiqueta": "Pasta, Negro, Reposteria"
+    },
+    {
+        "_id": "5f592b542df89701d8bcce82",
+        "etiqueta": "Pasta, Naranja, Reposteria"
+    },
+    {
+        "_id": "5f592c002df89701d8bcce84",
+        "etiqueta": "Pasta, Azul, Reposteria"
+    },
+    {
+        "_id": "5f592cca2df89701d8bcce86",
+        "etiqueta": "Gel, Reposteria, Verde"
+    },
+    {
+        "_id": "5f593da72df89701d8bcce88",
+        "etiqueta": "Gel, Reposteria, Rosa"
+    },
+    {
+        "_id": "5f593e6c2df89701d8bcce8a",
+        "etiqueta": "Gel, Reposteria, Rojo"
+    },
+    {
+        "_id": "5f593eee2df89701d8bcce8c",
+        "etiqueta": "Gel, Reposteria, Negro"
+    },
+    {
+        "_id": "5f593fa72df89701d8bcce8e",
+        "etiqueta": "Gel, Reposteria, Azul"
+    },
+    {
+        "_id": "5f5940712df89701d8bcce92",
+        "etiqueta": "Gel, Reposteria, Amarillo"
+    },
+    {
+        "_id": "5f5940d42df89701d8bcce95",
+        "etiqueta": "Gel, Reposteria, Rojo, Navidad"
+    },
+    {
+        "_id": "5f59429d2df89701d8bcce98",
+        "etiqueta": "Sal, Gruesa, Cocina"
+    },
+    {
+        "_id": "5f5943622df89701d8bcce9a",
+        "etiqueta": "Sal, Fina, Cocina"
+    },
+    {
+        "_id": "5f5944502df89701d8bcce9c",
+        "etiqueta": "Lenteja, Organica, Aires de Campo"
+    },
+    {
+        "_id": "5f5944dd2df89701d8bcce9d",
+        "etiqueta": "Harina, Trigo, Integral, Orgánica, harinas, organico"
+    },
+    {
+        "_id": "5f60fa172df89701d8bcd003",
+        "etiqueta": "Catsup, Heinz"
+    },
+    {
+        "_id": "5f60fae92df89701d8bcd005",
+        "etiqueta": "Salsa, BBQ, Heinz"
+    },
+    {
+        "_id": "5f60fc802df89701d8bcd007",
+        "etiqueta": "Macarrones, Queso, Kraft"
+    },
+    {
+        "_id": "5f60fdac2df89701d8bcd009",
+        "etiqueta": "Vinagre, Manzana, Heinz"
+    },
+    {
+        "_id": "5f61008c2df89701d8bcd013",
+        "etiqueta": "Mantequilla, Pura, Gloria"
+    },
+    {
+        "_id": "5f6101da2df89701d8bcd015",
+        "etiqueta": "Spray, Alcohol, Antibacterial, Zest"
+    },
+    {
+        "_id": "5f6522b0f01d53325892ef0f",
+        "etiqueta": "Yogurt, Cereales, Fresas"
+    },
+    {
+        "_id": "5f65255ef01d53325892ef11",
+        "etiqueta": "Yogurt, Durazno, Batido"
+    },
+    {
+        "_id": "5f65261bf01d53325892ef13",
+        "etiqueta": "Yogurt, Fresa, Batido"
+    },
+    {
+        "_id": "5f6526dcf01d53325892ef15",
+        "etiqueta": "Yogurt, Batido, Manzana"
+    },
+    {
+        "_id": "5f652779f01d53325892ef17",
+        "etiqueta": "Yogurt, Natural, Batido"
+    },
+    {
+        "_id": "5f65283bf01d53325892ef19",
+        "etiqueta": "Yogurt, Bebible, Manzana"
+    },
+    {
+        "_id": "5f6528faf01d53325892ef1b",
+        "etiqueta": "Yogurt, Griego, Moras"
+    },
+    {
+        "_id": "5f65298df01d53325892ef1d",
+        "etiqueta": "Yogurt, Griego, Natural"
+    },
+    {
+        "_id": "5f652a2bf01d53325892ef1f",
+        "etiqueta": "Yogurt, Griego, Natural"
+    },
+    {
+        "_id": "5f652d2df01d53325892ef21",
+        "etiqueta": "Yogurt, Bebible, Durazno"
+    },
+    {
+        "_id": "5f652db3f01d53325892ef23",
+        "etiqueta": "Yogurt, Bebible, Fresa"
+    },
+    {
+        "_id": "5f652e3ff01d53325892ef25",
+        "etiqueta": "Yogurt, Bebible, Mango"
+    },
+    {
+        "_id": "5f652ec1f01d53325892ef27",
+        "etiqueta": "Yogurt, Bebible, Piña, Coco"
+    },
+    {
+        "_id": "5f6a4d68292e50212f37d6bb",
+        "etiqueta": "Lata, té, te, Euro te, Pu Erh "
+    },
+    {
+        "_id": "5f6a50cf292e50212f37d6bd",
+        "etiqueta": "Roiboos, Te, Té, Euro Te, Lata"
+    },
+    {
+        "_id": "5f6a683d292e50212f37d6bf",
+        "etiqueta": "Alcaparras, Carbonel"
+    },
+    {
+        "_id": "5f6a6978292e50212f37d6c1",
+        "etiqueta": "Avena, Quaker, Oats"
+    },
+    {
+        "_id": "5f6a6aa0292e50212f37d6c3",
+        "etiqueta": "Jarabe, Maiz, Karo, Vainilla"
+    },
+    {
+        "_id": "5f6a6bb6292e50212f37d6c5",
+        "etiqueta": "Desinfectante, Inodoro, Harpic, Limpiador, Sarro"
+    },
+    {
+        "_id": "5f6a6cd3292e50212f37d6c7",
+        "etiqueta": "Brasso, Antigrasa, Limpiador, Grasa"
+    },
+    {
+        "_id": "5f6a6e4e292e50212f37d6c9",
+        "etiqueta": "Maiz, Pozolero, OvarB"
+    },
+    {
+        "_id": "5f6b8048292e50212f37d6f2",
+        "etiqueta": "Lata, Clip, Ulong"
+    },
+    {
+        "_id": "5f6b8212292e50212f37d6f5",
+        "etiqueta": "Lata, Clip, Tisana, Herbal, Euro Te"
+    },
+    {
+        "_id": "5f6b83a3292e50212f37d6f7",
+        "etiqueta": "Lata, Clip, Tisana, Herbal, Euro Te"
+    },
+    {
+        "_id": "5f6b8974292e50212f37d6f9",
+        "etiqueta": "Lata, té, te, Euro te, Te Verde"
+    },
+    {
+        "_id": "5f6b8ba7292e50212f37d6fb",
+        "etiqueta": "Lata, té, te, Euro te, Te Negro"
+    },
+    {
+        "_id": "5f6b8de3292e50212f37d6fd",
+        "etiqueta": "Tisana, Herbal, Lata, Euro te, "
+    },
+    {
+        "_id": "5f6b8eb0292e50212f37d6ff",
+        "etiqueta": "Tisana, Herbal, Lata, Euro te,"
+    },
+    {
+        "_id": "5f6b93a5292e50212f37d701",
+        "etiqueta": "Reynolds, Aluminio, Papel, Rollo"
+    },
+    {
+        "_id": "5f6b94ef292e50212f37d703",
+        "etiqueta": "Papel, Higienico, Kleenex, Rollo, Cotonelle, papel de baño, papel higiénico, papel higienico"
+    },
+    {
+        "_id": "5f6b96a5292e50212f37d705",
+        "etiqueta": "Pimienta, Negra, Bayas, Entera, Carmencita"
+    },
+    {
+        "_id": "5f6b9a72292e50212f37d709",
+        "etiqueta": "Pan, árabe, arabe "
+    },
+    {
+        "_id": "5f6b9ad8292e50212f37d70a",
+        "etiqueta": "Pan, Arabe, Árabe"
+    },
+    {
+        "_id": "5f6f6bf6df07ba4179a6a397",
+        "etiqueta": "Queso, Président, Emmental, Quesos, Queso Holandés, "
+    },
+    {
+        "_id": "5f6f6e0ddf07ba4179a6a399",
+        "etiqueta": "Queso, Roquefort, Society, Quesos, Gourmet, "
+    },
+    {
+        "_id": "5f6f6f73df07ba4179a6a39b",
+        "etiqueta": "Queso, Feta, Desmoronado, President, Quesos, "
+    },
+    {
+        "_id": "5f6f71f7df07ba4179a6a39d",
+        "etiqueta": "Queso, Manchego, Rebanado, Esmeralda, Quesos,"
+    },
+    {
+        "_id": "5f6f7374df07ba4179a6a39f",
+        "etiqueta": "Queso, Crema, Rebanado, Esmeralda, Quesos,"
+    },
+    {
+        "_id": "5f6f8e0cdf07ba4179a6a3a1",
+        "etiqueta": "Cápsulas, Expresso, Largo, Blasón, Café, Capsulas de Nespresso, Compatibles, capsulas, cápsulas café, capsulas cafe"
+    },
+    {
+        "_id": "5f6f8fd6df07ba4179a6a3a3",
+        "etiqueta": "Cápsulas, Expresso, Blasón, Café, Capsulas de Nespresso, Compatibles, cápsulas de café, capsulas de cafe"
+    },
+    {
+        "_id": "5f6f916cdf07ba4179a6a3a5",
+        "etiqueta": "Capsulas, Expresso, Descafeinado, Blasón, Capsulas de Nespresso, Compatibles, cápsulas de café, capsulas de cafe"
+    },
+    {
+        "_id": "5f6f922edf07ba4179a6a3a7",
+        "etiqueta": "Cápsulas, Expresso, Orgánico, Blasón, Capsulas de Nespresso, Compatibles, capsulas de cafe, cápsulas de café"
+    },
+    {
+        "_id": "5f6f92d2df07ba4179a6a3a9",
+        "etiqueta": "Capsulas, Expresso, Robusto, Blasón, Capsulas de Nespresso, Compatibles, Café, capsulas de cafe, cápsulas de café"
+    },
+    {
+        "_id": "5f74da3fdf07ba4179a6a45d",
+        "etiqueta": "Empanizador, Bimbo, Pan Molido, Crujiente, Pan Bimbo, "
+    },
+    {
+        "_id": "5f74dccadf07ba4179a6a45f",
+        "etiqueta": "Lavatrastes, Jabon liquido, Axion"
+    },
+    {
+        "_id": "5f7b5117df07ba4179a6a537",
+        "etiqueta": "Smothie, Fresa, Smarti, Flor de Jaguar"
+    },
+    {
+        "_id": "5f7b9433df07ba4179a6a539",
+        "etiqueta": "Galbani, Queso, Quesos, Mozarella "
+    },
+    {
+        "_id": "5f7b964ddf07ba4179a6a53b",
+        "etiqueta": "Queso, Panela, Quesos, Esmeralda"
+    },
+    {
+        "_id": "5f7c8c80df07ba4179a6a55f",
+        "etiqueta": "Higo, Fruta, Temporada"
+    },
+    {
+        "_id": "5f7c8e0adf07ba4179a6a561",
+        "etiqueta": "Yogurt, Fresa, Batido, Yoplait"
+    },
+    {
+        "_id": "5f7c8ee5df07ba4179a6a563",
+        "etiqueta": "Yogurt, Yoplait, Durazno, Batido"
+    },
+    {
+        "_id": "5f7c8fcddf07ba4179a6a565",
+        "etiqueta": "Natural, Yogurt, Batido, Yoplait"
+    },
+    {
+        "_id": "5f7c9255df07ba4179a6a567",
+        "etiqueta": "Gelatina, arandano, cero, light "
+    },
+    {
+        "_id": "5f7c94b6df07ba4179a6a569",
+        "etiqueta": "Cafe, Grano, Lavazza, Super crema"
+    },
+    {
+        "_id": "5f7c992cdf07ba4179a6a56a",
+        "etiqueta": "Maiz, Palomero, Palomitas"
+    },
+    {
+        "_id": "5f7f397ddf07ba4179a6a5ea",
+        "etiqueta": "Baguette, Pan, Rústico, Artesanal, Pan Artesanal, Pan Rustico, Panadería"
+    },
+    {
+        "_id": "5f7f3baddf07ba4179a6a5ec",
+        "etiqueta": "Nuez, India, Granel, "
+    },
+    {
+        "_id": "5f7f3ce1df07ba4179a6a5f2",
+        "etiqueta": "Chocolatin, Pan, Rústico, Rustico, Artesanal, Panadería, Pan Rustico, Pan Rústico, Pan Artesanal, "
+    },
+    {
+        "_id": "5f7f3d9bdf07ba4179a6a5f4",
+        "etiqueta": "Frutos, Secos, Semillas, Granel"
+    },
+    {
+        "_id": "5f7f3e4ddf07ba4179a6a5fa",
+        "etiqueta": "Concha Mini, Pan, Rústico, Rustico, Artesanal, Panadería, Pan Rustico, Pan Rústico, Pan Artesanal, Concha"
+    },
+    {
+        "_id": "5f7f3f2fdf07ba4179a6a5fc",
+        "etiqueta": "Semilla, Girasol, Granel, semillas de girasol, semilla de girasol"
+    },
+    {
+        "_id": "5f7f40b9df07ba4179a6a602",
+        "etiqueta": "Croissant de Mantequilla, Pan, Rústico, Rustico, Artesanal, Panadería, Pan Rustico, Pan Rústico, Pan Artesanal, Croissant,"
+    },
+    {
+        "_id": "5f7f40d6df07ba4179a6a603",
+        "etiqueta": "Chocolate, Granel, Chispas, Amargo"
+    },
+    {
+        "_id": "5f7f5488df07ba4179a6a616",
+        "etiqueta": "Cloro, Baños, Cloralex, Antisarro"
+    },
+    {
+        "_id": "5f7f573fdf07ba4179a6a61b",
+        "etiqueta": "Lavatrastes, Salvo, Limon, Liquido Lima"
+    },
+    {
+        "_id": "5f7f581ddf07ba4179a6a61d",
+        "etiqueta": "Lavanda, Fabuloso, Limpiador "
+    },
+    {
+        "_id": "5f7f59acdf07ba4179a6a61f",
+        "etiqueta": "Pinol, Limpiador"
+    },
+    {
+        "_id": "5f7f5c0adf07ba4179a6a626",
+        "etiqueta": "Cloro, Cloralex, Limpiador, Desinfectante"
+    },
+    {
+        "_id": "5f7f600ddf07ba4179a6a628",
+        "etiqueta": "Karo, Jarabe, Maple, Maiz "
+    },
+    {
+        "_id": "5f7f60e2df07ba4179a6a62a",
+        "etiqueta": "Croissant, Pan, Rústico, Rustico, Artesanal, Panadería, Pan Rustico, Pan Rústico, Pan Artesanal, Chocolate"
+    },
+    {
+        "_id": "5f7f61dfdf07ba4179a6a62c",
+        "etiqueta": "Caja, Surtido, Pan, Pan Artesanal, Rustico, Pan Rustico, Rústico, Hojaldra, Hojaldras, "
+    },
+    {
+        "_id": "5f80ace2df07ba4179a6a62e",
+        "etiqueta": "Leche, Leches, Deslactosada, Light, Alpura"
+    },
+    {
+        "_id": "5f80aeaadf07ba4179a6a630",
+        "etiqueta": "Queso, Rallado, Parmesano, Kraft, Quesos"
+    },
+    {
+        "_id": "5f845f565a9b22731c242b39",
+        "etiqueta": "Fresa, Bebida, Base, Ice Hot, Rich's"
+    },
+    {
+        "_id": "5f8461395a9b22731c242b3b",
+        "etiqueta": "Limon, Bebida, Base, Ice Hot, Rich's, Limón, Limon acido "
+    },
+    {
+        "_id": "5f8461fb5a9b22731c242b3d",
+        "etiqueta": "Mango, Bebida, Base, Ice Hot, Rich's"
+    },
+    {
+        "_id": "5f8462b85a9b22731c242b3f",
+        "etiqueta": "Margarita, Bebida, Base, Ice Hot, Rich's"
+    },
+    {
+        "_id": "5f8463465a9b22731c242b41",
+        "etiqueta": "Naranja, Bebida, Base, Ice Hot, Rich's"
+    },
+    {
+        "_id": "5f84641c5a9b22731c242b43",
+        "etiqueta": "Piña, Bebida, Base, Ice Hot, Rich's, Piña colada"
+    },
+    {
+        "_id": "5f8465865a9b22731c242b45",
+        "etiqueta": "Cheesecake, Postre, Postres, Cookies, Pastel, Rich's "
+    },
+    {
+        "_id": "5f8466e85a9b22731c242b47",
+        "etiqueta": "Chocolate, Postre, Postres, Pastel, Rich's, Pastel de chocolate"
+    },
+    {
+        "_id": "5f8468035a9b22731c242b49",
+        "etiqueta": "Chocolate, Postre, Postres, Pastel de chocolate, Pastel, Rich's"
+    },
+    {
+        "_id": "5f8468d15a9b22731c242b4b",
+        "etiqueta": "Espresso, Postre, Postres, Pasteles, Pastel, Rich's"
+    },
+    {
+        "_id": "5f847c455a9b22731c242b4e",
+        "etiqueta": "Cafe, Ejecutivo, Tostado y Molido, Blasón, Grano"
+    },
+    {
+        "_id": "5f847e015a9b22731c242b50",
+        "etiqueta": "Café, Espresso, Tostado, Grano, Blasón, Blason, Ejecutivo"
+    },
+    {
+        "_id": "5f847fb95a9b22731c242b52",
+        "etiqueta": "Chocolate, Untable, Carlos V, Decoración, Pastelería, Pasteleria "
+    },
+    {
+        "_id": "5f8480cd5a9b22731c242b55",
+        "etiqueta": "Chocolate, Untable, Abuelita, Decoración, Pastelería, Pasteleria"
+    },
+    {
+        "_id": "5f84822b5a9b22731c242b58",
+        "etiqueta": "Chocolate, Untable, Avellana, Decoración, Pastelería, Pasteleria"
+    },
+    {
+        "_id": "5f8483f55a9b22731c242b5b",
+        "etiqueta": "Dona, Levadura, Congelada, Dawn, Donas"
+    },
+    {
+        "_id": "5f8484e85a9b22731c242b5c",
+        "etiqueta": "Dona, Levadura, Congelada, Dawn, Donas, Rellenar "
+    },
+    {
+        "_id": "5f8487095a9b22731c242b5f",
+        "etiqueta": "Cobertura, Dona, Blanca, Dawn"
+    },
+    {
+        "_id": "5f8487df5a9b22731c242b62",
+        "etiqueta": "Cobertura, Chocolate, Blanca, Dawn"
+    },
+    {
+        "_id": "5f8488cb5a9b22731c242b65",
+        "etiqueta": "Cobertura, Dona, Maple, Dawn"
+    },
+    {
+        "_id": "5f8dec495a9b22731c242caf",
+        "etiqueta": "Bolsa, Desechable, Resellable, Congelados, Ziploc, Zip loc"
+    },
+    {
+        "_id": "5f8dfc7d5a9b22731c242cb1",
+        "etiqueta": "Bolsa, Desechable, Resellable, Congelados, Ziploc, Zip loc"
+    },
+    {
+        "_id": "5f8dfdbd5a9b22731c242cb3",
+        "etiqueta": "Bolsa, Desechable, Resellable, Ziploc, Zip loc"
+    },
+    {
+        "_id": "5f8dfebd5a9b22731c242cb5",
+        "etiqueta": "Bolsa, Desechable, Resellable, Ziploc, Zip loc"
+    },
+    {
+        "_id": "5f8dffa65a9b22731c242cb7",
+        "etiqueta": "Bolsa, Desechable, Resellable, Sandwich, Ziploc, Zip loc"
+    },
+    {
+        "_id": "5f8e01c85a9b22731c242cb9",
+        "etiqueta": "Bolsa, Desechable, Hornear"
+    },
+    {
+        "_id": "5f8e07985a9b22731c242cbb",
+        "etiqueta": "Desechable, Envoltura, Plastico, Vitafilm"
+    },
+    {
+        "_id": "5f8e08e15a9b22731c242cbd",
+        "etiqueta": "Alumino, Desechables"
+    },
+    {
+        "_id": "5f8e0a505a9b22731c242cbf",
+        "etiqueta": "Papel, Encerado, Desechable"
+    },
+    {
+        "_id": "5f8f2d6d5a9b22731c242cc9",
+        "etiqueta": "Kleenex, Mascarilla, Desechable, Cubrebocas, Nueva normalidad, cubre bocas, tapabocas, tapa bocas"
+    },
+    {
+        "_id": "5f8f2edf5a9b22731c242ccb",
+        "etiqueta": "Pañuelos, Facial, Desechable, Kleenex"
+    },
+    {
+        "_id": "5f8f2f8b5a9b22731c242ccd",
+        "etiqueta": "Papel, Higienico, Kleenex, Rollo, Cotonelle, papel de baño, baño, papel higiénico, papel higienico"
+    },
+    {
+        "_id": "5f8f31325a9b22731c242ccf",
+        "etiqueta": "Papel, Higienico, Marli, Rollo, papel de baño, baño, papel higiénico, papel higienico"
+    },
+    {
+        "_id": "5f8f33255a9b22731c242cd1",
+        "etiqueta": "Toalla, Interdoblada, Toalla para manos, Papel"
+    },
+    {
+        "_id": "5f8f370b5a9b22731c242cd3",
+        "etiqueta": "Toallas, Antibacteriales, Húmedas, Escudo "
+    },
+    {
+        "_id": "5f9196465a9b22731c242d11",
+        "etiqueta": "Agua, Coco, Pura, Orgánico, Natural, Natures heart, Tierra Fertil, Nature's Heart"
+    },
+    {
+        "_id": "5f9199d95a9b22731c242d13",
+        "etiqueta": "Agua, Coco, Pura, Orgánico, Natural, Natures heart, Tierra Fertil, Nature's Heart"
+    },
+    {
+        "_id": "5f919cb65a9b22731c242d15",
+        "etiqueta": "Alimento, Liquido, Almendra, Natures heart, Tierra Fertil, Nature's Heart"
+    },
+    {
+        "_id": "5f919dac5a9b22731c242d17",
+        "etiqueta": "Alimento, Liquido, Arroz, Organico, Natures heart, Tierra Fertil, Nature's Heart"
+    },
+    {
+        "_id": "5f91a24b5a9b22731c242d1c",
+        "etiqueta": "Alimento, Liquido, Coco, Natures heart, Tierra Fertil, Nature's Heart"
+    },
+    {
+        "_id": "5f91a3285a9b22731c242d1e",
+        "etiqueta": "Alimento, Liquido, Soya, Natures heart, Tierra Fertil, Nature's Heart"
+    },
+    {
+        "_id": "5f91a4ef5a9b22731c242d20",
+        "etiqueta": "Nopales, Nopal, Enchilado, Snack, Natures heart, Tierra Fertil, Nature's Heart"
+    },
+    {
+        "_id": "5f91a5e55a9b22731c242d22",
+        "etiqueta": "Veggies, Chips, Snack, Natures heart, Tierra Fertil, Nature's Heart"
+    },
+    {
+        "_id": "5f91a6be5a9b22731c242d24",
+        "etiqueta": "Infusión, Herbal, Te, Té Durazno, Peach, Natures heart, Tierra Fertil, Nature's Heart"
+    },
+    {
+        "_id": "5f91a7c65a9b22731c242d26",
+        "etiqueta": "nfusión, Herbal, Te, Té, Frutos Rojos, Natures heart, Tierra Fertil, Nature's Heart"
+    },
+    {
+        "_id": "5f91aa9c5a9b22731c242d28",
+        "etiqueta": "Te, Té Verde, Energy, Natures heart, Tierra Fertil, Nature's Heart"
+    },
+    {
+        "_id": "5f91abb85a9b22731c242d2a",
+        "etiqueta": "Te, Té, Jengibre, Natures heart, Tierra Fertil, Nature's Heart"
+    },
+    {
+        "_id": "5f91acf55a9b22731c242d2c",
+        "etiqueta": "Te, Té, Manzanilla, Jengibre, Gengibre, Natures heart, Tierra Fertil, Nature's Heart"
+    },
+    {
+        "_id": "5f91adff5a9b22731c242d2e",
+        "etiqueta": "Te, Té Matcha, Vainilla, Natures heart, Tierra Fertil, Nature's Heart"
+    },
+    {
+        "_id": "5f91af4c5a9b22731c242d30",
+        "etiqueta": "Te, Té negro, Chai, Natures heart, Tierra Fertil, Nature's Heart"
+    },
+    {
+        "_id": "5f91b06e5a9b22731c242d32",
+        "etiqueta": "Te, Té Manzanilla, Curcuma, Natures heart, Tierra Fertil, Nature's Heart"
+    },
+    {
+        "_id": "5f91b2185a9b22731c242d34",
+        "etiqueta": "Te, Té, Verde, Natures heart, Tierra Fertil, Nature's Heart"
+    },
+    {
+        "_id": "5f91b4de5a9b22731c242d36",
+        "etiqueta": "Quinoa, Orgánica, "
+    },
+    {
+        "_id": "5f91b6405a9b22731c242d38",
+        "etiqueta": "Frutas deshidratadas, Nueces, Mix"
+    },
+    {
+        "_id": "5f91b81b5a9b22731c242d3a",
+        "etiqueta": "Frutas deshidratadas, Nueces, Mix, Natures heart, Tierra Fertil, Nature's Heart"
+    },
+    {
+        "_id": "5f91b9765a9b22731c242d3c",
+        "etiqueta": "Cacahuate, Mix, Snack, Natures heart, Tierra Fertil, Nature's Heart"
+    },
+    {
+        "_id": "5f91ba655a9b22731c242d3e",
+        "etiqueta": "Cacahuate, Mix, Snack, Natures heart, Tierra Fertil, Nature's Heart"
+    },
+    {
+        "_id": "5f91cf5a5a9b22731c242d50",
+        "etiqueta": "Cacahuate, Mix, Snack, Natures heart, Tierra Fertil, Nature's Heart"
+    },
+    {
+        "_id": "5f91d8005a9b22731c242d52",
+        "etiqueta": "Maiz, Nueces, Mix, Snack, Natures heart, Tierra Fertil, Nature's Heart"
+    },
+    {
+        "_id": "5f91d9ee5a9b22731c242d54",
+        "etiqueta": "Frutos, Chocolate, Nueces, Cacao, Natures heart, Tierra Fertil, Nature's Heart"
+    },
+    {
+        "_id": "5f91dabc5a9b22731c242d56",
+        "etiqueta": "Frutos, Frutos secos, Nueces, Natures heart, Tierra Fertil, Nature's Heart"
+    },
+    {
+        "_id": "5f91dbd45a9b22731c242d58",
+        "etiqueta": "Cacao, Organico, Natures heart, Tierra Fertil, Nature's Heart"
+    },
+    {
+        "_id": "5f91dc7b5a9b22731c242d5a",
+        "etiqueta": "Espirulina, Natures heart, Tierra Fertil, Nature's Heart"
+    },
+    {
+        "_id": "5f96f4245a9b22731c242d90",
+        "etiqueta": "Tortillinas, Tía, Rosa,"
+    },
+    {
+        "_id": "5f9708ca5a9b22731c242dcd",
+        "etiqueta": "Calabaza, Castilla, Fruta de temporada, Dia de muertos, Todo para tu ofrenda"
+    },
+    {
+        "_id": "5f970ea45a9b22731c242dda",
+        "etiqueta": "Calabaza, Castilla, Fruta de temporada, Dia de muertos, Todo para tu ofrenda"
+    },
+    {
+        "_id": "5f9712055a9b22731c242ddc",
+        "etiqueta": "Atún, Atun, Lomo, Atún en Agua, Herdez, Aleta"
+    },
+    {
+        "_id": "5f9713515a9b22731c242dde",
+        "etiqueta": "Cotonetes, Hisopo, qtip, q tip, cotonete, johnson, qtips, q tips"
+    },
+    {
+        "_id": "5f97148c5a9b22731c242de0",
+        "etiqueta": "Crema, Cacahuate, Crema de cacahuate, Aladino "
+    },
+    {
+        "_id": "5f982e245a9b22731c242e05",
+        "etiqueta": "Mandarina, temporada, citrico, fruta de temporada, cítrico"
+    },
+    {
+        "_id": "5fa16e175a9b22731c242eb8",
+        "etiqueta": "Crema, Batida, Pasteles, Decoracion, Richs, Aerosol, Decoración, On top"
+    },
+    {
+        "_id": "5fa1b6de5a9b22731c242eff",
+        "etiqueta": "Pilgrims, Buffalo, Bufalo, Boneless, Pollo"
+    },
+    {
+        "_id": "5fa1b84d5a9b22731c242f01",
+        "etiqueta": "Alitas, Buffalo, Bufalo, Pilgrims"
+    },
+    {
+        "_id": "5fa1ba6a5a9b22731c242f03",
+        "etiqueta": "Pechuga, Pollo, Pilgrims, Grill"
+    },
+    {
+        "_id": "5fa1bbab5a9b22731c242f05",
+        "etiqueta": "Filete, Pollo, Pilgrims, Empanizado, Tenders"
+    },
+    {
+        "_id": "5fa1bc9b5a9b22731c242f07",
+        "etiqueta": "Hamburguesa, Pollo, Pechuga, Pilgrims"
+    },
+    {
+        "_id": "5fa1bd715a9b22731c242f09",
+        "etiqueta": "Pollo, Pilgrims, Pechuga, Nuggets"
+    },
+    {
+        "_id": "5fa1bf405a9b22731c242f0b",
+        "etiqueta": "Pollo, Palomitas, Del dia, Empanizados"
+    },
+    {
+        "_id": "5fa32b5e5a9b22731c242f76",
+        "etiqueta": "Calabaza, Castilla, Fruta de temporada, Dia de muertos, Todo para tu ofrenda"
+    },
+    {
+        "_id": "5fa427895a9b22731c242f94",
+        "etiqueta": "Pollo, Palomitas, Del dia, Empanizados, Pilgrims"
+    },
+    {
+        "_id": "5fa566ec5a9b22731c242f9a",
+        "etiqueta": "Carnes, Hamburguesa, Res, Pollo, Pilgrims "
+    },
+    {
+        "_id": "5fa5681c5a9b22731c242f9c",
+        "etiqueta": "Hamburguesa, Carnes, Pollo, Pilgrims"
+    },
+    {
+        "_id": "5fa56b1d5a9b22731c242f9e",
+        "etiqueta": "Concentrado, Concentrados, Saborizante, Sayes, Postres"
+    },
+    {
+        "_id": "5fa56c485a9b22731c242fa0",
+        "etiqueta": "Concentrado, Concentrados, Saborizante, Sayes, Postres"
+    },
+    {
+        "_id": "5fa56d035a9b22731c242fa2",
+        "etiqueta": "Concentrado, Concentrados, Saborizante, Sayes, Postres"
+    },
+    {
+        "_id": "5fa56e4c5a9b22731c242fa4",
+        "etiqueta": "Saborizante, Sayes, Postres, Vainilla, Esencia "
+    },
+    {
+        "_id": "5fa56f145a9b22731c242fa6",
+        "etiqueta": "Saborizante, Sayes, Postres, Vainilla, Esencia"
+    },
+    {
+        "_id": "5fa56fd05a9b22731c242fa8",
+        "etiqueta": "Saborizante, Sayes, Postres, Vainilla, Esencia"
+    },
+    {
+        "_id": "5fa5707c5a9b22731c242faa",
+        "etiqueta": "Saborizante, Sayes, Postres, Vainilla, Esencia"
+    },
+    {
+        "_id": "5fa571945a9b22731c242fac",
+        "etiqueta": "Esencia, Almendra, Hornear, Sayes, Saborizante, Postres"
+    },
+    {
+        "_id": "5fa572ce5a9b22731c242fae",
+        "etiqueta": "Esencia, Almendra, Hornear, Sayes, Saborizante, Postres"
+    },
+    {
+        "_id": "5fa5737a5a9b22731c242fb0",
+        "etiqueta": "Esencia, Canela, Hornear, Sayes, Saborizante, Postres"
+    },
+    {
+        "_id": "5fa575065a9b22731c242fb2",
+        "etiqueta": "Esencia, Canela, Hornear, Sayes, Saborizante, Postres"
+    },
+    {
+        "_id": "5fa575bb5a9b22731c242fb4",
+        "etiqueta": "Esencia, Mantequilla, Hornear, Sayes, Saborizante, Postres"
+    },
+    {
+        "_id": "5fa576745a9b22731c242fb6",
+        "etiqueta": "Esencia, Naranja, Hornear, Sayes, Saborizante, Postres"
+    },
+    {
+        "_id": "5fa5770c5a9b22731c242fb8",
+        "etiqueta": "Esencia, Nata, Hornear, Sayes, Saborizante, Postres"
+    },
+    {
+        "_id": "5fa577ea5a9b22731c242fba",
+        "etiqueta": "Esencia, Vainilla, Hornear, Sayes, Saborizante, Postres"
+    },
+    {
+        "_id": "5fa5787d5a9b22731c242fbc",
+        "etiqueta": "Esencia, Mantequilla, Hornear, Sayes, Saborizante, Postres, Vainilla"
+    },
+    {
+        "_id": "5fa579c65a9b22731c242fbe",
+        "etiqueta": "Flan, Sayes, Caramelo"
+    },
+    {
+        "_id": "5fa57c065a9b22731c242fc3",
+        "etiqueta": "Flan, Sayes, Caramelo"
+    },
+    {
+        "_id": "5fa57d865a9b22731c242fc5",
+        "etiqueta": "Gelatina, Agua, Sayes, Fresa"
+    },
+    {
+        "_id": "5fa57e575a9b22731c242fc7",
+        "etiqueta": "Gelatina, Agua, Sayes, Limón, Limon"
+    },
+    {
+        "_id": "5fa57f955a9b22731c242fc9",
+        "etiqueta": "Gelatina, Agua, Sayes, Piña"
+    },
+    {
+        "_id": "5fa5803f5a9b22731c242fcb",
+        "etiqueta": "Gelatina, Agua, Sayes, Uva"
+    },
+    {
+        "_id": "5fa581145a9b22731c242fcd",
+        "etiqueta": "Gelatina, Durazno, Postres, Agua"
+    },
+    {
+        "_id": "5fa5819b5a9b22731c242fcf",
+        "etiqueta": "Gelatina, Durazno, Postres, Agua"
+    },
+    {
+        "_id": "5fa5824e5a9b22731c242fd1",
+        "etiqueta": "Gelatina, Limón, Postres, Agua, Limon"
+    },
+    {
+        "_id": "5fa583e15a9b22731c242fd3",
+        "etiqueta": "Arrachera, Marinada, Carnes, Carne, Res"
+    },
+    {
+        "_id": "5fa585025a9b22731c242fd5",
+        "etiqueta": "Bitec, Milanesa, Res, Carne, Carnes"
+    },
+    {
+        "_id": "5fa586745a9b22731c242fd7",
+        "etiqueta": "Pescado, Tilapia, Filete"
+    },
+    {
+        "_id": "5fa587735a9b22731c242fd9",
+        "etiqueta": "Lengua, Res, Carne, Carnes"
+    },
+    {
+        "_id": "5fa588895a9b22731c242fdb",
+        "etiqueta": "Menudo, Pancita, Carne, Carnes, Res"
+    },
+    {
+        "_id": "5fa589925a9b22731c242fdd",
+        "etiqueta": "Cortes, Carne, New York, Carnes"
+    },
+    {
+        "_id": "5fa58a845a9b22731c242fdf",
+        "etiqueta": "Pollo, Pechuga, Carne, Carnes"
+    },
+    {
+        "_id": "5fa59d335a9b22731c242fe2",
+        "etiqueta": "Esencia, Naranja, Hornear, Sayes, Saborizante, Postres, Mantequilla"
+    },
+    {
+        "_id": "5faeb737dfc3704d62afc735",
+        "etiqueta": "Hamburguesa, Vegetal, Proteina,"
+    },
+    {
+        "_id": "5faebbaedfc3704d62afc737",
+        "etiqueta": "Bolsas, Basura, Bolsa negra, Jumbo, Costalitos"
+    },
+    {
+        "_id": "5faebed4dfc3704d62afc73a",
+        "etiqueta": "Jarabe, Fresa, Hersheys, Postre"
+    },
+    {
+        "_id": "5faeca58dfc3704d62afc73d",
+        "etiqueta": "Sal, Chispas, Hersheys, Caramelo"
+    },
+    {
+        "_id": "5fb3e1cbdfc3704d62afc794",
+        "etiqueta": "Jugo maggi, Sazonador, Maggi, Chiles"
+    },
+    {
+        "_id": "5fb43a721aee5662e59752d7",
+        "etiqueta": "Frijol, Negro, Frijol negro, Granel, Michigan"
+    },
+    {
+        "_id": "5fb44dfe1aee5662e59752dd",
+        "etiqueta": "Kit, Receta, Spaguetti, Awesome"
+    },
+    {
+        "_id": "5fb569121aee5662e597531a",
+        "etiqueta": "Awesome, Penne, Pluma, Toreada, Maggi"
+    },
+    {
+        "_id": "5fb573ce1aee5662e5975326",
+        "etiqueta": "Hamburguesa, Bimbollo, Bimbo, Awesome"
+    },
+    {
+        "_id": "5fb57ac41aee5662e5975328",
+        "etiqueta": "Box, Kit, Recetas, Hamburguesa, Awesome"
+    },
+    {
+        "_id": "5fb581491aee5662e597532a",
+        "etiqueta": "Kit, Box, Recetas, Hamburguesas, Hamburguesa, Awesome"
+    },
+    {
+        "_id": "5fb82b061aee5662e5975337",
+        "etiqueta": "Postres, Panqué, Panque, Receta, Recetas, Calabaza, Kit"
+    },
+    {
+        "_id": "5fbc0d481aee5662e59753fe",
+        "etiqueta": "Flautas, Pollo, Flauta, Comida"
+    },
+    {
+        "_id": "5fbc10411aee5662e5975400",
+        "etiqueta": "Queso, Flautas, Flauta, Comida"
+    },
+    {
+        "_id": "5fbc11381aee5662e5975402",
+        "etiqueta": "Flautas, Res, Flauta, Comida"
+    },
+    {
+        "_id": "5fbc12431aee5662e5975404",
+        "etiqueta": "Flautas, Pollo, Flauta, Comida, Papa"
+    },
+    {
+        "_id": "5fbc13891aee5662e5975406",
+        "etiqueta": "Flautas, Cochinita, Flauta, Comida"
+    },
+    {
+        "_id": "5fbc15051aee5662e5975408",
+        "etiqueta": "Flautas, Papa, Flauta, Comida"
+    },
+    {
+        "_id": "5fbc16171aee5662e597540a",
+        "etiqueta": "Vino, Vino blanco, Sensi, Toscana, "
+    },
+    {
+        "_id": "5fbc17d21aee5662e597540c",
+        "etiqueta": "Vino, Espumoso, Lambrusco"
+    },
+    {
+        "_id": "5fbc198d1aee5662e597540e",
+        "etiqueta": "Vino, Tinto, Santo Tomas, Merlot, ST"
+    },
+    {
+        "_id": "5fbc1a991aee5662e5975410",
+        "etiqueta": "Vino, Tinto, Cabernet, Sauvignon"
+    },
+    {
+        "_id": "5fbc1b871aee5662e5975412",
+        "etiqueta": "Vino, Tinto, Sensi, Chianti"
+    },
+    {
+        "_id": "5fbd6caf1aee5662e5975448",
+        "etiqueta": "Kleenex, Pañuelos, Desechables, De bolsillo, Antiviral"
+    },
+    {
+        "_id": "5fbd6e281aee5662e597544a",
+        "etiqueta": "Pañuelos, Desechables, Antiviral, Kleenex"
+    },
+    {
+        "_id": "5fbd6f851aee5662e597544c",
+        "etiqueta": "Pañuelos, Desechables, Kleenex, Hoja Doble"
+    },
+    {
+        "_id": "5fbd720a1aee5662e597544e",
+        "etiqueta": "Pañuelos, De bolsillo, Kleenex, Desechables"
+    },
+    {
+        "_id": "5fbd73a51aee5662e5975450",
+        "etiqueta": "Servilletas, Papel, Pétalo, Petalo, Servilleta"
+    },
+    {
+        "_id": "5fbd74f41aee5662e5975452",
+        "etiqueta": "Servitoalla, Kleenex, Jumbo"
+    },
+    {
+        "_id": "5fbd76061aee5662e5975454",
+        "etiqueta": "Towel, Scott, Kimberly, Wiper"
+    }
+]

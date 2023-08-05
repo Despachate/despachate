@@ -1,0 +1,679 @@
+<!-- Carusel  imagenes -->
+
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li
+      data-target="#carouselExampleIndicators"
+      data-slide-to="0"
+      class="active"
+    ></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img
+        src="assets/images/001-home-2.jpg"
+        class="d-none d-md-block w-100 slider"
+        alt="..."
+      />
+      <img
+        src="assets/images/001-home-2.jpg"
+        class="d-block d-md-none slider"
+        style="height: 40vh; width: auto; object-fit: cover"
+        alt="..."
+      />
+      <div class="carousel-caption d-none d-md-block">
+        <!-- <h5>Lorem ipsum dolor sit amet.</h5> -->
+        <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, iusto dolor dolorum mollitia, eum consequuntur. Maiores vel, facere rem sunt!.</p> -->
+      </div>
+    </div>
+    <div class="carousel-item" *ngFor="let item of listaCarrouseles">
+      <img
+        [src]="url + item.img"
+        class="d-none d-md-block w-100 slider"
+        alt="..."
+      />
+      <img
+        [src]="url + item.img"
+        class="d-block d-md-none slider"
+        style="height: 40vh; width: auto; object-fit: cover"
+        alt="..."
+      />
+      <div class="carousel-caption d-none d-md-block">
+        <!-- <h5>Lorem ipsum dolor sit amet.</h5> -->
+        <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, iusto dolor dolorum mollitia, eum consequuntur. Maiores vel, facere rem sunt!.</p> -->
+      </div>
+    </div>
+  </div>
+  <a
+    class="carousel-control-prev"
+    href="#carouselExampleIndicators"
+    role="button"
+    data-slide="prev"
+  >
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a
+    class="carousel-control-next"
+    href="#carouselExampleIndicators"
+    role="button"
+    data-slide="next"
+  >
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+<div>
+  <h1 class="text-center"><strong>Tu Súper en Línea y a Domicilio</strong></h1>
+</div>
+<!-- Fin carusel imagenes -->
+<!--Fin Barra de navegacion --->
+<!-- Recomendado para ti card con carusel pantallas grandes-->
+<Section class="container-fluid d-none d-md-block fondo-negro">
+  <h3
+    class="text-white text-center pt-3"
+    style="font-weight: bold; margin: 0 0 0px !important"
+  >
+    DESPÁCHATE CON <span class="texto-rojo">LOS FAVORITOS</span>
+  </h3>
+  <div class="container">
+    <div id="crecimendado" class="owl-carousel owl-theme p-3 fondo-negro">
+      <app-card-producto
+        *ngFor="let producto of prodRecomendadoParaTi"
+        [producto]="producto"
+        [style]="'cardRedonda'"
+      ></app-card-producto>
+    </div>
+  </div>
+</Section>
+
+<!-- Recomendado para ti pantallas pequeñas -->
+<section class="container-fluid d-block d-md-none fondo-negro">
+  <h3 class="container mr-1 text-white d-flex flex-column text-al-center pt-3">
+    DESPÁCHATE CON
+    <span class="texto-rojo">LOS FAVORITOS</span>
+  </h3>
+  <article class="container-fluid px-5">
+    <div class="row row-cols-2">
+      <div *ngFor="let producto of prodRecomendadoParaTi; let index = index">
+        <app-card-producto
+          *ngIf="5 >= index"
+          [producto]="producto"
+          [style]="'cardRedonda'"
+        ></app-card-producto>
+      </div>
+    </div>
+  </article>
+</section>
+
+<section class="container text-center">
+  <div class="row pt-5">
+    <div class="col-12 col-md-4 col-lg mt-3 mr-5">
+      <div class="icono">
+        <img
+          src="assets/images/002-home.svg"
+          style="height: 100px !important"
+          alt=""
+        />
+        <div style="margin-top: 15px !important">
+          <h2 class="">Con lo más fresco</h2>
+          <p class="text-muted" style="margin-top: -15px !important">
+            Encuentra los mejores productos que necesitas para tu hogar con los
+            mejores precios.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-4 col-lg mt-3 mr-5 ml-3">
+      <div class="icono">
+        <img
+          src="assets/images/003-home.svg"
+          style="height: 100px !important"
+          alt=""
+        />
+        <div style="margin-top: 15px !important">
+          <h2 class="">Fácil y rápido</h2>
+          <p class="text-muted" style="margin-top: -15px !important">
+            Con nuestro sistema de súper recurrente, hacer tu súper será muy
+            fácil y rápido.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-4 col-lg mt-3 ml-3">
+      <div class="icono">
+        <img
+          src="assets/images/004-home.svg"
+          style="height: 100px !important"
+          alt=""
+        />
+        <div style="margin-top: 15px !important">
+          <h2 class="">Con causa</h2>
+          <p class="text-muted" style="margin-top: -15px !important">
+            Cada vez que realizas tu compra, estás donando alimentos a personas
+            necesitadas.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Cards con carusel OFERTAS DEL DIA para pantallas grandes-->
+<Section class="mb-5 mt-5 degra d-none d-md-block">
+  <div class="container-fluid" style="position: relative">
+    <div class="flex-container d-flex">
+      <div class="col-10">
+        <span class="container font-size-42">
+          <strong class="text-uppercase">
+            Ofertas <span class="texto-rojo">del día</span></strong
+          >
+        </span>
+      </div>
+      <div class="col-2">
+        <p class="todos bg-danger text-white px-3">Hasta 20% desc</p>
+      </div>
+    </div>
+    <!--         <div *ngIf="modal" class="card rounded" style="left:30%; width: 450px !important;border: 3px solid purple; position: absolute; z-index: 9999;">
+            <div>
+                <a (click)="modal=false" class="float-right mt-2 mr-2 texto-morado" uk-icon="icon: close; ratio: 2"></a>
+            </div>
+            <div class="card-body mx-3 text-justify" style="margin-top: -10px !important;">
+                Utiliza este botón para añadir objetos a la <span class="texto-morado">Lista de tu súper recurrente</span> . Al tener una súper recurrente, Despáchate te permite programar tu súper con la frecuencia que tú decidas y ya no te tienes que preocupar
+                por hacerlo cada vez.
+            </div>
+        </div> -->
+    <div class="px-5">
+      <div id="cofertas" class="owl-carousel owl-theme p-3 pb-4">
+        <app-card-producto
+          *ngFor="let oferta of prodOferta"
+          [producto]="oferta.producto"
+        ></app-card-producto>
+      </div>
+    </div>
+    <div></div>
+  </div>
+</Section>
+
+<!--OFERTAS DEL DIA para dispisitovos pequeños-->
+<div>
+  <section class="container-fluid d-block mt-5 pb-5 d-md-none degra mb-5">
+    <span class="monoBold container mt-3 text-al-center font-size-42">
+      <strong class="text-uppercase">
+        Ofertas <span class="texto-rojo">del día</span></strong
+      >
+    </span>
+    <div class="display-5 d-flex flex-row-reverse pr-3 pb-3">
+      <span class="bg-danger text-white px-3"> Hasta 20% desc</span>
+    </div>
+    <article class="container">
+      <div class="row row-cols-2">
+        <div
+          class="mx-auto"
+          *ngFor="let oferta of prodOferta; let index = index"
+        >
+          <app-card-producto
+            *ngIf="3 >= index"
+            [producto]="oferta.producto"
+            [style]="'cardCatalogo'"
+          ></app-card-producto>
+        </div>
+      </div>
+      <!--
+        <div class="d-flex flex-row-reverse pb-5">
+            <a href="" class="text-white">Ver Todo</a>
+        </div> -->
+      <!--             <div *ngIf="modal" class="card rounded" style="top:12%; width: 270px !important;border: 3px solid purple; position: absolute; z-index: 9999; background-color: rgba(255,255, 255, 0.9);">
+                <div>
+                    <a (click)="modal=false" class="float-right mt-2 mr-2 texto-morado" uk-icon="icon: close; ratio: 2"></a>
+                </div>
+                <div class="card-body mx-3 text-justify" style="margin-top: -10px !important; font-size: 12px;">
+                    Utiliza este botón para añadir objetos a la <span class="texto-morado">Lista de tu súper recurrente</span>. Al tener una súper recurrente, Despáchate te permite programar tu súper con la frecuencia que tú decidas y ya no te tienes que preocupar
+                    por hacerlo cada vez.
+                </div>
+            </div> -->
+    </article>
+  </section>
+</div>
+
+<!-- CARRUSELES ADMINISTRABLES -->
+<Section class="container-fluid pt-3 pb-3 px-md-5 mb-5">
+  <div *ngFor="let item of listaCarruselesAdministrables; let i = index">
+    <span class="pb-5 monoBold font-size-42">
+      <!-- <strong class="text">
+        {{ item.titulo }}
+      </strong> -->
+      <strong class="text-uppercase">
+        {{ item.titulo.substr(0, item.titulo.indexOf(" ")) }}
+        <span class="texto-rojo">{{
+          item.titulo.substr(item.titulo.indexOf(" "))
+        }}</span></strong
+      >
+    </span>
+    <div id="cadministrable{{ i }}" class="owl-carousel owl-theme p-3">
+      <app-card-producto
+        *ngFor="let producto of item.productosCarousel"
+        [producto]="producto.producto"
+        [style]="'card3'"
+      ></app-card-producto>
+    </div>
+  </div>
+</Section>
+
+<!-- LO MAS VENDIDO -->
+<Section class="container-fluid pt-3 pb-3 px-5 mb-5 d-none d-md-block">
+  <span class="pb-5 monoBold font-size-42">
+    <strong>
+      LO MÁS<span class="texto-rojo font-weight-bold"> VENDIDO</span>
+    </strong>
+  </span>
+  <!-- <div class="row d-block d-md-none row-cols-2">
+        <app-card-producto *ngFor="let producto of productos" [producto]="producto"></app-card-producto>
+    </div> -->
+  <div id="cvendido" class="d-none d-md-block owl-carousel owl-theme p-3">
+    <app-card-producto
+      *ngFor="let producto of prodVentas"
+      [producto]="producto"
+    ></app-card-producto>
+  </div>
+</Section>
+
+<!-- DESPACHATE POR ESTILO DE VIDA -->
+<section class="mb-5">
+  <article class="container">
+    <span class="monoBold font-size-42">
+      <strong
+        >DESPÁCHATE POR
+        <span class="texto-verde font-weight-bold"
+          >ESTILO DE VIDA
+        </span></strong
+      >
+    </span>
+    <div class="row">
+      <div class="col-12 col-md-4 col-lg mt-3">
+        <div class="card shadow-none pt-5 md-shadow noneb">
+          <img src="assets/images/005-home.jpg" class="w-100" alt="..." />
+          <div class="card-body text-center">
+            <p class="card-text monoBold"><strong>ORGÁNICO</strong></p>
+            <button
+              type="button"
+              class="btn text-white bg-btnRojo btn-sm btn-block mt-5 mifuente2"
+              [routerLink]="['/catalogo']"
+              [queryParams]="{ estiloVida: 'Orgánico' }"
+            >
+              MÁS INFORMACIÓN
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-4 col-lg mt-3">
+        <div class="card shadow-none pt-5 md-shadow noneb">
+          <img src="assets/images/006-home.jpg" class="w-100" alt="..." />
+          <div class="card-body text-center">
+            <p class="card-text monoBold">
+              <STRong>VEGANO</STRong>
+            </p>
+            <button
+              type="button"
+              class="btn text-white bg-btnRojo btn-sm btn-block mt-5 mifuente2"
+              [routerLink]="['/catalogo']"
+              [queryParams]="{ estiloVida: 'Vegano' }"
+            >
+              MÁS INFORMACIÓN
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-4 col-lg mt-3">
+        <div class="card shadow-none pt-5 md-shadow noneb">
+          <img src="assets/images/007-home.jpg" class="w-100" alt="..." />
+          <div class="card-body text-center">
+            <p class="card-text monoBold">LO MÁS <strong>LOCAL</strong></p>
+            <button
+              type="button"
+              class="btn text-white bg-btnRojo btn-sm btn-block mt-5 mifuente2"
+              [routerLink]="['/catalogo']"
+              [queryParams]="{ estiloVida: 'Lo más local' }"
+            >
+              MÁS INFORMACIÓN
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-4 col-lg mt-3">
+        <div class="card shadow-none pt-5 md-shadow noneb">
+          <img src="assets/images/008-home.jpg" class="w-100" alt="..." />
+          <div class="card-body text-center">
+            <p class="card-text monoBold">
+              COMERCIO
+              <strong>JUSTO</strong>
+            </p>
+            <button
+              type="button"
+              class="btn text-white bg-btnRojo btn-sm btn-block mt-5 mifuente2"
+              [routerLink]="['/catalogo']"
+              [queryParams]="{ estiloVida: 'Comercio justo' }"
+            >
+              MÁS INFORMACIÓN
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-4 col-lg mt-3">
+        <div class="card shadow-none pt-5 md-shadow noneb">
+          <img src="assets/images/009-home.jpg" class="w-100" alt="..." />
+          <div class="card-body text-center">
+            <p class="card-text monoBold"><strong>GRANEL</strong></p>
+            <button
+              type="button"
+              class="btn text-white bg-btnRojo btn-sm btn-block mt-5 mifuente2"
+              [routerLink]="['/catalogo']"
+              [queryParams]="{ estiloVida: 'Granel' }"
+            >
+              MÁS INFORMACIÓN
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </article>
+</section>
+<!-- LO NUEVO A LA BOSLA -->
+<section class="container-fluid mb-5 degrapurple">
+  <div class="container">
+    <span class="pb-2 mb-3 monoBold font-size-42">
+      <strong> <span class="texto-morado">LO NUEVO</span> LA BOLSA</strong>
+    </span>
+  </div>
+  <!-- cards para pantallas grandes (Lo nuevo a la bolsa)-->
+  <div class="container-fluid px-5">
+    <div id="cbolsa" class="owl-carousel d-none d-md-block">
+      <app-card-producto
+        *ngFor="let prodNBolsa of prodNuevoBolsa"
+        [producto]="prodNBolsa"
+        [style]="'card2'"
+      ></app-card-producto>
+    </div>
+  </div>
+
+  <!-- cards para pantallas pequeñas con carusel (La nuevo a la bolsa)-->
+  <div id="cbolsa2" class="owl-carousel d-block d-md-none">
+    <app-card-producto
+      *ngFor="let prodNBolsa of prodNuevoBolsa"
+      [producto]="prodNBolsa"
+      [style]="'card3'"
+    ></app-card-producto>
+  </div>
+</section>
+
+<!--Despachate por departamento-->
+<section class="pb-3 px-5 mb-3 d-none d-md-block">
+  <article class="container">
+    <span class="monoBold font-size-42">
+      <strong>
+        DESPÁCHATE POR
+        <span class="texto-departamento font-weight-bold">DEPARTAMENTO </span>
+      </strong>
+    </span>
+
+    <div class="row">
+      <div class="col-6 col-md-4 col-lg">
+        <div class="card pt-5 md-shadow noneb shadow-none">
+          <img
+            src="assets/images/010-home.jpg"
+            style="width: 250px !important"
+            class="card-img-top noneb ml-auto mt-3 mr-auto"
+            alt="..."
+          />
+          <div class="card-body text-center">
+            <p class="card-text monoBold">
+              <a
+                class="uk-link-text"
+                [routerLink]="['/catalogo']"
+                [queryParams]="{
+                  departamento: departamentosURLS.alimentos_y_bebidas
+                }"
+                routerLinkActive="router-link-active"
+                ><b>ALIMENTOS</b> Y <br /><b>BEBIDAS</b></a
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-6 col-md-4 col-lg pb-4">
+        <div class="card pt-5 md-shadow noneb shadow-none pb-4">
+          <img
+            src="assets/images/011-home.jpg"
+            style="width: 250px !important"
+            class="card-img-top noneb ml-auto mt-3 mr-auto"
+            alt="..."
+          />
+          <div class="card-body text-center">
+            <p class="card-text monoBold">
+              <a
+                class="uk-link-text"
+                [routerLink]="['/catalogo']"
+                [queryParams]="{
+                  departamento: departamentosURLS.para_el_hogar
+                }"
+                routerLinkActive="router-link-active"
+                >PARA EL <b>HOGAR</b></a
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-6 col-md-4 col-lg mt-3">
+        <div class="card pt-5 md-shadow noneb shadow-none pb-4">
+          <img
+            src="assets/images/012-home.jpg"
+            style="width: 250px !important"
+            class="card-img-top noneb ml-auto mt-3 mr-auto"
+            alt="..."
+          />
+          <div class="card-body text-center">
+            <p class="card-text monoBold">
+              <a
+                class="uk-link-text"
+                [routerLink]="['/catalogo']"
+                [queryParams]="{
+                  departamento: departamentosURLS.cuidado_personal
+                }"
+                routerLinkActive="router-link-active"
+                >CUIDADO <b>PERSONAL</b></a
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-6 col-md-4 col-lg">
+        <div class="card pt-5 md-shadow noneb shadow-none pb-4">
+          <img
+            src="assets/images/013-home.jpg"
+            style="width: 250px !important"
+            class="card-img-top noneb ml-auto mt-3 mr-auto"
+            alt="..."
+          />
+          <div class="card-body text-center">
+            <p class="card-text monoBold">
+              <a
+                class="uk-link-text"
+                [routerLink]="['/catalogo']"
+                [queryParams]="{ departamento: departamentosURLS.eco_friendly }"
+                routerLinkActive="router-link-active"
+                ><b>ECO</b>-FRIENDLY</a
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-6 col-md-4 col-lg">
+        <div class="card pt-5 md-shadow noneb shadow-none pb-4">
+          <img
+            src="assets/images/014-home.jpg"
+            style="width: 250px !important"
+            class="card-img-top noneb ml-auto mt-3 mr-auto"
+            alt="..."
+          />
+          <div class="card-body text-center">
+            <p class="card-text monoBold">
+              <a
+                class="uk-link-text"
+                [routerLink]="['/catalogo']"
+                [queryParams]="{ departamento: departamentosURLS.cava }"
+                routerLinkActive="router-link-active"
+                ><b>CAVA</b></a
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </article>
+</section>
+
+<!-- Depachate con  lo mas local, pantallas grandes-->
+<Section class="container-fluid pt-3 pb-3 px-5 mb-5 d-none d-md-block">
+  <span class="pb-5 monoBold font-size-42">
+    <strong>
+      DESPÁCHATE
+      <span class="texto-verde font-weight-bold"> CON LO MÁS LOCAL</span>
+    </strong>
+  </span>
+
+  <div id="clocal" class="owl-carousel owl-theme p-3">
+    <app-card-producto
+      *ngFor="let producto of ProductosMasLocal"
+      [producto]="producto"
+    ></app-card-producto>
+  </div>
+
+  <div class="row">
+    <div class="col-12 todos">
+      <a class="texto-verde mr-2" [routerLink]="['/catalogo', 'Lo más local']"
+        >Ver todos</a
+      >
+    </div>
+  </div>
+</Section>
+<!-- despachate con lo mas lo mas local, pantallas pequeña -->
+<section class="container-fluid d-block d-md-none mb-5">
+  <span class="pb-5 text-center monoBold font-size-42">
+    <strong>
+      DESPÁCHATE
+      <span class="texto-verde font-weight-bold">CON LO MÁS LOCAL</span>
+    </strong>
+  </span>
+
+  <!-- <div style="text-align: center;" class="display-5" > Hasta 20% desc</div>    -->
+  <article class="container">
+    <div class="row row-cols-2">
+      <div
+        class="mx-auto"
+        *ngFor="let producto of ProductosMasLocal; let index = index"
+      >
+        <app-card-producto
+          *ngIf="3 >= index"
+          [producto]="producto"
+          [style]="'cardCatalogo'"
+        ></app-card-producto>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12 todos">
+        <a class="texto-verde mr-2" [routerLink]="['/catalogo', 'Lo más local']"
+          >Ver todos</a
+        >
+      </div>
+    </div>
+  </article>
+</section>
+
+<!-- DESP+ACHATE CON CAUSA -->
+<section class="container-fluid degrablue">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-md-4">
+        <div class="posion-relativa">
+          <h1 class="despacha-causa-titulo d-none d-md-block">
+            <strong>
+              DESPÁCHATE
+              <span class="texto-azul font-weight-bold"
+                ><br />
+                CON CAUSA
+              </span></strong
+            >
+          </h1>
+
+          <div class="d-none d-md-block container posion-relativa">
+            <div class="card tarje md-shadow rounded ml-4 posion-absoluta">
+              <div class="card-body">
+                <h6 class="card-subtitle mb-2 text-muted"></h6>
+                <p class="card-text">
+                  Sabemos que cuidas de ti y de tu familia, pero también sabemos
+                  que quieres cuidar de los que más lo necesitan, por eso, en
+                  “Despáchate”, cada vez que realizas una compra de tu súper en
+                  línea , estás donando alimentos a quienes más lo necesitan.
+                </p>
+                <a
+                  [routerLink]="['/recomiendaGana']"
+                  class="card-link texto-azul font-weight-bold"
+                  >Conoce más</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <div class="d-md-none d-block text-center">
+              <h1>DESPÁCHATE CON <span class="texto-azul"> CAUSA </span></h1>
+            </div>
+
+            <!-- <div class="d-md-none d-block ">
+                <h6 class="despacha-causa-titulo  ">
+                <strong> DESPÁCHATE <p class="texto-azul" >
+                  <br> CON CAUSA </p></strong></h6>
+              </div> -->
+          </div>
+        </div>
+      </div>
+      <div class="col-md-8 col-12 pl-0 pr-3 rounded estilo-fondo"></div>
+      <div
+        class="d-block d-md-none"
+        style="position: relative !important; bottom: 40px; left: 5%"
+      >
+        <div class="card" style="width: 90%">
+          <div class="card-body">
+            <p class="card-text">
+              Sabemos que cuidas de ti y de tu familia, pero también sabemos que
+              quieres cuidar de los que más lo necesitan, por eso, en
+              “Despáchate”, cada vez que realizas una compra de tu súper en
+              línea , estás donando alimentos a quienes más lo necesitan.
+            </p>
+            <a [routerLink]="['/recomiendaGana']" class="card-link texto-azul">
+              <strong> Conoce más</strong></a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+

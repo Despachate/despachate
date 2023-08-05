@@ -1,0 +1,323 @@
+<div class="container-fluid mb-5 zeta-index">
+  <div class="row my-5 mx-2">
+    <div class="col-md-4 offset-md-4 col-12 text-center">
+      <h2 class="">
+        MIS
+        <span class="texto-rojo"
+          >FAVORITOS<img
+            class="h-heart"
+            src="assets/images/FAV-ROJO.svg"
+            alt=""
+        /></span>
+      </h2>
+    </div>
+    <div class="col-md-4 col-12 text-md-right text-center mt-2">
+      <a
+        (click)="cerrarSesion()"
+        class="texto-negritas estilo-r monoRegular"
+        style="text-decoration: none; color: black"
+        ><u><strong>Cerrar sesión</strong></u></a
+      >
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12 px-0">
+      <div class="d-block d-md-none">
+        <button
+          class="btn btn-block btn-lg"
+          type="button"
+          uk-toggle="target: #offcanvas-usage"
+        >
+          <svg
+            class="svg-inline--fa fa-bars fa-w-14"
+            aria-hidden="true"
+            focusable="false"
+            data-prefix="fas"
+            data-icon="bars"
+            role="img"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 448 512"
+            data-fa-i2svg=""
+          >
+            <path
+              fill="currentColor"
+              d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"
+            ></path>
+          </svg>
+          <!-- <i class="fas fa-bars"></i> -->
+          Filtrar
+        </button>
+
+        <div id="offcanvas-usage" uk-offcanvas="" class="uk-offcanvas">
+          <div class="uk-offcanvas-bar uk-background-default">
+            <button
+              class="uk-offcanvas-close texto-negro uk-icon uk-close"
+              type="button"
+              uk-close=""
+            >
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 14 14"
+                xmlns="http://www.w3.org/2000/svg"
+                data-svg="close-icon"
+              >
+                <line
+                  fill="none"
+                  stroke="#000"
+                  stroke-width="1.1"
+                  x1="1"
+                  y1="1"
+                  x2="13"
+                  y2="13"
+                ></line>
+                <line
+                  fill="none"
+                  stroke="#000"
+                  stroke-width="1.1"
+                  x1="13"
+                  y1="1"
+                  x2="1"
+                  y2="13"
+                ></line>
+              </svg>
+            </button>
+            <!-- menu movil -->
+            <div class="container">
+              <div class="row mb-5">
+                <div class="col-12">
+                  <div class="sliderCustom">
+                    <div class="rangeslider sliderCustom">
+                      <input
+                        class="min"
+                        [(ngModel)]="rango1"
+                        name="range_1"
+                        #Rango1
+                        (change)="validar(true)"
+                        type="range"
+                        min="5"
+                        max="995"
+                        value="5"
+                      />
+                      <input
+                        class="max"
+                        [(ngModel)]="rango2"
+                        name="range_2"
+                        #Rango2
+                        (change)="validar(false)"
+                        type="range"
+                        min="10"
+                        max="1000"
+                        value="500"
+                      />
+                      <span class="range_min light left texto-negro">{{
+                        rango1 | currency: "MXN":"$":"1.2-2"
+                      }}</span>
+                      <span class="range_max light right texto-negro">{{
+                        rango2 | currency: "MXN":"$":"1.2-2"
+                      }}</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-12 mt-4 renglond">
+                  <button
+                    style="position: relative"
+                    (click)="filtarXPrecio()"
+                    type="button"
+                    class="btn btn-secondary btn-sm"
+                  >
+                    Filtrar
+                  </button>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="row">
+                  <div class="col-12 renglond2">
+                    <h4
+                      class="
+                        btn-md btn-block
+                        sin-borde sin-bordeC
+                        bg-blanco
+                        p-0
+                        textoalign
+                      "
+                    >
+                      <strong>{{ departamento }}</strong>
+                    </h4>
+                  </div>
+                </div>
+                <div class="row">
+                  <ul uk-accordion>
+                    <li
+                      *ngFor="let depto of lDepartamentos; let index = index"
+                      class="col-12 renglond"
+                    >
+                      <h4 class="uk-accordion-title texto-rojo" href="#">
+                        {{ depto.nombre }}
+                      </h4>
+                      <div class="uk-accordion-content">
+                        <ul uk-accordion>
+                          <li *ngFor="let categoria of _menu[index]" class="">
+                            <h5 class="uk-accordion-title text-dark" href="#">
+                              {{ categoria.nombre }}
+                            </h5>
+                            <div class="uk-accordion-content">
+                              <div
+                                *ngFor="
+                                  let subcategoria of lSubcategorias[
+                                    categoria._id
+                                  ]
+                                "
+                              >
+                                <p class="text-dark">
+                                  <a
+                                    class="uk-link-text text-dark"
+                                    (click)="filtrarProductos(subcategoria._id)"
+                                    routerLinkActive="active"
+                                    >{{ subcategoria.nombre }}</a
+                                  >
+                                </p>
+                              </div>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container mb-5">
+  <div class="row">
+    <div class="col-2 d-none d-md-block mt-5">
+      <div class="row mb-5">
+        <div class="col-12">
+          <div class="sliderCustom">
+            <div class="rangeslider sliderCustom">
+              <input
+                class="min"
+                [(ngModel)]="rango1"
+                name="range_1"
+                #Rango1
+                (change)="validar(true)"
+                type="range"
+                min="5"
+                max="995"
+                value="5"
+              />
+              <input
+                class="max"
+                [(ngModel)]="rango2"
+                name="range_2"
+                #Rango2
+                (change)="validar(false)"
+                type="range"
+                min="10"
+                max="1000"
+                value="500"
+              />
+              <span class="range_min light left texto-negro">{{
+                rango1 | currency: "MXN":"$":"1.2-2"
+              }}</span>
+              <span class="range_max light right texto-negro">{{
+                rango2 | currency: "MXN":"$":"1.2-2"
+              }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12 mt-4 renglond">
+          <button
+            style="position: relative"
+            #Filtrar
+            (click)="filtarXPrecio()"
+            type="button"
+            class="btn rounded-pill btn-secondary btn-sm"
+          >
+            Filtrar
+          </button>
+        </div>
+      </div>
+      <!-- *ngIf="depto.nombre != departamento" -->
+      <div class="row">
+        <div class="uk-width-1-1">
+          <ul
+            class="uk-nav-default uk-nav-parent-icon"
+            style="color: black"
+            uk-nav
+          >
+            <li
+              *ngFor="let depto of lDepartamentos; let index = index"
+              class="uk-parent renglond uk-active uk-padding-small"
+            >
+              <a class="uk-text-bold" style="font-size: 20px; color: red">
+                {{ depto.nombre }}
+              </a>
+              <ul class="uk-nav-sub">
+                <li
+                  *ngFor="let categoria of _menu[index]"
+                  class="uk-parent renglond uk-active"
+                >
+                  <a
+                    ><b>{{ categoria.nombre }}</b></a
+                  >
+                  <ul class="uk-nav-sub">
+                    <li
+                      *ngFor="let subcategoria of lSubcategorias[categoria._id]"
+                      class="uk-active"
+                    >
+                      <p class="text-dark">
+                        <a
+                          class="uk-link-text"
+                          (click)="filtrarProductos(subcategoria._id)"
+                          routerLinkActive="active"
+                          >{{ subcategoria.nombre }}</a
+                        >
+                      </p>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-10">
+      <div class="container">
+        <div class="display-5 pr-3 pb-3">
+          <h3 class="monropeLight px-5 ml-1 font-weight-bold">
+            <b> FAVORITOS</b>
+          </h3>
+        </div>
+
+        <div class="row row-cols-md-3 row-cols-1">
+          <div
+            *ngFor="let producto of listaFavoritos"
+            [hidden]="producto.producto === null"
+          >
+            <app-card-producto
+              *ngIf="producto.producto != null"
+              [producto]="producto.producto"
+              [style]="'cardCatalogo'"
+            ></app-card-producto>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--here-->
+</div>

@@ -1,0 +1,134 @@
+<!-- Content -->
+<div class="content">
+    <!-- Animated -->
+    <div class="animated fadeIn">
+
+        <div class="clearfix"></div>
+
+        <div class="orders">
+            <div class="row">
+                <div class="col">
+                    <div class="card">
+                        <div class="card-header hover btn-primary text-dark" style="cursor: pointer;" data-toggle="collapse" role="button" data-target="#header-form">
+                            <div class="d-block text-center">
+                                <strong class="p-2 bd-highlight">Agregar cupón</strong>
+                            </div>
+                        </div>
+                        <div class="card-body card-block collapse show" id="header-form">
+                            <form ngNativeValidate [formGroup]="form" (ngSubmit)="add()" class="form-horizontal">
+                                <div class="row">
+                                    <div class="col-12 col-md-6 col-sm-12 form-group">
+                                        <div class="col"><label for="codigo" class=" form-control-label">Código</label></div>
+                                        <div class="col"><input formControlName="codigo" minlength="1" maxlength="100" required type="text" id="codigo" name="codigo" placeholder="Introduce el código del cupon" class="form-control">
+                                            <small class="form-text text-muted">Ejemplo: 5DF4T</small></div>
+                                    </div>
+                                    <div class="col-12  col-md-6 col-sm-12 form-group">
+                                        <div class="col"><label for="valor" class=" form-control-label">Porcentaje de Descuento</label></div>
+                                        <div class="col">
+                                            <select formControlName="valor" name="valor" id="valor" class="form-control">
+                                                <option value="null" selected >Selecciona el porcentaje de descuento del cupón</option>
+                                                <option value="5" selected >5%</option>
+                                                <option value="10" selected >10%</option>
+                                                <option value="15" selected >15%</option>
+                                                <option value="20" selected >20%</option>
+                                                <option value="25" selected >25%</option>
+                                                <option value="30" selected >30%</option>
+                                                <option value="35" selected >35%</option>
+                                                <option value="40" selected >40%</option>
+                                                <option value="45" selected >45%</option>
+                                                <option value="50" selected >50%</option>
+                                                <option value="55" selected >55%</option>
+                                                <option value="60" selected >60%</option>
+                                                <option value="65" selected >65%</option>
+                                                <option value="70" selected >70%</option>
+                                                <option value="75" selected >75%</option>
+                                                <option value="80" selected >80%</option>
+                                                <option value="85" selected >85%</option>
+                                                <option value="90" selected >90%</option>
+                                                <option value="95" selected >95%</option>
+                                                <option value="100" selected >100%</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-12  col-md-6 col-sm-12 form-group">
+                                        <div class="col"><label for="tipoCupon" class=" form-control-label">tipoCupon</label></div>
+                                        <div class="col">
+                                            <select formControlName="tipoCupon" required name="tipoCupon" id="tipoCupon" class="form-control">
+                                                <option value="null" selected >Selecciona un tipo de Cupon</option>
+                                                <option value="Usuario" selected >Tipo Usuario</option>
+                                                <option value="General" selected >Tipo General</option>                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-12  col-md-6 col-sm-12 form-group">
+                                        <div class="col"><label for="idUsuario" class=" form-control-label">Usuario</label></div>
+                                        <div class="col">
+                                            <select formControlName="idUsuario" required name="idUsuario" id="idUsuario" class="form-control">
+                                                <option value="null" selected >Selecciona un Usuario</option>
+                                                <option [value]="[item._id]" *ngFor="let item of listaUsuarios">{{item.nombre}}</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <button type="button" class="btn btn-danger btn-block" (click)="limpiarCampos()">Cancelar</button>
+                                    </div>
+                                    <div class="col">
+                                        <button type="submit" class="btn btn-primary btn-block" [hidden]="hidden">Registrar</button>
+                                    </div>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="card p-3">
+                        <div class="card-body">
+                            <h4 class="box-title">Cupones</h4>
+                        </div>
+                        <div class="card-body">
+                            <div class="">
+                                <div class="table-responsive">
+                                    <table datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" class="table ">
+                                        <thead>
+                                            <tr>
+                                                <th class="serial">#</th>
+                                                <th>Código</th>
+                                                <th>Valor</th>
+                                                <th>Tipo Cupon</th>
+                                                <th>Opciones</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr *ngFor="let item of lista; let i = index">
+                                                <td class="serial">{{i+1}}</td>
+                                                <td>{{item.codigo}}</td>
+                                                <td>{{item.valor}}</td>
+                                                <td>{{item.tipoCupon}}</td>
+                                                <td>
+                                                    <div class="row row-cols-3">
+                                                        <button (click)="ver(i)" class="col btn col m-0 m-md-3 btn-info" data-toggle="tooltip" data-placement="top" title="Ver"> <i class="fas fa-info"></i></button>
+                                                        <button (click)="update(i,true)" class="col btn col m-0 m-md-3 btn-warning" data-toggle="tooltip" data-placement="top" title="Editar"> <i class="fas fa-edit"></i></button>
+                                                        <button (click)="delete(item._id)" class="col btn col m-0 m-md-3 btn-danger" data-toggle="tooltip" data-placement="top" title="Eliminar"><i class="fas fa-trash"></i></button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <!-- /.table-stats -->
+                        </div>
+
+                    </div>
+                    <!-- /.card -->
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- .animated -->
+</div>
+<!-- /.content -->
+<div class="clearfix"></div>

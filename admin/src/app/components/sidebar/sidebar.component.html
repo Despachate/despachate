@@ -1,0 +1,53 @@
+<div class="logo">
+    <a href="#" class="simple-text">
+        <div class="logo-img">
+            <img src="./assets/logo-despachate.svg" />
+        </div>
+        DESPACHATE
+    </a>
+</div>
+<div class="sidebar-wrapper">
+    <div *ngIf="isMobileMenu()">
+        <form class="navbar-form">
+            <span class="bmd-form-group">
+                <div class="input-group no-border">
+                <input type="text" value="" class="form-control" placeholder="Search...">
+                <button mat-raised-button type="submit" class="btn btn-white btn-round btn-just-icon">
+                    <i class="material-icons">search</i>
+                    <div class="ripple-container"></div>
+                </button>
+                </div>
+            </span>
+        </form>
+        <ul class="nav navbar-nav nav-mobile-menu mb-5">
+            <li class="nav-item dropdown">
+                <a class="nav-link" href="javascript:void(0)" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="material-icons">more_vert</i>
+                    <span class="notification"></span>
+                    <p>
+                        <span class="d-lg-none d-md-block">Opciones</span>
+                    </p>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" href="#">Logout</a>
+                    <a class="nav-item" class="dropdown-item" href="#">
+                        <i class="material-icons">logout</i>
+                        <p>logout</p>
+                    </a>
+                    <a *ngFor="let menuItem of menuItems" class="{{menuItem.class}} nav-item" class="dropdown-item" [routerLink]="[menuItem.path]">
+                        <i class="material-icons">{{menuItem.icon}}</i>
+                        <p>{{menuItem.title}}</p>
+                    </a>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <ul class="nav d-none d-md-block">
+        <li routerLinkActive="active" *ngFor="let menuItem of menuItems" class="{{menuItem.class}} nav-item">
+            <a class="nav-link" [routerLink]="[menuItem.path]">
+                <i class="material-icons">{{menuItem.icon}}</i>
+                <p>{{menuItem.title}}</p>
+            </a>
+        </li>
+    </ul>
+</div>

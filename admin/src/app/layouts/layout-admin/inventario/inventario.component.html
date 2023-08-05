@@ -1,0 +1,103 @@
+<!-- Content -->
+<div class="content">
+    <!-- Animated -->
+    <div class="animated fadeIn">
+
+        <div class="clearfix"></div>
+
+        <div class="orders">
+            <div class="row">
+                <div class="col">
+                    <div class="row">
+                        <div class="col">
+                            <a routerLink="/admin/productos" class="btn btn-primary btn-block">Productos</a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header hover btn-primary text-dark" style="cursor: pointer;" data-toggle="collapse" role="button" data-target="#header-form">
+                            <div class="d-block text-center">
+                                <strong class="p-2 bd-highlight">Agregar Datos al Inventario del producto <strong>{{producto}}</strong></strong>
+                            </div>
+                        </div>
+                        <div class="card-body card-block collapse show" id="header-form">
+                            <form ngNativeValidate [formGroup]="form" (ngSubmit)="add()" class="form-horizontal">
+                                <div class="row">
+                                    <div class="col-12 col-md-6 col-sm-12 form-group">
+                                        <div class="col"><label for="paquete" class=" form-control-label">Nombre Paquete</label></div>
+                                        <div class="col"><input formControlName="paquete" minlength="1" maxlength="100" required type="text" id="paquete" name="paquete" placeholder="Introduce el nombre del paquete" class="form-control">
+                                            <small class="form-text text-muted">Ejemplo: 12 piezas</small></div>
+                                    </div>
+                                    <div class="col-12 col-md-6 col-sm-12 form-group">
+                                        <div class="col"><label for="precio" class=" form-control-label">Precio</label></div>
+                                        <div class="col"><input formControlName="precio" min="0" step="0.01" required type="number" id="precio" name="precio" placeholder="Introduce el precio del paquete" class="form-control">
+                                            <small class="form-text text-muted">Ejemplo: 100</small></div>
+                                    </div>
+                                    <div class="col-12 col-md-6 col-sm-12 form-group">
+                                        <div class="col"><label for="stock" class=" form-control-label">Cantidad en stock</label></div>
+                                        <div class="col"><input formControlName="stock" min="0" required type="number" id="stock" name="stock" placeholder="Introduce el stock del paquete" class="form-control">
+                                            <small class="form-text text-muted">Ejemplo: 10</small></div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <button type="button" class="btn btn-danger btn-block" (click)="limpiarCampos()">Cancelar</button>
+                                    </div>
+                                    <div class="col">
+                                        <button type="submit" class="btn btn-primary btn-block" [hidden]="hidden">Registrar</button>
+                                    </div>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="card p-3">
+                        <div class="card-body">
+                            <h4 class="box-title">Inventarios</h4>
+                        </div>
+                        <div class="card-body">
+                            <div class="">
+                                <div class="table-responsive">
+                                    <table datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" class="table ">
+                                        <thead>
+                                            <tr>
+                                                <th class="serial">#</th>
+                                                <th>Paquete</th>
+                                                <th>Precio</th>
+                                                <th>Stock</th>
+                                                <th>Opciones</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr *ngFor="let item of lista; let i = index">
+                                                <td class="serial">{{i+1}}</td>
+                                                <td>{{item.paquete}}</td>
+                                                <td>{{item.precio}}</td>
+                                                <td>{{item.stock}}</td>
+                                                <td>
+                                                    <div class="row row-cols-3">
+                                                        <button (click)="ver(i)" class="col btn col m-0 m-md-3 btn-info" data-toggle="tooltip" data-placement="top" title="Ver"> <i class="fas fa-info"></i></button>
+                                                        <button (click)="update(i,true)" class="col btn col m-0 m-md-3 btn-warning" data-toggle="tooltip" data-placement="top" title="Editar"> <i class="fas fa-edit"></i></button>
+                                                        <button (click)="delete(item._id)" class="col btn col m-0 m-md-3 btn-danger" data-toggle="tooltip" data-placement="top" title="Eliminar"><i class="fas fa-trash"></i></button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <!-- /.table-stats -->
+                        </div>
+
+                    </div>
+                    <!-- /.card -->
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- .animated -->
+</div>
+<!-- /.content -->
+<div class="clearfix"></div>

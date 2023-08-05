@@ -1,0 +1,438 @@
+<!-- Content -->
+<div class="content">
+  <!-- Animated -->
+  <div class="animated fadeIn">
+    <div class="clearfix"></div>
+
+    <div class="orders">
+      <div class="row">
+        <div class="col">
+          <div class="card">
+            <div
+              class="card-header hover btn-primary text-dark"
+              style="cursor: pointer"
+              data-toggle="collapse"
+              role="button"
+              data-target="#header-form"
+            >
+              <div class="d-block text-center">
+                <strong class="p-2 bd-highlight">Agregar receta</strong>
+              </div>
+            </div>
+            <div class="card-body card-block collapse show" id="header-form">
+              <form
+                ngNativeValidate
+                [formGroup]="form"
+                (ngSubmit)="add()"
+                class="form-horizontal"
+              >
+                <div class="row">
+                  <div class="row btn btn-block btn-dark text-center">
+                    <h5>Subir imagen</h5>
+                    <div class="col-8 mx-auto">
+                      <div class="mb-4 mt-4">
+                        <ul class="row">
+                          <li
+                            *ngIf="imagenTemp != null"
+                            class="col text-center"
+                          >
+                            <div class="badge">
+                              <img
+                                [src]="imagenTemp"
+                                alt=""
+                                style="width: 50%"
+                              />
+                            </div>
+                          </li>
+                          <li *ngIf="imgEditar != ''" class="col text-center">
+                            <div class="badge">
+                              <img
+                                [src]="url + imgEditar"
+                                alt=""
+                                style="width: 50%"
+                              />
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="col-6 mx-auto">
+                      <input
+                        (change)="seleccionImage($event.target.files[0])"
+                        type="file"
+                        class="btn btn-info btn-block"
+                        formControlName="img"
+                        name="img"
+                        id="img"
+                      />
+                      <!-- <label class="custom-file-label" for="inputGroupFile02" aria-describedby="inputGroupFileAddon02">Selecciona una imagen</label> -->
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-12 form-group">
+                    <div class="col">
+                      <label for="nombre" class="form-control-label"
+                        >Nombre</label
+                      >
+                    </div>
+                    <div class="col">
+                      <input
+                        class="form-control"
+                        type="text"
+                        name="nombre"
+                        id="nombre"
+                        formControlName="nombre"
+                        required
+                      />
+                      <small class="form-text text-muted"
+                        >Ejemplo: Receta organica</small
+                      >
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-12 form-group">
+                    <div class="col">
+                      <label for="duracion" class="form-control-label"
+                        >Duración</label
+                      >
+                    </div>
+                    <div class="col">
+                      <input
+                        class="form-control"
+                        type="time"
+                        name="duracion"
+                        id="duracion"
+                        formControlName="duracion"
+                        required
+                      />
+                      <small class="form-text text-muted">Ejemplo: 00:30</small>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-12 form-group">
+                    <div class="col">
+                      <label for="code" class="form-control-label">Code</label>
+                    </div>
+                    <div class="col">
+                      <input
+                        class="form-control"
+                        type="text"
+                        name="code"
+                        id="code"
+                        formControlName="code"
+                        required
+                        minlength="4"
+                        maxlength="4"
+                      />
+                      <small class="form-text text-muted">Ejemplo: 0001</small>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-12 form-group">
+                    <div class="col">
+                      <label for="etiquetas" class="form-control-label"
+                        >Etiquetas</label
+                      >
+                    </div>
+                    <div class="col">
+                      <textarea
+                        name="etiquetas"
+                        id="etiquetas"
+                        formControlName="etiquetas"
+                        required
+                        class="form-control"
+                        rows="5"
+                      ></textarea>
+                      <small class="form-text text-muted"
+                        >Ejemplo: Organico, Rapido, Facil</small
+                      >
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-12 form-group">
+                    <div class="col">
+                      <label for="descripcion" class="form-control-label"
+                        >Descripción</label
+                      >
+                    </div>
+                    <div class="col">
+                      <textarea
+                        name="descripcion"
+                        id="descripcion"
+                        formControlName="descripcion"
+                        required
+                        class="form-control"
+                        rows="5"
+                      ></textarea>
+                      <small class="form-text text-muted"
+                        >Ejemplo: Receta rapida con ingredientes
+                        organicos</small
+                      >
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-12 form-group">
+                    <div class="col">
+                      <label for="listo_en" class="form-control-label"
+                        >Listo en</label
+                      >
+                    </div>
+                    <div class="col">
+                      <input
+                        class="form-control"
+                        type="time"
+                        name="listo_en"
+                        id="listo_en"
+                        formControlName="listo_en"
+                        required
+                      />
+                      <small class="form-text text-muted">Ejemplo: 00:30</small>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-12 form-group">
+                    <div class="col">
+                      <label for="preparacion" class="form-control-label"
+                        >Preparación</label
+                      >
+                    </div>
+                    <div class="col">
+                      <input
+                        class="form-control"
+                        type="time"
+                        name="preparacion"
+                        id="preparacion"
+                        formControlName="preparacion"
+                        required
+                      />
+                      <small class="form-text text-muted">Ejemplo: 00:30</small>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-12 form-group">
+                    <div class="col">
+                      <label for="cocinar" class="form-control-label"
+                        >Cocinar</label
+                      >
+                    </div>
+                    <div class="col">
+                      <input
+                        class="form-control"
+                        type="time"
+                        name="cocinar"
+                        id="cocinar"
+                        formControlName="cocinar"
+                        required
+                      />
+                      <small class="form-text text-muted">Ejemplo: 00:30</small>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-12 form-group">
+                    <div class="col">
+                      <label for="porciones" class="form-control-label"
+                        >Porciones</label
+                      >
+                    </div>
+                    <div class="col">
+                      <input
+                        class="form-control"
+                        type="number"
+                        name="porciones"
+                        id="porciones"
+                        formControlName="porciones"
+                        required
+                        min="0"
+                      />
+                      <small class="form-text text-muted">Ejemplo: 3</small>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-12 form-group">
+                    <div class="col">
+                      <label for="categoria" class="form-control-label"
+                        >Categoria</label
+                      >
+                    </div>
+                    <div class="col">
+                      <select
+                        formControlName="categoria"
+                        required
+                        name="categoria"
+                        id="categoria"
+                        class="form-control"
+                      >
+                        <option value="null" selected>
+                          Selecciona un categoria
+                        </option>
+                        <option
+                          [value]="[item._id]"
+                          *ngFor="let item of categorias"
+                        >
+                          {{ item.nombre }}
+                        </option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col">
+                    <button
+                      type="button"
+                      class="btn btn-danger btn-block"
+                      (click)="limpiarCampos()"
+                    >
+                      Cancelar
+                    </button>
+                  </div>
+                  <div class="col">
+                    <button
+                      type="submit"
+                      class="btn btn-primary btn-block"
+                      [hidden]="hidden"
+                    >
+                      Registrar
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="clearfix"></div>
+          <div class="card p-3">
+            <div class="card-body">
+              <h4 class="box-title">Recetas</h4>
+            </div>
+            <div class="card-body">
+              <div class="">
+                <div class="table-responsive">
+                  <table
+                    datatable
+                    [dtOptions]="dtOptions"
+                    [dtTrigger]="dtTrigger"
+                    class="table"
+                  >
+                    <thead>
+                      <tr>
+                        <th class="serial">#</th>
+                        <th>Imagen</th>
+                        <th>Duración</th>
+                        <th>Codigo</th>
+                        <th>Etiquetas</th>
+                        <th>Descripción</th>
+                        <th>Listo en</th>
+                        <th>Preparación</th>
+                        <th>Cocinar</th>
+                        <th>Porciones</th>
+                        <th>Categoria</th>
+                        <th>Opciones</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr *ngFor="let item of lista; let i = index">
+                        <td class="serial">{{ i + 1 }}</td>
+                        <td>
+                          <img
+                            [src]="url + item.img"
+                            alt="..."
+                            class="img-thumbnail"
+                            width="200px"
+                          />
+                        </td>
+                        <td>
+                          {{ item.duracion }}
+                          {{
+                            item.duracion.split(':')[0] != '00' ? 'hrs' : 'min'
+                          }}
+                        </td>
+                        <td>{{ item.code }}</td>
+                        <td>{{ item.etiquetas }}</td>
+                        <td>{{ item.descripcion }}</td>
+                        <td>
+                          {{ item.listo_en }}
+                          {{
+                            item.listo_en.split(':')[0] != '00' ? 'hrs' : 'min'
+                          }}
+                        </td>
+                        <td>
+                          {{ item.preparacion }}
+                          {{
+                            item.preparacion.split(':')[0] != '00'
+                              ? 'hrs'
+                              : 'min'
+                          }}
+                        </td>
+                        <td>
+                          {{ item.cocinar }}
+                          {{
+                            item.cocinar.split(':')[0] != '00' ? 'hrs' : 'min'
+                          }}
+                        </td>
+                        <td>{{ item.porciones }}</td>
+                        <td>{{ item.categoria.nombre }}</td>
+                        <td>
+                          <div class="row row-cols-3 row-cols-1">
+                            <button
+                              (click)="ver(i)"
+                              class="col m-0 m-md-3 btn btn-info"
+                              data-toggle="tooltip"
+                              data-placement="top"
+                              title="Ver"
+                            >
+                              <i class="fas fa-info"></i>
+                            </button>
+                            <button
+                              (click)="update(i, true)"
+                              class="col m-0 m-md-3 btn btn-warning"
+                              data-toggle="tooltip"
+                              data-placement="top"
+                              title="Editar"
+                            >
+                              <i class="fas fa-edit"></i>
+                            </button>
+                            <button
+                              (click)="delete(item._id)"
+                              class="col m-0 m-md-3 btn btn-danger"
+                              data-toggle="tooltip"
+                              data-placement="top"
+                              title="Eliminar"
+                            >
+                              <i class="fas fa-trash"></i>
+                            </button>
+                            <button
+                              [routerLink]="
+                                '/admin/recetas-pasos/' +
+                                item._id +
+                                '/' +
+                                item.nombre
+                              "
+                              class="col m-0 m-md-3 btn btn-primary"
+                              data-toggle="tooltip"
+                              data-placement="top"
+                              title="Pasos"
+                            >
+                              <i class="fas fa-list-ol"></i>
+                            </button>
+                            <button
+                              [routerLink]="
+                                '/admin/recetas-ingredientes/' +
+                                item._id +
+                                '/' +
+                                item.nombre
+                              "
+                              class="col m-0 m-md-3 btn btn-primary"
+                              data-toggle="tooltip"
+                              data-placement="top"
+                              title="Ingredientes"
+                            >
+                              <i class="fas fa-stream"></i>
+                            </button>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <!-- /.table-stats -->
+            </div>
+          </div>
+          <!-- /.card -->
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- .animated -->
+</div>
+<!-- /.content -->
+<div class="clearfix"></div>

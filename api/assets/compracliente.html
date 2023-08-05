@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <style>
+        @font-face{
+            font-family: 'PT Mono', monospace;
+            src: url(https://despachate.com.mx/email-assets/fonts/PTMono-Regular.ttf);
+        }
+
+        @font-face{
+            font-family: 'manrope', sans-serif;
+            src: url(https://despachate.com.mx/email-assets/fonts/Manrope-Medium.ttf);
+        }
+
+        @font-face{
+            font-family: 'manrope-bold', sans-serif;
+            src: url(https://despachate.com.mx/email-assets/fonts/Manrope-ExtraBold.ttf);
+        }
+
+        body {
+            padding: 0px;
+            margin: 0px;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .w-100 {
+            width: 100%;
+        }
+
+        .w-90 {
+            width: 90%;
+        }
+
+        .w-70 {
+            width: 70%;
+        }
+
+
+        .w-60 {
+            width: 60%;
+        }
+
+        .text-left {
+            text-align: left;
+        }
+
+        .padding-responsive {
+            padding: 3em;
+        }
+
+        .morado {
+            color: #68059b;
+            font-family: 'manrope', sans-serif;
+        }
+
+        .negro {
+            color: #000;
+        }
+
+        .margenes{
+             margin-top:.5em; 
+            margin-left: 25%; margin-right: 25%;
+        }
+
+        .bg-footer {
+            background-color: #231f20;
+            color: #fff;
+            padding: 4em 1em;
+        }
+
+
+        .pt-mono {
+            font-family: 'PT Mono', monospace;
+        }
+
+        .pt-mono-bold {
+            font-family: 'PT Mono', monospace;
+            font-weight: bold;
+        }
+        .bg-causa{
+            background-image: url('conocenos.jpg');
+        }
+        .manrope {
+            font-family: 'manrope', sans-serif;
+        }
+
+        .manrope-bold {
+            font-family: 'manrope-bold', sans-serif;
+        }
+
+        @media screen and (max-width: 770px) {
+            .padding-responsive {
+                padding: 1em;
+            }
+        }
+
+        @media screen and (max-width: 500px) {
+            .padding-responsive {
+                padding: .4em;
+            }
+            .w-60{
+                width: 90%;
+            }
+            .margenes{
+                 margin-top:.5em; 
+                 margin-left: 5%; margin-right: 5%;
+            }
+        }
+        #tabla_productos, td, th {
+            border: 1px solid gray;
+        }
+
+        #tabla_productos {
+            border-collapse: collapse;
+            border-color: gray;
+        }
+    </style>
+
+    <title>Pedido</title>
+  </head>
+  <body>
+
+    <!-- Inicio de Tabla del Header -->
+    <table align="center" cellpadding="0" cellspacing="0" class="w-100">
+        <tr>
+            <td>
+                <img src="https://despachate.com.mx/email-assets/bannerCupon.png" class="w-100" alt="Header de Mail">
+            </td>
+        </tr>
+    </table>
+    <!-- Final de Tabla del Header -->
+         
+
+    <!-- Inicio de Tabla del texto principal -->
+    <table align="center" cellpadding="0" cellspacing="0" class="w-60">
+        <tr>
+            <td>
+              <div style="margin-left:3%;">
+                 <h1 class="pt-mono-bold">¡HOLA <span style="color: #fb4a44;">{{user}}</span>!</h1>
+
+                <p class="text-left negro manrope">
+                   Gracias por comprar en <b class="morado"> Despachate</b></a>
+                </p>
+
+                <p class="text-left negro manrope">
+                Los detalles de tu compra se indican a continuación:
+                </p>
+              </div>
+            </td>
+        </tr>
+
+        <tr >
+            <td style=" border: 1px solid #000; ">
+                <div style="margin-left: 11%; margin-right: 11%; ">
+                   <h2>DETALLES DE COMPRA</h2>
+                   <p><b>Horario y fecha de entrega:</b> {{fecha}}</p>
+                   <p><b>Tipo de envio:</b> {{tipo}}</p>
+                   <p><b>Tu pedido será enviado a:</b> {{direccion}}</p>
+                   <p><b>Monto total:</b> ${{total}}</p>
+                   <p><b>Monto de donación:</b> ${{donacion}}</p>
+                   <p><b>Notas: </b>{{notas}}</p>
+
+                   <p><b>Saldo usado: </b>${{saldo_usado}}</p>
+                   <p><b>Saldo comprado: </b>${{saldo_comprado}}</p>
+                   <p><b>Correo de compra: </b>{{correo_saldo}}</p>
+
+                   <br>
+                   <table id="tabla_productos">
+                    <tr>
+                       <th>Nombre</th>
+                       <th>Paquete</th>
+                       <th>Precio</th>
+                       <th>Cantidad</th>
+                     </tr>
+                     {{#each productos}}
+                         <tr>
+                             <td>{{producto.nombre}}</td>
+                             <td>{{paquete.paquete}}</td>
+                             <td>${{paquete.precio}}</td>
+                             <td>{{cantidad}}</td>
+                         </tr>
+                     {{/each}}
+                    </table>
+                    <br />
+                    <table>
+                        <tr>
+                            <th>Cupones usados</th>
+                        </tr>
+                        {{#each cupones}}
+                            <tr>
+                                <td>{{cupon.codigo}}</td>
+                            </tr>
+                        {{/each}}
+                    </table>
+                    <br/>
+                    <br/>
+                   <a style="color: #fff;
+                    background-color: #fb4a44;
+                    padding: .5em .7em .5em .7em;
+                    border-radius: 25px;
+                    font-family: 'Manrope', sans-serif;
+                    font-weight: 700;" href="https://despachate.com.mx/tienda/miCuenta" target="_blanck">VER PEDIDO</a>
+
+                    <p>Se requiere una firma en el momento de la entrega.</p>
+
+                </div>
+                
+            </td>
+        </tr>
+
+    
+
+    </table>
+    <!-- Final de Tabla del texto principal -->
+
+
+
+     <table align="center" cellpadding="0" cellspacing="0" class="w-90">
+        
+        <tr >
+            <td style=" background-image: url('https://despachate.com.mx/email-assets/conocenos.jpg');    background-size:cover;
+  background-repeat: no-repeat; width: 100%;
+           height: 20em;">
+              
+              
+                <div class="margenes" style="padding:.8em; color: white; background-color: #00d2b8; border-radius: 10px; " >
+                    <h2>DESPÁCHATE CON <b>CAUSA</b></h2>
+                    <p>Sabemos que quieres cuidar de ti y de tu familia, y también sabemos que quieres cuidar de los que más lo necesitan, por eso en Despáchate cada vez que realizas tu compra, estás donando alimentos a personas necesitadas.</p>
+                    
+                    <p>Por cada compra que realices el 3% del total de tu compra se donará en kilos de arroz y frijol a personas necesitadas.</p>
+
+                    <!--<h3>HASTA HOY HAS DONDADO: $<b>donaciones</b></h3>-->
+                   
+                </div>
+              
+              
+            </td>
+        </tr>
+
+    </table>
+
+    <!-- Inicio de Tabla Pre-Footer -->
+    <table align="center" cellpadding="0" cellspacing="0" class="w-60">
+        <tr>
+            <td>
+                <img src="https://despachate.com.mx/email-assets/linea.png" class="w-100" alt="">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p class="text-left negro manrope">
+                    Para cualquier aclaración, duda o comentarios por favor comunicarse al <a style="color: #555;
+            font-family: 'manrope', sans-serif;" href="tel:2224570222">+521 222 457 0222</a> o escríbenos a nuestro correo electrónico <a href="mailto:hola@despachate.mx" style="color: #555;
+            font-family: 'manrope', sans-serif;">hola@despachate.mx</a>. Puedes consultar nuestro <a href="https://despachate.com.mx/tienda/terminos" target="_blanck" style="color: #555;
+            font-family: 'manrope', sans-serif;">términos y condiciones aquí</a>.
+                </p>
+
+                <p class="text-left negro manrope">
+                    Para mantenerte informado sobre nuestras ofertas y promociones <a href="https://despachate.com.mx/tienda/registrarse"> <u>suscribete aquí<u></a>.
+                </p>
+            </td>
+        </tr>
+    </table>
+    <!-- Final de Tabla Pre-Footer -->
+
+    <br><br>
+
+    <!-- Inicio de Tabla Footer -->
+    <table align="center" cellpadding="0" cellspacing="0" class="w-100 bg-footer">
+        <tr>
+            <td style="text-align: center;">
+                <img width="20" src="https://despachate.com.mx/email-assets/facebook-f-brands.png" style="padding: 0px .5em;">
+
+                <img width="30" src="https://despachate.com.mx/email-assets/instagram-brands.png" style="padding: 0px .5em;">
+            </td>
+        </tr>
+
+        <tr style="text-align: center;">
+            <td>
+                <a href="mailto:hola@despachate.com.mx" style="color: #fff;">
+                    <h3 class="pt-mono-bold">hola@despachate.com.mx</h3>
+                </a>
+            </td>
+        </tr>
+    </table>
+    <!-- Final de Tabla Footer -->
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

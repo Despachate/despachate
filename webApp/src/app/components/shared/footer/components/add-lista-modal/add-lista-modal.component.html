@@ -1,0 +1,104 @@
+<div
+  class="modal fade"
+  id="modalAddProductoLista"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="modalAddProductoListaTitle"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">
+          Agregar a mis listas
+        </h5>
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-12 col-md-12">
+            <form class="mt-3">
+              <div
+                class="row mt-3 d-md-block d-none"
+                *ngIf="!createLista; else crear"
+              >
+                <div
+                  class="d-flex align-items-center justify-content-between mb-3 px-3"
+                >
+                  <p for="dias" class="font-weight-bold mb-0">
+                    Selecciona una lista
+                  </p>
+                  <button
+                    (click)="toggleCreateLista()"
+                    class="btn btn-info rounded-0"
+                  >
+                    Crear lista de compras
+                  </button>
+                </div>
+                <select
+                  [(ngModel)]="lista_model"
+                  name="lista"
+                  id="lista"
+                  class="ml-3 uk-select"
+                  style="width: 94%"
+                >
+                  <option [value]="''">Seleccionar Lista</option>
+                  <option [value]="item.nombre" *ngFor="let item of listas">
+                    {{ item.nombre }}
+                  </option>
+                </select>
+              </div>
+              <ng-template #crear>
+                <div class="row mt-3 d-md-block d-none">
+                  <div
+                    class="d-flex align-items-center justify-content-between mb-3 px-3"
+                  >
+                    <p class="font-weight-bold mb-0">Crear lista</p>
+                    <button
+                      (click)="toggleCreateLista()"
+                      class="btn btn-info rounded-0"
+                    >
+                      Seleccionar lista de compras
+                    </button>
+                  </div>
+                  <input
+                    [(ngModel)]="new_lista"
+                    name="lista"
+                    id="lista"
+                    class="ml-3 uk-input"
+                    style="width: 94%"
+                    placeholder="Nombre de la lista"
+                  />
+                </div>
+              </ng-template>
+
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-danger rounded-0"
+                  data-dismiss="modal"
+                >
+                  Cancelar
+                </button>
+                <button
+                  type="button"
+                  class="btn bg-btnAzul rounded-0"
+                  (click)="agregarProductoALista()"
+                >
+                  {{ createLista ? "Crear y Guardar" : "Guardar" }}
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

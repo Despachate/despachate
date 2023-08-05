@@ -1,0 +1,1001 @@
+<!-- Content -->
+<div class="content">
+  <!-- Animated -->
+  <div class="animated fadeIn">
+    <div class="clearfix"></div>
+
+    <div class="orders">
+      <div class="row">
+        <div class="col">
+          <div class="card">
+            <div class="card-header text-dark">
+              <div class="d-block text-center">
+                <strong class="p-2 bd-highlight">Detalle de venta</strong>
+              </div>
+            </div>
+            <div class="card-body card-block collapse" id="header-form">
+              <form
+                ngNativeValidate
+                [formGroup]="form"
+                (ngSubmit)="add()"
+                class="form-horizontal"
+              >
+                <div class="row">
+                  <div class="col-12 col-md-6 col-sm-12 form-group">
+                    <div class="col">
+                      <label for="fechaCompra" class="form-control-label">
+                        Fecha de Compra
+                      </label>
+                    </div>
+                    <div class="col">
+                      <input
+                        formControlName="fechaCompra"
+                        required
+                        type="date"
+                        id="fechaCompra"
+                        name="fechaCompra"
+                        class="form-control"
+                      />
+                      <small class="form-text text-muted">
+                        Ejemplo:29/06/2020
+                      </small>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6 col-sm-12 form-group">
+                    <div class="col">
+                      <label for="fechaRecepcion" class="form-control-label">
+                        Fecha de Recepción
+                      </label>
+                    </div>
+                    <div class="col">
+                      <input
+                        formControlName="fechaRecepcion"
+                        required
+                        type="date"
+                        id="fechaRecepcion"
+                        name="fechaRecepcion"
+                        class="form-control"
+                      />
+                      <small class="form-text text-muted">
+                        Ejemplo:29/06/2020
+                      </small>
+                    </div>
+                  </div>
+
+                  <div class="col-12 col-md-6 col-sm-12 form-group">
+                    <div class="col">
+                      <label for="horarioRecepcion" class="form-control-label">
+                        Horario de recepción
+                      </label>
+                    </div>
+                    <div class="col">
+                      <select
+                        formControlName="horarioRecepcion"
+                        name="horarioRecepcion"
+                        id="horarioRecepcion"
+                        class="form-control"
+                      >
+                        <option value="null" selected>
+                          Selecciona un Horario de recepción
+                        </option>
+                        <option value="9:00AM - 11:00AM" selected>
+                          9:00AM - 11:00AM
+                        </option>
+                        <option value="11:00am-1:00pm" selected>
+                          11:00AM - 1:00PM
+                        </option>
+                        <option value="12:00PM - 3:00PM" selected>
+                          12:00PM - 3:00PM
+                        </option>
+                        <option value="1:00pm-3:00pm" selected>
+                          1:00PM - 3:00PM
+                        </option>
+                        <option value="3:00pm-4:00pm" selected>
+                          3:00PM - 4:00PM
+                        </option>
+                        <option value="4:00PM - 7:00PM" selected>
+                          4:00PM - 7:00PM
+                        </option>
+                        <option value="9:00am - 12:00pm" selected>
+                          9:00AM - 12:00PM
+                        </option>
+                        <option value="12:00pm - 4:00pm" selected>
+                          12:00AM - 4:00PM
+                        </option>
+                        <option value="4:00pm - 7:00pm" selected>
+                          4:00PM - 7:00PM
+                        </option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6 col-sm-12 form-group">
+                    <div class="col">
+                      <label for="precioTotal" class="form-control-label">
+                        Precio Total del Pedido
+                      </label>
+                    </div>
+                    <div class="col">
+                      <input
+                        formControlName="precioTotal"
+                        type="number"
+                        min="0"
+                        step="0.01"
+                        id="precioTotal"
+                        name="precioTotal"
+                        class="form-control"
+                      />
+                      <small class="form-text text-muted">
+                        Ejemplo: 1379.50
+                      </small>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6 col-sm-12 form-group">
+                    <div class="col">
+                      <label for="cantidadTotal" class="form-control-label">
+                        Cantidad Total de Productos
+                      </label>
+                    </div>
+                    <div class="col">
+                      <input
+                        formControlName="cantidadTotal"
+                        type="number"
+                        min="0"
+                        required
+                        id="cantidadTotal"
+                        name="cantidadTotal"
+                        placeholder="Introduce la cantidad Total de productos"
+                        class="form-control"
+                      />
+                      <small class="form-text text-muted">Ejemplo: 25</small>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6 col-sm-12 form-group">
+                    <div class="col">
+                      <label for="metodoPago" class="form-control-label">
+                        Método de Pago
+                      </label>
+                    </div>
+                    <div class="col">
+                      <select
+                        formControlName="metodoPago"
+                        name="metodoPago"
+                        id="metodoPago"
+                        class="form-control"
+                      >
+                        <option value="null" selected>
+                          Selecciona un Método Pago
+                        </option>
+                        <option value="Pago con PAYPAL" selected>
+                          Pago con PAYPAL
+                        </option>
+                        <option value="Pago con STRIPE" selected>
+                          Pago con STRIPE
+                        </option>
+                        <option value="Efectivo" selected>Efectivo</option>
+                        <option
+                          value="Vales de despensa o electrónicos"
+                          selected
+                        >
+                          Vales de despensa o electrónicos
+                        </option>
+                        <option value="Tarjeta de crédito" selected>
+                          Tarjeta de crédito
+                        </option>
+                        <option value="Tarjeta de débito" selected>
+                          Tarjeta de débito
+                        </option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6 col-sm-12 form-group">
+                    <div class="col">
+                      <label for="referenciaPago" class="form-control-label">
+                        Referencia
+                      </label>
+                    </div>
+                    <div class="col">
+                      <input
+                        formControlName="referenciaPago"
+                        minlength="1"
+                        maxlength="200"
+                        type="text"
+                        required
+                        id="referenciaPago"
+                        name="referenciaPago"
+                        placeholder="Introduce la Referencia de Pago"
+                        class="form-control"
+                      />
+                      <small class="form-text text-muted">
+                        Ejemplo: gfhdgd546
+                      </small>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6 col-sm-12 form-group">
+                    <div class="col">
+                      <label for="contacto" class="form-control-label">
+                        Contacto
+                      </label>
+                    </div>
+                    <div class="col">
+                      <input
+                        formControlName="contacto"
+                        type="text"
+                        id="contacto"
+                        name="contacto"
+                        class="form-control"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6 col-sm-12 form-group">
+                    <div class="col">
+                      <label for="formaContacto" class="form-control-label">
+                        Forma de Contacto
+                      </label>
+                    </div>
+                    <div class="col">
+                      <select
+                        formControlName="formaContacto"
+                        name="formaContacto"
+                        id="formaContacto"
+                        class="form-control"
+                      >
+                        <option value="null" selected>
+                          Selecciona un Método Pago
+                        </option>
+                        <option value="Ninguna" selected>Ninguna</option>
+                        <option value="Whatsapp" selected>Whatsapp</option>
+                        <option value="WhatsApp" selected>WhatsApp</option>
+                        <option value="Teléfono" selected>Teléfono</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6 col-sm-12 form-group">
+                    <div class="col">
+                      <label for="estatusPago" class="form-control-label">
+                        Estatus del Pago
+                      </label>
+                    </div>
+                    <div class="col">
+                      <select
+                        formControlName="estatusPago"
+                        name="estatusPago"
+                        id="estatusPago"
+                        class="form-control"
+                      >
+                        <option value="null" selected>
+                          Selecciona el estatus del Pago
+                        </option>
+                        <option value="Pendiente" selected>Pendiente</option>
+                        <option value="Pagado" selected>Pagado</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6 col-sm-12 form-group">
+                    <div class="col">
+                      <label for="estatusEnvio" class="form-control-label">
+                        Estatus del Envio
+                      </label>
+                    </div>
+                    <div class="col">
+                      <select
+                        formControlName="estatusEnvio"
+                        name="estatusEnvio"
+                        id="estatusEnvio"
+                        class="form-control"
+                      >
+                        <option value="null" selected>
+                          Selecciona el estatus de Envio
+                        </option>
+                        <option value="Pendiente" selected>Pendiente</option>
+                        <option value="En preparación" selected>
+                          En preparación
+                        </option>
+                        <option value="Enviado" selected>Enviado</option>
+                        <option value="Recibido" selected>Recibido</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6 col-sm-12 form-group">
+                    <div class="col">
+                      <label for="direccion" class="form-control-label">
+                        Dirección de Envio
+                      </label>
+                    </div>
+                    <div class="col">
+                      <input
+                        formControlName="direccion"
+                        minlength="1"
+                        maxlength="200"
+                        type="text"
+                        required
+                        id="direccion"
+                        name="direccion"
+                        placeholder="Introduce la dirección envio"
+                        class="form-control"
+                      />
+                      <small class="form-text text-muted">
+                        Ejemplo: Calle Salvador Urrutia #345
+                      </small>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6 col-sm-12 form-group">
+                    <div class="col">
+                      <label for="cupon" class="form-control-label">
+                        Cupon
+                      </label>
+                    </div>
+                    <div class="col">
+                      <input
+                        formControlName="cupon"
+                        type="text"
+                        minlength="4"
+                        maxlength="50"
+                        required
+                        id="cupon"
+                        name="cupon"
+                        placeholder="Introduce el cupon"
+                        class="form-control"
+                      />
+                      <small class="form-text text-muted">Ejemplo: F45TY</small>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6 col-sm-12 form-group">
+                    <div class="col">
+                      <label for="usuario" class="form-control-label">
+                        Usuario
+                      </label>
+                    </div>
+                    <div class="col">
+                      <input
+                        formControlName="usuario"
+                        type="text"
+                        minlength="1"
+                        maxlength="200"
+                        required
+                        id="usuario"
+                        name="usuario"
+                        placeholder="Introduce el nombre del usuario"
+                        class="form-control"
+                      />
+                      <small class="form-text text-muted">
+                        Ejemplo: Juan López
+                      </small>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6 col-sm-12 form-group">
+                    <div class="col">
+                      <label for="telefono" class="form-control-label">
+                        Telefono
+                      </label>
+                    </div>
+                    <div class="col">
+                      <input
+                        formControlName="telefono"
+                        required
+                        type="text"
+                        id="telefono"
+                        name="telefono"
+                        class="form-control"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6 col-sm-12 form-group">
+                    <div class="col">
+                      <label for="empaque" class="form-control-label">
+                        Tipo de Empaque
+                      </label>
+                    </div>
+                    <div class="col">
+                      <select
+                        formControlName="empaque"
+                        name="empaque"
+                        id="empaque"
+                        class="form-control"
+                      >
+                        <option value="null" selected>
+                          Selecciona el Tipo de Empaque
+                        </option>
+                        <option value="Tela" selected>Tela</option>
+                        <option value="Papel" selected>Papel</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6 col-sm-12 form-group">
+                    <div class="col">
+                      <label for="cantidadEmpaque" class="form-control-label">
+                        Cantidad de empaques
+                      </label>
+                    </div>
+                    <div class="col">
+                      <input
+                        formControlName="cantidadEmpaque"
+                        type="number"
+                        required
+                        id="cantidadEmpaque"
+                        name="cantidadEmpaque"
+                        placeholder="Introduce el nombre del usuario"
+                        class="form-control"
+                      />
+                      <small class="form-text text-muted">Ejemplo: 1</small>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6 col-sm-12 form-group">
+                    <div class="col">
+                      <label for="precioEmpaques" class="form-control-label">
+                        Precio de empaques
+                      </label>
+                    </div>
+                    <div class="col">
+                      <input
+                        formControlName="precioEmpaques"
+                        type="number"
+                        required
+                        id="precioEmpaques"
+                        name="precioEmpaques"
+                        placeholder="Introduce el nombre del usuario"
+                        class="form-control"
+                      />
+                      <small class="form-text text-muted">Ejemplo: 1</small>
+                    </div>
+                  </div>
+                  <div class="col-12 form-group">
+                    <div class="col">
+                      <label for="comentario" class="form-control-label">
+                        Comentarios
+                      </label>
+                    </div>
+                    <div class="col">
+                      <textarea
+                        class="form-control"
+                        formControlName="comentario"
+                        name="comentario"
+                        id="comentario"
+                        cols="30"
+                        rows="3"
+                      ></textarea>
+                      <small class="form-text text-muted">
+                        Ejemplo: Tocar el timbre número 2
+                      </small>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 form-group">
+                  <div class="col">
+                    <h3>Detalle de saldos</h3>
+                    <p>
+                      <span>Saldo Comprado:</span>
+                      <span>{{ venta?.saldo_comprado | currency }}</span>
+                    </p>
+                    <p>
+                      <span>Saldo Agregado:</span>
+                      <span>{{ venta?.saldo_agregado ? 'Si' : 'No' }}</span>
+                    </p>
+                    <p>
+                      <span>Saldo Usado:</span>
+                      <span>{{ venta?.saldo_usado | currency }}</span>
+                    </p>
+                    <p>
+                      <span>Saldo Descontado:</span>
+                      <span>{{ venta?.saldo_descontado ? 'Si' : 'No' }}</span>
+                    </p>
+                    <p>
+                      <span>Cuenta:</span>
+                      <span>{{ venta?.correo_saldo }}</span>
+                    </p>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col">
+                    <button
+                      type="button"
+                      class="btn btn-danger btn-block"
+                      (click)="limpiarCampos()"
+                    >
+                      Cancelar
+                    </button>
+                  </div>
+                  <div class="col">
+                    <button
+                      type="submit"
+                      class="btn btn-primary btn-block"
+                      [hidden]="hidden"
+                    >
+                      Registrar
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="clearfix"></div>
+          <div class="card p-3">
+            <div class="card-body">
+              <h4 class="box-title">Ventas</h4>
+            </div>
+            <div class="card-body">
+              <div class="">
+                <div class="d-flex align-items-center overflow-auto">
+                  <button
+                    class="btn btn-sm btn-success"
+                    (click)="generateExcel()"
+                  >
+                    Excel
+                  </button>
+                  <button
+                    class="btn btn-primary"
+                    [ngClass]="{
+                      'btn-md': pagina == _pagina,
+                      'btn-sm': pagina != _pagina
+                    }"
+                    *ngFor="let _pagina of obtenerPaginas()"
+                    (click)="changePage(_pagina)"
+                  >
+                    {{ _pagina }}
+                  </button>
+                </div>
+                <div>
+                  <input
+                    type="search"
+                    name="search"
+                    class="form-control"
+                    [(ngModel)]="search"
+                    (keyup.enter)="consultarDatos()"
+                  />
+                </div>
+                <div class="table-responsive">
+                  <!-- datatable
+                  [dtOptions]="dtOptions"
+                  [dtTrigger]="dtTrigger" -->
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th class="serial">#</th>
+                        <th
+                          class="text-nowrap text-capitalize"
+                          (click)="changeOrder('fechaCompra')"
+                        >
+                          <span
+                            class="d-flex align-items-center"
+                            [style.cursor]="'pointer'"
+                          >
+                            Fecha de Compra
+                            <small
+                              class="material-icons"
+                              *ngIf="order_by == 'fechaCompra'"
+                            >
+                              {{
+                                order_direction == -1
+                                  ? 'arrow_downward'
+                                  : 'arrow_upward'
+                              }}
+                            </small>
+                          </span>
+                        </th>
+                        <th
+                          class="text-nowrap text-capitalize"
+                          (click)="changeOrder('fechaRecepcion')"
+                        >
+                          <span
+                            class="d-flex align-items-center"
+                            [style.cursor]="'pointer'"
+                          >
+                            Fecha Recepcion
+                            <small
+                              class="material-icons"
+                              *ngIf="order_by == 'fechaRecepcion'"
+                            >
+                              {{
+                                order_direction == -1
+                                  ? 'arrow_downward'
+                                  : 'arrow_upward'
+                              }}
+                            </small>
+                          </span>
+                        </th>
+                        <th
+                          class="text-nowrap text-capitalize"
+                          (click)="changeOrder('horarioRecepcion')"
+                        >
+                          <span
+                            class="d-flex align-items-center"
+                            [style.cursor]="'pointer'"
+                          >
+                            Horario Recepcion
+                            <small
+                              class="material-icons"
+                              *ngIf="order_by == 'horarioRecepcion'"
+                            >
+                              {{
+                                order_direction == -1
+                                  ? 'arrow_downward'
+                                  : 'arrow_upward'
+                              }}
+                            </small>
+                          </span>
+                        </th>
+                        <th
+                          class="text-nowrap text-capitalize"
+                          (click)="changeOrder('precioTotal')"
+                        >
+                          <span
+                            class="d-flex align-items-center"
+                            [style.cursor]="'pointer'"
+                          >
+                            Precio Total
+                            <small
+                              class="material-icons"
+                              *ngIf="order_by == 'precioTotal'"
+                            >
+                              {{
+                                order_direction == -1
+                                  ? 'arrow_downward'
+                                  : 'arrow_upward'
+                              }}
+                            </small>
+                          </span>
+                        </th>
+                        <th
+                          class="text-nowrap text-capitalize"
+                          (click)="changeOrder('cantidadTotal')"
+                        >
+                          <span
+                            class="d-flex align-items-center"
+                            [style.cursor]="'pointer'"
+                          >
+                            Cantidad Total
+                            <small
+                              class="material-icons"
+                              *ngIf="order_by == 'cantidadTotal'"
+                            >
+                              {{
+                                order_direction == -1
+                                  ? 'arrow_downward'
+                                  : 'arrow_upward'
+                              }}
+                            </small>
+                          </span>
+                        </th>
+                        <th
+                          class="text-nowrap text-capitalize"
+                          (click)="changeOrder('metodoPago')"
+                        >
+                          <span
+                            class="d-flex align-items-center"
+                            [style.cursor]="'pointer'"
+                          >
+                            Metodo Pago
+                            <small
+                              class="material-icons"
+                              *ngIf="order_by == 'metodoPago'"
+                            >
+                              {{
+                                order_direction == -1
+                                  ? 'arrow_downward'
+                                  : 'arrow_upward'
+                              }}
+                            </small>
+                          </span>
+                        </th>
+                        <th
+                          class="text-nowrap text-capitalize"
+                          (click)="changeOrder('referenciaPago')"
+                        >
+                          <span
+                            class="d-flex align-items-center"
+                            [style.cursor]="'pointer'"
+                          >
+                            Referencia Pago
+                            <small
+                              class="material-icons"
+                              *ngIf="order_by == 'referenciaPago'"
+                            >
+                              {{
+                                order_direction == -1
+                                  ? 'arrow_downward'
+                                  : 'arrow_upward'
+                              }}
+                            </small>
+                          </span>
+                        </th>
+                        <th
+                          class="text-nowrap text-capitalize"
+                          (click)="changeOrder('contacto')"
+                        >
+                          <span
+                            class="d-flex align-items-center"
+                            [style.cursor]="'pointer'"
+                          >
+                            Contacto
+                            <small
+                              class="material-icons"
+                              *ngIf="order_by == 'contacto'"
+                            >
+                              {{
+                                order_direction == -1
+                                  ? 'arrow_downward'
+                                  : 'arrow_upward'
+                              }}
+                            </small>
+                          </span>
+                        </th>
+                        <th
+                          class="text-nowrap text-capitalize"
+                          (click)="changeOrder('formaContacto')"
+                        >
+                          <span
+                            class="d-flex align-items-center"
+                            [style.cursor]="'pointer'"
+                          >
+                            Forma Contacto
+                            <small
+                              class="material-icons"
+                              *ngIf="order_by == 'formaContacto'"
+                            >
+                              {{
+                                order_direction == -1
+                                  ? 'arrow_downward'
+                                  : 'arrow_upward'
+                              }}
+                            </small>
+                          </span>
+                        </th>
+                        <th
+                          class="text-nowrap text-capitalize"
+                          (click)="changeOrder('estatusPago')"
+                        >
+                          <span
+                            class="d-flex align-items-center"
+                            [style.cursor]="'pointer'"
+                          >
+                            Estatus Pago
+                            <small
+                              class="material-icons"
+                              *ngIf="order_by == 'estatusPago'"
+                            >
+                              {{
+                                order_direction == -1
+                                  ? 'arrow_downward'
+                                  : 'arrow_upward'
+                              }}
+                            </small>
+                          </span>
+                        </th>
+                        <th
+                          class="text-nowrap text-capitalize"
+                          (click)="changeOrder('estatusEnvio')"
+                        >
+                          <span
+                            class="d-flex align-items-center"
+                            [style.cursor]="'pointer'"
+                          >
+                            Estatus Envio
+                            <small
+                              class="material-icons"
+                              *ngIf="order_by == 'estatusEnvio'"
+                            >
+                              {{
+                                order_direction == -1
+                                  ? 'arrow_downward'
+                                  : 'arrow_upward'
+                              }}
+                            </small>
+                          </span>
+                        </th>
+                        <th class="text-nowrap text-capitalize d-none">
+                          Direccion
+                        </th>
+                        <th class="text-nowrap text-capitalize">Cupon</th>
+                        <th class="text-nowrap text-capitalize">Usuario</th>
+                        <th class="text-nowrap text-capitalize">Empaque</th>
+                        <th class="text-nowrap text-capitalize">
+                          Cantidad Empaque
+                        </th>
+                        <th class="text-nowrap text-capitalize">Donacion</th>
+                        <th class="text-nowrap text-capitalize d-none">
+                          Productos
+                        </th>
+                        <th
+                          class="text-nowrap text-capitalize"
+                          style="
+                            position: sticky;
+                            right: 0;
+                            background-color: white;
+                          "
+                        >
+                          Opciones
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr *ngFor="let item of lista; let i = index">
+                        <td class="serial">{{ i + 1 }}</td>
+                        <td class="text-nowrap">
+                          {{ item.fechaCompra.split('T')[0] }}
+                        </td>
+                        <td class="text-nowrap">
+                          {{ item.fechaRecepcion.split('T')[0] }}
+                        </td>
+                        <td class="text-nowrap">{{ item.horarioRecepcion }}</td>
+                        <td class="text-nowrap">{{ item.precioTotal }}</td>
+                        <td class="text-nowrap">{{ item.cantidadTotal }}</td>
+                        <td class="text-nowrap">{{ item.metodoPago }}</td>
+                        <td class="text-nowrap">{{ item.referenciaPago }}</td>
+                        <td class="text-nowrap">
+                          {{ item.contacto ? 'Si' : 'No' }}
+                        </td>
+                        <td class="text-nowrap">{{ item.formaContacto }}</td>
+                        <td class="text-nowrap">{{ item.estatusPago }}</td>
+                        <td class="text-nowrap">{{ item.estatusEnvio }}</td>
+                        <td class="d-none">
+                          <ul *ngIf="item.direccion != null">
+                            <li class="text-nowrap">
+                              <span class="text-capitalize">Nombre:</span>
+                              {{ item.direccion.nombre }}
+                            </li>
+                            <li class="text-nowrap">
+                              <span class="text-capitalize">Apellidos:</span>
+                              {{ item.direccion.apellidos }}
+                            </li>
+                            <li class="text-nowrap">
+                              <span class="text-capitalize">Calle:</span>
+                              {{ item.direccion.calle }}
+                            </li>
+                            <li class="text-nowrap">
+                              <span class="text-capitalize">
+                                Numero interior:
+                              </span>
+                              {{ item.direccion.numeroInterior }}
+                            </li>
+                            <li class="text-nowrap">
+                              <span class="text-capitalize">Referencia:</span>
+                              {{ item.direccion.referencia }}
+                            </li>
+                            <li class="text-nowrap">
+                              <span class="text-capitalize">
+                                Codigo postal:
+                              </span>
+                              {{ item.direccion.codigoPostal }}
+                            </li>
+                            <li class="text-nowrap">
+                              <span class="text-capitalize">Colonia:</span>
+                              {{
+                                item.direccion.colonia
+                                  ? item.direccion.colonia
+                                  : 'No introducido'
+                              }}
+                            </li>
+                          </ul>
+                        </td>
+                        <td>{{ item.cupon ? item.cupon.codigo : '' }}</td>
+                        <td>
+                          <ul *ngIf="item.usuario != null">
+                            <li class="text-nowrap">
+                              <span class="text-capitalize">Nombre:</span>
+                              {{ item.usuario.nombre }}
+                            </li>
+                            <li class="text-nowrap">
+                              <span class="text-capitalize">Email:</span>
+                              {{ item.usuario.email }}
+                            </li>
+                            <li class="text-nowrap">
+                              <span class="text-capitalize">Telefono:</span>
+                              {{
+                                item.usuario.telefono
+                                  ? item.usuario.telefono
+                                  : 'No introducido'
+                              }}
+                            </li>
+                          </ul>
+                          <span *ngIf="item.usuario == null">
+                            Usuario no encontrado
+                          </span>
+                        </td>
+                        <td>{{ item.empaque.tipoEmpaque }}</td>
+                        <td>{{ item.cantidadEmpaque }}</td>
+                        <td>{{ item.donacion }}</td>
+                        <td class="d-none">
+                          <ul>
+                            <li *ngFor="let detalle of item.productos">
+                              <p
+                                class="text-nowrap"
+                                *ngIf="detalle.producto != null"
+                              >
+                                <span>{{ detalle.producto.nombre }}</span>
+                                <span>{{ detalle.producto.sku }}</span>
+                                <span *ngIf="detalle.paquete != null">
+                                  {{ detalle.paquete.paquete }}
+                                </span>
+                                <span *ngIf="detalle.paquete == null">
+                                  Paquete no encontrado
+                                </span>
+                                <span>{{ detalle.cantidad }}</span>
+                                <span *ngIf="detalle.paquete != null">
+                                  ${{ detalle.paquete.precio }}
+                                </span>
+                                <span *ngIf="detalle.paquete == null">
+                                  Paquete no encontrado
+                                </span>
+                                <span>${{ detalle.subtotal }}</span>
+                              </p>
+                              <span
+                                class="text-nowrap"
+                                *ngIf="detalle.producto == null"
+                              >
+                                Producto no encontrado
+                              </span>
+                            </li>
+                          </ul>
+                        </td>
+                        <td
+                          style="
+                            position: sticky;
+                            right: 0;
+                            background-color: white;
+                          "
+                        >
+                          <div class="row row-cols-3 row-cols-1">
+                            <button
+                              (click)="ver(i)"
+                              class="col text-nowrap btn btn-info"
+                              data-toggle="tooltip"
+                              data-placement="top"
+                              title="Ver"
+                            >
+                              Ver datos generales de la compra
+                            </button>
+                            <button
+                              (click)="update(i, true)"
+                              class="col text-nowrap btn btn-warning"
+                              data-toggle="tooltip"
+                              data-placement="top"
+                              title="Editar"
+                            >
+                              Editar
+                            </button>
+                            <button
+                              class="col text-nowrap btn btn-info"
+                              routerLink="/admin/pedidos/{{ item._id }}"
+                              data-toggle="tooltip"
+                              data-placement="top"
+                              title="Detalle Venta"
+                            >
+                              Ver todos los detalles de la compra
+                            </button>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="d-flex align-items-center overflow-auto">
+                  <button
+                    class="btn btn-sm btn-success"
+                    (click)="generateExcel()"
+                  >
+                    Excel
+                  </button>
+                  <button
+                    class="btn btn-primary"
+                    [ngClass]="{
+                      'btn-md': pagina == _pagina,
+                      'btn-sm': pagina != _pagina
+                    }"
+                    *ngFor="let _pagina of obtenerPaginas()"
+                    (click)="changePage(_pagina)"
+                  >
+                    {{ _pagina }}
+                  </button>
+                </div>
+              </div>
+              <!-- /.table-stats -->
+            </div>
+          </div>
+          <!-- /.card -->
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- .animated -->
+</div>
+<!-- /.content -->
+<div class="clearfix"></div>

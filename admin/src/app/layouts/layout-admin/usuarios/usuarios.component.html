@@ -1,0 +1,289 @@
+<div class="clearfix"></div>
+<div class="card p-3">
+  <div class="card-body text-center">
+    <h4 class="box-title">Usuarios</h4>
+  </div>
+  <div class="card-body">
+    <div class="">
+      <div class="table-responsive">
+        <table
+          datatable
+          [dtOptions]="dtOptions"
+          [dtTrigger]="dtTrigger"
+          class="table"
+        >
+          <thead>
+            <tr>
+              <th class="serial">#</th>
+              <th>Avatar</th>
+              <th>Nombre</th>
+              <th>Email</th>
+              <th>Teléfono</th>
+              <th class="text-nowrap">Conteo de uso de cupón</th>
+              <th>Opciones</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of lista; let i = index">
+              <td class="serial">{{ i + 1 }}</td>
+              <td>
+                <img
+                  [src]="url + item.img"
+                  class="img-thumbnail"
+                  width="100px"
+                  alt=""
+                  srcset=""
+                />
+              </td>
+              <td>
+                <span class="name" *ngIf="item.role === 'ADMIN_ROLE'">{{
+                  item.nombre
+                }}</span>
+                <a
+                  *ngIf="item.role !== 'ADMIN_ROLE'"
+                  href="javascript:void(0)"
+                  (click)="cambiarPassword(item._id, item.email)"
+                  >{{ item.nombre }}</a
+                >
+              </td>
+              <td>{{ item.email }}</td>
+              <td>{{ item.telefono }}</td>
+              <td>{{ item.contadorCupon }}</td>
+              <td>
+                <button
+                  type="button"
+                  (click)="agregarSaldo(item._id)"
+                  class="m-0 col m-md-3 btn btn-warning"
+                  title="Donar"
+                >
+                  Donar saldo
+                </button>
+                <button
+                  (click)="excelComprasSaldo(item._id)"
+                  class="col m-0 m-md-3 btn btn-info"
+                >
+                  Excel Compras Saldo
+                </button>
+                <button
+                  (click)="excelSaldoUsado(item._id)"
+                  class="col m-0 m-md-3 btn btn-info"
+                >
+                  Excel Saldo usado
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <!-- /.table-stats -->
+  </div>
+</div>
+<div class="card p-3">
+  <div class="card-body text-center">
+    <h4 class="box-title">Usuarios con suscripción activa</h4>
+  </div>
+  <div class="card-body">
+    <div class="">
+      <div class="table-responsive">
+        <table
+          datatable
+          [dtOptions]="dtOptions"
+          [dtTrigger]="dtTrigger"
+          class="table"
+        >
+          <thead>
+            <tr>
+              <th class="serial">#</th>
+              <th>Avatar</th>
+              <th>Nombre</th>
+              <th>Email</th>
+              <th>Teléfono</th>
+              <th>Fecha</th>
+              <th>Estado</th>
+              <th>Frecuencia</th>
+              <th>Opciones</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of suscripciones; let i = index">
+              <td class="serial">{{ i + 1 }}</td>
+              <td>
+                <img
+                  *ngIf="item.usuario != null"
+                  [src]="url + item.usuario.img"
+                  class="img-thumbnail"
+                  width="100px"
+                  alt=""
+                  srcset=""
+                />
+                <img
+                  *ngIf="item.usuario == null"
+                  [src]="url + 'noimage'"
+                  class="img-thumbnail"
+                  width="100px"
+                  alt=""
+                  srcset=""
+                />
+              </td>
+              <td>
+                <span *ngIf="item.usuario != null">{{
+                  item.usuario.nombre
+                }}</span>
+                <span *ngIf="item.usuario == null">Usuario no encontrado</span>
+              </td>
+              <td>
+                <span *ngIf="item.usuario != null">{{
+                  item.usuario.email
+                }}</span>
+                <span *ngIf="item.usuario == null">Usuario no encontrado</span>
+              </td>
+              <td>
+                <span *ngIf="item.usuario != null">{{
+                  item.usuario.telefono
+                }}</span>
+                <span *ngIf="item.usuario == null">Usuario no encontrado</span>
+              </td>
+              <td>
+                <span *ngIf="item.usuario != null">{{
+                  item.fecha | date
+                }}</span>
+                <span *ngIf="item.usuario == null">Usuario no encontrado</span>
+              </td>
+              <td>Activo</td>
+              <td class="text-capitalize">{{ item.frecuenciaEntrega }}</td>
+              <td>
+                <button
+                  (click)="verProdSus(item.usuario)"
+                  class="col m-0 m-md-3 btn btn-info"
+                >
+                  Productos Suscripción
+                </button>
+                <button
+                  (click)="agregarSaldo(item._id)"
+                  class="m-0 col m-md-3 btn btn-warning"
+                  title="Donar"
+                >
+                  Donar saldo
+                </button>
+                <button
+                  (click)="excelComprasSaldo(item.usuario)"
+                  class="col m-0 m-md-3 btn btn-info"
+                >
+                  Excel Compras Saldo
+                </button>
+                <button
+                  (click)="excelSaldoUsado(item.usuario)"
+                  class="col m-0 m-md-3 btn btn-info"
+                >
+                  Excel Saldo usado
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <!-- /.table-stats -->
+  </div>
+</div>
+<!-- /.card -->
+
+<!-- Modal productos Suscripción-->
+<div
+  class="modal fade"
+  id="mdlProductosSuscripcion"
+  data-backdrop="static"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="mdlProductos"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h5 class="modal-title text-center text-uppercase">
+          <strong
+            >Productos que se encuentran en la suscripción del usuario</strong
+          >
+        </h5>
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="row row-cols-md-3 row-cols-1" *ngIf="prodEncontrados">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">SKU</th>
+                <th scope="col">Cantidad</th>
+                <th scope="col">Paquete</th>
+                <th scope="col">Precio Unitario</th>
+                <th scope="col">Total</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let producto of Listaproductos; let i = index">
+                <td>{{ i + 1 }}</td>
+                <td>
+                  <span *ngIf="producto.producto != null">{{
+                    producto.producto.nombre
+                  }}</span
+                  ><span *ngIf="producto.producto == null"
+                    >Producto descartado por administración</span
+                  >
+                </td>
+                <td>
+                  <span *ngIf="producto.producto != null">{{
+                    producto.producto.sku
+                  }}</span
+                  ><span *ngIf="producto.producto == null"
+                    >Prducto descartado por administración</span
+                  >
+                </td>
+                <td>
+                  <span>{{ producto.cantidad }}</span>
+                </td>
+                <td>
+                  <span *ngIf="producto.paquete != null">{{
+                    producto.paquete.paquete
+                  }}</span
+                  ><span *ngIf="producto.paquete == null"
+                    >Paquete descartado por administración</span
+                  >
+                </td>
+                <td>
+                  <span *ngIf="producto.paquete != null">{{
+                    producto.paquete.precio
+                  }}</span
+                  ><span *ngIf="producto.paquete == null"
+                    >Paquete descartado por administración</span
+                  >
+                </td>
+                <td>
+                  <span>{{ producto.subtotal }}</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p *ngIf="!prodEncontrados" class="text-center mt-4">
+          No se encontraron productos en la suscripción del usuario
+        </p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">
+          Cerrar
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

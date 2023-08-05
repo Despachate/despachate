@@ -1,0 +1,223 @@
+<!-- Content -->
+<div class="content">
+  <!-- Animated -->
+  <div class="animated fadeIn">
+    <div class="clearfix"></div>
+
+    <div class="orders">
+      <div class="row">
+        <div class="col">
+          <div class="card">
+            <div
+              class="card-header hover btn-primary text-dark"
+              style="cursor: pointer"
+              data-toggle="collapse"
+              role="button"
+              data-target="#header-form"
+            >
+              <div class="d-block text-center">
+                <strong class="p-2 bd-highlight">Agregar Empresa</strong>
+              </div>
+            </div>
+            <div class="card-body card-block collapse show" id="header-form">
+              <form
+                ngNativeValidate
+                [formGroup]="form"
+                (ngSubmit)="add()"
+                class="form-horizontal"
+              >
+                <div class="row">
+                  <!-- nombre input text -->
+                  <div class="col-12 col-md-6 col-sm-12 form-group">
+                    <div class="col">
+                      <label for="order" class="form-control-label">
+                        Nombre
+                      </label>
+                    </div>
+                    <div class="col">
+                      <input
+                        formControlName="nombre"
+                        required
+                        type="text"
+                        id="nombre"
+                        name="nombre"
+                        placeholder="Introduce el nombre de la empresa"
+                        class="form-control"
+                      />
+                      <small class="form-text text-muted">
+                        Ejemplo: Empresa
+                      </small>
+                    </div>
+                  </div>
+
+                  <!-- direccion input text -->
+                  <div class="col-12 col-md-6 col-sm-12 form-group">
+                    <div class="col">
+                      <label for="direccion" class="form-control-label">
+                        Dirección
+                      </label>
+                    </div>
+                    <div class="col">
+                      <input
+                        formControlName="direccion"
+                        minlength="1"
+                        maxlength="200"
+                        required
+                        type="text"
+                        id="direccion"
+                        name="direccion"
+                        placeholder="Introduce la dirección"
+                        class="form-control"
+                      />
+                      <small class="form-text text-muted">
+                        Ejemplo: Calle Falsa 123
+                      </small>
+                    </div>
+                  </div>
+                  <!-- telefono input number -->
+                  <div class="col-12 col-md-6 col-sm-12 form-group">
+                    <div class="col">
+                      <label for="telefono" class="form-control-label">
+                        Teléfono
+                      </label>
+                    </div>
+                    <div class="col">
+                      <input
+                        formControlName="telefono"
+                        minlength="10"
+                        maxlength="10"
+                        required
+                        type="tel"
+                        id="telefono"
+                        name="telefono"
+                        placeholder="Introduce el teléfono"
+                        class="form-control"
+                      />
+                      <small class="form-text text-muted">
+                        Ejemplo: 123456789
+                      </small>
+                    </div>
+                  </div>
+                  <!-- email input email -->
+                  <div class="col-12 col-md-6 col-sm-12 form-group">
+                    <div class="col">
+                      <label for="email" class="form-control-label">
+                        Correo electrónico
+                      </label>
+                    </div>
+                    <div class="col">
+                      <input
+                        formControlName="email"
+                        minlength="1"
+                        maxlength="200"
+                        required
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Introduce el correo electrónico"
+                        class="form-control"
+                      />
+                      <small class="form-text text-muted">Ejemplo:</small>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col">
+                    <button
+                      type="button"
+                      class="btn btn-danger btn-block"
+                      (click)="limpiarCampos()"
+                    >
+                      Cancelar
+                    </button>
+                  </div>
+                  <div class="col">
+                    <button
+                      type="submit"
+                      class="btn btn-primary btn-block"
+                      [hidden]="hidden"
+                    >
+                      Registrar
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="clearfix"></div>
+          <div class="card p-3">
+            <div class="card-body">
+              <h4 class="box-title">Empresas</h4>
+            </div>
+            <div class="card-body">
+              <div class="">
+                <div class="table-responsive">
+                  <table
+                    datatable
+                    [dtOptions]="dtOptions"
+                    [dtTrigger]="dtTrigger"
+                    class="table"
+                  >
+                    <thead>
+                      <tr>
+                        <th>nombre</th>
+                        <th>direccion</th>
+                        <th>telefono</th>
+                        <th>email</th>
+                        <th></th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr *ngFor="let item of lista; let i = index">
+                        <td>{{ item.nombre }}</td>
+                        <td>{{ item.direccion }}</td>
+                        <td>{{ item.telefono }}</td>
+                        <td>{{ item.email }}</td>
+                        <td>
+                          <div class="row row-cols-3 row-cols-1">
+                            <button
+                              (click)="ver(i)"
+                              class="col m-0 m-md-3 btn btn-info"
+                              data-toggle="tooltip"
+                              data-placement="top"
+                              title="Ver"
+                            >
+                              <i class="fas fa-info"></i>
+                            </button>
+                            <button
+                              (click)="update(i, true)"
+                              class="col m-0 m-md-3 btn btn-warning"
+                              data-toggle="tooltip"
+                              data-placement="top"
+                              title="Editar"
+                            >
+                              <i class="fas fa-edit"></i>
+                            </button>
+                            <button
+                              (click)="delete(item._id)"
+                              class="col m-0 m-md-3 btn btn-danger"
+                              data-toggle="tooltip"
+                              data-placement="top"
+                              title="Eliminar"
+                            >
+                              <i class="fas fa-trash"></i>
+                            </button>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <!-- /.table-stats -->
+            </div>
+          </div>
+          <!-- /.card -->
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- .animated -->
+</div>
+<!-- /.content -->
+<div class="clearfix"></div>

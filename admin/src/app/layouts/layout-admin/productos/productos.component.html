@@ -1,0 +1,893 @@
+<!-- Content -->
+<div class="content">
+  <!-- Animated -->
+  <div class="animated fadeIn">
+    <div class="clearfix"></div>
+
+    <div class="orders">
+      <div class="row">
+        <div class="col">
+          <div class="text-center row btn btn-block btn-dark">
+            <h5>Subir excel</h5>
+            <div class="mx-auto col-6">
+              <input
+                (change)="seleccionExcel($event.target.files[0])"
+                type="file"
+                class="btn btn-primary btn-block"
+                name="excel"
+                id="excel"
+              />
+            </div>
+          </div>
+          <div class="text-center row btn btn-block btn-dark">
+            <h5>Generar excel</h5>
+            <div class="mx-auto col-6">
+              <button
+                class="btn btn-secondary btn-block"
+                (click)="generateExcel()"
+              >
+                Generar excel
+              </button>
+            </div>
+          </div>
+          <div class="card">
+            <div
+              class="card-header hover btn-primary text-dark"
+              style="cursor: pointer"
+              data-toggle="collapse"
+              role="button"
+              data-target="#header-form"
+            >
+              <div class="text-center d-block">
+                <strong class="p-2 bd-highlight">Agregar producto</strong>
+              </div>
+            </div>
+            <div class="card-body card-block collapse show" id="header-form">
+              <form
+                ngNativeValidate
+                [formGroup]="form"
+                (ngSubmit)="add()"
+                class="form-horizontal"
+              >
+                <div class="text-center row btn btn-block btn-dark">
+                  <h5>Subir imagen</h5>
+                  <div class="mx-auto col-8">
+                    <div class="mt-4 mb-4">
+                      <ul class="row">
+                        <li *ngIf="imagenTemp != null" class="text-center col">
+                          <div class="badge">
+                            <img [src]="imagenTemp" alt="" style="width: 50%" />
+                          </div>
+                        </li>
+                        <li *ngIf="imgEditar != ''" class="text-center col">
+                          <div class="badge">
+                            <img
+                              [src]="url + imgEditar"
+                              alt=""
+                              style="width: 50%"
+                            />
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="mx-auto col-6">
+                    <input
+                      (change)="seleccionImage($event.target.files[0])"
+                      type="file"
+                      class="btn btn-info btn-block"
+                      formControlName="img"
+                      name="img"
+                      id="img"
+                    />
+                    <!-- <label class="custom-file-label" for="inputGroupFile02" aria-describedby="inputGroupFileAddon02">Selecciona una imagen</label> -->
+                  </div>
+                </div>
+                <div class="row">
+                  <!-- <div class="col-12 col-md-12 col-sm-12">
+                                        <div class="p-2 text-center mt-md-4 form-group btn btn-block btn-info animation-on-hover">
+                                            <label for="img" class="text-light">Imagen</label>
+
+
+                                            <label class="custom-file-label" for="inputGroupFile02" aria-describedby="inputGroupFileAddon02">Selecciona una imagen</label>
+
+
+                                           
+
+
+                                        </div>
+                                    </div> -->
+                  <div class="col-12 col-md-6 col-sm-12 form-group">
+                    <div class="col">
+                      <label for="nombre" class="form-control-label"
+                        >Nombre</label
+                      >
+                    </div>
+                    <div class="col">
+                      <input
+                        formControlName="nombre"
+                        minlength="1"
+                        maxlength="200"
+                        required
+                        type="text"
+                        id="nombre"
+                        name="nombre"
+                        placeholder="Introduce el nombre del producto"
+                        class="form-control"
+                      />
+                      <small class="form-text text-muted"
+                        >Ejemplo: Coca Cola</small
+                      >
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6 col-sm-12 form-group">
+                    <div class="col">
+                      <label for="peso" class="form-control-label"
+                        >Peso del producto</label
+                      >
+                    </div>
+                    <div class="col">
+                      <input
+                        formControlName="peso"
+                        type="number"
+                        min="0"
+                        step="0.01"
+                        required
+                        id="peso"
+                        name="peso"
+                        placeholder="Introduc el peso del producto"
+                        class="form-control"
+                      />
+                      <small class="form-text text-muted">Ejemplo: 25</small>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6 col-sm-12 form-group">
+                    <div class="col">
+                      <label for="medida" class="form-control-label"
+                        >Medida del producto</label
+                      >
+                    </div>
+                    <div class="col">
+                      <input
+                        formControlName="medida"
+                        type="text"
+                        minlength="2"
+                        maxlength="50"
+                        required
+                        id="medida"
+                        name="medida"
+                        placeholder="Introduce las medida"
+                        class="form-control"
+                      />
+                      <small class="form-text text-muted">Ejemplo: GR</small>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6 col-sm-12 form-group">
+                    <div class="col">
+                      <label for="sku" class="form-control-label"
+                        >SKU del producto</label
+                      >
+                    </div>
+                    <div class="col">
+                      <input
+                        formControlName="sku"
+                        type="text"
+                        minlength="1"
+                        maxlength="100"
+                        required
+                        id="sku"
+                        name="sku"
+                        placeholder="Introduce el SKU"
+                        class="form-control"
+                      />
+                      <small class="form-text text-muted"
+                        >Ejemplo: SKU213112</small
+                      >
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6 col-sm-12 form-group">
+                    <div class="col">
+                      <label for="etiqueta" class="form-control-label"
+                        >Etiqueta del producto</label
+                      >
+                    </div>
+                    <div class="col">
+                      <input
+                        formControlName="etiqueta"
+                        type="text"
+                        minlength="1"
+                        maxlength="200"
+                        required
+                        id="etiqueta"
+                        name="etiqueta"
+                        placeholder="Introduce la etiqueta del producto"
+                        class="form-control"
+                      />
+                      <small class="form-text text-muted"
+                        >Ejemplo: Jabón para ropa blanca, Jabón para ropa de
+                        color, Detergente, Ace, Despensa a domicio,
+                        Supermercado,</small
+                      >
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6 col-sm-12 form-group">
+                    <div class="col">
+                      <label for="departamento" class="form-control-label"
+                        >Departamento</label
+                      >
+                    </div>
+                    <div class="col">
+                      <select
+                        formControlName="departamento"
+                        name="departamento"
+                        id="departamento"
+                        class="form-control"
+                        (change)="
+                          consultarCategorias(form.get('departamento').value)
+                        "
+                      >
+                        <option value="null" selected>
+                          Selecciona un Departamento
+                        </option>
+                        <option
+                          [value]="[item._id]"
+                          *ngFor="let item of listaDepartamentos"
+                        >
+                          {{ item.nombre }}
+                        </option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6 col-sm-12 form-group">
+                    <div class="col">
+                      <label for="categoria" class="form-control-label"
+                        >Categoria</label
+                      >
+                    </div>
+                    <div class="col">
+                      <select
+                        formControlName="categoria"
+                        name="categoria"
+                        id="categoria"
+                        class="form-control"
+                        (change)="
+                          consultarSubcategorias(form.get('categoria').value)
+                        "
+                      >
+                        <option value="null" selected>
+                          Selecciona un categoria
+                        </option>
+                        <option
+                          [value]="[item._id]"
+                          *ngFor="let item of listaCategorias"
+                        >
+                          {{ item.nombre }}
+                        </option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6 col-sm-12 form-group">
+                    <div class="col">
+                      <label for="subcategoria" class="form-control-label"
+                        >Subcategoria</label
+                      >
+                    </div>
+                    <div class="col">
+                      <select
+                        formControlName="subcategoria"
+                        name="subcategoria"
+                        id="subcategoria"
+                        class="form-control"
+                      >
+                        <option value="null" selected>
+                          Selecciona una subcategoria
+                        </option>
+                        <option
+                          [value]="[item._id]"
+                          *ngFor="let item of listaSubCategorias"
+                        >
+                          {{ item.nombre }}
+                        </option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6 col-sm-12 form-group">
+                    <div class="col">
+                      <label for="estiloVida" class="form-control-label"
+                        >Estilo de Vida</label
+                      >
+                    </div>
+                    <div class="col">
+                      <select
+                        formControlName="estiloVida"
+                        name="estiloVida"
+                        id="estiloVida"
+                        class="form-control"
+                      >
+                        <option value="null" selected>
+                          Selecciona un estilo de vida
+                        </option>
+                        <option value="Orgánico" selected>Orgánico</option>
+                        <option value="Vegano" selected>Vegano</option>
+                        <option value="Lo más local" selected>
+                          Lo más local
+                        </option>
+                        <option value="Comercio justo" selected>
+                          Comercio justo
+                        </option>
+                        <option value="Granel" selected>Granel</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="col col-md-12 col-sm-12 form-group">
+                    <div class="col">
+                      <label for="resumenBreve" class="form-control-label"
+                        >Descripción breve del producto</label
+                      >
+                    </div>
+                    <div class="col">
+                      <textarea
+                        formControlName="resumenBreve"
+                        requiered
+                        type="text"
+                        id="resumenBreve"
+                        name="resumenBreve"
+                        placeholder="Introduce la descripción del producto"
+                        class="form-control"
+                      ></textarea>
+                      <small class="form-text text-muted"
+                        >Ejemplo: Bebida refrescante muy deliciosa</small
+                      >
+                    </div>
+                  </div>
+                  <div class="col col-md-12 col-sm-12 form-group">
+                    <div class="col">
+                      <label for="descripcion" class="form-control-label"
+                        >Descripción del producto</label
+                      >
+                    </div>
+                    <div class="col">
+                      <textarea
+                        formControlName="descripcion"
+                        minlength="4"
+                        maxlength="1000"
+                        requiered
+                        type="text"
+                        id="descripcion"
+                        name="descripcion"
+                        placeholder="Introduce la descripción del producto"
+                        class="form-control"
+                      ></textarea>
+                      <small class="form-text text-muted"
+                        >Ejemplo: Bebida refrescante muy deliciosa</small
+                      >
+                    </div>
+                  </div>
+
+                  <div class="col-12 col-md-6 col-sm-12 form-group">
+                    <div class="col">
+                      <label for="status" class="form-control-label"
+                        >Status</label
+                      >
+                    </div>
+                    <div class="col">
+                      <select
+                        formControlName="status"
+                        name="status"
+                        id="status"
+                        class="form-control"
+                      >
+                        <option value="null" selected>
+                          Selecciona una opción
+                        </option>
+                        <option value="En stock" selected>En stock</option>
+                        <option value="Agotado" selected>Agotado</option>
+                        <option value="Oculto" selected>Oculto</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col">
+                    <button
+                      type="button"
+                      class="btn btn-danger btn-block"
+                      (click)="limpiarCampos()"
+                    >
+                      Cancelar
+                    </button>
+                  </div>
+                  <div class="col">
+                    <button
+                      type="submit"
+                      class="btn btn-primary btn-block"
+                      [hidden]="hidden"
+                    >
+                      Registrar
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="clearfix"></div>
+          <div class="p-3 card">
+            <div class="card-body">
+              <h4 class="box-title">
+                Productos
+                <div class="form-group">
+                  <label for="">Buscar</label>
+                  <input
+                    type="search"
+                    [(ngModel)]="params.search"
+                    class="form-control"
+                    name="search"
+                    placeholder="buscar"
+                    (change)="consultarDatos()"
+                  />
+                </div>
+              </h4>
+            </div>
+            <div class="card-body">
+              <div class="">
+                <div class="table-responsive">
+                  <!-- datatable
+                    [dtOptions]="dtOptions"
+                    [dtTrigger]="dtTrigger" -->
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th class="serial">#</th>
+                        <th
+                          class="d-flex"
+                          [style.cursor]="'pointer'"
+                          (click)="changeOrder('img')"
+                        >
+                          <span class="d-flex">
+                            Imagen
+                            <span
+                              *ngIf="
+                                params.order === 'img' &&
+                                params.order_direction === -1
+                              "
+                            >
+                              <i class="fas fa-arrow-up"></i>
+                            </span>
+                            <span
+                              *ngIf="
+                                params.order === 'img' &&
+                                params.order_direction === 1
+                              "
+                            >
+                              <i class="fas fa-arrow-down"></i>
+                            </span>
+                          </span>
+                        </th>
+                        <th
+                          [style.cursor]="'pointer'"
+                          (click)="changeOrder('nombre')"
+                        >
+                          <span class="d-flex">
+                            Producto
+                            <span
+                              *ngIf="
+                                params.order === 'nombre' &&
+                                params.order_direction === -1
+                              "
+                            >
+                              <i class="fas fa-arrow-up"></i>
+                            </span>
+                            <span
+                              *ngIf="
+                                params.order === 'nombre' &&
+                                params.order_direction === 1
+                              "
+                            >
+                              <i class="fas fa-arrow-down"></i>
+                            </span>
+                          </span>
+                        </th>
+                        <th
+                          [style.cursor]="'pointer'"
+                          (click)="changeOrder('sku')"
+                        >
+                          <span class="d-flex">
+                            SKU
+                            <span
+                              *ngIf="
+                                params.order === 'sku' &&
+                                params.order_direction === -1
+                              "
+                            >
+                              <i class="fas fa-arrow-up"></i>
+                            </span>
+                            <span
+                              *ngIf="
+                                params.order === 'sku' &&
+                                params.order_direction === 1
+                              "
+                            >
+                              <i class="fas fa-arrow-down"></i>
+                            </span>
+                          </span>
+                        </th>
+                        <th
+                          [style.cursor]="'pointer'"
+                          (click)="changeOrder('departamento')"
+                        >
+                          <span class="d-flex">
+                            Departamento
+                            <span
+                              *ngIf="
+                                params.order === 'departamento' &&
+                                params.order_direction === -1
+                              "
+                            >
+                              <i class="fas fa-arrow-up"></i>
+                            </span>
+                            <span
+                              *ngIf="
+                                params.order === 'departamento' &&
+                                params.order_direction === 1
+                              "
+                            >
+                              <i class="fas fa-arrow-down"></i>
+                            </span>
+                          </span>
+                        </th>
+                        <th
+                          [style.cursor]="'pointer'"
+                          (click)="changeOrder('descripcion')"
+                        >
+                          <span class="d-flex">
+                            Descripción
+                            <span
+                              *ngIf="
+                                params.order === 'descripcion' &&
+                                params.order_direction === -1
+                              "
+                            >
+                              <i class="fas fa-arrow-up"></i>
+                            </span>
+                            <span
+                              *ngIf="
+                                params.order === 'descripcion' &&
+                                params.order_direction === 1
+                              "
+                            >
+                              <i class="fas fa-arrow-down"></i>
+                            </span>
+                          </span>
+                        </th>
+                        <th
+                          [style.cursor]="'pointer'"
+                          (click)="changeOrder('status')"
+                        >
+                          <span class="d-flex">
+                            Status
+                            <span
+                              *ngIf="
+                                params.order === 'status' &&
+                                params.order_direction === -1
+                              "
+                            >
+                              <i class="fas fa-arrow-up"></i>
+                            </span>
+                            <span
+                              *ngIf="
+                                params.order === 'status' &&
+                                params.order_direction === 1
+                              "
+                            >
+                              <i class="fas fa-arrow-down"></i>
+                            </span>
+                          </span>
+                        </th>
+                        <th>Inventarios</th>
+                        <th
+                          [style]="{
+                            position: 'sticky',
+                            right: 0,
+                            background: '#fff'
+                          }"
+                        >
+                          Opciones
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr *ngFor="let item of lista; let i = index">
+                        <td class="serial">{{ i + 1 }}</td>
+                        <td>
+                          <img
+                            [src]="url + item.img"
+                            class="img-thumbnail"
+                            width="200px"
+                            alt=""
+                            srcset=""
+                          />
+                        </td>
+                        <td>{{ item.nombre }}</td>
+                        <td>{{ item.sku }}</td>
+                        <td>{{ item.departamento.nombre }}</td>
+                        <td
+                          style="
+                            white-space: nowrap;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            max-width: 200px;
+                          "
+                        >
+                          {{ item.descripcion }}
+                        </td>
+                        <td>{{ item.status }}</td>
+                        <td>
+                          <table class="table">
+                            <thead>
+                              <tr>
+                                <th>Paquete</th>
+                                <th>Stock</th>
+                                <th>Precio</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr *ngFor="let inventario of item.inventarios">
+                                <td scope="row">{{ inventario.paquete }}</td>
+                                <td>{{ inventario.stock }}</td>
+                                <td>{{ inventario.precio }}</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                          <!-- <ul>
+                            <li *ngFor="let inventario of item.inventarios">
+                              [<span
+                                >Paquete: {{ inventario.paquete }}----</span
+                              >
+                              <span>Stock: {{ inventario.stock }}----</span>
+                              <span>Precio: $ {{ inventario.precio }}</span
+                              >]
+                            </li>
+                          </ul> -->
+                        </td>
+                        <td
+                          [style]="{
+                            position: 'sticky',
+                            right: 0,
+                            background: '#fff'
+                          }"
+                        >
+                          <div class="row row-cols-3 row-cols-1">
+                            <button
+                              (click)="ver(i)"
+                              class="m-0 col m-md-3 btn btn-info"
+                              data-toggle="tooltip"
+                              data-placement="top"
+                              title="Ver"
+                            >
+                              Ver
+                            </button>
+                            <button
+                              (click)="update(i, true)"
+                              class="m-0 col m-md-3 btn btn-warning"
+                              data-toggle="tooltip"
+                              data-placement="top"
+                              title="Editar"
+                            >
+                              Editar
+                            </button>
+                            <button
+                              (click)="inventario(item._id)"
+                              class="m-0 col m-md-3 btn btn-success"
+                              data-toggle="tooltip"
+                              data-placement="top"
+                              title="Inventario"
+                            >
+                              Inventario
+                            </button>
+                            <button
+                              (click)="delete(item._id)"
+                              class="m-0 col m-md-3 btn btn-danger"
+                              data-toggle="tooltip"
+                              data-placement="top"
+                              title="Eliminar"
+                            >
+                              Eliminar
+                            </button>
+                            <button
+                              class="m-0 col m-md-3 btn btn-danger"
+                              data-toggle="tooltip"
+                              data-placement="top"
+                              title="Duplicar"
+                              (click)="duplicar(item._id)"
+                            >
+                              Duplicar
+                            </button>
+                            <button
+                              class="m-0 col m-md-3 btn"
+                              data-toggle="tooltip"
+                              data-placement="top"
+                              title="Ocultar"
+                              (click)="ocultar(item._id)"
+                            >
+                              Ocultar
+                            </button>
+
+                            <button
+                              class="m-0 col m-md-3 btn btn-success"
+                              data-toggle="tooltip"
+                              data-placement="top"
+                              type="button"
+                              title="Agrega a favoritos"
+                              *ngIf="item.es_favorito != 'si'"
+                              (click)="adm_favoritos(item._id)"
+                            >
+                              Agregar a favoritos
+                            </button>
+
+                            <button
+                              class="m-0 col m-md-3 btn btn-warning"
+                              data-toggle="tooltip"
+                              type="button"
+                              data-placement="top"
+                              *ngIf="item.es_favorito == 'si'"
+                              title="Quitar de favoritos"
+                              (click)="adm_favoritos(item._id)"
+                            >
+                              Quitar de favoritos
+                            </button>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <nav aria-label="Page navigation example">
+                  <ul class="pagination pg-blue">
+                    <li class="page-item">
+                      <a
+                        class="page-link"
+                        mdbWavesEffect
+                        [style.cursor]="'pointer'"
+                        (click)="cambiarpagina(1)"
+                      >
+                        <span aria-hidden="true">&laquo;</span>
+                      </a>
+                    </li>
+                    <li class="page-item" *ngIf="params.pagina != 1">
+                      <a
+                        class="page-link"
+                        mdbWavesEffect
+                        [style.cursor]="'pointer'"
+                        (click)="cambiarpagina(params.pagina - 1)"
+                      >
+                        <span aria-hidden="true">&lsaquo;</span>
+                      </a>
+                    </li>
+
+                    <li
+                      class="page-item"
+                      [ngClass]="{
+                        'bg-primary text-light': params.pagina == pagina
+                      }"
+                      *ngFor="let pagina of paginas; let index = index"
+                    >
+                      <a
+                        class="page-link"
+                        mdbWavesEffect
+                        [style.cursor]="'pointer'"
+                        (click)="cambiarpagina(pagina)"
+                        >{{ pagina }}</a
+                      >
+                    </li>
+                    <li class="page-item" *ngIf="params.pagina != last_page">
+                      <a
+                        class="page-link"
+                        mdbWavesEffect
+                        [style.cursor]="'pointer'"
+                        (click)="cambiarpagina(params.pagina + 1)"
+                      >
+                        <span aria-hidden="true">&rsaquo;</span>
+                      </a>
+                    </li>
+
+                    <li class="page-item">
+                      <a
+                        class="page-link"
+                        mdbWavesEffect
+                        [style.cursor]="'pointer'"
+                        (click)="cambiarpagina(last_page)"
+                      >
+                        <span aria-hidden="true">&raquo;</span>
+                      </a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+              <!-- /.table-stats -->
+            </div>
+          </div>
+          <!-- /.card -->
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- .animated -->
+</div>
+<!-- /.content -->
+<div class="clearfix"></div>
+
+<!-- Modal -->
+<div
+  class="modal fade"
+  id="excelTable"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="modelTitleId"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-xl" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Productos a ser registrados</h5>
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="table-responsive">
+          <table
+            datatable
+            [dtOptions]="dtOptions"
+            [dtTrigger]="dtTrigger"
+            class="table"
+          >
+            <thead>
+              <tr>
+                <th class="serial">#</th>
+                <th>Imagen</th>
+                <th>Producto</th>
+                <th>Descripción</th>
+                <th>Departamento</th>
+                <th>Categoria</th>
+                <th>Subcategoria</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let item of listaExcel; let i = index">
+                <td class="serial">{{ i + 1 }}</td>
+                <td>
+                  <img
+                    [src]="url + item.img"
+                    class="img-thumbnail"
+                    width="200px"
+                    alt=""
+                    srcset=""
+                  />
+                </td>
+                <td>{{ item.nombre }}</td>
+                <td>{{ item.resumenBreve }}</td>
+                <td>{{ item.departamento }}</td>
+                <td>{{ item.categoria }}</td>
+                <td>{{ item.subcategoria }}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">
+          Close
+        </button>
+        <button (click)="excel()" type="button" class="btn btn-primary">
+          Save
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

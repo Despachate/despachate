@@ -1,0 +1,231 @@
+<div class="container-fluid degrablue mt-md-5 mt-2">
+  <div class="container shadow p-3 bg-white rounded">
+    <div class="row text-center">
+      <div class="col-12">
+        <a [routerLink]="['/home']" style="color: #8d8d8d" href="">Inicio/</a>
+        <a
+          [routerLink]="['/catalogo', idDpto._id, idCat._id, idSubCat._id]"
+          style="color: #8d8d8d"
+          href=""
+          >{{ idDpto.nombre }}/</a
+        >
+        <a
+          [routerLink]="['/catalogo', idDpto._id, idCat._id, idSubCat._id]"
+          style="color: #8d8d8d"
+          href=""
+          >{{ idCat.nombre }}/</a
+        >
+        <a
+          [routerLink]="['/catalogo', idDpto._id, idCat._id, idSubCat._id]"
+          style="color: #8d8d8d"
+          href=""
+          >{{ idSubCat.nombre }}</a
+        >
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6 col-12">
+        <button
+          class="posicion-botonLike"
+          (click)="favorito()"
+          *ngIf="!isFavorito"
+        >
+          <!-- <i [class]="class" ></i> -->
+          <i class="far fa-heart inclinacion-botonlike"></i>
+        </button>
+        <button
+          class="posicion-botonLike"
+          (click)="favorito()"
+          *ngIf="isFavorito"
+        >
+          <!-- <i [class]="class" ></i> -->
+          <i class="fas fa-heart text-danger inclinacion-botonlike"></i>
+        </button>
+        <div class="text-center d-md-block d-none" style="margin-top: 80px">
+          <img
+            [src]="url + producto.img"
+            id="img_01"
+            height="100px"
+            class="img-fluid"
+            alt=""
+            srcset=""
+          />
+        </div>
+        <div class="text-center d-md-none d-block">
+          <img
+            [src]="url + producto.img"
+            id="img_01"
+            height="100px"
+            class="img-fluid"
+            alt=""
+            srcset=""
+          />
+        </div>
+      </div>
+
+      <div class="col-md-5 col-12">
+        <div class="row">
+          <div class="col-12">
+            <h1 class="font-size-24">
+              <strong>{{ producto.nombre }}</strong>
+            </h1>
+          </div>
+          <div class="col-12">
+            <p>{{ producto.resumenBreve }}</p>
+          </div>
+          <div class="col-12">
+            <div class="row row-cols-md-2 row-cols-1 mb-1">
+              <div class="col text-center text-md-left">
+                <span class="" id="idPrecio">${{ _precio }}</span>
+                <span
+                  style="text-decoration: line-through"
+                  *ngIf="precioAnterior > 0"
+                  >${{ precioAnterior }}</span
+                >
+              </div>
+              <div class="col pl-md-5">
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <button
+                      class="btn btn-outline-secondary"
+                      (click)="cantidad(false)"
+                      type="button"
+                      id="button-addon1"
+                    >
+                      <i class="fas fa-minus"></i>
+                    </button>
+                  </div>
+                  <input
+                    type="number"
+                    [value]="_cantidad"
+                    disabled
+                    readonly
+                    class="form-control text-center"
+                    placeholder=""
+                    aria-label="Example text with button addon"
+                    aria-describedby="button-addon1"
+                  />
+                  <div class="input-group-append">
+                    <button
+                      class="btn btn-outline-secondary"
+                      (click)="cantidad(true)"
+                      type="button"
+                      id="button-addon1"
+                    >
+                      <i class="fas fa-plus"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- <div class="row mb-1">
+                            <input *ngFor="let paquete of paquetes" type="button" name="paquete" [(ngModel)]="_paquete" value="{{paquete._id}}">
+                        </div> -->
+          </div>
+          <div class="col-12">
+            <div class="row">
+              <div class="col-12 mb-3">
+                <div class="row row-cols-md-4 row-cols-2">
+                  <div
+                    *ngFor="let paquete of paquetes; let index = index"
+                    class="col"
+                  >
+                    <button
+                      (click)="seleccionPaquete(index)"
+                      [class]="
+                        _paquete._id === paquete._id
+                          ? 'btn rounded-0 btn-block btn-outline-dark mt-2 active'
+                          : 'btn rounded-0 btn-block btn-outline-dark mt-2'
+                      "
+                    >
+                      {{ paquete.paquete }}
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 d-flex flex-column">
+            <button
+              type="button"
+              class="mb-2 btn text-white"
+              style="background: red"
+              (click)="addCarrito()"
+            >
+              Añadir al carrito
+            </button>
+            <button
+              type="button"
+              class="btn text-white"
+              style="background: indigo"
+              (click)="addSuscripcion()"
+            >
+              Añadir a mi súper recurrente
+            </button>
+          </div>
+          <div class="col-12">
+            <p>
+              <strong>SKU: {{ producto.sku }}</strong>
+            </p>
+            <!-- <p><strong>Etiquetas:</strong></p>
+                        <p>{{producto.etiqueta}}</p> -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <div class="card">
+          <div
+            style="background-color: #00d2b8"
+            class="card-header text-white bg-btnAzul"
+          >
+            Descripción
+          </div>
+          <p class="descripcion card-body" #Descripcion></p>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <section class="container pt-3 pb-3 px-5 mb-5">
+          <div class="row align-items-center">
+            <div class="col-md-8 col-12">
+              <div class="monoBold" style="font-size: 32px !important">
+                TAMBIÉN TE PUEDE <span class="texto-rojo">INTERESAR </span>
+              </div>
+            </div>
+          </div>
+          <div class="row d-md-block d-none">
+            <div class="col-12">
+              <div
+                id="cvendido2"
+                class="owl-carousel owl-theme owl-rtl owl-loaded owl-drag"
+              >
+                <app-card-producto
+                  *ngFor="let producto of productosRelacionados"
+                  [producto]="producto"
+                ></app-card-producto>
+              </div>
+            </div>
+          </div>
+          <div class="row d-md-none d-block">
+            <div
+              *ngFor="let producto of productosRelacionados; let index = index"
+            >
+              <app-card-producto
+                *ngIf="3 >= index"
+                [producto]="producto"
+                [style]="'cardCatalogo'"
+              ></app-card-producto>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+  <br />
+  <br />
+  <br />
+</div>

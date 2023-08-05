@@ -1,0 +1,85 @@
+<div class="container-fluid degradoNaranja ">
+    <br>
+    <div class="container rounded" style="background: white;">
+        <div class="row">
+            <div class="col-md-10 col-12">
+                <h2 class="text-center mb-5">MIS <span class="texto-rojo"> DIRECCIONES</span> <br> DE <span class="texto-rojo"> ENTREGA</span></h2>
+                <div class="d-md-none d-block text-center monoRegular">
+                    <a class=" monoRegular" (click)="back()" style="text-decoration: none; color: black;"> <u><b>Regresar</b></u></a>
+                </div>
+                <p class="mb-0 monoRegular" style="font-size: 1em;"><strong>Agrega una nueva dirección</strong></p>
+                <p class="tamanioperfil monoRegular " style="color:gray">Tus datos serán tratados como lo indica <br> nuestro aviso de
+                    <a [routerLink]="['/','privacidad']"> <strong class="texto-negro"><u>PRIVACIDAD</u></strong> </a>
+                </p>
+            </div>
+            <div class="col-md-2 col-12 d-md-block d-none text-center">
+                <a (click)="back()" style="text-decoration: none; color: black;" class="monoRegular"> <u><strong>Regresar</strong></u></a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 ">
+                <form class="bt-5" ngNativeValidate [formGroup]="form" (ngSubmit)="altaDirecccion()">
+
+                    <div class="form-row d-flex">
+                        <div class="form-group col-md-6">
+
+                            <input type="text" formControlName="nombre" required minlength="1" maxlength="200" class="form-control shadow p-3 mb-5 bg-white rounded sin-borde" id="inputNombre" placeholder="Nombre">
+
+                            <input type="text" formControlName="calle" required minlength="1" maxlength="200" class="form-control shadow p-3 mb-5 bg-white rounded sin-borde" id="inputCalleNumero" placeholder="Calle y número">
+
+                            <input type="text" formControlName="colonia" required minlength="1" maxlength="200" class="form-control shadow p-3 mb-5 bg-white rounded sin-borde" id="inputColonia" placeholder="Colonia">
+
+                            <input type="text" formControlName="referencia" required minlength="1" maxlength="200" class="form-control shadow p-3 mb-5 bg-white rounded sin-borde" id="inputReferencia" placeholder="Referencía calle, piso etc.">
+
+                        </div>
+                        <div class="form-group col-md-6">
+
+                            <input type="text" formControlName="apellidos" required minlength="1" maxlength="200" class="form-control shadow p-3 mb-5 bg-white rounded sin-borde" id="inputApellidos" placeholder="Apellidos">
+
+                            <input type="text" formControlName="numeroInterior" class="form-control shadow p-3 mb-5 bg-white rounded sin-borde" id="inputNumeroInterior" placeholder="Número interior">
+
+                            <input type="text" formControlName="codigoPostal" required minlength="1" maxlength="5" pattern="[0-9]{5,5}" class="form-control shadow p-3 mb-5 bg-white rounded sin-borde" id="inputCodigoPostal" placeholder="Código postal">
+
+                            <input type="tel" [hidden]="!!form.value.telefono" formControlName="telefono" required minlength="10"  class="form-control shadow p-3 mb-5 bg-white rounded sin-borde" id="inputTelefono" placeholder="Teléfono">
+                        </div>
+
+                        <div class="mb-5">
+                            <button type="submit" class="btn bg-naranja text-white">CONFIRMAR INFORMACIÓN</button>
+                        </div>
+                    </div>
+                    <!--                     <div class="d-md-none ml-5">
+                        <div class="row">
+                            <input type="text" formControlName="nombre" required minlength="4" maxlength="200" class="form-control shadow p-3 mb-3 bg-white rounded sin-borde" id="inputNombre" placeholder="Nombre">
+                        </div>
+                        <div class="row">
+                            <input type="text" formControlName="apellidos" required minlength="4" maxlength="200" class="form-control shadow p-3 mb-3 bg-white rounded sin-borde" id="inputApellidos" placeholder="Apellidos">
+                        </div>
+                        <div class="row">
+                            <input type="text" formControlName="calle" required minlength="10" maxlength="200" class="form-control shadow p-3 mb-3 bg-white rounded sin-borde" id="inputCalleNumero" placeholder="Calle y número">
+                        </div>
+                        <div class="row">
+                            <input type="text" formControlName="numeroInterior" class="form-control shadow p-3 mb-3 bg-white rounded sin-borde" id="inputNumeroInterior" placeholder="Número interior">
+                        </div>
+                        <div class="row">
+                            <input type="text" formControlName="referencia" required minlength="10" maxlength="200" class="form-control shadow p-3 mb-3 bg-white rounded sin-borde" id="inputReferencia" placeholder="Refrencía calle, piso etc.">
+                        </div>
+                        <div class="row">
+                            <input type="text" formControlName="codigoPostal" required minlength="5" maxlength="5" pattern="[0-9]{5,5}" class="form-control shadow p-3 mb-3 bg-white rounded sin-borde" id="inputCodigoPostal" placeholder="Código postal">
+                        </div>
+
+                        <div class="mb-5 mt-2">
+                            <button type="submit" class="btn bg-naranja text-white ">CONFIRMAR INFORMACIÓN</button>
+                        </div>
+                    </div> -->
+
+                </form>
+
+            </div>
+
+
+
+        </div>
+
+    </div>
+    <br>
+</div>

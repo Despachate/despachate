@@ -1,0 +1,53 @@
+<div class="container-fluid degradoNaranja ">
+    <br>
+    <div class="container rounded bg-blanco mt-4">
+        <div class="row">
+            <div class="col-12 col-md-10 text-center">
+                <h2 class="text-center mb-5">MI <span class="texto-rojo">PERFIL</span></h2>
+                <div class="d-md-none d-block text-center mb-3">
+                    <a (click)="back()" style="text-decoration: none; color: black;"> <u><strong>Regresar</strong></u></a>
+                </div>
+            </div>
+            <div class="col-md-2 col-12 d-md-block d-none text-center">
+                <a class="monoRegular" (click)="back()" style="text-decoration: none; color: black;"> <u><strong>Regresar</strong></u></a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-md-10 ">
+                <form class="bt-5 p-md-3" ngNativeValidate [formGroup]="form" (ngSubmit)="actualizarDatos()">
+                    <p style="font-size: 1em;" class="monoBold mb-0 text-center text-md-left"><strong class="monoBold">Actualiza tus datos personales</strong></p>
+                    <p style="font-size:0.7em; color:gray;" class="monoRegular text-center text-md-left">Tus datos serán tratados como lo indica <br> nuestro aviso de
+                        <a [routerLink]="['/','privacidad']"> <strong class="texto-negro"> <u> PRIVACIDAD</u></strong> </a>
+                    </p>
+                    <div class="form-row text-center text-md-left">
+                        <div class="form-group col-md-6">
+                            <img [src]="urlUser+imgEditar" class="redo" alt="" srcset="">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-12">
+                            <input type="text" formControlName="nombre" required minlength="8" maxlength="200" class="form-control shadow p-3 mb-5 bg-white rounded sin-borde" id="inputNombre" placeholder="Nombre y apellidos">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <input type="email" formControlName="email" required class="form-control shadow p-3 mb-5 bg-white rounded sin-borde" id="inputEmail" placeholder="E-mail">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <input type="tel" formControlName="telefono" required minlength="10" maxlength="10" pattern="[0-9]{10,10}" class="form-control shadow p-3 mb-5 bg-white rounded sin-borde" id="inputTelefono" placeholder="Telefono">
+                        </div>
+                        <div class="form-group col-md-12">
+                            <div class="mb-5 todos">
+                                <button type="submit" class="btn bg-naranja text-white d-flex-end">CONFIRMAR INFORMACIÓN</button>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+    <br>
+</div>

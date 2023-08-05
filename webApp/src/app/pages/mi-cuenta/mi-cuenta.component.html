@@ -1,0 +1,890 @@
+<div class="container-fluid degradoNaranja">
+  <br />
+
+  <div
+    class="container rounded shadow p-3 mb-5 bg-white rounded bg-blanco"
+    *ngFor="let dato of datosUsuario"
+  >
+    <div class="row">
+      <div
+        class="col-12 col-md-4 mb-3 text-center"
+        style="display: flex; flex-direction: column"
+      >
+        <div class="text-center">
+          <div uk-form-custom>
+            <input
+              type="file"
+              (change)="seleccionImage($event.target.files[0])"
+            />
+            <button type="button" class="btn border rounded-circle p-0">
+              <img [src]="urlUser + imgEditar" class="redo" alt="" srcset="" />
+            </button>
+          </div>
+        </div>
+        <label for="" class="monoRegular">
+          <strong>!Hola {{ dato.nombre }}¡</strong>
+        </label>
+        <label for="" class="monoRegular">Te registraste en:</label>
+        <label for="">
+          {{
+            dato.fechaRegistro != null ? dato.fechaRegistro.split("T")[0] : ""
+          }}
+        </label>
+      </div>
+
+      <div class="col-12 col-md-4 text-center">
+        <h2 for="">MI <span class="texto-rojo"> CUENTA </span></h2>
+      </div>
+      <div class="col-12 col-md-4 text-center">
+        <a (click)="cerrarSesion()" class="texto-negro monoRegular"
+          ><u><strong>Cerrar sesión</strong></u></a
+        >
+      </div>
+    </div>
+
+    <div class="row pt-3 pt-md-0">
+      <div class="col-12 col-md-6 mb-2">
+        <div class="card">
+          <div class="card-body">
+            <div class="d-flex justify-content-between">
+              <h4 class="card-title"><b>MI PERFIL</b></h4>
+              <a
+                [routerLink]="['/', 'miPerfil']"
+                class="texto-negro monoRegular"
+              >
+                <u> <strong> Administrar </strong></u>
+              </a>
+            </div>
+
+            <div class="d-flex flex-column">
+              <label for="" class="monoRegular"
+                ><b>Nombre</b>: {{ dato.nombre }}</label
+              >
+              <label for="" class="monoRegular"
+                ><b>Correo electrónico</b>: {{ dato.email }}</label
+              >
+              <label for="" class="monoRegular"
+                ><b>Teléfono</b>: {{ dato.telefono }}</label
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-6">
+        <div class="card mb-3 pb-5">
+          <div class="card-body">
+            <div class="d-flex justify-content-between">
+              <h4 class="card-title"><b>CONTRASEÑA</b></h4>
+              <a
+                data-toggle="modal"
+                data-target="#mdlPassword"
+                class="texto-negro monoRegular"
+              >
+                <u> <strong>Cambiar contraseña</strong> </u>
+              </a>
+            </div>
+            <br />
+            <br />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-12 col-md-6">
+        <div class="card mb-2" id="misaldo">
+          <div class="card-body">
+            <h4 class="card-title"><b>SALDO DE MI GIFT CARD </b> <small style="font-size: 14px;">(Se puede usar todo el saldo disponible o una parte)</small> </h4>
+            <!-- <p class="card-title text-center">Se puede usar todo el saldo o una parte </p> -->
+            <div>
+              <h5 class="text-center mb-1">
+                <span><small  class="text-secondary">Saldo disponible:</small> {{ dato.saldo | currency }}</span><br/>
+                <span><small  class="text-secondary">Saldo pendiente de descontar:</small> {{ dato.saldoPendienteDescontar | currency }}</span><br />
+                <span><small  class="text-secondary">Saldo total:</small> {{ dato.saldoEnCuenta | currency }}</span><br />
+              </h5>
+            </div>
+          </div>
+        </div>
+        <div class="card mb-3" id="mispedidos" #mispedidos>
+          <div class="card-body">
+            <h4 class="card-title"><b>MIS PEDIDOS </b></h4>
+            <div *ngIf="pedidos.length == 0">
+              <p class="text-center text-danger">
+                Aún no has realizado pedidos
+              </p>
+            </div>
+            <div class="scrollable" *ngIf="pedidos.length > 0">
+              <div
+                class="row pedidos-row align-items-center"
+                *ngFor="let pedido of pedidos; let index = index"
+              >
+                <div class="col-3">
+                  <img
+                    src="assets/images/001-micuenta.svg"
+                    alt="icono"
+                    class="w-100"
+                  />
+                </div>
+                <div class="col-8">
+                  <h6 class="m-0">
+                    Fecha de pedido: {{ pedido.fechaCompra.split("T")[0] }}
+                  </h6>
+                  <h6 class="m-0">Estatus de pago: {{ pedido.estatusPago }}</h6>
+                  <h6 class="m-0">
+                    Estatus de envio: {{ pedido.estatusEnvio }}
+                  </h6>
+                  <h6 class="m-0">Método de pago: {{ pedido.metodoPago }}</h6>
+                  <h6 class="m-0">
+                    Empaque:
+                    {{
+                      pedido.empaque != undefined && pedido.empaque != null
+                        ? pedido.empaque.tipoEmpaque +
+                          " $" +
+                          pedido.empaque.precio
+                        : ""
+                    }}
+                  </h6>
+                  <h6 class="m-0">
+                    Cantidad empaques: {{ pedido.cantidadEmpaque }}
+                  </h6>
+                  <h6 class="m-0">
+                    Precio empaques:
+                    {{
+                      pedido.cantidadEmpaque != undefined &&
+                      pedido.cantidadEmpaque != null
+                        ? pedido.cantidadEmpaque * pedido.empaque.precio
+                        : ""
+                    }}
+                  </h6>
+                  <h6 class="m-0">Total: ${{ pedido.precioTotal }}</h6>
+                  <button
+                    class="btn btn-sm btn-primary mt-4 mt-md-5 mb-3 btn-block"
+                    *ngIf="
+                      pedido.estatusPago === 'Pendiente' &&
+                      pedido.metodoPago === 'Pago con STRIPE'
+                    "
+                    (click)="pagarPedido(pedido)"
+                  >
+                    Pagar
+                  </button>
+                  <button
+                    class="btn btn-sm bg-rojo text-white btn-block"
+                    (click)="mostrarPedido(index)"
+                  >
+                    Ver pedido
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6">
+        <div class="shadow-sm p-3 mb-3 bg-white rounded card mb-1">
+          <div class="card-body">
+            <div class="d-flex justify-content-between">
+              <h4 class="card-title"><b>MIS DIRECCIONES</b></h4>
+              <a
+                [routerLink]="['/', 'altaDireccion']"
+                class="texto-negro monoRegular"
+                ><u><strong> Administrar</strong></u></a
+              >
+            </div>
+
+            <div *ngFor="let dir of listaDirecciones; let i = index">
+              <button
+                class="btn-primary-outline"
+                (click)="eliminarDireccion(dir._id)"
+              >
+                <img
+                  style="width: 20px"
+                  class="mr-1"
+                  src="assets/images/TACHE.svg"
+                  alt=""
+                />
+              </button>
+              <label [attr.for]="dir._id"
+                >{{ i + 1 }}.- {{ dir.calle }} C.P.
+                {{ dir.codigoPostal }}</label
+              >
+            </div>
+          </div>
+        </div>
+
+        <!--                 <div class="card mb-3">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between">
+                            <h5 class="card-title">MIS MÉTODOS DE PAGO</h5>
+                            <a href="" data-toggle="modal" data-target="#mdlMetodoPago" class="texto-negro"><u><strong> Administrar</strong></u></a>
+                        </div>
+
+                        <div class="d-flex flex-column">
+                            <button class="btn-md btn-block rounded sin-bordeC bg-blanco p-0 text-center py-2 mb-1" style="text-align: initial;" data-toggle="collapse" data-target="#btnCardVisa"><img src="assets/images/VISA.svg" height="19" alt=""></button>
+                            <button class="btn-md btn-block rounded sin-bordeC bg-blanco p-0 text-center py-2 mb-1" style="text-align: initial;" data-toggle="collapse" data-target="#btncardMaster"><img src="assets/images/MASTERCARD.svg" height="30" alt="" srcset=""></button>
+                            <button class="btn-md btn-block rounded sin-bordeC bg-blanco p-0 text-center py-2 mb-1" style="text-align: initial;" data-toggle="collapse" data-target="#btnPaypal"><img src="assets/images/PAYPAL.svg" height="20" alt=""></button>
+                        </div>
+
+                    </div>
+                </div> -->
+
+        <div class="card mb-1">
+          <div class="card-body">
+            <h3><b>SHOPPER DE CORAZÓN</b></h3>
+            <p>
+              Elige si quieres que un Shopper de Corazón te contacte para
+              confirmar tu pedido y darte opciones de productos sustitutos en
+              caso necesario. Queremos que hagas tu super perfecto sin ir al
+              super.
+            </p>
+            <div class="custom-control custom-control-inline custom-checkbox">
+              <input
+                class="custom-control-input"
+                type="radio"
+                name="contactar"
+                [(ngModel)]="contactar"
+                id="inlineCheckbox1"
+                value="si"
+              />
+              <label
+                class="custom-control-label monoRegular"
+                for="inlineCheckbox1"
+                >Si</label
+              >
+            </div>
+            <div class="custom-control custom-control-inline custom-checkbox">
+              <input
+                class="custom-control-input"
+                type="radio"
+                name="contactar"
+                [(ngModel)]="contactar"
+                id="inlineCheckbox2"
+                value="no"
+              />
+              <label
+                class="custom-control-label monoRegular"
+                for="inlineCheckbox2"
+                >No</label
+              >
+            </div>
+            <h4><b>FORMAS DE CONTACTO</b></h4>
+            <div class="custom-control custom-control-inline custom-checkbox">
+              <input
+                class="custom-control-input"
+                type="radio"
+                name="contacto"
+                [(ngModel)]="contacto"
+                id="inlineCheckbox_1"
+                value="Whatsapp"
+              />
+              <label
+                class="custom-control-label texto-verde"
+                for="inlineCheckbox_1"
+                >WhatsApp</label
+              >
+            </div>
+            <div class="custom-control custom-control-inline custom-checkbox">
+              <input
+                class="custom-control-input"
+                type="radio"
+                name="contacto"
+                [(ngModel)]="contacto"
+                id="inlineCheckbox_2"
+                value="Teléfono"
+              />
+              <label class="custom-control-label" for="inlineCheckbox_2"
+                >Teléfono</label
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-12 col-md-6 mb-3">
+        <div class="card mb-1">
+          <div class="card-body p-2">
+            <div class="d-flex justify-content-between">
+              <span class="card-title monoBold">
+                <b>MIS FAVORITOS</b>
+                <img
+                  style="height: 0.9rem !important"
+                  src="assets/images/FAV-ROJO.svg"
+                  alt=""
+                />
+              </span>
+              <a
+                *ngIf="!!_usuarioService.usuario"
+                [routerLink]="['/', 'catalogo']"
+                [queryParams]="{ user: _usuarioService.usuario._id }"
+                class="texto-negro monoRegular"
+                ><u><strong>Ver todo</strong></u></a
+              >
+            </div>
+            <div class="d-flex justify-content-between">
+              <div *ngFor="let product of prodFav">
+                <img
+                  *ngIf="product.producto != null"
+                  [src]="
+                    product.producto != null && product.producto
+                      ? url + product.producto.img
+                      : url + 'noimage'
+                  "
+                  class="redo2"
+                  alt=""
+                  srcset=""
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 mb-3">
+        <div class="card mb-1">
+          <div class="card-body p-2">
+            <div class="d-flex justify-content-between">
+              <span class="card-title monoBold">
+                <b class="">MIS RECETAS FAVORITAS</b>
+                <img
+                  style="height: 0.9rem !important"
+                  src="assets/images/FAV-ROJO.svg"
+                  alt=""
+                />
+              </span>
+              <a
+                [routerLink]="['/recetas']"
+                [queryParams]="{ user: datosUsuario[0]._id }"
+                class="texto-negro monoRegular"
+                ><u><strong>Ver todo</strong></u></a
+              >
+            </div>
+            <div class="d-flex justify-content-between">
+              <div *ngFor="let item of recetasFav">
+                <img
+                  *ngIf="item.receta != null"
+                  [src]="
+                    item.receta != null && item.receta
+                      ? url_receta + item.receta.img
+                      : url_receta + 'noimage'
+                  "
+                  class="redo2"
+                  alt=""
+                  srcset=""
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-body">
+        <div class="row">
+          <div class="col-12 col-md-6">
+            <h4 class="container mr-1">
+              DESPÁCHATE <span class="texto-rojo">RECOMIENDA</span> Y
+              <span class="texto-departamento">GANA</span>
+            </h4>
+            <p>
+              Despáchate con lo mejor, recomiéndanos, gana y haz ganar a tus
+              amigos y familiares.
+            </p>
+            <p>
+              Por cada 5 personas que usan tú código y generan una compra en
+              Despáchate recibirás un código de 5% de descuento que podrás
+              aplicar en tu siguiente compra. A su vez, tu amig@ al usar tú
+              código, obtendrá 5% de descuento en su primer pedido.
+            </p>
+            <label class="monoRegular" for="">Tu código es: </label
+            ><label id="codigo" #codigo class="ml-2"> {{ cuponUsuario }}</label>
+          </div>
+          <div class="col-12 col-md-6">
+            <img src="assets/images/REGALO.svg" alt="" srcset="" />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-12 mb-3 mt-4">
+            <div class="row pl-0">
+              <div class="col-md-5 col-12">
+                <form class="form-inline w-100" style="position: relative">
+                  <input
+                    [(ngModel)]="correos"
+                    name="correos"
+                    class="form-control w-100 monoRegular"
+                    type="search"
+                    placeholder="email@email.com"
+                    aria-label="Search"
+                  />
+                  <button
+                    style="position: absolute; right: 0px"
+                    class="btn btn-danger px-5 monoRegular"
+                    (click)="enviarCorreos()"
+                  >
+                    ENVIAR
+                  </button>
+                </form>
+              </div>
+              <div class="col-md-7 col-12">
+                <div class="d-none d-md-block">
+                  <button
+                    type="button"
+                    class="btn bg-verde px-5 text-white monoRegular"
+                    (click)="copyLink(cuponUsuario)"
+                  >
+                    COPIAR CÓDIGO
+                  </button>
+                  <!-- <button type="button" class="btn bg-verde2 px-5  text-white" data-toggle="modal" data-target="#mdlWhatsapp">COMPARTIR POR WHATSAPP</button> -->
+                  <a
+                    [href]="
+                      'https://api.whatsapp.com/send?&text=Te invito a realizar tu súper en Despáchate y recibe un cupón de 5% de descuento en tu primera compra usando mi código ' +
+                      cuponUsuario +
+                      ' en este link despachate.mx'
+                    "
+                    target="blank"
+                    class="btn bg-verde2 px-5 text-white"
+                    >COMPARTIR POR WHATSAPP</a
+                  >
+                </div>
+                <div class="d-block d-md-none">
+                  <button
+                    type="button"
+                    class="btn bg-verde my-1 px-5 text-white btn-block monoRegular"
+                    (click)="copyLink(cuponUsuario)"
+                  >
+                    COPIAR CÓDIGO
+                  </button>
+                  <!-- <button type="button" class="btn bg-verde2 px-5 text-white btn-block monoRegular">COMPARTIR POR WHATSAPP</button> -->
+                  <a
+                    [href]="
+                      'https://api.whatsapp.com/send?&text=Te invito a realizar tu súper en Despáchate y recibe un cupón de 5% de descuento en tu primera compra usando mi código ' +
+                      cuponUsuario +
+                      ' en este link despachate.mx'
+                    "
+                    target="blank"
+                    class="btn bg-verde2 px-5 text-white btn-block monoRegular"
+                    >COMPARTIR POR WHATSAPP</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <label for="" class="monoRegular text-black-50"
+              >Separa los correos con una coma</label
+            >
+
+            <div class="col-md-6">
+              <h4>TUS CÓDIGOS DE DESCUENTO</h4>
+              <div class="scrollable2">
+                <table class="table">
+                  <thead></thead>
+                  <tbody>
+                    <tr *ngFor="let cupon of listaCuponesGenerales">
+                      <td class="monoRegular">
+                        {{ cupon.codigo }} Descuento:{{ cupon.valor }}%
+                      </td>
+                      <td class="todos">
+                        <button
+                          type="button"
+                          (click)="copyLink(cupon.codigo)"
+                          class="btn btn-sm bg-naranja px-5 text-white"
+                        >
+                          COPIAR CÓDIGO
+                        </button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <!-- <div class="col-12  col-md-6 text-center">
+                <button type="button" class="btn bg-verde px-5 text-white">COPIAR CODIGO</button>
+                <button type="button" class="btn bg-verde2 px-5  text-white">COMPARTIR POR WHATSAPP</button>
+
+              </div> -->
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="row mt-3 shadow-sm p-3 mb-5 bg-white rounded card bg-causa1 mx-1"
+      style="position: relative"
+    >
+      <div class="card-body mb-3 d-none d-md-block">
+        <div class="col-12 align-self-center d-flex justify-content-center">
+          <div class="d-none d-md-block card w-50" style="background: #4adfcd">
+            <div class="card-body text-white">
+              <h2
+                class="card-title text-white monoRegular"
+                style="color: white !important"
+              >
+                DESPÁCHATE <strong class="bold"> CON CAUSA </strong>
+              </h2>
+              <p class="card-text">
+                Sabemos que quieres cuidar de tí y de tu familia, y también
+                sabemos qua quieres cuidar de los que más lo necesitan, por eso
+                en Despáchate cada vez que realizas tu compra, estás donando
+                alimentos a personas necesitadas.
+              </p>
+              <p>
+                Por cada compra que realices el 3% del total de tu compra se
+                donará en kilos de arroz y frijol a personas necesitadas.
+              </p>
+
+              <p class="mb-0"><strong>HASTA HOY HAS DONADO:</strong></p>
+              <label class="mt-0" for="" id="lbAbono">${{ totalDonado }}</label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card-body mb-3 d-block d-md-none" style="position: absolute">
+        <div class="card" style="background: #4adfcd">
+          <div class="card-body text-white">
+            <h2 class="card-title text-white monoRegular">
+              DEPÁCHATE <b> CON CAUSA </b>
+            </h2>
+            <p class="card-text">
+              Sabemos que quieres cuidar de tí y de tu familia, y también
+              sabemos qua quieres cuidar de los que más necesitan, por eso en
+              Despáchate cada vez que realizas tu compra, estás donando
+              alimentos a personas necesitadas.
+            </p>
+            <p>
+              Por cada compra que realices el 3% del total de tu compra se
+              donará en kilos de arroz y frijoles a personas necesitadas.
+            </p>
+            <p class="mb-0"><strong>HASTA HOY HAS DONADO:</strong></p>
+            <label class="mt-0" for="" id="lbAbono">${{ totalDonado }}</label>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br />
+    <br />
+  </div>
+  <br />
+  <br />
+</div>
+
+<!-- Modal Contraseña -->
+<div
+  class="modal fade"
+  id="mdlPassword"
+  data-backdrop="static"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="mdlPassword"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cambiar Contraseña</h5>
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <form ngNativeValidate [formGroup]="form" (ngSubmit)="cambiarPassword()">
+        <div class="modal-body">
+          <div class="form-group row">
+            <div class="col-sm-12">
+              <input
+                formControlName="password"
+                type="password"
+                required
+                minlength="8"
+                maxlength="16"
+                class="form-control bordes-btn"
+                id="inputPassword"
+                placeholder="Contraseña Nueva"
+              />
+            </div>
+          </div>
+          <div class="form-group row">
+            <div class="col-sm-12">
+              <input
+                formControlName="confirmarPassword"
+                type="password"
+                required
+                minlength="8"
+                maxlength="16"
+                class="form-control bordes-btn"
+                id="inputPassword2"
+                placeholder="Confirmar contraseña"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">
+            Cancelar
+          </button>
+          <button type="submit" class="btn btn-primary">Guardar Cambios</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<!-- Modal Whatsapp -->
+<div
+  class="modal fade"
+  id="mdlWhatsapp"
+  data-backdrop="static"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="mdlWhatsapp"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Compartir código por whatsapp</h5>
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="form-group row">
+          <div class="col-sm-12">
+            <input
+              name="numTelefono"
+              type="number"
+              [(ngModel)]="numTelefono"
+              required
+              minlength="10"
+              maxlength="10"
+              class="form-control bordes-btn"
+              id="inputNumero"
+              placeholder="Número Teléfono"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">
+          Cancelar
+        </button>
+        <a
+          [href]="
+            'https://api.whatsapp.com/send?&text=Te invito a realizar tu súper en Despáchate y recibe un cupón de $50 en tu primera
+                compra usando mi código ' +
+            cuponUsuario +
+            ' en este link despachate.mx'
+          "
+          target="blank"
+          class="btn btn-primary"
+          >Enviar</a
+        >
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modal Métodos de pago -->
+<div
+  class="modal fade"
+  id="mdlMetodoPago"
+  data-backdrop="static"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="mdlMetodoPagoTitle"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalPassword">MIS MÉTODOS DE PAGO</h5>
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form action="" method="POST" id="card-form">
+          <span class="card-errors"></span>
+          <div class="form-group row">
+            <label for="nombreTarjetaHabitante" class="col-sm-4 col-form-label"
+              >Nombre del tarjeta habiente</label
+            >
+            <div class="col-sm-8">
+              <input
+                type="text"
+                class="form-control"
+                minlength="4"
+                maxlength="100"
+                data-conekta="card[name]"
+                id="nombreTarjetaHabitante"
+                placeholder="Nombre del tarjeta habiente"
+              />
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="numeroTarjeta" class="col-sm-4 col-form-label"
+              >Número de tarjeta de crédito</label
+            >
+            <div class="col-sm-8">
+              <input
+                type="number"
+                class="form-control"
+                size="16"
+                data-conekta="card[number]"
+                id="numeroTarjeta"
+                placeholder="Número de tarjeta de crédito"
+              />
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="CVC" class="col-sm-1 col-form-label">CVC</label>
+            <div class="col-sm-3">
+              <input
+                type="number"
+                class="form-control"
+                data-conekta="card[cvc]"
+                size="4"
+                id="CVC"
+                placeholder="CVC"
+              />
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="CVC" class="col-sm-7 col-form-label"
+              >Fecha de expiración (MM/AAAA)</label
+            >
+            <div class="col-sm-2">
+              <input
+                type="number"
+                class="form-control"
+                size="2"
+                data-conekta="card[exp_month]"
+                placeholder="MM"
+              />
+            </div>
+            <div class="col-sm-3">
+              <input
+                type="number"
+                class="form-control"
+                size="4"
+                data-conekta="card[exp_year]"
+                placeholder="AAAA"
+              />
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="submit" class="btn btn-primary">Crear token</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Button trigger modal -->
+
+<!-- Modal -->
+<div
+  class="modal fade"
+  id="modelId"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="modelTitleId"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Detalle del pedido</h5>
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="container-fluid">
+          <div class="table-responsive">
+            <table>
+              <tbody>
+                <tr *ngFor="let detalle of detalles">
+                  <td *ngIf="detalle.producto != null">
+                    <img
+                      [src]="url + detalle.producto.img"
+                      width="100px"
+                      [routerLink]="['/producto', detalle.producto._id]"
+                      alt="icono"
+                    />
+                  </td>
+                  <td *ngIf="detalle.producto != null">
+                    {{ detalle.producto.nombre }}
+                  </td>
+                  <td *ngIf="detalle.paquete != null">
+                    {{ detalle.paquete.paquete }}
+                  </td>
+                  <td *ngIf="detalle.producto != null">
+                    Cantidad: {{ detalle.cantidad }}
+                  </td>
+                  <td *ngIf="detalle.producto != null">
+                    Subtotal: ${{ detalle.subtotal }}
+                  </td>
+                  <td *ngIf="detalle.producto != null">
+                    <span *ngIf="detalle.oferta"
+                      >Oferta: ${{ detalle.oferta }}</span
+                    >
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- <div *ngFor="let detalle of detalles" [hidden]="detalle.producto===null">
+                        <div class="row border" *ngIf="detalle.producto!=null">
+                            <div class="col-12">
+                                <div class="row row-cols-1 row-cols-md-2">
+                                    <div class="p-3 border">
+                                        <img [src]="url+detalle.producto.img" width="100px" [routerLink]="['/producto', detalle.producto._id]" alt="icono">
+                                    </div>
+                                    <div class="p-3 border" style="font-size: 2vh;">
+                                        <p class="text-center">{{detalle.producto.resumenBreve}}</p>
+                                    </div>
+                                    <div class="p-3 border" style="font-size: 2.5vh;">
+                                        <p class="text-center"><span class="badge badge-primary p-2">{{detalle.paquete.paquete}}</span></p>
+                                    </div>
+                                    <div class="p-3 border" style="font-size: 2.5vh;">
+                                        <p class="text-center"><span>Cantidad: {{detalle.cantidad}}</span></p>
+                                    </div>
+                                    <div class="p-3 border" style="font-size: 2.5vh;">
+                                        <p class="text-center"><span class="p-3" [style]="detalle.oferta&&detalle.oferta>0? 'text-decoration: line-through;':'text-decoration: none;'">Subtotal: ${{detalle.subtotal}}</span></p>
+                                    </div>
+                                    <div class="p-3 border" style="font-size: 2.5vh;" *ngIf="detalle.oferta && detalle.oferta>0">
+                                        <p class="text-center"><span class="p-3">oferta: ${{detalle.oferta}}</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">
+          Close
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

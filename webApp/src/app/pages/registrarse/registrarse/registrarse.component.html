@@ -1,0 +1,214 @@
+<div class="container-fluid degrablue">
+  <div class="container bg-registrate rounded my-4">
+    <div class="row">
+      <div class="col-12 col-lg-4 col-md-12">
+        <form
+          class="mt-3"
+          ngNativeValidate
+          [formGroup]="form"
+          (ngSubmit)="registrarse()"
+        >
+          <div class="form-group row mx-1 d-flex flex-column mt-5">
+            <h3 for="" class="texto-negritas font-weight-bold">CREAR CUENTA</h3>
+            <p>Únete a #Despachate</p>
+            <p class="mb-1" *ngIf="!!_socialLoginService.usuario.nombre">
+              Por favor completa los siguientes campos para poder finalizar el
+              registro
+            </p>
+          </div>
+          <div class="form-group row">
+            <div class="col-sm-12 mb-2">
+              <input
+                type="text"
+                required
+                minlength="8"
+                maxlength="200"
+                formControlName="nombre"
+                class="form-control bordes-btn"
+                id="inputNombre"
+                placeholder="Nombre y apellidos"
+              />
+            </div>
+
+            <div class="col-sm-12 mb-2">
+              <input
+                type="tel"
+                required
+                formControlName="telefono"
+                required
+                minlength="10"
+                maxlength="10"
+                pattern="[0-9]{10,10}"
+                class="form-control bordes-btn"
+                id="inputTelefono"
+                placeholder="Telefono"
+              />
+            </div>
+
+            <div class="col-sm-12 mb-2">
+              <input
+                type="text"
+                formControlName="calle"
+                required
+                minlength="1"
+                maxlength="200"
+                class="form-control bordes-btn"
+                id="inputCalleNumero"
+                placeholder="Calle y número"
+              />
+            </div>
+            <div class="col-sm-12 mb-2">
+              <input
+                type="text"
+                formControlName="colonia"
+                required
+                minlength="1"
+                maxlength="200"
+                class="form-control bordes-btn"
+                id="inputColonia"
+                placeholder="Colonia"
+              />
+            </div>
+            <div class="col-sm-12 mb-2">
+              <input
+                type="text"
+                formControlName="referencia"
+                required
+                minlength="1"
+                maxlength="200"
+                class="form-control bordes-btn"
+                id="inputReferencia"
+                placeholder="Referencía calle, piso etc."
+              />
+            </div>
+            <div class="col-sm-12 mb-2">
+              <input
+                type="text"
+                formControlName="numeroInterior"
+                class="form-control bordes-btn"
+                id="inputNumeroInterior"
+                placeholder="Número interior"
+              />
+            </div>
+            <div class="col-sm-12 mb-2">
+              <input
+                type="text"
+                formControlName="codigoPostal"
+                required
+                minlength="1"
+                maxlength="5"
+                pattern="[0-9]{5,5}"
+                class="form-control bordes-btn"
+                id="inputCodigoPostal"
+                placeholder="Código postal"
+              />
+            </div>
+
+            <div class="col-sm-12 mb-2">
+              <input
+                type="text"
+                required
+                formControlName="email"
+                class="form-control bordes-btn"
+                id="inputEmail"
+                placeholder="Email"
+              />
+            </div>
+
+            <div class="col-sm-12 mb-2">
+              <input
+                type="password"
+                required
+                minlength="8"
+                maxlength="16"
+                formControlName="password"
+                class="form-control bordes-btn"
+                id="inputPassword"
+                placeholder="Contraseña"
+              />
+            </div>
+            <div class="col-sm-12 mb-2">
+              <input
+                type="password"
+                required
+                minlength="8"
+                maxlength="16"
+                formControlName="confirmarPassword"
+                class="form-control bordes-btn"
+                id="inputPassword2"
+                placeholder="Confirmar contraseña"
+              />
+            </div>
+          </div>
+          <div class="form-group row ml-1 d-flex flex-column mb-4">
+            <div class="custom-control custom-checkbox mb-2">
+              <input
+                formControlName="mailing"
+                type="checkbox"
+                class="custom-control-input"
+                id="customCheck"
+              />
+              <label class="custom-control-label" for="customCheck"
+                >Quíero suscribírme al mailing</label
+              >
+            </div>
+
+            <div class="custom-control custom-checkbox">
+              <input
+                required
+                formControlName="terminos"
+                type="checkbox"
+                class="custom-control-input"
+                id="customCheck2"
+              />
+              <label class="custom-control-label" for="customCheck2"
+                >Acepto los
+                <a
+                  class="texto-negro texto-negritas font-weight-bold"
+                  [routerLink]="['/', 'terminos']"
+                  >términos y condiciones</a
+                ></label
+              >
+            </div>
+          </div>
+
+          <div class="form-group row mx-1 mb-4">
+            <input
+              type="submit"
+              class="btn btn-block bg-rojo text-white"
+              value="Registrate"
+            />
+          </div>
+
+          <div class="">
+            <label for=""
+              >¿Ya tienes una cuenta?<a
+                class="texto-negro"
+                [routerLink]="['/', 'login']"
+                ><strong> Ingresa aquí</strong></a
+              ></label
+            >
+
+            <label for=""
+              >Tus datos serán tratados como lo indica nuestro aviso de
+              <a
+                [routerLink]="['/', 'privacidad']"
+                class="texto-negro texto-negritas"
+                ><strong>PRIVACIDAD</strong></a
+              >
+            </label>
+          </div>
+          <div class="form-group row mx-1 mt-3">
+            <input
+              type="submit"
+              [routerLink]="['/', 'miSuscricpcionInfografia']"
+              class="btn btn-block bg-btnMorado text-white"
+              value="Como funciona mi súper recurrente"
+            />
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <br />
+</div>

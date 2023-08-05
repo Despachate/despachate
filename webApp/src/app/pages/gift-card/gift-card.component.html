@@ -1,0 +1,225 @@
+<div class="container shadow p-3 mb-5 mt-4 bg-white rounded">
+  <div class="row mt-5 mb-5 px-5">
+    <div class="col-12 text-center mb-4">
+      <h3>
+        <!-- <img src="assets/images/icono_carro.png" style="height: 30px" alt="" /> -->
+        <!-- <strong> CARRITO</strong> -->
+        GIFT CARD <span class="texto-verde">VIRTUAL</span>
+      </h3>
+    </div>
+
+    <div class="col-12 card">
+      <div class="row">
+        <div class="col">
+          <div class="row p-5">
+            <div class="col-12 col-md-4 offset-md-4 mt-5" *ngIf="tamanio_pantalla == 'Small'">
+                <!-- [hidden]="!saldo.comprar" -->
+                <div
+                  class="card"
+                  [style]="{ overflow: 'hidden', position: 'relative' }"
+                >
+                  <!-- src="./assets/images/GiftCardDespachate.jpeg" -->
+                  <img
+                    src="./assets/images/GiftCardDespchate-02.jpg"
+                    alt="GiftCard"
+                  />
+                  <div
+                    class="card-body"
+                    [style]="{
+                      position: 'absolute',
+                      background: 'transparent',
+                      width: '100%',
+                      height: '100%'
+                    }"
+                  >
+                    <span class="text-light">{{
+                      saldo.saldo | currency: "MXN"
+                    }}</span>
+                  </div>
+                </div>
+              </div>
+
+            <div class="col-12 col-md-4">
+              <div class="form-check">
+                <label class="form-check-label" [hidden]="true">
+                  <input
+                    type="checkbox"
+                    class="form-check-input"
+                    name="saldo_comprar"
+                    id="saldo_comprar"
+                    [(ngModel)]="saldo.comprar"
+                  />
+                  Comprar Saldo
+                </label>
+                <!-- usar saldo check -->
+                <!-- <label [hidden]="saldo.comprar">
+                  <input
+                    type="checkbox"
+                    class="form-check-input"
+                    name="saldo_usar"
+                    id="saldo_usar"
+                    (change)="calcularTotal()"
+                    [(ngModel)]="saldo.usar"
+                  />
+                  Usar Saldo
+                  <span
+                    ><b> Saldo disponible</b>
+                    {{ saldo.saldo_disponible | currency }}
+                    <small
+                      >(Se puede usar todo el saldo o una parte)</small
+                    ></span
+                  >
+                  <span *ngIf="saldo.usar">
+                    <b> Despues de la compra</b>
+                    {{
+                      saldo.saldo_disponible - saldo.saldo_descontado | currency
+                    }}
+                  </span>
+                </label> -->
+              </div>
+              <div class="form-group mt-3" *ngIf="!saldo.usar">
+                <label for="saldo">Saldo a comprar</label>
+                <input
+                  type="number"
+                  class="form-control"
+                  name="saldo"
+                  id="saldo"
+                  [(ngModel)]="saldo.saldo"
+                  (change)="calcularTotal()"
+                  aria-describedby="saldo"
+                  placeholder="Recarga un saldo mínimo de $50"
+                />
+                <small id="saldo" class="form-text text-muted">Recarga un saldo mínimo de $50</small>
+              </div>
+
+              <div class="form-group" *ngIf="!saldo.usar">
+                <label for="mensaje_amigo">Mensaje</label>
+                <textarea
+                  type="number"
+                  class="form-control"
+                  name="mensaje_amigo"
+                  id="mensaje_amigo"
+                  [(ngModel)]="mensaje_amigo"
+                  aria-describedby="mensaje_amigo"
+                  placeholder="Personaliza tu GiftCard"
+                ></textarea>
+                <!-- <small id="saldo" class="form-text text-muted">100</small> -->
+              </div>
+              <!-- Correo del usuario del saldo -->
+              <div class="form-group" *ngIf="!saldo.usar">
+                <label for="correo">Correo amigo</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  name="correo"
+                  id="correo"
+                  [(ngModel)]="saldo.email"
+                  aria-describedby="correo"
+                  placeholder="Introduce tu correo o el de un amigo"
+                />
+                <small id="correo" class="form-text text-muted">
+                  Ejemplo: mail@mail.com
+                </small>
+              </div>
+            </div>
+            <!-- Card -->
+            <div class="col-12 col-md-4 offset-md-4 mt-5" *ngIf="tamanio_pantalla != 'Small'">
+              <!-- [hidden]="!saldo.comprar" -->
+              <div
+                class="card"
+                [style]="{ overflow: 'hidden', position: 'relative' }"
+              >
+                <!-- src="./assets/images/GiftCardDespachate.jpeg" -->
+                <img
+                  src="./assets/images/GiftCardDespchate-02.jpg"
+                  alt="GiftCard"
+                />
+                <div
+                  class="card-body"
+                  [style]="{
+                    position: 'absolute',
+                    background: 'transparent',
+                    width: '100%',
+                    height: '100%'
+                  }"
+                >
+                  <span class="text-light">{{
+                    saldo.saldo | currency: "MXN"
+                  }}</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 text-right">
+              <!-- <button class="btn bg-rojo">PAGAR</button> -->
+
+              <div class="row">
+                <div class="col-12 text-right">
+                  <b style="font-size: 1.5em;">{{ total | currency }}</b>
+                  <small class="texto-rojo" style="font-size: 1em;"> IVA incluido</small>
+                </div>
+                <div class="col-md-3"></div>
+                <div class="col-md-3"></div>
+                <div class="col-md-3"></div>
+                <div
+                  class="col-md-3 shadow-sm p-3 mb-5 bg-white rounded text-right"
+                >
+                  <!-- <h3>Pagar</h3> -->
+                  <div
+                    #paypal
+                    id="paypal"
+                    class="w-100"
+                    [hidden]="!(metodo === 'Pago con PAYPAL')"
+                  ></div>
+                  <button
+                    type="button"
+                    class="btn btn-block btn-danger btn-lg mb-1"
+                    (click)="registrarCompra()"
+                    [hidden]="
+                      !(
+                        metodo != 'Pago con PAYPAL' &&
+                        metodo != 'Pago con STRIPE'
+                      )
+                    "
+                  >
+                    Finalizar pedido
+                  </button>
+                  <button
+                    type="button"
+                    class="btn btn-block btn-primary btn-lg mb-1"
+                    (click)="registrarCompra(true)"
+                    [hidden]="!(metodo === 'Pago con STRIPE')"
+                  >
+                    Pagar
+                  </button>
+                  <!-- <button
+                      type="button"
+                      style="font-size: 15px"
+                      (click)="convertirASuscripcion()"
+                      class="btn bg-btnMorado text-white btn-block btn-lg"
+                    >
+                      Volver mi pedido un súper recurrente
+                    </button> -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row d-md-none d-sm-block">
+    <!-- <div class="col">
+      <a
+        class="btn bg-btnAzul ml-2"
+        href="javascript:void(0)"
+        (click)="seguirCompra()"
+        >SEGUIR COMPRANDO</a
+      >
+    </div> -->
+    <!--  <div class="col">
+      <button class="btn bg-rojo mr-2">AGREGAR AL CARRITO</button>
+    </div> -->
+  </div>
+</div>

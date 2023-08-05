@@ -1,0 +1,1051 @@
+<div class="container-fluid degra">
+  <div class="container bg-blanco">
+    <div class="row mb-5 mt-4">
+      <div class="col-12">
+        <h2 class="text-center">
+          CONFIRMA TU <b span class="texto-rojo">PAGO</b> Y
+          <b class="texto-rojo">DATOS</b> DE ENTREGA
+        </h2>
+      </div>
+    </div>
+    <div class="row mt-5">
+      <!-- Tabla mis pedidos  -->
+      <div class="col-12 col-md-6">
+        <div class="col-12">
+          <div class="card mb-3">
+            <div class="card-body">
+              <h5 class="card-title">
+                <b> PRODUCTOS <span class="texto-rojo"> SELECCIONADOS</span></b>
+              </h5>
+              <div class="scrollable5">
+                <div
+                  *ngFor="let producto of productos; let index = index"
+                  class="row carrito-row align-items-center text-center mt-3"
+                >
+                  <div class="col-6 col-md-3 d-flex">
+                    <button
+                      class="btn-primary-outline"
+                      (click)="eliminarProducto(producto.paquete._id)"
+                    >
+                      <img
+                        style="width: 20px"
+                        class="mr-1"
+                        src="assets/images/TACHE.svg"
+                        alt=""
+                      />
+                    </button>
+                    <img
+                      [src]="url + producto.producto.img"
+                      alt="icono"
+                      class="w-50 h-50"
+                    />
+                  </div>
+                  <div class="col-6 col-md-5">
+                    <p style="font-size: 12px">
+                      {{ producto.producto.nombre }}
+                    </p>
+                    <span class="badge badge-primary p-2 mb-4 mb-md-0">{{
+                      producto.paquete.paquete
+                    }}</span>
+                    <span
+                      class="badge badge-warining"
+                      *ngIf="producto.oferta != 0"
+                    >
+                      Descuento: ${{ producto.oferta }}
+                    </span>
+
+                  </div>
+                  <div class="col-8 offset-2 col-md-3 offset-md-0">
+                    <div class="row align-items-center">
+                      <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                          <button
+                            class="btn btn-outline-secondary"
+                            (click)="cantidad(index, false)"
+                            type="button"
+                            id="button-addon1"
+                          >
+                            <i class="fas fa-minus"></i>
+                          </button>
+                        </div>
+                        <input
+                          type="number"
+                          [value]="producto.cantidad"
+                          disabled
+                          readonly
+                          class="form-control text-center"
+                          placeholder=""
+                          aria-label="Example text with button addon"
+                          aria-describedby="button-addon1"
+                        />
+                        <div class="input-group-append">
+                          <button
+                            class="btn btn-outline-secondary"
+                            (click)="cantidad(index, true)"
+                            type="button"
+                            id="button-addon1"
+                          >
+                            <i class="fas fa-plus"></i>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="row p-0 mt-3">
+                      <div class="col-6 text-left">
+                        <p style="font-size: 8px" class="p-0">
+                          ${{ producto.paquete.precio }}
+                        </p>
+                      </div>
+                      <div class="col-6 text-right">
+                        <p style="font-size: 8px" class="p-0">
+                          ${{
+                            producto.total ? producto.total : producto.subtotal
+                          }}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12">
+          <div class="card mb-4">
+            <div class="card-body">
+              <h6
+                class="card-title"
+                data-toggle="tooltip"
+                data-placement="right"
+                title="Puedes cambiar la opción seleccionada"
+              >
+                <b>DIRECCIÓN DE ENTREGA</b>
+              </h6>
+              <div class="d-flex justify-content-between">
+                <h4 class="card-title">
+                  <span uk-icon="icon: location"></span><b>Mis direcciones</b>
+                </h4>
+                <a [routerLink]="['/', 'altaDireccion']" class="texto-negro"
+                  ><u><b> Administrar</b></u></a
+                >
+                <!--                                 <a [routerLink]="['/','altaDireccion']" class="texto-negro"><u><strong> Administrar</strong></u></a> -->
+              </div>
+              <div *ngFor="let dir of listaDirecciones">
+                <div class="custom-control custom-checkbox">
+                  <input
+                    type="radio"
+                    class="custom-control-input"
+                    [(ngModel)]="direccion"
+                    name="direccion"
+                    value="{{ dir._id }}"
+                    [attr.id]="dir._id"
+                  />
+                  <label class="custom-control-label" [attr.for]="dir._id"
+                    >{{ dir.calle }} C.P. {{ dir.codigoPostal }}</label
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12">
+          <div class="card mb-1">
+            <div class="card-body">
+              <h3
+                data-toggle="tooltip"
+                data-placement="right"
+                title="Puedes cambiar la opción seleccionada"
+              >
+                <b>SHOPPER DE CORAZÓN</b>
+              </h3>
+              <p>
+                Elige si quieres que un Shopper de Corazón te contacte para
+                confirmar tu pedido y darte opciones de productos sustitutos en
+                caso necesario. Queremos que hagas tu super perfecto sin ir al
+                super.
+              </p>
+              <div class="custom-control custom-control-inline custom-checkbox">
+                <input
+                  class="custom-control-input"
+                  type="radio"
+                  name="shoper"
+                  [(ngModel)]="shoper"
+                  id="inlineCheckbox1"
+                  value="Si"
+                />
+                <label
+                  class="custom-control-label monoRegular"
+                  for="inlineCheckbox1"
+                  >Si</label
+                >
+              </div>
+              <div class="custom-control custom-control-inline custom-checkbox">
+                <input
+                  class="custom-control-input"
+                  type="radio"
+                  name="shoper"
+                  [(ngModel)]="shoper"
+                  id="inlineCheckbox2"
+                  value="No"
+                />
+                <label
+                  class="custom-control-label monoRegular"
+                  for="inlineCheckbox2"
+                  >No</label
+                >
+              </div>
+              <h4
+                [hidden]="shoper === 'No'"
+                data-toggle="tooltip"
+                data-placement="right"
+                title="Puedes cambiar la opción seleccionada"
+              >
+                <b>FORMA DE CONTACTO</b>
+              </h4>
+              <div
+                [hidden]="shoper === 'No'"
+                class="custom-control custom-control-inline custom-checkbox"
+              >
+                <input
+                  class="custom-control-input"
+                  type="radio"
+                  name="contacto"
+                  [(ngModel)]="contacto"
+                  id="inlineCheckbox_1"
+                  value="WhatsApp"
+                  [disabled]="shoper === 'No'"
+                />
+                <label
+                  class="custom-control-label texto-verde"
+                  for="inlineCheckbox_1"
+                  >WhatsApp</label
+                >
+              </div>
+              <div
+                [hidden]="shoper === 'No'"
+                class="custom-control custom-control-inline custom-checkbox"
+              >
+                <input
+                  class="custom-control-input"
+                  type="radio"
+                  name="contacto"
+                  [(ngModel)]="contacto"
+                  id="inlineCheckbox_2"
+                  value="Teléfono"
+                  [disabled]="shoper === 'No'"
+                />
+                <label class="custom-control-label" for="inlineCheckbox_2"
+                  >Teléfono</label
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-6">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12 bg-blanco mb-1 px-0 px-md-3">
+              <div class="card" [hidden]="referencia === 'Suscripción'">
+                <div class="card-body">
+                  <h5
+                    data-toggle="tooltip"
+                    data-placement="right"
+                    title="Puedes cambiar la opción seleccionada"
+                  >
+                    <strong class="mr-2">
+                      <b>¿CÚANDO DESEAS RECIBIR TU PEDIDO?</b>
+                    </strong>
+                    <i class="fa fa-truck" aria-hidden="true"></i>
+                  </h5>
+                  <p>
+                    Al seleccionar <span class="text-danger">Express</span>, tu
+                    pedido se agendará para entrega en un promedio de
+                    <span class="text-danger">4-5</span>, horas del mismo día.
+                    Siempre y cuando tu compra sea en un horario antes de las
+                    <span class="text-danger">3</span> de la tarde.
+                  </p>
+                  <p>
+                    Si se realiza después de las
+                    <span class="text-danger">3</span> de la tarde se agendará
+                    tu entrega a primera hora del día siguiente.
+                  </p>
+
+                  <!-- Checks -->
+                  <div
+                    class="custom-control custom-control-inline custom-checkbox"
+                  >
+                    <input
+                      class="custom-control-input"
+                      type="radio"
+                      name="pedido"
+                      id="inlineCheckboxPedido1"
+                      (change)="tipoEnvio()"
+                      value="Express"
+                      [(ngModel)]="pedido"
+                    />
+                    <label
+                      class="custom-control-label"
+                      for="inlineCheckboxPedido1"
+                      >Express</label
+                    >
+                  </div>
+                  <div
+                    class="custom-control custom-control-inline custom-checkbox"
+                  >
+                    <input
+                      class="custom-control-input"
+                      type="radio"
+                      name="pedido"
+                      id="inlineCheckboxPedido2"
+                      (change)="tipoEnvio()"
+                      value="Agendar"
+                      [(ngModel)]="pedido"
+                    />
+                    <label
+                      class="custom-control-label"
+                      for="inlineCheckboxPedido2"
+                      >Agendar</label
+                    >
+                  </div>
+                </div>
+                <div class="col-12 p-0 p-md-3">
+                  <div class="card">
+                    <div class="row">
+                      <div class="col-12">
+                        <h5 class="font-weight-bold mb-3 mt-4 ml-2">
+                          Selecciona tu fecha de entrega
+                        </h5>
+                        <!-- <input class="form-control ml-2" type="date" (change)="onChangeNoSunday(fechaSeleccionada)" [(ngModel)]="fechaSeleccionada" [disabled]="campoFecha" name="nacidoen" [attr.min]="fechaActual" (change)="fechasYhorarios()"> -->
+                        <!-- Aqui va el calendario -->
+                        <bs-datepicker-inline
+                          [bsConfig]="{showWeekNumbers: false}"
+                          [(bsValue)]="dateSelecte"
+                          (bsValueChange)="onDateChange($event)"
+                        ></bs-datepicker-inline>
+                      </div>
+                      <div
+                        class="col-12 my-3 d-flex flex-column p-5 align-items-center"
+                      >
+                        <p><b>Horario</b></p>
+                        <div class="custom-control custom-checkbox">
+                          <input
+                            class="custom-control-input"
+                            type="radio"
+                            id="inlineCheckboxMetodo1"
+                            name="horario"
+                            value="9:00am - 12:00pm"
+                            [(ngModel)]="horario"
+                          />
+                          <label
+                            class="custom-control-label"
+                            for="inlineCheckboxMetodo1"
+                            ><b>9:00am - 12:00pm</b></label
+                          >
+                        </div>
+                        <hr />
+                        <div class="custom-control custom-checkbox">
+                          <input
+                            class="custom-control-input"
+                            type="radio"
+                            id="inlineCheckboxMetodo2"
+                            name="horario"
+                            value="12:00pm - 4:00pm"
+                            [(ngModel)]="horario"
+                          />
+                          <label
+                            class="custom-control-label"
+                            for="inlineCheckboxMetodo2"
+                            ><b>12:00pm - 4:00pm</b></label
+                          >
+                        </div>
+                        <hr />
+                        <div
+                          class="custom-control custom-checkbox"
+                          [hidden]="horarioNoSaturday"
+                        >
+                          <input
+                            class="custom-control-input"
+                            type="radio"
+                            id="inlineCheckboxMetodo3"
+                            name="horario"
+                            value="4:00pm - 7:00pm"
+                            [(ngModel)]="horario"
+                          />
+                          <label
+                            class="custom-control-label"
+                            for="inlineCheckboxMetodo3"
+                            ><b>4:00pm - 7:00pm</b></label
+                          >
+                        </div>
+                        <hr />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 mb-2">
+              <div class="card">
+                <div class="card-body">
+                  <div class="row mx-1 d-flex justify-content-between">
+                    <h5
+                      data-toggle="tooltip"
+                      data-placement="right"
+                      title="Puedes cambiar la opción seleccionada"
+                    >
+                      <b>MÉTODO DE PAGO</b>
+                    </h5>
+                  </div>
+                  <div class="row mx-1">
+                    <div class="d-flex flex-column">
+                      <p><strong>Pago online</strong></p>
+                      <div class="custom-control custom-checkbox">
+                        <input
+                          type="radio"
+                          class="custom-control-input"
+                          name="metodo"
+                          value="Pago con PAYPAL"
+                          [(ngModel)]="metodo"
+                          id="CheckPaypal"
+                        />
+                        <label class="custom-control-label" for="CheckPaypal"
+                          >Pago con PAYPAL</label
+                        >
+                      </div>
+                      <div class="custom-control custom-checkbox">
+                        <input
+                          type="radio"
+                          class="custom-control-input"
+                          name="metodo"
+                          value="Pago con STRIPE"
+                          [(ngModel)]="metodo"
+                          id="CheckStripe"
+                        />
+                        <label class="custom-control-label" for="CheckStripe"
+                          >Pago Online (Tarjeta Crédito, Débito, Google Pay,
+                          Apple Pay)</label
+                        >
+                      </div>
+
+                      <p><strong>Paga contra entrega</strong></p>
+
+                      <div class="custom-control custom-checkbox">
+                        <input
+                          type="radio"
+                          class="custom-control-input"
+                          name="metodo"
+                          value="Efectivo"
+                          [(ngModel)]="metodo"
+                          id="checkEfectivo"
+                        />
+                        <label class="custom-control-label" for="checkEfectivo"
+                          >Efectivo</label
+                        >
+                      </div>
+
+                      <div class="custom-control custom-checkbox">
+                        <input
+                          type="radio"
+                          class="custom-control-input"
+                          name="metodo"
+                          value="Vales de despensa o electrónicos"
+                          [(ngModel)]="metodo"
+                          id="checkVales"
+                        />
+                        <label class="custom-control-label" for="checkVales"
+                          >Vales de despensa o electrónicos</label
+                        >
+                      </div>
+
+                      <div class="custom-control custom-checkbox">
+                        <input
+                          type="radio"
+                          class="custom-control-input"
+                          name="metodo"
+                          value="Tarjeta de crédito"
+                          [(ngModel)]="metodo"
+                          id="checkTarjetaCredito"
+                        />
+                        <label
+                          class="custom-control-label"
+                          for="checkTarjetaCredito"
+                          >Tarjeta de crédito</label
+                        >
+                      </div>
+
+                      <div class="custom-control custom-checkbox">
+                        <input
+                          type="radio"
+                          class="custom-control-input"
+                          name="metodo"
+                          value="Tarjeta de débito"
+                          [(ngModel)]="metodo"
+                          id="checkTarjetaDebito"
+                        />
+                        <label
+                          class="custom-control-label"
+                          for="checkTarjetaDebito"
+                          >Tarjeta de débito</label
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 bg-blanco mt-3">
+              <div class="card">
+                <div class="card-body">
+                  <div class="row mx-1">
+                    <h4
+                      data-toggle="tooltip"
+                      data-placement="right"
+                      title="Puedes cambiar la opción seleccionada"
+                    >
+                      <b>ELIGE TU BOLSA</b
+                      ><img
+                        src="assets/images/BOLSA.svg"
+                        style="height: 20px"
+                        height="15"
+                        class="mb-2 ml-4"
+                      />
+                    </h4>
+                  </div>
+
+                  <div class="row align-items-end">
+                    <div
+                      *ngFor="let empa of empaques"
+                      class="col-md-4 d-md-block d-none"
+                    >
+                      <img
+                        src="assets/images/002-datosentrega.jpg"
+                        *ngIf="empa.tipoEmpaque == 'Tela'"
+                        alt=""
+                      />
+                      <img
+                        src="assets/images/001-datosentrega.jpg"
+                        *ngIf="empa.tipoEmpaque == 'Papel'"
+                        alt=""
+                      />
+                      <div
+                        class="custom-control custom-control-inline custom-checkbox"
+                      >
+                        <input
+                          class="custom-control-input"
+                          (change)="seleccionaEmpaque(empa._id)"
+                          name="empaque"
+                          type="radio"
+                          [attr.id]="empa._id"
+                          [(ngModel)]="empaque"
+                          value="{{ empa._id }}"
+                        />
+                        <label
+                          class="custom-control-label"
+                          [attr.for]="empa._id"
+                          ><b
+                            >{{ empa.tipoEmpaque }} ({{
+                              empa.precio | currency: "MXN":"$":"1.2-2"
+                            }})</b
+                          ></label
+                        >
+                      </div>
+                    </div>
+                    <div
+                      *ngFor="let empa of empaques"
+                      class="col-12 d-md-none d-block mx-0"
+                    >
+                      <img
+                        src="assets/images/002-datosentrega.jpg"
+                        *ngIf="empa.tipoEmpaque == 'Tela'"
+                        alt=""
+                      />
+                      <img
+                        src="assets/images/001-datosentrega.jpg"
+                        class="mx-0"
+                        *ngIf="empa.tipoEmpaque == 'Papel'"
+                        alt=""
+                      />
+                      <div
+                        class="custom-control custom-control-inline custom-checkbox mx-0"
+                      >
+                        <input
+                          class="custom-control-input"
+                          (change)="seleccionaEmpaque(empa._id)"
+                          name="empaque1"
+                          type="radio"
+                          [attr.id]="empa._id"
+                          [(ngModel)]="empaque"
+                          value="{{ empa._id }}"
+                        />
+                        <label
+                          class="custom-control-label"
+                          [attr.for]="empa._id"
+                          ><b
+                            >{{ empa.tipoEmpaque }} ({{
+                              empa.precio | currency: "MXN":"$":"1.2-2"
+                            }})</b
+                          ></label
+                        >
+                      </div>
+                    </div>
+                    <div class="col-md-4 col-12 text-center">
+                      <div class="row">
+                        <div class="input-group mb-3">
+                          <div class="input-group-prepend">
+                            <button
+                              class="btn btn-outline-secondary"
+                              (click)="cantidadBolsa(true)"
+                              type="button"
+                              id="button-addon1"
+                            >
+                              <i class="fas fa-plus"></i>
+                            </button>
+                          </div>
+                          <input
+                            type="number"
+                            [value]="_cantidadBolsa"
+                            disabled
+                            readonly
+                            class="form-control text-center"
+                            placeholder=""
+                            aria-label="Example text with button addon"
+                            aria-describedby="button-addon1"
+                          />
+                          <div class="input-group-append">
+                            <button
+                              class="btn btn-outline-secondary"
+                              (click)="cantidadBolsa(false)"
+                              type="button"
+                              id="button-addon1"
+                            >
+                              <i class="fas fa-minus"></i>
+                            </button>
+                          </div>
+                        </div>
+                        <label>{{
+                          empaqueSeleccionado.precio * _cantidadBolsa
+                            | currency: "MXN":"$":"1.2-2"
+                        }}</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-12 bg-blanco mt-3">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="row mx-1">
+                      <h4
+                        data-toggle="tooltip"
+                        data-placement="right"
+                        title="Puedes cambiar la opción seleccionada"
+                      >
+                        <b>¿TIENES ALGÚN COMENTARIO?</b
+                        ><img
+                          src="assets/images/BOLSA.svg"
+                          style="height: 20px"
+                          height="15"
+                          class="mb-2 ml-4"
+                        />
+                      </h4>
+                    </div>
+                    <div class="row align-items-end">
+                      <textarea
+                        class="col uk-form-controls-text"
+                        name="comentario"
+                        [(ngModel)]="comentario"
+                        id="comentario"
+                        cols="30"
+                        rows="3"
+                        placeholder="Deja tu comentario"
+                      ></textarea>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card mx-3 mt-4">
+      <div class="card-body">
+        <div class="col-12 renglond">
+          <h3 for="">
+            <strong class="monoRegular text-uppercase">
+              Total del carrito</strong
+            >
+          </h3>
+        </div>
+        <div class="row row-cols-1 renglond">
+          <div class="col">
+            <div class="row row-cols-2">
+              <div class="col text-left">
+                <label class="text-nowrap" for="">SubTotal</label>
+              </div>
+              <div class="col text-right">
+                <h3>${{ subtotal }}</h3>
+              </div>
+            </div>
+            <div class="row row-cols-2">
+              <div class="col text-left">
+                <label class="text-nowrap" for="">Costo de envio</label>
+              </div>
+              <div class="col text-right">
+                <h5>${{ costoEnvio }}</h5>
+              </div>
+            </div>
+            <div class="row row-cols-2">
+              <div class="col text-left">
+                <label class="text-nowrap" for="">Donación extra</label>
+              </div>
+              <div class="col text-right">
+                <h5>${{ donacion }}</h5>
+              </div>
+            </div>
+            <div class="row row-cols-2">
+              <div class="col text-left">
+                <label class="text-nowrap" for="">Bolsa</label>
+              </div>
+              <div class="col text-right">
+                <h5>${{ totalEmpaque }}</h5>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12 col-md-4" >
+                <div class="form-check" >
+                  <!-- [hidden]="saldo.usar" -->
+                  <label class="form-check-label" [hidden]="true">
+                    <input
+                      type="checkbox"
+                      class="form-check-input"
+
+                      name="saldo_comprar"
+                      id="saldo_comprar"
+                      [(ngModel)]="saldo.comprar"
+                    />
+                    Comprar Saldo
+                  </label>
+                  <!-- usar saldo check -->
+                  <label [hidden]="saldo.comprar">
+                    <input
+                      type="checkbox"
+                      class="form-check-input"
+                      name="saldo_usar"
+                      id="saldo_usar"
+                      (change)="calcularTotal()"
+                      [(ngModel)]="saldo.usar"
+                    />
+                    Usar Saldo
+                    <span
+                      ><b> Saldo disponible</b>
+                      {{ saldo.saldo_disponible | currency }} </span
+                    >
+                    <span *ngIf="saldo.usar">
+                      <b> Despues de la compra</b>
+                      {{
+                        saldo.saldo_disponible - saldo.saldo_descontado
+                          | currency
+                      }}
+                    </span>
+                  </label>
+                </div>
+                <div class="form-group" *ngIf="saldo.comprar && !saldo.usar">
+                  <label for="saldo">Saldo a comprar</label>
+                  <input
+                    type="number"
+                    class="form-control"
+                    name="saldo"
+                    id="saldo"
+                    [(ngModel)]="saldo.saldo"
+                    (change)="calcularTotal()"
+                    aria-describedby="saldo"
+                    placeholder="Introduce cuanto saldo quieres comprar"
+                  />
+                  <small id="saldo" class="form-text text-muted">100</small>
+                </div>
+
+                <div class="form-group" *ngIf="saldo.comprar && !saldo.usar">
+                  <label for="mensaje_amigo">Mensaje</label>
+                  <textarea
+                    type="number"
+                    class="form-control"
+                    name="mensaje_amigo"
+                    id="mensaje_amigo"
+                    [(ngModel)]="mensaje_amigo"
+                    aria-describedby="mensaje_amigo"
+                    placeholder="Personaliza tu GiftCard"
+                  ></textarea>
+                  <!-- <small id="saldo" class="form-text text-muted">100</small> -->
+                </div>
+                <!-- Correo del usuario del saldo -->
+                <div class="form-group" *ngIf="saldo.comprar && !saldo.usar">
+                  <label for="correo">Correo</label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    name="correo"
+                    id="correo"
+                    [(ngModel)]="saldo.email"
+                    aria-describedby="correo"
+                    placeholder="Introduce tu correo"
+                  />
+                  <small id="correo" class="form-text text-muted">
+                    Ejemplo: mail@mail.com
+                  </small>
+                </div>
+              </div>
+              <!-- Card -->
+              <div
+                class="col-12 col-md-4 offset-md-4"
+                [hidden]="!saldo.comprar"
+              >
+                <div
+                  class="card"
+                  [style]="{ overflow: 'hidden', position: 'relative' }"
+                >
+                <!-- src="./assets/images/GiftCardDespachate.jpeg" -->
+                  <img
+                    src="./assets/images/GiftCardDespchate-02.jpg"
+                    alt="GiftCard"
+                  />
+                  <div
+                    class="card-body"
+                    [style]="{
+                      position: 'absolute',
+                      background: 'transparent',
+                      width: '100%',
+                      height: '100%'
+                    }"
+                  >
+                    <span class="text-light">{{
+                      saldo.saldo | currency: "MXN"
+                    }}</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 renglond">
+            <div class="row">
+              <div class="col-6">
+                <label for="">Total</label>
+              </div>
+              <div class="col-6 todos align-items-center">
+                <label class="texto-rojo mr-2 mt-3" for="" id="lbtotal"
+                  ><h3>${{ total }}</h3></label
+                >
+                <label class="texto-rojo" for="">IVA incluido</label>
+                <span class="badge badge-primary" *ngIf="!!_cupon"
+                  >cupon aplicado</span
+                >
+              </div>
+
+              <div class="col-6"></div>
+              <!-- <div class="col-6 text-right"></div> -->
+            </div>
+          </div>
+          <div class="col-12 d-flex todos mt-2">
+            <label class="texto-departamento w-100 text-right" for=""
+              >Hoy donarás: ${{ percentDonacionObligatoria }}</label
+            ><br />
+          </div>
+          <div class="col-12 d-flex todos mt-2">
+            <label class="texto-departamento w-100 text-right mt-2" for=""
+              >¿Deseas donar más? Puedes donar desde $1.
+            </label>
+            <div class="input-group ml-1 text-center d-md-flex d-none col-2">
+              <div class="input-group-prepend p-0 m-0">
+                <small class="input-group-text texto-departamento h-100"
+                  >$</small
+                >
+              </div>
+              <input
+                type="number"
+                name="donacion"
+                [(ngModel)]="donacion"
+                id="donacion"
+                (change)="calcularTotal()"
+                class="form-control text-center h-100 texto-departamento"
+              />
+            </div>
+
+            <!-- <input type="number" name="donacion" [(ngModel)]="donacion" id="donacion" (change)="calcularTotal()" class="ml-1 text-center form-control d-md-flex d-none col-1"> -->
+            <!-- <input type="numbser" name="donacion" [(ngModel)]="donacion" id="donacion" (change)="calcularTotal()" class="ml-1 text-center form-control d-md-none d-flex col-3"> -->
+
+            <label class="texto-departamento" for="" id="lbDonativo"></label>
+          </div>
+          <div class="col-12 d-flex todos mt-2">
+            <div class="input-group ml-1 text-center d-md-none d-flex col-12">
+              <div class="input-group-prepend p-0 m-0">
+                <span class="input-group-text texto-departamento h-100">$</span>
+              </div>
+              <input
+                type="number"
+                name="donacion"
+                [(ngModel)]="donacion"
+                id="donacion"
+                (change)="calcularTotal()"
+                class="form-control h-100 texto-departamento text-center"
+              />
+            </div>
+          </div>
+
+          <div class="row mt-3">
+            <div class="col-md-5 shadow-sm p-3 mb-5 bg-white rounded">
+              <div class="card" style="background: #4adfcd">
+                <div class="card-body text-white">
+                  <h5 class="card-title text-center text-white">
+                    DESPÁCHATE <strong>CON CAUSA</strong>
+                  </h5>
+                  <div class="row">
+                    <div class="col-md-8">
+                      <p class="card-text">
+                        {{
+                          datosDonacion.length > 0
+                            ? datosDonacion[0].descripcion
+                            : ""
+                        }}
+                      </p>
+                    </div>
+                    <div class="col-md-4">
+                      <img
+                        [src]="
+                          datosDonacion.length > 0
+                            ? urlDonacion + datosDonacion[0].img
+                            : urlDonacion + ''
+                        "
+                        id="img_01"
+                        height="40px"
+                        class="img-fluid"
+                        alt=""
+                        srcset=""
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4 shadow-sm p-3 mb-5 bg-white rounded">
+              <div class="card">
+                <div class="card-body">
+                  <h5><strong>¿Tienes un CUPÓN? Ingrésalo aquí</strong></h5>
+                  <div class="input-group input-group-sm mb-3">
+                    <input
+                      placeholder="Código de cupón aquí"
+                      type="text"
+                      class="form-control"
+                      aria-label="Sizing example input"
+                      aria-describedby="inputGroup-sizing-sm"
+                      [(ngModel)]="_codigo"
+                    />
+                  </div>
+                  <button
+                    type="button"
+                    class="rounded btn-block btn-estilo"
+                    (click)="cupon(_codigo)"
+                  >
+                    Aplicar cupón
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-3 shadow-sm p-3 mb-5 bg-white rounded">
+              <h3>Pagar</h3>
+              <div
+                #paypal
+                id="paypal"
+                class="w-100"
+                [hidden]="!(metodo === 'Pago con PAYPAL')"
+              ></div>
+              <button
+                type="button"
+                class="btn btn-block btn-danger btn-lg mb-1"
+                (click)="registrarCompra()"
+                [hidden]="
+                  !(metodo != 'Pago con PAYPAL' && metodo != 'Pago con STRIPE')
+                "
+              >
+                Finalizar pedido
+              </button>
+              <button
+                type="button"
+                class="btn btn-block btn-primary btn-lg mb-1"
+                (click)="registrarCompra(true)"
+                [hidden]="!(metodo === 'Pago con STRIPE')"
+              >
+                Pagar
+              </button>
+              <button
+                type="button"
+                style="font-size: 15px"
+                (click)="convertirASuscripcion()"
+                class="btn bg-btnMorado text-white btn-block btn-lg"
+              >
+                Volver mi pedido un súper recurrente
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12">
+          <section class="container pt-3 pb-3 px-5 mb-5">
+            <div class="row align-items-center">
+              <div class="col-md-8 col-12">
+                <h1 class="">
+                  PUEDE QUE TE <span class="texto-rojo">INTERESE </span>
+                </h1>
+              </div>
+            </div>
+
+            <div class="row d-md-block d-none">
+              <div class="col-12">
+                <div
+                  id="cvendido2"
+                  class="owl-carousel owl-theme owl-rtl owl-loaded owl-drag"
+                >
+                  <app-card-producto
+                    (onAddCarrito)="getItemsCarrito()"
+                    *ngFor="let producto of productosRelacionados"
+                    [producto]="producto"
+                  ></app-card-producto>
+                </div>
+              </div>
+            </div>
+            <div class="row d-md-none d-block">
+              <div
+                *ngFor="
+                  let producto of productosRelacionados;
+                  let index = index
+                "
+              >
+                <app-card-producto
+                  (onAddCarrito)="getItemsCarrito()"
+                  *ngIf="3 >= index"
+                  [producto]="producto"
+                  [style]="'cardCatalogo'"
+                ></app-card-producto>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+  </div>
+</div>

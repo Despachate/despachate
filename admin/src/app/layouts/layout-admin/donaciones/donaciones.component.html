@@ -1,0 +1,129 @@
+<!-- Content -->
+<div class="content">
+    <!-- Animated -->
+    <div class="animated fadeIn">
+
+        <div class="clearfix"></div>
+
+        <div class="orders">
+            <div class="row">
+                <div class="col">
+                    <div class="card">
+                        <div class="card-header hover btn-primary text-dark" style="cursor: pointer;" data-toggle="collapse" role="button" data-target="#header-form">
+                            <div class="d-block text-center">
+                                <strong class="p-2 bd-highlight">Agregar donación</strong>
+                            </div>
+                        </div>
+                        <div class="card-body card-block collapse show" id="header-form">
+                            <form ngNativeValidate [formGroup]="form" (ngSubmit)="add()" class="form-horizontal">
+                                <div class="row btn btn-block btn-dark text-center">
+                                    <h5>Subir imagen</h5>
+                                    <div class="col-8 mx-auto">
+                                        <div class="mb-4 mt-4">
+                                            <ul class="row">
+                                                <li *ngIf="imagenTemp != null" class="col text-center">
+                                                    <div class="badge">
+                                                        <img [src]="imagenTemp" alt="" style="width: 50%;">
+                                                    </div>
+                                                </li>
+                                                <li *ngIf="imgEditar != ''" class="col text-center">
+                                                    <div class="badge">
+                                                        <img [src]="url+imgEditar" alt="" style="width: 50%;">
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 mx-auto">
+
+                                        <input (change)="seleccionImage($event.target.files[0])" type="file" class="btn btn-info btn-block" formControlName="img" name="img" id="img">
+                                        <!-- <label class="custom-file-label" for="inputGroupFile02" aria-describedby="inputGroupFileAddon02">Selecciona una imagen</label> -->
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12 col-md-6 col-sm-12 form-group">
+                                        <div class="col"><label for="nombre" class=" form-control-label">Nombre o título</label></div>
+                                        <div class="col"><input formControlName="nombre" required type="text" minlength="1" maxlength="200" id="nombre" name="nombre" placeholder="Introduce el nombre o título de la donación" class="form-control">
+                                            <small class="form-text text-muted">Ejemplo: Donación 1</small></div>
+                                    </div>
+                                    <div class="col-12  col-md-6 col-sm-12 form-group">
+                                        <div class="col"><label for="estatus" class=" form-control-label">Estatus de la donación</label></div>
+                                        <div class="col">
+                                            <select formControlName="estatus" required name="estatus" id="estatus" class="form-control">
+                                                <option value="null" selected >Selecciona el estatus</option>
+                                                <option value="Activa">Activa</option>
+                                                <option value="Inactiva">Inactiva</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col col-md-12 col-sm-12 form-group">
+                                        <div class="col"><label for="descripcion" class=" form-control-label">Descripción de la donación</label></div>
+                                        <div class="col"> <textarea formControlName="descripcion" minlength="1" maxlength="200" requiered type="text" id="descripcion" name="descripcion" placeholder="Introduce la descripción de la donación" class="form-control"></textarea>
+                                            <small class="form-text text-muted">Ejemplo: Donación para los más necesitados</small></div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <button type="button" class="btn btn-danger btn-block" (click)="limpiarCampos()">Cancelar</button>
+                                    </div>
+                                    <div class="col">
+                                        <button type="submit" class="btn btn-primary btn-block" [hidden]="hidden">Registrar</button>
+                                    </div>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="card p-3">
+                        <div class="card-body">
+                            <h4 class="box-title">Donaciones</h4>
+                        </div>
+                        <div class="card-body">
+                            <div class="">
+                                <div class="table-responsive">
+                                    <table datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" class="table ">
+                                        <thead>
+                                            <tr>
+                                                <th class="serial">#</th>
+                                                <th>Nombre</th>
+                                                <th>imagen</th>
+                                                <th>Estatus</th>
+                                                <th>Descripción</th>
+                                                <th>Opciones</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr *ngFor="let item of lista; let i = index">
+                                                <td class="serial">{{i+1}}</td>
+                                                <td>{{item.nombre}}</td>
+                                                <td><img [src]="url+item.img" alt="..." class="img-thumbnail" width="200px"></td>
+                                                <td>{{item.estatus}}</td>
+                                                <td>{{item.descripcion}}</td>
+                                                <td>
+                                                    <div class="row row-cols-3">
+                                                        <button (click)="ver(i)" class="col btn col m-0 m-md-3 btn-info" data-toggle="tooltip" data-placement="top" title="Ver"> <i class="fas fa-info"></i></button>
+                                                        <button (click)="update(i,true)" class="col btn col m-0 m-md-3 btn-warning" data-toggle="tooltip" data-placement="top" title="Editar"> <i class="fas fa-edit"></i></button>
+                                                        <button (click)="delete(item._id)" class="col btn col m-0 m-md-3 btn-danger" data-toggle="tooltip" data-placement="top" title="Eliminar"><i class="fas fa-trash"></i></button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <!-- /.table-stats -->
+                        </div>
+
+                    </div>
+                    <!-- /.card -->
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- .animated -->
+</div>
+<!-- /.content -->
+<div class="clearfix"></div>

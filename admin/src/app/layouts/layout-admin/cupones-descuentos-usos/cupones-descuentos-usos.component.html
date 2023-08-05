@@ -1,0 +1,69 @@
+<div class="card card-body">
+  <h6 class="text-center">Historial de cupones usados</h6>
+</div>
+
+<div class="card card-body">
+  <div class="input-group">
+    <span class="input-group-text" id="sufixId">De</span>
+    <input
+      type="date"
+      name="fecha_inicio"
+      id="fecha_inicio"
+      [(ngModel)]="filter.fecha_inicio"
+      class="form-control"
+      placeholder="placeholder"
+      aria-describedby="sufixId"
+    />
+    <span class="input-group-text" id="sufixId">A</span>
+    <input
+      type="date"
+      name="fecha_fin"
+      id="fecha_fin"
+      [(ngModel)]="filter.fecha_fin"
+      class="form-control"
+      placeholder="placeholder"
+      aria-describedby="sufixId"
+    />
+    <span class="input-group-text">Empresa</span>
+    <select
+      name="empresa"
+      id="empresa"
+      [(ngModel)]="filter.empresa"
+      class="form-control"
+      aria-describedby="sufixId"
+    >
+      <option [ngValue]="undefined">Todas</option>
+      <option *ngFor="let empresa of empresas" [value]="empresa._id">
+        {{ empresa.nombre }}
+      </option>
+    </select>
+
+    <button class="btn btn-primary" (click)="getHistorialCupones()">
+      Filtrar
+    </button>
+  </div>
+  <div class="table-responseive">
+    <table class="table table-striped">
+      <thead class="thead-inverse bg-secondary">
+        <tr>
+          <th class="text-light text-uppercase">cupon</th>
+          <th class="text-light text-uppercase">Intentos</th>
+          <th class="text-light text-uppercase">Usuarios Origen</th>
+          <th class="text-light text-uppercase">Usuario Destino</th>
+          <th class="text-light text-uppercase">Empresa</th>
+          <th class="text-light text-uppercase">fecha</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let historial_cupon of data.historial_cupones">
+          <td scope="row">{{ historial_cupon.cupon?.codigo }}</td>
+          <td>{{ historial_cupon.cupon?.intentos }}</td>
+          <td>{{ getUsuarios() }}</td>
+          <td>{{ historial_cupon.usuario?.nombre }}</td>
+          <td>{{ historial_cupon.empresa?.nombre }}</td>
+          <td>{{ historial_cupon.createdAt | date }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
